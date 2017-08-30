@@ -15,7 +15,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción de la caja Funcional  (in/out)
 
-https://user-images.githubusercontent.com/24497588/29882024-7b7f8d4e-8d71-11e7-9346-9f11aff06f63.png
+<img width="684" alt="cajanegra" src="https://user-images.githubusercontent.com/24497588/29882197-e9ceca08-8d71-11e7-8cec-2f944bfea0b0.png">
 
 ## Descripción funcional:
 
