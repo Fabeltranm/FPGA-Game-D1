@@ -11,9 +11,9 @@
 
 ## Descripción general del sistema: 
 
-En el modulo de se va a grabar una voz por un lapso aproximado de 2 segundos en el cual se pretende digitalizar, guardar y reproducir esta señal, se utilizaran dos grandes modulos en el cual se tienen microfono y altavoz
+En el módulo de audio se pretende garantizar la grabación de una voz por un lapso aproximado de 2 segundos en el cual se pretende digitalizar, guardar y reproducir esta señal, se utilizaran dos grandes modulos en el cual se tienen microfono y altavoz
 en el micronofo setendra una señal analoga con frecuencia de 1 a 5 kHz la cual entrara a un convertidor A/D para asi realizarle un proceso de pasabajos logrando una salida de 18 bits; Esta entrara a nuestra FPGA nexys4 donde se guardara por modulos en un proceso FIFO sincronico, el sincronismo de los cloks esnecesario para acoplar todas las fases de dicho proceso.
-en la segunda etapa (altavoz), entra dicha informacion a un convertidor D/A (PCM) el cual tambien logra amplificar dicha 
+en la segunda etapa (altavoz), entra dicha informacion a un convertidor D/A (PCM) el cual tambien logra amplificar esta señal para poder ser reproducida.
 
 
 ## Descripción de la caja funcional (Modulo Fpga):
@@ -45,9 +45,10 @@ El modulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salida
 ### Descripción Estructural (Divisor de frecuencia):
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/k59ap5/Selecci_n_038.png" alt="Selecci_n_038" border="0"></a>
 
+
 ## Diagrama de Estados:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 
 ## Arquitectura del periférico:
 
