@@ -4,7 +4,7 @@
 
 ### 1 Lisseth Tatiana Herrera Rosero ltherreraro@unal.edu.co
 
-### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 2 santi guevara
 
 ### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
 
