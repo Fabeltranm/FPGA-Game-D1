@@ -44,5 +44,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## referencias:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+https://www.maximintegrated.com/en/products/analog/audio/MAX98357A.html/tb_tab0
+https://cdn-shop.adafruit.com/product-files/3421/i2S+Datasheet.PDF
 
