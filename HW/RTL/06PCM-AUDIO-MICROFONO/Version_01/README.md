@@ -41,8 +41,9 @@ Como salidas cuenta con **di** que es la información del micrófono y consta de
 El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salidas del módulo FPGA y se usa para la serialización de los datos para pasarlos a una señal análoga y cuenta con un **fo** (16 bit) son los datos enviados por la FPGA. Como salida cuenta con el parlante (actuador).
 1
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/dBNZhQ/altavoz.jpg" alt="altavoz" border="0"></a>
-## Descripción Estructural:
-### Descripción Estructural (Divisor de frecuencia):
+## Descripción funcional:
+<a href="https://imgbb.com/"><img src="https://image.ibb.co/k3nwCQ/Whats_App_Image_2017_08_30_at_1_52_31_PM.jpg" alt="Whats_App_Image_2017_08_30_at_1_52_31_PM" border="0"></a>
+### Descripción funcional (Divisor de frecuencia):
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/k59ap5/Selecci_n_038.png" alt="Selecci_n_038" border="0"></a>
 
 
