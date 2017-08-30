@@ -4,13 +4,17 @@
 
 ### 1 Lisseth Tatiana Herrera Rosero ltherreraro@unal.edu.co
 
-### 2 santi guevara
+### 2 Santiago Esteban Guevara Rozo seguevarar@unal.edu.co
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 3 Michael Fabian Sierra Tarazona mfsierrat@unal.edu.co
 
 
 ## Descripción general del sistema: 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+En el modulo de se va a grabar una voz por un lapso aproximado de 2 segundos en el cual se pretende digitalizar, guardar y reproducir esta señal, se utilizaran dos grandes modulos en el cual se tienen microfono y altavoz
+en el micronofo setendra una señal analoga con frecuencia de 1 a 5 kHz la cual entrara a un convertidor A/D para asi realizarle un proceso de pasabajos logrando una salida de 18 bits; Esta entrara a nuestra FPGA nexys4 donde se guardara por modulos en un proceso FIFO sincronico, el sincronismo de los cloks esnecesario para acoplar todas las fases de dicho proceso.
+en la segunda etapa (altavoz), entra dicha informacion a un convertidor D/A (PCM) el cual tambien logra amplificar dicha 
+
 
 ## Descripción de la caja funcional (Modulo Fpga):
 En este modulo se tienen inicialmente dos submodulos: divisor de frecuencia y registros. El divisor de frecuencia es necesario para obtener los clocks de sincranizacion de el modulo de microfono y de altavoz, para esto se necesita un clock de entrada CLK, un clock de salida CLKOUT y un RESET de entrada para reiniciar el ciclo, adicionalmente se tienen dos parametros fijos la Fi que es la frecuencia del reloj de la Nexys 2 50MHZ y el Fo que es la Frecuencia de salida que se quiere. 
