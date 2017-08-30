@@ -1,5 +1,3 @@
- FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03 document/caja negra.png # SISTEMA DE AUDIO
-
 ## Integrantes del equipo de trabajo:
 
 ### 1 Nelly Alexandra Rodriguez Villa   nelarodriguezvil@unal.edu.co
