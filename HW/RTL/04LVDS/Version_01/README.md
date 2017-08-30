@@ -11,7 +11,7 @@
 
 ## Descripción general del sistema: (tomado del documento de clase)
 
-El sistema de transmisión LVDS (low voltage differential signaling) es un sistema en el cual la señal es transmitida por duplicado por el emisor pero con diferente voltaje, una señal transmitida con signo positivo, mientras que la otra es transmitida con signo negativo.Para ello se requieren dos cables diferenciados (par trenzado). Una vez la señal llega al receptor, éste se encarga de comparar ambas señales, y comprobar cuál de las dos tiene mayor potencial y asignar el valor lógico que corresponda. 
+El sistema de transmisión LVDS (low voltage differential signaling) es un sistema en el cual la señal es transmitida por duplicado por el emisor pero con diferente voltaje, una señal transmitida con signo positivo, mientras que la otra es transmitida con signo negativo. Para ello se requieren dos cables diferenciados (par trenzado). Una vez la señal llega al receptor, éste se encarga de comparar ambas señales, y comprobar cuál de las dos tiene mayor potencial y asignar el valor lógico que corresponda. 
 
 El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por BOE, cuyas especificaciones generales y eléctricas son, respectivamente:
 
