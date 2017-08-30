@@ -11,7 +11,7 @@
 
 ## Descripción general del sistema: (tomado del documento de clase)
 
-Una interfaz de comunicación serial que reduce el número de pines necesarios para el intercambio de datos es la Interfaz Periférica Serial (SPI).
+Para implememtar la unidad de almacenamiento se usara una interfaz de comunicación serial que reduce el número de pines necesarios para el intercambio de datos que se conoce como Interfaz Periférica Serial (SPI), que sera dirigida por un Entorno Programable de Arreglos de Compuertas (FPGA).
 El SPI se compone de cuatro conexiones (Cables) los cuales son:
 
 1. Reloj (CLK).
