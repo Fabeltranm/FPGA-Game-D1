@@ -25,7 +25,7 @@ El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por 
 
 ## Descripción funcional:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![lcd - pagina 1](https://user-images.githubusercontent.com/24497588/29882470-b6ae5764-8d72-11e7-9786-4b9f07c60983.png)
 
 ## Descripción Estructural:
 
