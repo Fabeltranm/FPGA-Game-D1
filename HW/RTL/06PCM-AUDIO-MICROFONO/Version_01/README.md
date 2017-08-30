@@ -48,6 +48,7 @@ El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salid
 ## Descripción Estructural: 
 <a href="https://ibb.co/ni3iRk"><img src="https://preview.ibb.co/jkZZXQ/Whats_App_Image_2017_08_30_at_2_12_28_PM.jpg" alt="Whats_App_Image_2017_08_30_at_2_12_28_PM" border="0"></a>
 
+
 ## Diagrama de Estados:
 
 
@@ -61,6 +62,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## referencias:
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+-Datasheet Microfono mems SPH0645LM4H-B,[online] knowls, Disponible en: https://www.digikey.com/product-detail/es/knowles/SPH0645LM4H-B/423-1405-1-ND/5332432
+-Datasheet Nexys 4TM FPGA Board Reference Manual,[online], Digilent Disponible en: http://store.digilentinc.com/nexys-4-artix-7-fpga-trainer-board-limited-time-see-nexys4-ddr/
+-Datasheet PCM Audio MAX98357A,[online] Maxim integrated, Disponible en:http://www.alldatasheet.com/view.jsp?Searchword=Max98357a
 
