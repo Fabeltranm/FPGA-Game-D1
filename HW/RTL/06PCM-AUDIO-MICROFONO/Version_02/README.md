@@ -19,7 +19,7 @@
 
 ## Descripción funcional:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 
 ## Descripción Estructural:
 
