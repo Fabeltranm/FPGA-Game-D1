@@ -27,7 +27,7 @@ Es un dispositivo que realiza la conversión de una señal continua en una seña
 
 ## Descripción funcional:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![diagrama funcional j](https://user-images.githubusercontent.com/31463503/29928098-b317064e-8e2d-11e7-92fb-ff6068bf0b65.jpg)
 
 ## Descripción Estructural:
 
