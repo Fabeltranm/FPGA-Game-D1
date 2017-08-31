@@ -2,11 +2,11 @@
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Oscar Ivan Medina Rojas oimedinar@unal.edu.co
+### 1 Cesar Santiago Gordillo Tous csgordillot@unal.edu.co
 
-### 2 Fray Alexander Riscanevo Tellez fariscanevot@unal.edu.co
+### 2 Oscar Ivan Medina Rojas oimedinar@unal.edu.co
 
-### Cesar Santiago Gordillo Tous csgordillot@unal.edu.co
+### 3 Fray Alexander Riscanevo Tellez fariscanevot@unal.edu.co
 
 
 ## Descripción general del sistema: (tomado del documento de clase)
