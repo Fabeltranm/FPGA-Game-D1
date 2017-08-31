@@ -2,26 +2,26 @@
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 1 Cristian Camilo Ortiz Aranda ccortiza@unal.edu.co
 
 ### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
 
 ### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
 
 
-## Descripci髇 general del sistema: (tomado del documento de clase)
+## Descripci贸n general del sistema: (tomado del documento de clase)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci髇 de la caja Funcional  (in/out)
+## Descripci贸n de la caja Funcional  (in/out)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci髇 funcional:
+## Descripci贸n funcional:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci髇 Estructural:
+## Descripci贸n Estructural:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -29,11 +29,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Arquitectura del perif閞ico:
+## Arquitectura del perif茅rico:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Diagrama de bloques del perif閞ico:
+## Diagrama de bloques del perif茅rico:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
