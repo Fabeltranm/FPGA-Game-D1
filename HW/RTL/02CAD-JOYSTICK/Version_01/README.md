@@ -23,7 +23,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![joystick](https://user-images.githubusercontent.com/31439403/29906795-f6cbc6fa-8ddc-11e7-90c6-65a2d0b1e08b.png)
 
 ## Diagrama de Estados:
 
