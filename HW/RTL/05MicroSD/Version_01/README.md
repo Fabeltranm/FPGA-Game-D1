@@ -28,7 +28,7 @@ Internamente la targeta SD comienza con una Interfaz de Manejo la cual construye
 La prioridad o esencia del del sistema es la Solicitud de Control y la Solicitud de Datos; la Solicitud de Control es la encargada de acceder a la memoria SD de forma ordenada y a ubicaciones puntuales, mientras , la Solicitud de Datos se encarga de guardar, sobrescribir o consultar los datos en dicha ubicación para posteriormente de sus estado u retomar una nueva orden.
 ## Descripción de la caja Funcional  (in/out)
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/00MULTIPLICADOR%20(ejemplo)/Version_01/03%20document/img/imagen2.png)
+
 
 ## Descripción funcional:
 
