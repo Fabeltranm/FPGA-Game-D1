@@ -9,9 +9,9 @@
 ### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
 
 
-## Descripción general del sistema: (tomado del documento de clase)
+## Descripción general del sistema:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Un joystick es una herramienta muy útil cuyo funcionamiento está basado en el movimiento en dos dimensiones de una palanca, este movimiento es capturado por dos potenciómetros (uno para el eje Y y el otro para el eje X), de este modo se entiende que para cada movimiento en cada dirección se producira un voltaje diferente. Este moviemiento es una señal analogica que sera transformada a una señal digital por un conversor analogo-digital, el cual nos brindara una señal digital la cual pasa a un bloque de decision, donde se lee, analaiza y se ejecuta.
 
 ## Descripción de la caja Funcional  (in/out)
 
