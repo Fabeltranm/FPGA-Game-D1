@@ -28,7 +28,7 @@ En la siguiente imagen se mostrara el modulo de microfono y audio.
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/dge.png)
 
 ## Diagrama de Estados:
 
