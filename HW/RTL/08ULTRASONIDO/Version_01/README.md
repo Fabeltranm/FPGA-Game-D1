@@ -2,26 +2,24 @@
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 1. Adriana Mercedes Rivera Gonzalez - amriverag@unal.edu.co
+### 2. Heriberto Forero Correa - hforeroc@unal.edu.co
+### 3. Gilbert Andr茅s Angulo Saucedo - gaangulosa@unal.edu.co
 
-### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+## Descripci贸n general del sistema: (tomado del documento de clase)
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+El m贸dulo de ultrasonido HC-SR04 es un sensor de distancias por ultrasonidos capaz de detectar objetos y calcular la distancia a la que se encuentra en un rango de 2 a 450 cm. consta de dos membranas, de las cuales una emite una se帽al mec谩nica de alta frecuencia (trigger) que al encontrarse con alg煤n obst谩culo rebota, siendo captada por la membrana receptora (echo), dicha onda inicialmente es un puso de 10uS el cual al llegar al trigger es modulado a una frecuencia de 8 ciclos de ultrasonido a 40kHz. La distancia se puede calcular de dos formas, la primera es tomando el intervalo de tiempo entre  la emisi贸n y recepci贸n en uS y dividi茅ndolo por 58 si se requiere la distancia expresada en cent铆metros de lo contrario de necesitarse expresada en pulgadas la divisi贸n debe ser por 148. La segunda forma de calcular la distancia es tomando en cuenta el tiempo en el cual la se帽al recibida se encuentra en un nivel alto y dividi茅ndolo por la velocidad del sonido, tomada como una constante (340m/s).
 
+## Descripci贸n de la caja Funcional  (in/out)
 
-## Descripci髇 general del sistema: (tomado del documento de clase)
+La caja funcional del m贸dulo ultrasonido tiene como entradas, Pulse la cual introduce un pulso de 10uS. Echo en donde se recibe la se帽al luego de que esta haya rebotado con alg煤n objeto cercano. Clock parte crucial ya que permite establecer el intervalo de tiempo entre la emisi贸n y recepci贸n o la cantidad de tiempo en que la se帽al recibida se encuentre en el nivel alto, lo que permitir铆a calcular las distancias. Init que permitir铆a iniciar el proceso de emisi贸n y recepci贸n de la se帽al de ultrasonido. Como salidas se tiene Trigger desde la cual se emite la se帽al de ultrasonido y Distance la cual me proporciona el valor calculado de la distancia del obst谩culo cercano.
+[Imagen]
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-## Descripci髇 de la caja Funcional  (in/out)
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-## Descripci髇 funcional:
+## Descripci贸n funcional:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci髇 Estructural:
+## Descripci贸n Estructural:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -29,11 +27,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Arquitectura del perif閞ico:
+## Arquitectura del perif茅rico:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Diagrama de bloques del perif閞ico:
+## Diagrama de bloques del perif茅rico:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
