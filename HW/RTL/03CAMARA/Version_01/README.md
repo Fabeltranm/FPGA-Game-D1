@@ -38,7 +38,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción Estructural:
 
-<img src="https://www.dropbox.com/s/nrtv5rdyhljb96a/Diagrama1.png?dl=0" />
+<img src="hhttps://drive.google.com/open?id=0B1hvLIaHp_xyY2hPWUxHeGhtSG8" />
 
 ## Diagrama de Estados:
 
