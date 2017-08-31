@@ -4,9 +4,9 @@
 
 ### 1 Oscar Ivan Medina Rojas oimedinar@unal.edu.co
 
-### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 2 Fray Alexander Riscanevo Tellez fariscanevot@unal.edu.co
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### Cesar Santiago Gordillo Tous csgordillot@unal.edu.co
 
 
 ## Descripción general del sistema: (tomado del documento de clase)
@@ -27,7 +27,7 @@ Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de V
 
 ## Descripción de la caja Funcional  (in/out)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<a href="https://ibb.co/coHRxQ"><img src="https://preview.ibb.co/bHRark/Diagrama_in_out.png" alt="Diagrama_in_out" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'>fotos para</a><br />
 
 ## Descripción funcional:
 
