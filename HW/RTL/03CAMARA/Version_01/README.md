@@ -23,7 +23,7 @@ Por interpolación de colores: CCD y super CCD, CCD RBGE y CMOS.
 
 Sin interpolación de colores: Foveon X3 y Triple sensor. 
 
-Siendo  los  sensores  CMOS[6]  los  más  utilizados  en  la  actualidad,  por  su  menor consumo de energia y menor coste de fabricación (como el sensor de cámara OV7670). 
+Siendo  los  sensores  CMOS  los  más  utilizados  en  la  actualidad,  por  su  menor consumo de energia y menor coste de fabricación (como el sensor de cámara OV7670). 
 
 Los sensores también se pueden clasificar de acuerdo a su tamaño: Sensor Full Frame, conocido también como sensor 35mm. Dimensiones: 36x24mm, Sensor APS-H. Dimensiones: 28,7x19mm, Sensor APS-C (usado en las Nikon, Pentax y  Sony).  Dimensiones:  23,6×15,7mm,  Sensor  APS-C  (usado  en  las  Canon). Dimensiones:  22,2×14,8mm,  Sensor  Foveon  (usado  en  las  cámaras  Sigma). Dimensiones: 20,7×13,8mm y Sensor Micro Cuatro Tercios. Dimensiones: 17,3x13mm 
 
@@ -38,7 +38,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<img src="https://photos-2.dropbox.com/t/2/AABte6P5wK0qVKJZ-hNViTDarWPJl0GB9qzfwirgSnGJGA/12/344075269/png/32x32/1/_/1/2/Diagrama1.png/EMbNttgCGAUgAigC/95LilBknTnBuXcLG7PqiwhVm7FfyNXlUF-hugamioi0?size=1280x960&size_mode=3" />
 
 ## Diagrama de Estados:
 
