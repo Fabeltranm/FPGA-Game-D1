@@ -14,6 +14,7 @@ El sistema de ultrsonido se enecarga de medir la distancia con el uso de los sen
 ## Descripción de la caja Funcional  (in/out)
 
 La caja negra del sistema de ultrasonido tiene como entradas un trigger (trigg) para el conteo del tiempo y las entradas del circuito análogo de ultrasonido. La salida es la distancia calculada. Además, las señales INIT(entrada) y DONE(salida),  se utilizan para iniciar el proceso de medición y para indicar que el resultado está disponible, respectivamente.
+![](https://drive.google.com/file/d/0B23JIzIjQ7LVcEhIOGx2X2ducW8/view?usp=sharing)
 
 ## Descripción funcional:
 
