@@ -2,26 +2,29 @@
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 1 Christian Camilo Cuestas Ibáñez cccuestasi@unal.edu.co
 
-### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 2 Juliana Lozano Peña jlozanop@unal.edu.co
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 3 Jonathan Smith Moreno Sánchez josmorenosa@unal.edu.co
+
+### 4 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
 
 
-## Descripci�n general del sistema: (tomado del documento de clase)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-## Descripci�n de la caja Funcional  (in/out)
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-## Descripci�n funcional:
+## Descripción general del sistema: (tomado del documento de clase)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci�n Estructural:
+## Descripción de la caja Funcional  (in/out)
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+## Descripción funcional:
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+## Descripción Estructural:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -29,11 +32,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Arquitectura del perif�rico:
+## Arquitectura del periférico:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Diagrama de bloques del perif�rico:
+## Diagrama de bloques del periférico:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
