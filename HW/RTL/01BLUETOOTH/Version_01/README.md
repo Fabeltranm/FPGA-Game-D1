@@ -11,13 +11,12 @@
 
 ## Descripción general del sistema: (tomado del documento de clase)
 Bluetooth es una tecnología  que permite  intercambiar datos de forma inalámbrica. ESTO NOS PERMITE CONECTAR DISPOSITIVOS E INTERCABIAR INFORMACION ENTRE ELLOS DE MANERA INALABRICA. Trabaja mediante transmisiones de radio de onda corta en la banda de los 2,4 GHz creando redes de área personal y BAJO CONSUMO DE ENRGIA
+![sistema-bluetooth-4-1024](https://user-images.githubusercontent.com/14295760/30007421-73d4059c-90d3-11e7-91a1-e8a5ee8e4048.jpg)
 
  Sistema de comunicacion usando el modulo de bluetooth HC-05 y el protocolo de comunicacion UART. el objetivo es intercambiar informacion entre el modulo bluetooth y la FPGA. La forma de hacerlo es atraves del transmisor, receptor asincrono universal (UART).
  
 ## Descripción de la caja Funcional  (in/out)
 ![diagrama estructural modulo de bluetooth](https://user-images.githubusercontent.com/14295760/30006343-3aaafc10-90bc-11e7-9ef9-a25b44e576d2.png)
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción funcional:
 
