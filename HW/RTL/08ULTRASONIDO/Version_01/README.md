@@ -17,8 +17,8 @@ https://user-images.githubusercontent.com/31454781/30006006-975a234e-90b4-11e7-8
 ![caja funcional](https://user-images.githubusercontent.com/31454781/30006006-975a234e-90b4-11e7-8bf2-7e7da36b7e62.png)
 
 ## Descripción funcional:
+![descripcion estructural](https://user-images.githubusercontent.com/31454781/30006040-35878fd4-90b5-11e7-91e1-c42e0769c62b.png)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción Estructural:
 
