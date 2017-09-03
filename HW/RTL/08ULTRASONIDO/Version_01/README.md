@@ -22,7 +22,7 @@ Receptor
 ![diagrama funcional receptor](https://user-images.githubusercontent.com/31454781/30006061-a0a59d4c-90b5-11e7-828b-ee08d7c5b5dc.png)
 
 ## Descripción Estructural:
-![descripcion estructural](https://user-images.githubusercontent.com/31454781/30006040-35878fd4-90b5-11e7-91e1-c42e0769c62b.png)
+![descripcion estructural](https://user-images.githubusercontent.com/31454781/30006112-7b5c3f0e-90b6-11e7-9ca3-5575d32b479b.png)
 
 ## Diagrama de Estados:
 
