@@ -7,6 +7,6 @@ Y una salida:
 
 Adicionalmente tiene dos parametros **fi** frecuencia de la fpga 50000000 Hz (Nexys 2) y **fo** que es la frecuencia deseada.
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Div_freq.jpg) 
+ ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Div_freq.jpg) 
 # Diagrama funcional divisor de Frecuencia <h1>
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/div_funcional.png) 
+ ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/div_funcional.png) 
