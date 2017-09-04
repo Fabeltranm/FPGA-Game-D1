@@ -1,28 +1,45 @@
-# Bluetooth
+# JOYSTICK
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Nombre1 nombre2  apelido1 apellido2  correo@electronico
-### 2 Nombre1 nombre2  apelido1 apellido2  correo@electronico
-### 3 Nombre1 nombre2  apelido1 apellido2  correo@electronico
+### 1 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+
+### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+
+### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
 
 
-## Descripci髇 general del sistema:
+## Descripci贸n general del sistema: (tomado del documento de clase)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci髇 de la caja Funcional  (in/out)
+## Descripci贸n de la caja Funcional  (in/out)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+## Descripci贸n funcional:
 
-## Descripci髇 funcional:
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+## Descripci贸n Estructural:
 
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## Descripci髇 Estructural
+## Diagrama de Estados:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+## Arquitectura del perif茅rico:
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+## Diagrama de bloques del perif茅rico:
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+## referencias:
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 
 
