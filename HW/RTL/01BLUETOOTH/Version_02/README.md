@@ -16,16 +16,16 @@ Opera en una frecuencia de banda abierta a cualquier sistema que se encuentra en
 ## Descripción de la caja Funcional  (in/out)
 La caja funcional tiene como salidas el clock dividido un factor de w, R/W. Las señales Done, Busy y Enable dan información sobre el estado del proceso de transferencia de datos, la señal de entrada d in es de 8 bits al igual que la de salida d out, estas señales corresponden a la información de entrada y salida del dispositivo, la salida TXD se refiere a los datos trasmitidos y la señal RXD a los datos recibidos.
 
-![yolo](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/Captura%20de%20pantalla%20de%202017-09-04%2015-14-34.png?raw=true)
+![in/out](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/Captura%20de%20pantalla%20de%202017-09-04%2015-14-34.png?raw=true)
 
 
 ## Descripción funcional:
 
-https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/funcional.png?raw=true
+![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/funcional.png?raw=true)
 
 ## Descripción Estructural:
 
-https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/uart.png?raw=true
+![estrutural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/uart.png?raw=true)
 
 ## Diagrama de Estados:
 
