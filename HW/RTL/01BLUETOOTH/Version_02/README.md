@@ -22,7 +22,7 @@ La caja funcional tiene como salidas el clock dividido un factor de w, R/W. Las 
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![captura de pantalla de 2017-09-04 00-26-29](https://user-images.githubusercontent.com/31445996/30012737-dc2388be-9107-11e7-8955-cd84135603eb.png)
 
 ## Diagrama de Estados:
 
