@@ -6,7 +6,7 @@
 
 ### 2 Duvan Andrés Agudelo Amado daagudeloa@unal.edu.co
 
-### 3 Johan David Muñoz jodmunozol@unal.edu.co
+### 3 Johan David Muñoz Olarte jodmunozol@unal.edu.co
 
 
 ## Descripción general del sistema: (tomado del documento de clase)
