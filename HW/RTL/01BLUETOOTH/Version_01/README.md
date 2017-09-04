@@ -16,6 +16,30 @@ Bluetooth es una tecnología  que permite  intercambiar datos de forma inalám
 Para que el modulo bluetooth y el dispositivo electronico intercambien su información, deben compartir un protocolo de comunicación común. Cientos de protocolos de comunicación han sido definidos para lograr este intercambio de datos, y, en general, cada uno puede ser separado en una de dos categorías: paralelo o en serie.
 
 COMUNICACIÓN EN PARALELO
+![imagen1](https://user-images.githubusercontent.com/14295760/30022647-c93f7a80-9131-11e7-88ee-c0b164a50d70.png)
+
+Las interfaces paralelas transfieren múltiples bits al mismo tiempo. Por lo general requieren autobuses de datos - que transmiten a través de ocho, dieciséis, o más cables. Los datos son transferidos en enormes ondas de 1 y 0.
+
+COMUNICACIÓN SERIAL
+
+Las interfaces serie transmiten sus datos, un solo bit a la vez. Estas interfaces pueden funcionar en tan poco como un cable, normalmente nunca más de cuatro.
+
+COMUNICACIÓN SERIAL ASINCRONA
+
+Una interfaz en serie sincrónica siempre empareja su línea de datos con una señal de reloj, por lo que todos los dispositivos de un bus serie síncrono comparten un reloj común.
+Asíncrono significa que los datos se transfieren sin soporte de una señal de reloj externa. Este método de transmisión es perfecto para minimizar los cables requeridos y los pines de E / S, pero significa que necesitamos poner un esfuerzo extra para transferir y recibir datos de forma fiable.
+
+Reglas para la Comunicación Serial Asincrona.
+
+El protocolo en serie asíncrono tiene varias reglas integradas: mecanismos que ayudan a asegurar transferencias de datos sólidas y sin errores. Estos mecanismos, que se obtienen por evitar la señal de reloj externo, son:
+Bits de datos,
+Bits de sincronización,
+Los bits de paridad,
+Y la velocidad en baudios.
+
+Enmarcado de datos
+Cada bloque (normalmente un byte) de datos transmitidos se envía realmente en un paquete o marco de bits. Los marcos se crean añadiendo bits de sincronización y paridad a nuestros datos.
+
 
 
 
