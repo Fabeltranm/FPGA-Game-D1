@@ -51,7 +51,7 @@ El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salid
 
 
 ## Diagrama de Estados:
-
+a
 
 
 ## Arquitectura del periférico:
