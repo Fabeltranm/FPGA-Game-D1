@@ -29,17 +29,17 @@ Finalmente este módulo tiene 3 salidas:
 * **clkout** El clock que necesita el micrófono para modular la señal y enviarla (conformado por 1 bit)
 * **select** necesario más adelante para seleccionar derecho o izquierdo (conformado por 1 bit)
 * **do** datos de salida hacia el altavoz (conformado por 16 bits)
- ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/fpga.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/fpga.jpg) 
 ### Descripción de la caja funcional (Módulo Micrófono MEMS):
 El módulo de micrófono tiene como entradas **clkout** (1 bit) que es una de las salidas del módulo fpga y se usa para realizar todo el poceso de digitalización, esta también el **enable** (1 bit) para iniciar el modulo  y esta un **select** (1 bit) que se aplicara más adelante para el seriado de dos micrófonos.
 
 Como salidas cuenta con **di** que es la información del micrófono y consta de 18 bits, la interfaz de comunicación de este módulo y el FPGA es I2S.
- ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/microfono.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/microfono.jpg) 
 ### Descripción de la caja funcional (Módulo Altavoz):
 El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salidas del módulo FPGA y se usa para la serialización de los datos para pasarlos a una señal análoga y cuenta con un **fo** (16 bit) son los datos enviados por la FPGA. Como salida cuenta con el parlante (actuador).
- ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/altavoz.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/altavoz.jpg) 
 ### Descripción funcional (Divisor de frecuencia):
- ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Div_freq.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Div_freq.jpg) 
 ## Descripción funcional:
 
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/k3nwCQ/Whats_App_Image_2017_08_30_at_1_52_31_PM.jpg" alt="Whats_App_Image_2017_08_30_at_1_52_31_PM" border="0"></a>
