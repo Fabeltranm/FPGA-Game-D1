@@ -43,7 +43,7 @@ El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salid
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/altavoz.jpg) 
 ### Descripción funcional (Divisor de frecuencia):
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Div_freq.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/div_funcional.png) 
 ## Descripción funcional:
 
 <a href="https://imgbb.com/"><img src="https://image.ibb.co/k3nwCQ/Whats_App_Image_2017_08_30_at_1_52_31_PM.jpg" alt="Whats_App_Image_2017_08_30_at_1_52_31_PM" border="0"></a>
