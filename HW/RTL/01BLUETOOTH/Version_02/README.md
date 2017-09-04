@@ -11,8 +11,8 @@
 
 ## Descripción general del sistema: (tomado del documento de clase)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
+Bluetooth es una teconología que permite el intercambio de información de manera inalambrica entre dispositivos.
+Opera en una frecuencia de banda abierta a cualquier sistema que se encuentra en un rango de 2.400MHz - 2.500MHz
 ## Descripción de la caja Funcional  (in/out)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
