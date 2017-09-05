@@ -31,11 +31,11 @@ Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de V
 
 ## Descripción Diagrma funcional:
 
-<a href="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Diagrama%20funcional.png?raw=true" alt="Diagrama_funcional" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Diagrama%20funcional.png?raw=true" alt="OV7670_app1" border="0"></a>
 
 ## Descripción Estructural:
 
-<a href="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Diagrama%20estructural.png?raw=true" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Diagrama%20estructural.png?raw=true" alt="OV7670_app1" border="0"></a>
 
 ## Diagrama de Estados:
 
