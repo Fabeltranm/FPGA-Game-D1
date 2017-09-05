@@ -1,4 +1,4 @@
-update=mié 30 ago 2017 17:54:42 -05
+update=mar 05 sep 2017 13:47:55 COT
 version=1
 last_client=kicad
 [pcbnew]
@@ -37,7 +37,7 @@ SpiceUseNetNumbers=0
 LabSize=60
 [eeschema]
 version=1
-LibDir=
+LibDir=microfono.pretty
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -68,5 +68,3 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/lisseth/Descargas/SPH0645LM4H-B/SPH0645LM4H-B
-LibName31=/home/lisseth/Descargas/SPH0645LM4H-B (1)/SPH0645LM4H-B
