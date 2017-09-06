@@ -29,7 +29,7 @@ La señal **START** activa el **CINM** (módulo de inicialización de tarjetas) 
 
 **_2. Diagrama de flujo de lectura y escritura de la tarjeta._**
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/memoria.png# ALMACENAMIENTO SD)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/memoria.png).
 
 ## Descripción Estructural:
 
