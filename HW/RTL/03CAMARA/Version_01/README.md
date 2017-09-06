@@ -22,7 +22,7 @@ El siguiente diagrama esquemático muestra un sistema básico basado en cámaras
 
 <a href="https://imgbb.com/"><img src="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Imagen%201.jpg?raw=true" alt="OV7670_app1" border="0"></a>
 
-<a href="https://imgbb.com/"><img src="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Imagen%201.jpg?raw=true" alt="OV7670_app1" border="0"></a>
+<a href="https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Imagen%201.jpg?raw=true" alt="OV7670_app1" border="0"></a>
 
 Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de VGA, una etapa con memoria RAM, un módulo de captura de imagen, un módulo de control de cámara y un programa principal para reunir todos estos. En el datasheet del sistema omnivisión OV7670, se indica que la camara inicia entregando señal en formato YCbCr 4:2:2, en un tamaño de 640x480 pixeles.
 
