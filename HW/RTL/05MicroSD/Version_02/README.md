@@ -15,7 +15,7 @@ La comunicación de la micro SD se basa en la interfaz de 8 pines (**reloj**, l�
 
 ## Descripción de la caja Funcional  (in/out)
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/bloques.png).
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/bloques.png).
 
 ## Descripción funcional:
 
