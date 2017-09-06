@@ -15,7 +15,7 @@ La comunicación de la micro SD se basa en la interfaz de 8 pines (**reloj**, l�
 
 ## Descripción de la caja Funcional  (in/out)
 
-![](http://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs13639-016-0060-8/MediaObjects/13639_2016_60_Fig14_HTML.gif "Diagrama de flujo de inicialización de la tarjeta.").
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/bloques.png).
 
 ## Descripción funcional:
 
