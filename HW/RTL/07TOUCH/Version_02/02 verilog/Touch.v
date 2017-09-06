@@ -1,6 +1,7 @@
 module Touch	(
 
-				output 		SDA,
+				output 		SDA1,
+				input		SDA2,
 				input 		SCL
 
 			 );
