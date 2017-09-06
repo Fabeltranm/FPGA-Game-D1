@@ -5,11 +5,9 @@ module Ultrasonido	(
 				output Rm,
 				output i,
 				input f,
-				input Tro
-
+				input Tro,
+				input clk
 
 			 );
-
-
 
 endmodule
