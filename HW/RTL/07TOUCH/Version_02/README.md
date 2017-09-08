@@ -14,11 +14,13 @@
 
 ## Descripción general del sistema: (tomado del documento de clase)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+El sistema de touch es un bloque del proyecto que se encarga de recibir información del usuario a traves de toques en la pantalla del dispositivo, como interfaz hombre-máquina. Se encarga de medir la posición bidimensional de los toques y/o movimientos realizados en la pantalla touch. El sistema entrega las coordenadas de la posición del toque o movimiento.
 
 ## Descripción de la caja Funcional  (in/out)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+La caja negra del sistema de touch tiene como entradas:
+Las salidas son:
+También tiene señales de control:
 
 ## Descripción funcional:
 
