@@ -9,11 +9,9 @@
 ### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
 
 
-## Descripción general del sistema: (tomado del documento de clase)
+## Descripción general del sistema:
 Sistema de comunicacion usando el modulo de bluetooth HC-05 y el protocolo de comunicacion UART. el objetivo es intercambiar informacion entre el modulo bluetooth y la FPGA. La forma de hacerlo es atraves del transmisor, receptor asincrono universal (UART).
  
-
-
 
 COMUNICACIÓN SERIAL
 
@@ -33,6 +31,8 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 ![imagen4](https://user-images.githubusercontent.com/14295760/30022955-375db3e6-9133-11e7-824d-50842eccaeec.png)
 
 
+
+
 ## Descripción de la caja Funcional  (in/out)
 
 ![diagrama estructural modulo de bluetooth](https://user-images.githubusercontent.com/14295760/30006343-3aaafc10-90bc-11e7-9ef9-a25b44e576d2.png)
@@ -40,11 +40,13 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 ## Descripción funcional:
 
 
+![diagramafuncionall](https://user-images.githubusercontent.com/14295760/30240890-7ab4de62-953e-11e7-8d60-f83b0530482c.jpg)
+
 
 
 ## Descripción Estructural:
 
-
+![diagramaestructuralkkkk](https://user-images.githubusercontent.com/14295760/30240877-56cc237a-953e-11e7-8771-c15bf7f4a599.jpg)
 
 
 ## Diagrama de Estados:
