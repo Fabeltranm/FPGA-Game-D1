@@ -4,9 +4,7 @@
 
 ### 1 Sergio Ariel Urian Niño sauriann@unal.edu.co
 
-### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
-
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 2 Jorge Eduardo Rondón Ruiz jerondonr@unal.edu.co
 
 
 ## Descripción general del sistema: (tomado del documento de clase)
