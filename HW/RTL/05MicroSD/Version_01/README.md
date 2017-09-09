@@ -9,8 +9,11 @@
 
 ## Descripción general del sistema: (tomado del documento de clase)
 
-Para implememtar la unidad de almacenamiento se usara una interfaz de comunicación serial que reduce el número de pines necesarios para el intercambio de datos que se conoce como Interfaz Periférica Serial (SPI), que sera dirigida por un Entorno Programable de Arreglos de Compuertas (FPGA).
-El SPI se compone de cuatro conexiones (Cables) los cuales son:
+Este sistema permite la comunicación con un dispositivo de almacenamiento llamado "micro SD". Dicha comunicación puede realizar funciones de lectura y almacenamiento de datos. Para establecer dicha comunicación, se utiliza un protoolo serial llamado SPI (Serial Peripheral Interface). Este protocolo maneja la arquitectura Maestro-Esclavo, que permite la transferencia de datos entre un dispositivo maestro y varios esclavos. Para este caso, solo existira un esclavo (micro SD).
+
+
+
+El protocolo SPI se compone de un bus de cuatro lineas las cuales son:
 
 1. Reloj (CLK).
 2. Master-Out, Slave-In (MOSI). 
@@ -19,7 +22,7 @@ El SPI se compone de cuatro conexiones (Cables) los cuales son:
 
 La señal de **CLK** se controla y genera desde la SD con mando Maestro (Master) para sincronizar el intercambio de datos, el **MOSI** son los datos del Maestro al Esclavo (Slave) y el **MISO** son los datos que retorna el Esclavo según las solicitudes del Maestro y finalmente el **CS** suspende o permite la comunicación entre el Maestro y el Esclavo.
 
-El elemento para almacenar e implementar la interfaz anteriormente expuesta es una tarjeta Secure Data (**SD**) la cual se comunica y opera por medio de 9 entradas (pines).
+El elemento para almacenar e implementar la interfaz anteriormente expuesta es una tarjeta micro SD la cual opera por medio de  8 entradas (pines).
 
 Internamente la targeta **SD** comienza con una **Interfaz de Manejo** la cual construye el **Bus** o paquete de información que va a ingresar, luego, la **Interfaz del Controlador de la Tarjeta** ejecuta protocolos según la información que contenga el paquete o bus de datos que se ingrese (todo esto se sincroniza con un reloj **CLK** el cual es la herramienta que permite caracterizar y separar los grupos de datos o bus), como penúltimo paso el **Controlador de Interfaz de Tarjeta** envía el paquete o bus de datos con las instrucciones precisas al **Núcleo de interfaz de Memoria** donde finalmente el bus ingresa al Núcleo de Memoria donde se almacenará, modificará o se copiará según la instrucción que tenga.
 
