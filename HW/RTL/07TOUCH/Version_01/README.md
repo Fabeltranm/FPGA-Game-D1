@@ -24,7 +24,7 @@ Cada capa conductora tratada con un material conductor resistivo transparente, n
 •	Después conectamos al convertidor analógico-digital el terminal Y+ y una tensión continua entre los terminales X+ y X- y repetimos el mismo proceso para calcular la coordenada "Y" del punto de contacto.
 
 ![dg - 2](https://user-images.githubusercontent.com/14281085/30242372-e5f8c06e-955a-11e7-94c7-d04a945a26d1.png)
-Dedo tocando pantalla táctil resistiva
+<br />Dedo tocando pantalla táctil resistiva
 
 En algunos tipos de pantalla se puede medir además la coordenada Z o presión que se ha ejercido sobre la pantalla táctil. Para esto hay que conocer la resistencia de cada "plato". Para este tipo de medidas más complejas se necesitan más terminales para calibrar la pantalla, ya que la resistencia de los "platos" varía con la temperatura ambiente.
 
