@@ -16,7 +16,7 @@ Es un tipo de pantallas táctiles muy usado. La pantalla táctil propiamente dic
 Hay varios tipos de pantallas resistivas según el número de hilos conductores que usan, entre cuatro y ocho. Todas se basan en el mismo sistema
 
 ![dg - 1](https://user-images.githubusercontent.com/14281085/30242353-8e0081bc-955a-11e7-9235-ed86b76143a0.png)
-\\Esquema pantalla resistiva
+Esquema pantalla resistiva
 
 Cada capa conductora tratada con un material conductor resistivo transparente, normalmente óxido de indio y estaño (In2O3)9(SnO2), tiene una barra conductora en dos lados opuestos como en la figura. Una de las capas sirve para medir la posición en el eje X y la otra en el eje Y.
 
