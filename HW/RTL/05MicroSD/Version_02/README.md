@@ -30,10 +30,11 @@ La señal **START** activa el **CINM** (módulo de inicialización de tarjetas) 
 **_2. Diagrama de flujo de lectura y escritura de la tarjeta._**
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/memoria.png).
+La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura. La parte izquierda del diagrama describe la operación de lectura y la parte derecha la operacion de escritura. La unidad de control decide en dos diferente comandos(17 - 18) para el modulo de lectura dependiendo de el valor de señal, este se enviará a través  del MOSI, y se tendrá una respuesta de la tarjeta a través del MISO e iniciará la lectura de los datos de la tarjeta junto con los bits CRC. En cuanto a la escritura el controlador genera el comando para la escritura(24 - 25) y empieza a escribir los datos. Al finalizar la escritura de datos los bits CRC son enviados a través de la linea MISO, indicando si la operación fue exitosa o no, en caso negativo se reinicia la escritura de los datos. Al completar la lectura o escritura el sistema verificará la señal de reset para decidir si inicializar la tarjeta nuevamente o esperar una nueva señal de lectura o escritura 
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estructural.png).
 
 ## Diagrama de Estados:
 
