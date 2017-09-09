@@ -31,6 +31,8 @@ La prioridad o esencia del del sistema es la **Solicitud de Control** y la **Sol
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/DiagramaFuncional.jpg).
 
+Imagen tomada de [1].
+
 
 ## Descripción funcional:
 
@@ -54,5 +56,5 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## referencias:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+[1] https://es.wikipedia.org/wiki/Serial_Peripheral_Interface#/media/File:SPI_single_slave.svg
 
