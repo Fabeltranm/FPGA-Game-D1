@@ -1,3 +1,4 @@
+## Almacenamiento en microSD
 
 ## Integrantes del equipo de trabajo:
 
@@ -13,7 +14,7 @@
 La comunicación de la micro SD se basa en la interfaz de 8 pines (**reloj**, línea de comandos / Master Out Slave In (**MOSI**), líneas 4xData / Master In Slave Out (**MISO**) y **3xPower**). El protocolo de comunicación que admite la tarjeta para la inicialización es el protocolo **SPI** (Serial Peripheral Interface).  El funcionamiento del sistema se basa en 5 módulos diferentes: módulo de inicialización de tarjetas (**CINM**), módulo inactivo (**IM**), módulo de lectura de tarjetas (**CRM**), módulo de escritura de tarjetas (**CWM**) y módulo de decisión (**DM**). Junto a los módulos hay una **CU** (unidad de control) para supervisar y controlar las actividades de cada módulo.
 
 ## Descripción de la caja Funcional  (in/out)
-La caja negra del proyecto de almacenamiento en microSD muestra dos bloques funcionales que especifican en protocolo SPI, el bloque "MASTER" muestra 6 señales de entrada, **R/W** describe lo que queremos hacer con la tarjeta, **R/W=1** indica que queremos leer información, con **R/W=0** indica que queremos escribir en ella. **dataIN** es un vector de 16 bits, con el cual indicamos la información a guardar, **EN** inicia los procesos dentro de "MASTER", **RESET** reinicia todos los procesos y se regresa al punto inicial. **CLK** es la señal de reloj, sincroniza los procesos en "MASTER" así también es enviada hacia el "SLAVE" la cual sincroniza el intercambio de datos, por ultimo la señal **adress** indica la dirección de memoria la microSD.
+La caja negra del proyecto de almacenamiento en microSD muestra dos bloques funcionales que especifican en protocolo SPI, el bloque "MASTER" muestra 6 señales de entrada, **R/W** describe lo que queremos hacer con la tarjeta, **R/W=1** indica que queremos leer información, con **R/W=0** indica que queremos escribir en ella. **dataIN** es un vector de 16 bits, con el cual indicamos la información a guardar, **EN** inicia los procesos dentro de "MASTER", **RESET** reinicia todos los procesos y se regresa al punto inicial. **CLK** es la señal de reloj, sincroniza los procesos en "MASTER" así también es enviada hacia el "SLAVE" la cual sincroniza el intercambio de datos, por ultimo la señal **adress** un vector de 8 bits, indica las direcciones de memoria la microSD.
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/bloques.png).
 
