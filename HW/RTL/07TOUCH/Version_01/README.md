@@ -36,7 +36,7 @@ Las pantallas táctiles resistivas tienen la ventaja de que pueden ser usadas co
 El diagrama de caja Funcional nos ayuda a identificar claramente las entradas y salidas y estudiar las relaciones que existen entre ellas, permitiendo así maximizar la eficiencia de los sistemas sin tener que introducirnos en los procesos de la pantalla Touch.
 
 ![dg - 3](https://user-images.githubusercontent.com/14281085/30257035-b95809fa-9674-11e7-9fe8-4ba69a92e010.png)
-g
+<br />Diagrama de caja funcional planteado por el grupo de trabajo
 
 si deseamos saber cómo funciona el dispositivo entonces nos vemos obligados a destapar “la Caja Negra” y estudiar ese subsistema en forma más precisa. Con los siguientes diagramas
 
