@@ -16,7 +16,7 @@ El sistema de ultrasonido se encarga de medir la distancia con el uso de los sen
 <!--
 La caja negra del sistema de ultrasonido tiene como entradas un trigger (trigg) para el conteo del tiempo y las entradas del circuito análogo de ultrasonido. La salida es la distancia calculada. Además, las señales INIT(entrada) y DONE(salida),  se utilizan para iniciar el proceso de medición y para indicar que el resultado está disponible, respectivamente.
 
-![Alt text](03_document/img/UltrasonidoDiagramaCajaNegra.jpg)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_02/03_document/img/UltrasonidoDiagramaCajaNegra.jpg)
 -->
 
 
