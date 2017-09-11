@@ -3,9 +3,8 @@
 ## Integrantes del equipo de trabajo:
 
 ### 1 Christian Camilo Cuestas Ibáñez cccuestasi@unal.edu.co
-### 2 Juliana Lozano Peña jlozanop@unal.edu.co
-### 3 Jonathan Smit Moreno Sánchez josmorenosa@unal.edu.co
-### 4 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
+### 2 Jonathan Smit Moreno Sánchez josmorenosa@unal.edu.co
+### 3 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
 
 ## Descripción general del sistema: (tomado del documento de clase)
 
