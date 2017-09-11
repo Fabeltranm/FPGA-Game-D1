@@ -6,7 +6,7 @@
 
 ### 2 Heriberto Forero Correa hforeroc@unal.edu.co
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 3 Adriana Mercedes Rivera Gonzalez correo@electronico
 
 
 ## Descripción general del sistema: 
