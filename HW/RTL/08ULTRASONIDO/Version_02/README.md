@@ -20,7 +20,7 @@ La señal **INIT**(de entrada) se utiliza para dar inicio al proceso de medició
 
 ## Descripción Estructural:
 
-El sistema consta de 3 bloques: un Divisor de frecuencia, el Generador de pulsos y el Divisor entre 58. El divisor de frecuencia transforma la señal de 100MHz (**clk**) en una señal de 1MHz, necesario para el conteo del tiempo en microsegundos. Entrega al bloque Generador de pulsos una señal **clk** de 1MHz. 
+El sistema consta de 3 bloques: un Divisor de frecuencia, el Generador de pulsos y el Divisor entre 58. El divisor de frecuencia transforma la señal de 100MHz (**clk**) en una señal de 1MHz, necesario para el conteo del tiempo en microsegundos; y entrega al bloque Generador de pulsos una señal **clk** de 1MHz. El Generador de pulsos se encarga de contar el tiempo en microsegundos, enviar por la salida **trigg** un pulso de 10uS al inicio de la medición y contar el tiempo que demora la señal de la entrada **ECHO** en llegar. Cuando **ECHO** se hace 1 lógico, se detiene el conteo y se hace saber  que se realizó la medición(**DONE**=1) y el dato del tiempo está listo en **COUNT** para transformarlo en distancia por el Divisor entre 58. Este divisor obtiene el valor de **COUNT** y lo divide entre 58 de forma binaria, entrega el resultado por la salida **d** y establece que la salida **DONE** es 1, para hacer saber que la medición de la distancia se ha completado.
 
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_02/03_document/img/UltrasonidoDiagramaEstructural.jpg)
