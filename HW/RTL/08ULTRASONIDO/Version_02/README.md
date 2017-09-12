@@ -5,23 +5,18 @@
 ### 1 Christian Camilo Cuestas Ibáñez cccuestasi@unal.edu.co
 ### 2 Jonathan Smit Moreno Sánchez josmorenosa@unal.edu.co
 ### 3 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
-
 ## Descripción general del sistema: (tomado del documento de clase)
 
-El sistema de ultrasonido se encarga de medir la distancia con el uso de los sensores de ultrasonido y su circuito análogo que suministra un pulso tras detectar la onda de vuelta. Hay un contador que hace un conteo del tiempo en el que se da la orden, hasta cuando recibe de vuelta el pulso, y este, por conveniencia, se mide con el mismo periodo de la onda ultrasónica, para dar uso posterior a su longitud de onda y tratar distancias. El contador manda el tiempo que se contó entre pulso mandado y recibido, para pasarlo a una adecuación del dato, haciendo uso de la proporción entre periodo contado y el de la onda ultrasónica, así como la distancia recorrida con la longitud de onda, se ultimizan los detalles y es entregado como un valor representativo de la distancia.
+El sistema de ultrasonido se encarga de medir la distancia con el uso de módulos de oscilación ultrasónica HC-SR04. El sistema se encarga de controlar el sensor, contar el tiempo de regreso de la onda y calcular la distancia en función del tiempo. El módulo HC-SR04 recibe un pulso de 10uS, a través del pin Trig, iniciando el envío de la onda. El sensor, al rebotar la onda en un objeto y llegar, envía al sistema de ultrasonido un pulso largo, de tiempo proporcional a la distancia. El sistema cuenta el tiempo desde el envío del pulso (por la salida **trigg*) hasta la recepción del eco (por 
+la entrada **ECHO**). Luego, calcula la distancia con la fórmula: tiempo(uS)/58= distancia(cm). Finalmente, envía por la salida **d** el dato de 8-bits de la distancia.
 
 ## Descripción de la caja Funcional  (in/out)
 
-<!--
-La caja negra del sistema de ultrasonido tiene como entradas un trigger (trigg) para el conteo del tiempo y las entradas del circuito análogo de ultrasonido. La salida es la distancia calculada. Además, las señales INIT(entrada) y DONE(salida),  se utilizan para iniciar el proceso de medición y para indicar que el resultado está disponible, respectivamente.
+La caja negra del sistema de ultrasonido tiene como salida **d**, que es un dato de 8-bits con la distancia calculada. También, tiene como salida hacia el sensor de ultrasonido un trigger (**trigg**) para que empiece la oscilación. La entrada **ECHO** recibida del sensor al momento de recibir el eco de la oscilación.
 
-![Diagrama Caja Negra](/03_document/img/UltrasonidoDiagramaCajaNegra.jpg)
--->
+La señal **INIT**(de entrada) se utiliza para dar inicio al proceso de medición. La señal **DONE**(de salida) para indicar que el resultado de la medición ya está disponible en la salida **d**.
 
-
-Sus entradas son **clk**, **Tro**, y **f**, y sus salidas son **Ren**, el bus **R** de tamaño 10, **Rm** y el bus**i** de tamaño 3. La entrada **clk** resulta siendo el <i>clock</i>, o el reloj que requiere el sistema, **Tro** es una entrada de confirmación del dato que se entrega, que resulta siendo **R**, en este caso, la entrada **f** es el pulso que da la orden de funcionamiento para calcular la distancia en ese instante de un objeto. La salida **Ren** es un calor de confirmación para que se reciba el dato **R**, y **Rm** es una salida para dar a entender si está dispuesto u ocupado el sistema. El bus **i** es la salida que da el valor de identificación del Bloque de ultrasonido.
-
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_02/03%20document/img/Caja%20Funcional%20ultrasonido)
+![Diagrama](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_02/03_document/img/UltrasonidoDiagramaCajaNegra.png)
 
 
 ## Descripción funcional:
@@ -52,7 +47,10 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## referencias:
+<!--
 <ul> 
 <li><b>Raúl Alvarez.</b> <i>Cómo Medir Distancias con el Sensor Ultrasónico PING</i>
 <p>URL: <a href="url">http://tecbolivia.com/index.php/articulos-y-tutoriales-microcontroladores/17-como-medir-distancias-con-el-sensor-ultrasonico-ping</a></p></li> 
 </ul> 
+-->
+
