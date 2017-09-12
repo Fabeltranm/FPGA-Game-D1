@@ -21,7 +21,7 @@ El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por 
 
 ## Descripción de la caja Funcional  (in/out)
 
-<img width="891" alt="captura de pantalla 2017-09-11 a las 08 37 53" src="https://user-images.githubusercontent.com/24497588/30277157-94886310-96cc-11e7-905f-3ef9fa0e49fb.png">
+<img width="717" alt="captura de pantalla 2017-09-12 a las 09 15 51" src="https://user-images.githubusercontent.com/24497588/30330605-29effbd8-979b-11e7-9411-98e597466541.png">
 
 ## Descripción funcional:
 
