@@ -16,11 +16,11 @@ En la siguiente imagen se mostrara el modulo de microfono y audio.
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/caja%20negra.png) 
 ## Descripción de la caja Funcional  (in/out)
 
- El siguiente diagrama de bloques nos muestra la caja negra para el funcionamiento del microfono.
+ El siguiente diagrama de bloques nos muestra la caja negra para el funcionamiento del microfono mems SPH0645LM4H-B.
  
- ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/dgb.png)
+ ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/d_B_m.png)
  
-  
+  En el siguiente diagrama de bloque tenemos la caja negra para la salida de audio al MAX98357A.
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/MAX98357A.png)
 
 ## Descripción funcional:
