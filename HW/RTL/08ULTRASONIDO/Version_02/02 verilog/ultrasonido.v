@@ -1,7 +1,7 @@
 module	ultrasound
 (
 	input           clk,
-	input           init,
+	input           enable,
 	input		echo,
 	output   [7:0]  d,
 	output		done,
