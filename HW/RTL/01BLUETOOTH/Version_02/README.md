@@ -21,11 +21,11 @@ La caja funcional tiene como salidas el clock dividido un factor de w, R/W. Las 
 
 ## Descripción funcional:
 
-![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/funcional.png?raw=true)
+![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/DF.png)
 
 ## Descripción Estructural:
 
-![estrutural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/uart.png?raw=true)
+![estrutural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/DE.png)
 
 ## Diagrama de Estados:
 
