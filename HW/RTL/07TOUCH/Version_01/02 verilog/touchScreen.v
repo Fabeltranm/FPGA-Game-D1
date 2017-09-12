@@ -1,5 +1,5 @@
 module touchscreen #(
-	parameter coordinate_x = 0,
-	parameter coordinate_y = 0,
+	parameter serialized_coordinate_x = 1,
+	parameter serialized_coordinate_y = 1,
          
-)(input init, input signal, input pulse, output coordinates);
+)(input RX, output Package XY,output DONE);
