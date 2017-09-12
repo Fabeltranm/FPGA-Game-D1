@@ -21,15 +21,15 @@ En la siguiente imagen se mostrara el modulo de microfono y audio.
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/d_B_m.png)
  
   En el siguiente diagrama de bloque tenemos la caja negra para la salida de audio al MAX98357A.
- ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/MAX98357A.png)
+ ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/d_b_a.png)
 
 ## Descripción funcional:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/dgf.png)
+![]()
 
 ## Descripción Estructural:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/dge.png)
+![]()
 
 ## Diagrama de Estados:
 
