@@ -36,7 +36,7 @@ El módulo de micrófono tiene como entradas **clkout** (1 bit) que es una de la
 
 Como salidas cuenta con **di** que es la información del micrófono y consta de 18 bits, la interfaz de comunicación de este módulo y el FPGA es I2S.
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/microfono.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Driver%20micr%C3%B3fono.jpeg) 
 ### Descripción de la caja funcional (Módulo Altavoz):
 El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salidas del módulo FPGA y se usa para la serialización de los datos para pasarlos a una señal análoga y cuenta con un **fo** (16 bit) son los datos enviados por la FPGA. Como salida cuenta con el parlante (actuador).
 
