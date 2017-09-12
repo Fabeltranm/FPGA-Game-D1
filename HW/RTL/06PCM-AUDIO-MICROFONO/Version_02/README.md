@@ -16,10 +16,11 @@ En la siguiente imagen se mostrara el modulo de microfono y audio.
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/caja%20negra.png) 
 ## Descripción de la caja Funcional  (in/out)
 
- El diagrama de bloques muestra la entrada que tendra el microfono a la FPGA para el tramtamiento de los datos esta entrada sera de 16bits. Tambien nos muestra la salida que tiene la FPGA al amplificador de audio la cual tendra 16bits.
+ El siguiente diagrama de bloques nos muestra la caja negra para el funcionamiento del microfono.
+ 
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/dgb.png)
  
- En el siguiente diagrama se muestra el amplificador de audio MAX98357A, con las entradas mas especificadas. 
+  
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/MAX98357A.png)
 
 ## Descripción funcional:
