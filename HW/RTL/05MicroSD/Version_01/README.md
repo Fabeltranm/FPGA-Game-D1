@@ -12,8 +12,9 @@
 Este sistema permite la comunicación con un dispositivo de almacenamiento llamado "micro SD". Dicha comunicación puede realizar funciones de lectura y almacenamiento de datos. Para establecer dicha comunicación, se utiliza un protoolo serial llamado SPI (Serial Peripheral Interface). Este protocolo maneja la arquitectura Maestro-Esclavo, que permite la transferencia de datos entre un dispositivo maestro y varios esclavos. Para este caso solo existira un esclavo (tarjeta micro SD).
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/ProtocoloSPI.png)
+
 Imagen tomada de [1].
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Pasa%20bajas%20A.PNG)
+
 El protocolo SPI se compone de un bus de cuatro lineas las cuales son:
 
 1. Reloj (CLK).
