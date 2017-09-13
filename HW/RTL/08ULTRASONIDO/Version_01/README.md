@@ -27,7 +27,6 @@ Receptor
 
 ## Diagrama de Estados:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Arquitectura del periférico:
 
