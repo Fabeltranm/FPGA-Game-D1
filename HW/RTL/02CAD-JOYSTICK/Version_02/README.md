@@ -22,7 +22,7 @@ El sistema que se va a implementar utiliza un módulo joystick que envía una se
 
 ## Descripción Estructural:
 
-![estructural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/aiuda.png)
+
 
 ## Diagrama de Estados:
 
