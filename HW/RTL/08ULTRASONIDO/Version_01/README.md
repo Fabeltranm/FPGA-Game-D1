@@ -26,7 +26,7 @@ Receptor
 ![descripcion estructural](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
 
 ## Diagrama de Estados:
-![diagrama de estados](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
+![diagrama de estados](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_01/03%20document/imgs/estados.PNG)
 
 
 ## Arquitectura del periférico:
