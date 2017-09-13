@@ -22,16 +22,17 @@ Es un dispositivo que realiza la conversión de una señal continua en una seña
 
 ## Descripción de la caja Funcional  (in/out)
 
-![bloques](https://user-images.githubusercontent.com/31439403/29907174-77229d04-8ddf-11e7-96de-2a22b6c0a846.png)
-
+![caja negra](https://user-images.githubusercontent.com/31439403/30362160-50886c82-9820-11e7-9d9b-6d6db866e352.PNG)
 
 ## Descripción funcional:
 
-![diagrama funcional j](https://user-images.githubusercontent.com/31463503/29928098-b317064e-8e2d-11e7-92fb-ff6068bf0b65.jpg)
+![diagrama funcional](https://user-images.githubusercontent.com/31439403/30362243-bc387bde-9820-11e7-97a9-0216e0f1af38.PNG)
+
 
 ## Descripción Estructural:
 
-![joystick](https://user-images.githubusercontent.com/31439403/29906795-f6cbc6fa-8ddc-11e7-90c6-65a2d0b1e08b.png)
+![diagrama estructural](https://user-images.githubusercontent.com/31439403/30362227-b0d363da-9820-11e7-9ae1-65f04cba2885.png)
+
 
 ## Diagrama de Estados:
 
