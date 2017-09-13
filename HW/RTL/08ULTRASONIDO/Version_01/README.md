@@ -26,6 +26,7 @@ Receptor
 ![descripcion estructural](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
 
 ## Diagrama de Estados:
+![diagrama de estados](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
 
 
 ## Arquitectura del periférico:
