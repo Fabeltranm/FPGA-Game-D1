@@ -14,16 +14,16 @@ El módulo de ultrasonido HC-SR04 es un sensor de distancias por ultrasonidos ca
 ## Descripción de la caja Funcional  (in/out)
 
 La caja funcional del módulo ultrasonido tiene como entradas, Pulse la cual introduce un pulso de 10uS. Echo en donde se recibe la señal luego de que esta haya rebotado con algún objeto cercano. Clock parte crucial ya que permite establecer el intervalo de tiempo entre la emisión y recepción o la cantidad de tiempo en que la señal recibida se encuentre en el nivel alto, lo que permitiría calcular las distancias. Init que permitiría iniciar el proceso de emisión y recepción de la señal de ultrasonido. Como salidas se tiene Trigger desde la cual se emite la señal de ultrasonido y Distance la cual me proporciona el valor calculado de la distancia del obstáculo cercano.<br />
-![caja funcional](https://user-images.githubusercontent.com/31454781/30006006-975a234e-90b4-11e7-8bf2-7e7da36b7e62.png)
+![caja funcional](https://user-images.githubusercontent.com/31454781/30354225-e3ce2d2c-97f0-11e7-9dac-c3947ffb93b8.png)
 
 ## Descripción funcional:
 Emisor
 ![diagrama funcional emisor](https://user-images.githubusercontent.com/31454781/30006058-94d65aba-90b5-11e7-9be5-b66a2653858f.png)
 Receptor
-![diagrama funcional receptor](https://user-images.githubusercontent.com/31454781/30006061-a0a59d4c-90b5-11e7-828b-ee08d7c5b5dc.png)
+![diagrama funcional receptor](https://user-images.githubusercontent.com/31454781/30354235-f4319370-97f0-11e7-8e76-6ad0ec90db2c.png)
 
 ## Descripción Estructural:
-![descripcion estructural](https://user-images.githubusercontent.com/31454781/30006112-7b5c3f0e-90b6-11e7-9ca3-5575d32b479b.png)
+![descripcion estructural](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
 
 ## Diagrama de Estados:
 
