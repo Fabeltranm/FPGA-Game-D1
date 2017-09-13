@@ -4,18 +4,13 @@
 
 ### 1 Juan David González Muñoz judgonzalezmu@unal.edu.co
 
-### 2 Nombre1 nombre2 apelido1 apellido2 correo@electronico
-
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+## Descripción general del sistema:
 
 
-## Descripción general del sistema: (tomado del documento de clase)
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Descripción de la caja Funcional  (in/out)
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 
 ## Descripción funcional:
 
