@@ -6,7 +6,7 @@
 
 ### 2 Heriberto Forero Correa hforeroc@unal.edu.co
 
-### 3 Adriana Mercedes Rivera Gonzalez correo@electronico
+### 3 Adriana Mercedes Rivera Gonzalez amriverag@unal.edu.co
 
 
 ## Descripción general del sistema: 
@@ -31,23 +31,32 @@ En algunos tipos de pantalla se puede medir además la coordenada Z o presión q
 Las pantallas táctiles resistivas tienen la ventaja de que pueden ser usadas con cualquier objeto, un dedo, un lápiz, un dedo con guantes, etc. Son económicas, fiables y versátiles. Por el contrario, al usar varias capas de material transparente sobre la propia pantalla, se pierde bastante luminosidad. Por otro lado, el tratamiento conductor de la pantalla táctil es sensible a la luz ultravioleta, de tal forma que con el tiempo se degrada y pierde flexibilidad y transparencia.
 
 
+
 ## Descripción de la caja Funcional  (in/out)
 
 El diagrama de caja Funcional nos ayuda a identificar claramente las entradas y salidas y estudiar las relaciones que existen entre ellas, permitiendo así maximizar la eficiencia de los sistemas sin tener que introducirnos en los procesos de la pantalla Touch.
 
-![dg - 3](https://user-images.githubusercontent.com/14281085/30257035-b95809fa-9674-11e7-9fe8-4ba69a92e010.png)
+si deseamos saber cómo funciona el dispositivo entonces nos vemos obligados a destapar “la Caja Negra” y estudiar ese subsistema en forma más precisa. Con los subsiguientes diagramas
+
+![dcn](https://user-images.githubusercontent.com/14281085/30340906-b2a2949a-97b9-11e7-9be5-c29b4c2487fc.png)
 <br />Diagrama de caja funcional planteado por el grupo de trabajo
 
-si deseamos saber cómo funciona el dispositivo entonces nos vemos obligados a destapar “la Caja Negra” y estudiar ese subsistema en forma más precisa. Con los siguientes diagramas
+tiene como entradas los datos serializados por el TOUCHSCREEN-CONTROLLER ETP-4500UG-B, llamada Rx, con señales de 1 bits cada una. la salida es el resultado de la posición de los datos sobre una grilla planteada sobre la pantalla, en la que los paquetes funcionan a la frecuencia del reloj del controlador (6.25*10^-3 s). Ademas, la señal de reloj. La señal DONE de salida, se utiliza para indicar que se envió un resultado, debido a una puslion hecha sobre el screen
+
 
 
 ## Descripción funcional:
+Representación simbólica de las acciones en un sistema por medio de bloques funcionales enlazados por líneas de acción.Las líneas de acción no representan necesariamente conexiones físicas.En el contexto del control automático, un diagrama funcional es a veces denominado simplemente diagrama de bloques.
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![df](https://user-images.githubusercontent.com/14281085/30354033-aee00e7e-97ef-11e7-8f62-cc3cc24b4cc6.png)
+<br />Descripción funcional planteado por el grupo de trabajo
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+es la representación gráfica de los diferentes procesos de un sistema y el flujo de señales donde cada proceso tiene un bloque asignado y éstos se unen por flechas que representan el flujo de señales que interaccionan entre los diferentes procesos
+
+![de](https://user-images.githubusercontent.com/14281085/30379659-dd92b3b2-985c-11e7-9805-4e012169c63e.png)
+<br />Descripción Estructural funcional planteado por el grupo de trabajo
 
 ## Diagrama de Estados:
 
@@ -64,4 +73,3 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ## referencias:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
