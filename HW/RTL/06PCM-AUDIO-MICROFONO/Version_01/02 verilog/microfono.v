@@ -4,8 +4,8 @@ module microfono
 	output    [7:0]  Adress,
 	input     Clk1,
 	input     Reset,
-	input     Done,
-	output     [17:0]  Dataout
+	output     Done,
+	output    [17:0]  Dataout
 	input     data,
 	input     select,
 	output     Clk2,	
