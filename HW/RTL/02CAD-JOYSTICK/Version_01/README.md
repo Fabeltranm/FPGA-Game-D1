@@ -22,7 +22,7 @@ Es un dispositivo que realiza la conversión de una señal continua en una seña
 
 ## Descripción de la caja Funcional  (in/out)
 
-![caja negra](https://user-images.githubusercontent.com/31439403/30362160-50886c82-9820-11e7-9d9b-6d6db866e352.PNG)
+
 
 ## Descripción funcional:
 
