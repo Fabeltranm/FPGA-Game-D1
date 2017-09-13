@@ -32,9 +32,8 @@ Finalmente este módulo tiene 3 salidas:
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/fpga.jpg) 
 ### Descripción de la caja funcional (Módulo Micrófono MEMS):
-El módulo de micrófono tiene como entradas **clkout** (1 bit) que es una de las salidas del módulo fpga y se usa para realizar todo el poceso de digitalización, esta también el **enable** (1 bit) para iniciar el modulo  y esta un **select** (1 bit) que se aplicara más adelante para el seriado de dos micrófonos.
-
-Como salidas cuenta con **di** que es la información del micrófono y consta de 18 bits, la interfaz de comunicación de este módulo y el FPGA es I2S.
+El driver del micrófono tiene como entreda la **información** (señal de voz), y un **reset** que viene directo de la unidad central, como salidas tiene un **ws** y un **select** que se encargan de ordenar al micrófono si comienza a grabar o permanece apagado, una salida de **datos** en paralelo de 18 bits y un **address** que selecciona la dirección de memoria en la cual se va a guardar la información. 
+El módulo de micrófono tiene como entrada **clkout** (1 bit) que es una de las salidas del módulo fpga y se usa para realizar todo el poceso de digitalización. La interfaz de comunicación de este módulo y el FPGA es I2S.
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Driver%20micr%C3%B3fono.jpeg) 
 ### Descripción de la caja funcional (Módulo Altavoz):
