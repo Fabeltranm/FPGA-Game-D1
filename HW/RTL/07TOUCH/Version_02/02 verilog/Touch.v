@@ -1,10 +1,10 @@
 module Touch	(
 
-				output 		SDA1,
-				input		SDA2,
-				input 		SCL
-
-			 );
+	output 		data,
+	output		DONE,
+	output		clk,
+	input 		Rx
+);
 
 
 endmodule
