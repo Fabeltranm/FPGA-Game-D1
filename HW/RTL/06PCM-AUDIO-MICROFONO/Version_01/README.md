@@ -32,14 +32,14 @@ Finalmente este módulo tiene 3 salidas:
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/fpga.jpg) 
 ### Descripción de la caja funcional (Módulo Micrófono MEMS):
-El driver del micrófono tiene como entreda la **información** (señal de voz), y un **reset** que viene directo de la unidad central, como salidas tiene un **ws** y un **select** que se encargan de ordenar al micrófono si comienza a grabar o permanece apagado, una salida de **datos** en paralelo de 18 bits y un **address** que selecciona la dirección de memoria en la cual se va a guardar la información. 
+El driver del micrófono tiene como entreda la **información** (señal de voz), y un **reset** que viene directo de la unidad central, como salidas tiene un **ws** y un **select** que se encargan de ordenar al micrófono si comienza a grabar o permanece apagado, una salida de **datos** en paralelo de 18 bits y un **address** que selecciona la dirección de memoria en la cual se va a guardar la información y un **DONE** que envia la señal al módulo central de que el proceso fue realizado correctamente. 
 El módulo de micrófono tiene como entrada **clkout** (1 bit) que es una de las salidas del módulo fpga y se usa para realizar todo el poceso de digitalización. La interfaz de comunicación de este módulo y el FPGA es I2S.
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Driver%20micr%C3%B3fono.jpeg) 
 ### Descripción de la caja funcional (Módulo Altavoz):
-El módulo de altavoz tiene como entradas **clkout** (1 bit) es una de las salidas del módulo FPGA y se usa para la serialización de los datos para pasarlos a una señal análoga y cuenta con un **fo** (16 bit) son los datos enviados por la FPGA. Como salida cuenta con el parlante (actuador).
+El módulo de altavoz tiene como entradas **Bclk** (1 bit) es una de las salidas del módulo FPGA y se usa para la serialización de los datos para pasarlos a una señal análoga y cuenta con un **data** (16 bit) son los datos enviados por la FPGA. Como salida cuenta con el parlante (actuador) un **rlclk** que permite medir el tiempo de reproducción del sonido, un **SD_MODE** el cual se encarga de ordenar encenderse al altavoz y que parlante va a sonar y un **DONE** que envia la señal al módulo central de que el proceso fue realizado correctamente .
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/altavoz.jpg) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Driver%20altavoz.jpeg) 
 ### Descripción funcional (Divisor de frecuencia):
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/div_funcional.png) 
