@@ -2,7 +2,7 @@
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Juan David González Muñoz judgonzalezmu@unal.edu.co
+###  Juan David González Muñoz judgonzalezmu@unal.edu.co
 
 ## Descripción general del sistema:
 
