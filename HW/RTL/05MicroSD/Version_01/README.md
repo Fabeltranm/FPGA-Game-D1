@@ -13,7 +13,7 @@ Este sistema permite la comunicación con un dispositivo de almacenamiento llama
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/ProtocoloSPI.png)
 Imagen tomada de [1].
-
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Pasa%20bajas%20A.PNG)
 El protocolo SPI se compone de un bus de cuatro lineas las cuales son:
 
 1. Reloj (CLK).
