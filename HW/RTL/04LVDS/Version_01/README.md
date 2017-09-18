@@ -21,17 +21,22 @@ El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por 
 
 ## Descripción de la caja Funcional  (in/out)
 
-<img width="717" alt="captura de pantalla 2017-09-12 a las 09 15 51" src="https://user-images.githubusercontent.com/24497588/30330605-29effbd8-979b-11e7-9411-98e597466541.png">
+<img width="742" alt="screen shot 2017-09-18 at 14 24 47" src="https://user-images.githubusercontent.com/24497588/30560323-366c268e-9c7d-11e7-90d5-49ca1e79f223.png">
 
 ## Descripción funcional:
 
+Diagrama funcional del serializador:
 ![serializador](https://user-images.githubusercontent.com/24497588/30371217-7e0deda2-983f-11e7-8707-dae8d80d8b0b.png)
 
+Diagrama funcional del serializador:
 ![loadimage](https://user-images.githubusercontent.com/24497588/30371247-984c78fa-983f-11e7-9301-2d7edebb2b50.png)
 
 ## Descripción Estructural:
 
 ![structure](https://user-images.githubusercontent.com/24497588/30371264-abbc0e1e-983f-11e7-8c1f-0c69a41d7e8c.png)
+
+Diagrama estructural del serializador:
+Diagrama estructural del procesamiento de imagen:
 
 ## Diagrama de Estados:
 
