@@ -35,7 +35,7 @@ El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por 
 
 ## Diagrama de Estados:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![diagrama de estados](https://user-images.githubusercontent.com/24497588/30560088-6b59721c-9c7c-11e7-9204-cdc60257bdd9.png)
 
 ## Arquitectura del periférico:
 
@@ -45,7 +45,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## referencias:
+## Referencias:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+https://en.wikipedia.org/wiki/Low-voltage_differential_signaling
+http://www.ti.com/lit/ug/slld009/slld009.pdf
+http://waf-e.dubudisk.com/hidisplay.co.kr/hidisplaycokr/O185Q3t/DubuDisk/public/HB140WX1-100.pdf
 
