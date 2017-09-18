@@ -18,7 +18,7 @@ La caja funcional del módulo ultrasonido tiene como entradas, Pulse la cual int
 
 ## Descripción funcional:
 Emisor
-![diagrama funcional emisor](https://user-images.githubusercontent.com/31454781/30379442-20066dac-985c-11e7-962b-d2036d90ba60.png)
+![diagrama funcional emisor](https://user-images.githubusercontent.com/31454781/30545513-75702ee4-9c4f-11e7-8f86-c3fd65b3c197.png)
 Receptor
 ![diagrama funcional receptor](https://user-images.githubusercontent.com/31454781/30354235-f4319370-97f0-11e7-8e76-6ad0ec90db2c.png)
 
