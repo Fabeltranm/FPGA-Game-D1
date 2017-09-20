@@ -38,7 +38,7 @@ La caja negra o caja funcional posee una entrada de relog (clk) al dispositivo m
 
 ## Descripción funcional:
 
-El diagrama funcional inicia con la lectura de los valores de las entrada de reloj y Enable. Adicionalmente se asume que Done esta en 1, es decir, que el driver esta listo para recibir ordenes. En el momento en el que Enable tenga 1 en su estado, se procede a cargar los valores de R/W y addr. Despues de ello, se verifica el valor que posee la entrada R/W y apartir de el se procede dos formas:
+El diagrama funcional inicia con la lectura de los valores de las entrada de reloj y Enable. Adicionalmente se asume que Done esta en 1, es decir, que el driver esta listo para recibir ordenes. En el momento en el que Enable sea igual a 1, se procede a cargar los valores de R/W y addr. Despues de ello, se verifica el valor que posee la entrada R/W y apartir de el se procede dos formas:
 
   1. El proceso de almacenamiento de datos posee un proceso que serializa los datos ingresados paralelamente en cada uno de los pines del arreglo Data(in) y posteriormente se hace uso del protocolo SPI para transferencia de datos con la micro SD.
   2. El proceso de lectura de datos toma la información deseada por medio del protocolo SPI (almacenada en la micro SD) y posteriormente se realiza un proceso de conversion de tipo serial a paralelo el cual se entrega por el bus de salida Data(out)[15:0]
