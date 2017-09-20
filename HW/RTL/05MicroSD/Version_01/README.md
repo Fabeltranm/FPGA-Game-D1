@@ -38,7 +38,6 @@ La caja negra o caja funcional posee una entrada de relog (clk) al dispositivo m
 
 ## Descripción funcional:
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/DiagramaFuncional.png)
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Funcional.PNG).
 
 ## Descripción Estructural:
 
