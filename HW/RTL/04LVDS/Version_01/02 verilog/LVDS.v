@@ -1,10 +1,12 @@
-module LVDS
+module LVDS(CLK, Image, DataEnable, Channel0, Channel1, Channel2)
 	( 
 	input CLK,
 	input Image,
 	input DataEnable,
-	output Channel 0,
-	output Channel 1,
-	output Channel 2,
+	output CLK,	
+	output Channel0,
+	output Channel1,
+	output Channel2,
 	);
+	end
 endmodule
