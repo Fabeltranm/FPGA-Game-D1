@@ -27,7 +27,7 @@ Receptor
 
 ## Diagrama de Estados:
 ![estados emisor](https://user-images.githubusercontent.com/31454781/30724531-fa474920-9f03-11e7-9016-4c70597b42db.png)
-![estados emisor](https://user-images.githubusercontent.com/31454781/30724531-fa474920-9f03-11e7-9016-4c70597b42db.png)
+![estados receptor](https://user-images.githubusercontent.com/31454781/30724534-fdb67ae0-9f03-11e7-8932-01634883abae.png)
 
 ## Arquitectura del periférico:
 
