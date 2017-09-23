@@ -14,6 +14,8 @@ Como micrófono se implementara los dos SPH0645LM4H-B del cual saldrá datos de 
 
 * Caja negra driver microfono.
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/CAJA%20NEGRA%20MICROFONO.jpeg)
+ 
+ 
 * Caja negra driver audio.
  ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/CAJA%20NEGRA%20MAX.jpeg)
  
