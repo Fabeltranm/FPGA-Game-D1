@@ -14,7 +14,7 @@ El módulo de ultrasonido HC-SR04 es un sensor de distancias por ultrasonidos ca
 ## Descripción de la caja Funcional  (in/out)
 
 La caja funcional del módulo ultrasonido tiene como entradas, Pulse la cual introduce un pulso de 10uS. Echo en donde se recibe la señal luego de que esta haya rebotado con algún objeto cercano. Clock parte crucial ya que permite establecer el intervalo de tiempo entre la emisión y recepción o la cantidad de tiempo en que la señal recibida se encuentre en el nivel alto, lo que permitiría calcular las distancias. Init que permitiría iniciar el proceso de emisión y recepción de la señal de ultrasonido. Como salidas se tiene Trigger desde la cual se emite la señal de ultrasonido y Distance la cual me proporciona el valor calculado de la distancia del obstáculo cercano.<br />
-![caja funcional](https://user-images.githubusercontent.com/31454781/30354225-e3ce2d2c-97f0-11e7-9dac-c3947ffb93b8.png)
+![caja funcional](FPGA-Game-D1/HW/RTL/08ULTRASONIDO/Version_01/03 document/imgs/Caja negra ultrasonido.png)
 
 ## Descripción funcional:
 Emisor
