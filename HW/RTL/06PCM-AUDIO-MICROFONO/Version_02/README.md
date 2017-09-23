@@ -24,7 +24,7 @@ Como micrófono se implementara los dos SPH0645LM4H-B del cual saldrá datos de 
 
 * Diagrama funcional driver microfono mems SPH0645LM4H-B:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/DIAGRAMA%20DE%20FLUJO%20MICROFONO.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/DIAGRAMA%20DE%20FLUJO%20MICROFONO.jpeg)
 
 * Diagrama funcional del divisor de frecuencia:
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_02/03%20document/DIVISOR%20DE%20FRECUENCIA.png)
