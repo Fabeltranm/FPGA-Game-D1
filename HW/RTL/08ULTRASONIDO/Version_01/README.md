@@ -26,8 +26,8 @@ Receptor
 ![descripcion estructural](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
 
 ## Diagrama de Estados:
-![estados emisor](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_01/03%20document/imgs/estados%20echo.png?raw=true)
-![estados receptor](https://user-images.githubusercontent.com/31454781/30724534-fdb67ae0-9f03-11e7-8932-01634883abae.png)
+![estados emisor](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_01/03%20document/imgs/estados%20ultrasonido.png?raw=true)
+![estados receptor](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_01/03%20document/imgs/estados%20echo.png?raw=true)
 
 ## Arquitectura del periférico:
 
