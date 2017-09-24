@@ -1,4 +1,4 @@
-﻿module	divisor
+﻿module	multiplo
 (
 	input           count,
 	input		enable
