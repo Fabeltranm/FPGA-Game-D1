@@ -48,7 +48,7 @@ El diagrama funcional inicia con la lectura de los valores de las entrada de rel
 
 ## Descripción Estructural:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Diagrama Estructural.png).
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Diagrama Estructural.JPG).
 
 ## Diagrama de Estados:
 
