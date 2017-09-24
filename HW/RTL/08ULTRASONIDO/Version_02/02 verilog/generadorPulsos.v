@@ -1,6 +1,6 @@
 ﻿module	generadorPulsos
 (
 	input		ECHO,
-	output          trigg,
+	output          trigg
 );
  endmodule
