@@ -34,7 +34,6 @@ module Ultrasonido_TB;
 			#50;
 			clk = ~clk;
 		//end
-		// Add stimulus here
 
 	end
       
