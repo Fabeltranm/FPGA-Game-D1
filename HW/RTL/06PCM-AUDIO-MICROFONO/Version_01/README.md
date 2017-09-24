@@ -83,8 +83,7 @@ Y finalmente tiene como parametros
 
 ## Descripción Estructural: 
 
-<a href="https://ibb.co/ni3iRk"><img src="https://preview.ibb.co/jkZZXQ/Whats_App_Image_2017_08_30_at_2_12_28_PM.jpg" alt="Whats_App_Image_2017_08_30_at_2_12_28_PM" border="0"></a>
-
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/estructural.jpg) 
 
 ## Diagrama de Estados:
 
