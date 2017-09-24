@@ -16,30 +16,65 @@ En el módulo del micrófono se tendrá una señal análoga con frecuencia de 1 
 En la segunda etapa (altavoz), entra dicha informacion a un convertidor D/A (PCM) el cual también logra amplificar esta señal para poder ser reproducida.
 
 
-## Descripción de la caja funcional (Modulo Fpga):
-En este módulo se tienen inicialmente dos sub-módulos: divisor de frecuencia y registros. El divisor de frecuencia es necesario para obtener los clocks de sincranización de el módulo de micrófono y de altavoz, para esto se necesita un clock de entrada CLK, un clock de salida CLKOUT y un RESET de entrada para reiniciar el ciclo, adicionalmente se tienen dos parámetros fijos la Fi que es la frecuencia del reloj de la Nexys 4 50MHZ y el Fo que es la Frecuencia de salida que se quiere. 
+## Descripción de la caja funcional (Modulo Microfono):
+En este módulo depende del modulo divisor de frecuencia. El divisor de frecuencia es necesario para obtener los clocks de sincranización de el módulo de micrófono y de altavoz.
 
-El modulo de la FPGA además de los sub-módulos tiene 4 entradas: 
-* **di** datos provenientes del micrófono (conformado por 18 bits) 
-* **int** para inicializar (conformado por 1 bit)
-* **W/R** para indicar si va a repoducir o grabar (conformado por 1 bit)
+Este modulo tiene entradas: 
+* **Data** datos provenientes del micrófono (conformado por 32 bits) de los cuales solo 18 se van a usar para la salida 
+* **Enable** para inicializar (conformado por 1 bit)
+
+Este módulo tiene salidas:
+* **Clk** El clock que necesita el micrófono para modular la señal y enviarla (conformado por 1 bit)
+* **ws** necesario más adelante para seleccionar derecho o izquierdo (conformado por 1 bit)
+* **Dataout** datos de salida serializado (conformado por 1 bit)
 * **done** para indicar que finalizó la acción (conformado por 1 bit)
 
-Finalmente este módulo tiene 3 salidas:
-* **clkout** El clock que necesita el micrófono para modular la señal y enviarla (conformado por 1 bit)
-* **select** necesario más adelante para seleccionar derecho o izquierdo (conformado por 1 bit)
-* **do** datos de salida hacia el altavoz (conformado por 16 bits)
+Y finalmente tiene un parametro
+* **Count** para contar las interacciones 
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/fpga.jpg) 
-### Descripción de la caja funcional (Módulo Micrófono MEMS):
-El driver del micrófono tiene como entreda la **información** (señal de voz), y un **reset** que viene directo de la unidad central, como salidas tiene un **ws** y un **select** que se encargan de ordenar al micrófono si comienza a grabar o permanece apagado, una salida de **datos** en paralelo de 18 bits y un **address** que selecciona la dirección de memoria en la cual se va a guardar la información y un **DONE** que envia la señal al módulo central de que el proceso fue realizado correctamente. 
-El módulo de micrófono tiene como entrada **clkout** (1 bit) que es una de las salidas del módulo fpga y se usa para realizar todo el poceso de digitalización. La interfaz de comunicación de este módulo y el FPGA es I2S.
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/ESmicrofono1.jpg) 
+
 ### Descripción funcional (Módulo Micrófono MEMS):
+Para que el modulo de microfono este activo la frecuencia del clk debe estar ser mayor a 1MHz y tener el voltaje VDD activo, pero esto se garantiza en el divisor de frecuencia.
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Mic.png) 
-### Descripción de la caja funcional (Módulo Altavoz):
-El módulo de altavoz tiene como entradas **Bclk** (1 bit) es una de las salidas del módulo FPGA y se usa para la serialización de los datos para pasarlos a una señal análoga y cuenta con un **data** (16 bit) son los datos enviados por la FPGA. Como salida cuenta con el parlante (actuador) un **rlclk** que permite medir el tiempo de reproducción del sonido, un **SD_MODE** el cual se encarga de ordenar encenderse al altavoz y que parlante va a sonar y un **DONE** que envia la señal al módulo central de que el proceso fue realizado correctamente .
+
+##Descripción de la caja funcional (Módulo Altavoz):
+En este módulo tambien depende de el modulo divisor de frecuencia. 
+
+Este modulo tiene entradas: 
+* **Data** datos provenientes del micrófono ya serializados (conformado por 1 bit) 
+* **Enable** para inicializar (conformado por 1 bit)
+
+Este módulo tiene salidas:
+* **Bclk** El clock que necesita el altavoz para recuperar los datos(conformado por 1 bit)
+* **LRclk** necesario para seleccionar derecho o izquierdo (conformado por 1 bit)
+* **Data_R** datos de salida canal derecho (conformado por 16 bit)
+* **Data_L** datos de salida canal izquierdo (conformado por 16 bit)
+* **done** para indicar que finalizó la acción (conformado por 1 bit)
+
+Y finalmente tiene un parametro
+* **Count** para contar las interacciones 
+
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Esaltavoz.jpg) 
+
 ### Descripción funcional (Módulo Altavoz):
+El LRclk tiene un delay de 1 ciclo de Bclk por lo tanto solo soporta frecuencias de 8KHz, 16KHz, 32KHz, 44.1KHz, 48KHz, 88.2KHz y 96KHz, pero esto se garantiza en el divisor de frecuencia.
+
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Altavoz.png) 
+
+##Descripción de la caja funcional (Módulo Divisor de frecuencia):
+Este modulo tiene entradas: 
+* **Clk** El clock que necesita realizar la divison de señal (conformado por 1 bit)
+* **Reset** para reiniciar el sistema (conformado por 1 bit)
+
+Este módulo tiene salidas:
+* **Clkout** El clock que se deseaba (conformado por 1 bit)
+Y finalmente tiene como parametros
+* **fi** Frecuencia de entrada
+* **fo** Frecuencia de salida (la que se desea obtener)
+* **Count** para contar las interacciones 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Imagenes%20sin%20usar/Div_freq.jpg) 
+
 ### Descripción funcional (Divisor de frecuencia):
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Divfreq.png) 
