@@ -60,7 +60,7 @@ Y finalmente tiene un parametro
 ### Descripción funcional (Módulo Altavoz):
 El LRclk tiene un delay de 1 ciclo de Bclk por lo tanto solo soporta frecuencias de 8KHz, 16KHz, 32KHz, 44.1KHz, 48KHz, 88.2KHz y 96KHz, pero esto se garantiza en el divisor de frecuencia.
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Altavoz.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Altavoz1.png)
 
 ## Descripción de la caja funcional (Módulo Divisor de frecuencia):
 Este modulo tiene entradas: 
