@@ -2,7 +2,7 @@ module Touch	(
 
 	output 		data,
 	output		DONE,
-	output		clk,
+	input		clk,
 	input 		Rx
 );
 
