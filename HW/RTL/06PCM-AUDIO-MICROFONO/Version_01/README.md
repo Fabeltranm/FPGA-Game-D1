@@ -87,6 +87,8 @@ Y finalmente tiene como parametros
 
 ## Diagrama de Estados:
 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/WhatsApp%20Image%202017-09-24%20at%203.36.43%20PM.jpeg)
+
 
 
 ## Arquitectura del periférico:
