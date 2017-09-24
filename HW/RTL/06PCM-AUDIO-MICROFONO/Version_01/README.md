@@ -36,7 +36,7 @@ Y finalmente tiene un parametro
 
 ### Descripción funcional (Módulo Micrófono MEMS):
 Para que el modulo de microfono este activo la frecuencia del clk debe estar ser mayor a 1MHz y tener el voltaje VDD activo, pero esto se garantiza en el divisor de frecuencia.
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Mic.png) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Microfono1.png) 
 
 ## Descripción de la caja funcional (Modulo Altavoz):
 En este módulo tambien depende de el modulo divisor de frecuencia. 
