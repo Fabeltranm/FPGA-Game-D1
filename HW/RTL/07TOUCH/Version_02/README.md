@@ -20,14 +20,14 @@ El sistema de touch tiene como entrada **Rx**, por donde llega una señal serial
 
 ## Descripción funcional:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20Funcional%20Touch)
 
 ## Descripción Estructural:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20Estructural%20Touch)
 ## Diagrama de Estados:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20de%20Estado%20Touch)
 
 ## Arquitectura del periférico:
 
