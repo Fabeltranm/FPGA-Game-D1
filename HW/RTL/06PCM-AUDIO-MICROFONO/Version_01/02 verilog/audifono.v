@@ -1,13 +1,16 @@
-module microfono
+module audifono
 (
-	input     bclk,
-	output    [7:0]  Adress,
-	input     sdmode,
-	input     Reset,
-	input     [14:0]  Datain,
-	input     select,
-	output    done,	
+	input     Enable,
+	input     data,
+	output     Bclk,
+	output     LRclk,
+	output     [15:0]Data_R,
+	output     [15:0]Data_L,
+	output     Done,
+	parameter   count  = 15,
 
 );
 
 endmodule
+
+
