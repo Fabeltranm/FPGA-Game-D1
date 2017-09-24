@@ -1,4 +1,4 @@
-﻿module	divisor
+﻿module	calculos
 (
 	input           count,
 	input		enable
