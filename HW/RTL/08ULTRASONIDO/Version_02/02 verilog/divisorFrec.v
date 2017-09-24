@@ -1,6 +1,6 @@
 ﻿module	divisorFrec
-(
-	input           CLKIN,
-	output          CLKOUT
-);
+			(
+				input           CLKIN,
+				output          CLKOUT
+			);
  endmodule
