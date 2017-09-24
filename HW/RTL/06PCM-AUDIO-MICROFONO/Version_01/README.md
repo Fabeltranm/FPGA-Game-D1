@@ -38,7 +38,7 @@ Y finalmente tiene un parametro
 Para que el modulo de microfono este activo la frecuencia del clk debe estar ser mayor a 1MHz y tener el voltaje VDD activo, pero esto se garantiza en el divisor de frecuencia.
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Mic.png) 
 
-##Descripción de la caja funcional (Módulo Altavoz):
+## Descripción de la caja funcional (Modulo Altavoz):
 En este módulo tambien depende de el modulo divisor de frecuencia. 
 
 Este modulo tiene entradas: 
@@ -60,9 +60,9 @@ Y finalmente tiene un parametro
 ### Descripción funcional (Módulo Altavoz):
 El LRclk tiene un delay de 1 ciclo de Bclk por lo tanto solo soporta frecuencias de 8KHz, 16KHz, 32KHz, 44.1KHz, 48KHz, 88.2KHz y 96KHz, pero esto se garantiza en el divisor de frecuencia.
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Altavoz.png) 
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Altavoz.png)
 
-##Descripción de la caja funcional (Módulo Divisor de frecuencia):
+## Descripción de la caja funcional (Módulo Divisor de frecuencia):
 Este modulo tiene entradas: 
 * **Clk** El clock que necesita realizar la divison de señal (conformado por 1 bit)
 * **Reset** para reiniciar el sistema (conformado por 1 bit)
@@ -73,6 +73,7 @@ Y finalmente tiene como parametros
 * **fi** Frecuencia de entrada
 * **fo** Frecuencia de salida (la que se desea obtener)
 * **Count** para contar las interacciones 
+
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Imagenes%20sin%20usar/Div_freq.jpg) 
 
 ### Descripción funcional (Divisor de frecuencia):
