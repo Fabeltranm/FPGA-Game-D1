@@ -6,6 +6,7 @@ module microfono
 	output     ws,
 	output     Dataout,
 	output     Done,
+	parameter   count  = 0,
 
 );
 
