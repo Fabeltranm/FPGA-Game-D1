@@ -46,6 +46,10 @@ El diagrama funcional inicia con la lectura de los valores de las entrada de rel
  
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Diagramfuncional.png)
 
+Protocolo SPI
+
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/funcional.png)
+
 ## Descripción Estructural:
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/DiagramaEstructural.png)
