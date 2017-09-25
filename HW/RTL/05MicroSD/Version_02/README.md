@@ -14,20 +14,23 @@ La caja negra del proyecto de almacenamiento en microSD muestra dos bloques func
 
 El sistema cuenta con señales de salida que controlan la tarjeta microSD, con **CMD** el cual es el mismo **MOSI**, envía comandos de control a la microSD, también se encarga de enviar los datos a guardar que fueron ingresados por **dataIN**, los datos de lectura se pueden ver por medio de la línea **dataOUT** el cual es un vector de 16 bits; con la señal **CD** se selecciona la tarjeta a trabajar e inicia las comunicaciones entre los dos dispositivos; una vez todos los procesos hayan acabado, se envía un 1 a la señal **DONE**.
 
+
 ## Descripción funcional:
+
 A continuación se muestra los diagramas de flujo de inicialización, lectura y escritura de la tarjeta.
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/22015232_718318035036170_242313731_o.png).
-
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/22015232_718318035036170_242313731_o.png)
 
 La señal **START** activa el **CINM** (módulo de inicialización de tarjetas) y reconoce la unidad de control con una señal **READY**. El modulo transcurre 74 o más ciclos de reloj para iniciar el protocolo **SPI**. La tarjeta se inicia primero con el comando **CMD0**, el controlador valida el rango de tensión en este para emitir el comando **CMD8** que identifica la versión de la tarjeta (versión 2). Por otra parte, el controlador genera los comandos **CMD55** y **ACMD41** para completar el proceso de inicialización. El controlador genera continuamente los comandos (**CMD55+ACMD41**) hasta que se inicialice la tarjeta y de una respuesta de **00000000**. El comando **CMD58** se genera para identificar el modo de direccionamiento de la tarjeta (direccionamiento de bloques o direccionamiento de byte). Si se genera el direccionamiento de bytes, se emite el comando **CMD16** para fijar la longitud de bloque de datos a 512 bytes. Seguido del proceso de inicialización, la tarjeta pasa al módulo inactivo hasta que se genere el comando para lectura y escritura.
 
-La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura. La parte izquierda del diagrama describe la operación de lectura y la parte derecha la operación de escritura. La unidad de control decide en dos diferente comandos(17 - 18) para el modulo de lectura dependiendo de el valor de señal, este se enviará a través  del **MOSI**, y se tendrá una respuesta de la tarjeta a través del **MISO** e iniciará la lectura de los datos de la tarjeta junto con los bits **CRC**. En cuanto a la escritura el controlador genera el comando para la escritura(24 - 25) y empieza a escribir los datos. Al finalizar la escritura de datos los bits **CRC** son enviados a través de la linea **MISO**, indicando si la operación fue exitosa o no, en caso negativo se reinicia la escritura de los datos. Al completar la lectura o escritura el sistema verificará la señal de **RESET** para decidir si inicializar la tarjeta nuevamente o esperar una nueva señal de lectura o escritura.
+La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura. La parte izquierda del diagrama describe la operación de lectura y la parte derecha la operación de escritura. La unidad de control decide en dos diferente comandos(17 - 18) para el modulo de lectura dependiendo de el valor de señal, este se enviará a través  del **MOSI**, y se tendrá una respuesta de la tarjeta a través del **MISO** e iniciará la lectura de los datos de la tarjeta junto con los bits **CRC**. En cuanto a la escritura el controlador genera el comando para la escritura(24 - 25) y empieza a escribir los datos. Al finalizar la escritura de datos los bits **CRC** son enviados a través de la linea **MISO**, indicando si la operación fue exitosa o no, en caso negativo se reinicia la escritura de los datos. Al completar la lectura o escritura el sistema verificará la señal de **RESET** para decidir si inicializar la tarjeta nuevamente o esperar una nueva señal de lectura o escritura 
 
 ## Descripción Estructural:
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estructural.png).
+
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estructural.png)
 ## Diagrama de Estados:
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/Estados.PNG)
 ## Arquitectura del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ## Diagrama de bloques del periférico:
