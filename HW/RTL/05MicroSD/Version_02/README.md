@@ -30,7 +30,7 @@ La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estructuralfinal.png)
 ## Diagrama de Estados:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/Estados.PNG)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estados.PNG)
 ## Arquitectura del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ## Diagrama de bloques del periférico:
