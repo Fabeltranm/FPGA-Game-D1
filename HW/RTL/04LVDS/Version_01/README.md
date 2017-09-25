@@ -34,6 +34,7 @@ Diagrama funcional del serializador:
 ## Descripción Estructural:
 
 Diagrama estructural del procesamiento de imagen:
+![estructural 1 - pagina 1](https://user-images.githubusercontent.com/25514964/30791751-41b7c014-a17a-11e7-8743-89e11f7bdfcd.png)
 
 Diagrama estructural del serializador:
 ![serializador estruct - pagina 1](https://user-images.githubusercontent.com/25514964/30791690-c9c25df8-a179-11e7-99c0-d45f7cf1fc88.png)
