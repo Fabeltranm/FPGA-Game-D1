@@ -26,9 +26,9 @@ El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por 
 ## Descripción funcional:
 
 Diagrama funcional del serializador:
-![serializador](https://user-images.githubusercontent.com/24497588/30371217-7e0deda2-983f-11e7-8707-dae8d80d8b0b.png)
+![serializador - pagina 1](https://user-images.githubusercontent.com/25514964/30791764-7553e498-a17a-11e7-9c4e-5e6ac4ffbb6f.png)
 
-Diagrama funcional del serializador:
+Diagrama funcional del procesamiento de imagen:
 ![loadimage](https://user-images.githubusercontent.com/24497588/30371247-984c78fa-983f-11e7-9301-2d7edebb2b50.png)
 
 ## Descripción Estructural:
