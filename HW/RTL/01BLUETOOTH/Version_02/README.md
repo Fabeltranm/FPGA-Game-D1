@@ -21,7 +21,8 @@ La caja funcional posee las señales Done, Busy y Enable las cuales se encargan 
 
 ## Descripción funcional:
 
-![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/DF.png)
+![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/Rx.png)
+![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/Tx.png)
 
 ## Descripción Estructural:
 
