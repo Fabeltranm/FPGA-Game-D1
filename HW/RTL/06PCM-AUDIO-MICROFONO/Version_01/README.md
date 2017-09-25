@@ -87,7 +87,7 @@ Y finalmente tiene como parametros
 
 ## Diagrama de Estados:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/diagrama%20de%20estados%20altavoz.jpg)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/03%20document/Imagenes/Diagrama%20de%20estados%20MEMS.jpg)
 
 
 
