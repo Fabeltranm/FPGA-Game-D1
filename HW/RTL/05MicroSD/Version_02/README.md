@@ -33,4 +33,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ## Diagrama de bloques del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ## referencias:
-https://jes-eurasipjournals.springeropen.com/articles/10.1186/s13639-016-0060-8
+1. https://jes-eurasipjournals.springeropen.com/articles/10.1186/s13639-016-0060-8
+2. http://www.dejazzer.com/ee379/lecture_notes/lec12_sd_card.pdf
+3. https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi
+4. http://elm-chan.org/docs/mmc/mmc_e.html
