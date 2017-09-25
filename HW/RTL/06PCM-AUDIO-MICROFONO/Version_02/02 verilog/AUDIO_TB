@@ -1,0 +1,35 @@
+`timescale 1ns / 1ps
+
+module audio_TB;
+
+	// Inputs
+	reg CLK;
+	reg [15:0] D_IN;
+
+	// Outputs
+	wire BCLK;
+	wire LRCLK;
+	wire DONE;
+	wire D_OUT;
+
+	// Instantiate the Unit Under Test (UUT)
+	audio uut (
+		.CLK(CLK), 
+		.D_IN(D_IN), 
+		.BCLK(BCLK), 
+		.LRCLK(LRCLK), 
+		.DONE(DONE), 
+		.D_OUT(D_OUT)
+	);
+
+	initial begin
+		// Initialize Inputs
+		CLK = 0;
+		D_IN = 0;
+		#100;
+        
+
+
+	end
+      
+endmodule
