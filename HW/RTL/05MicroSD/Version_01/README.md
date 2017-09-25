@@ -44,7 +44,7 @@ El diagrama funcional inicia con la lectura de los valores de las entrada de rel
   2. El proceso de lectura de datos toma la información deseada por medio del protocolo SPI (almacenada en la micro SD) y posteriormente se realiza un proceso de conversion de tipo serial a paralelo el cual se entrega por el bus de salida Data(out)[15:0]
   
  
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/DiagramaFuncional.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Diagramafuncional.png)
 
 ## Descripción Estructural:
 
@@ -52,7 +52,7 @@ El diagrama funcional inicia con la lectura de los valores de las entrada de rel
 
 ## Diagrama de Estados:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/DiagramadeEstados.png)
 
 ## Arquitectura del periférico:
 
