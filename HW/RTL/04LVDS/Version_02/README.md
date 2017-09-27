@@ -16,7 +16,7 @@ La transmisión de los datos de los sistemas que utilizan este tipo de transmisi
 
 ## Descripción funcional:
 
-![Funcional](https://user-images.githubusercontent.com/31424774/30376393-cd59bba4-9851-11e7-97f9-d3070f2a45eb.jpeg)
+![diagrama](https://user-images.githubusercontent.com/31424774/30913324-634817b0-a355-11e7-8e12-1b2ab39180be.jpeg)
 
 ## Descripción Estructural:
 
