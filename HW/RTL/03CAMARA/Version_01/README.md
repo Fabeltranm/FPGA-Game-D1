@@ -25,7 +25,7 @@ Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de V
 
 ## Descripción de la caja Funcional  (in/out)
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/caja%20negra%203.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/caja%20negra%204.png)
 
 ## Descripción Diagrama funcional:
 
