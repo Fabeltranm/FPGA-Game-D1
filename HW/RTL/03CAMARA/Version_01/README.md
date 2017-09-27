@@ -30,6 +30,7 @@ Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de V
 ## Descripción Diagrama funcional:
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/diagrama%20funcional%20comunicacion%20I2C.png)
+Diagrama funcional comunicacion I2C
 
 ## Descripción Estructural:
 
