@@ -2,14 +2,12 @@
 
 ## Integrantes del equipo de trabajo:
 
-### 1 Cesar Santiago Gordillo Tous csgordillot@unal.edu.co
+### 1 Oscar Ivan Medina Rojas oimedinar@unal.edu.co
 
-### 2 Oscar Ivan Medina Rojas oimedinar@unal.edu.co
-
-### 3 Fray Alexander Riscanevo Tellez fariscanevot@unal.edu.co
+### 2 Fray Alexander Riscanevo Tellez fariscanevot@unal.edu.co
 
 
-## Descripción general del sistema: (tomado del documento de clase)
+## Descripción general del sistema: 
 
 La cámara digital es uno de los dispositivos electrónicos más populares no funcionan sobre la base de una película fílmica como las cámaras fotográfica tradicionales, sino sobre la base de un sensor electrónico interno que hace las veces de la película fílmica donde se graba o imprime la imagen captada luego se almacena en una memoria interna para que el usuario pueda disponer de ellas cuándo y cómo quiera. Los sensores para cámara pueden ser de cualquiera de los siguientes tipos: 
 
@@ -22,7 +20,7 @@ El siguiente diagrama esquemático muestra un sistema básico basado en cámaras
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/caja%20funcional.png?raw=true)
 
-Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de VGA, una etapa con memoria RAM, un módulo de captura de imagen, un módulo de control de cámara y un programa principal para reunir todos estos. En el datasheet del sistema omnivisión OV7670, se indica que la camara inicia entregando señal en formato YCbCr 4:2:2, en un tamaño de 640x480 pixeles.
+Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de VGA, una etapa con memoria RAM, un módulo de captura de imagen, un módulo de control de cámara y un programa principal para reunir todos estos. En el datasheet del sistema omnivisión OV2640, se indica que la camara inicia entregando señal en formato YCbCr 4:2:2, en un tamaño de 640x480 pixeles.
 
 
 ## Descripción de la caja Funcional  (in/out)
@@ -35,7 +33,7 @@ Se realiza la etapa de adquisición de la imagen. Requiriendose una intefaz de V
 
 ## Descripción Estructural:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/Diagrama%20estructural.png?raw=true)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/03CAMARA/Version_01/03%20document/diagrama%20estructural.png)
 
 ## Diagrama de Estados:
 
