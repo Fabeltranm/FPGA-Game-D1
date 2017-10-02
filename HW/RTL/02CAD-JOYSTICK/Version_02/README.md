@@ -14,6 +14,7 @@ El sistema que se va a implementar utiliza un módulo joystick que envía una se
 
 ## Descripción de la caja Funcional  (in/out)
 ![jcajanegra](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/02CAD-JOYSTICK/Version_02/03%20document/img/cajanegraadc.png)
+![divcajanegra](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/02CAD-JOYSTICK/Version_02/03%20document/img/22217736_1430676720335144_222896798_o.png?raw=true)
 
 
 ## Descripción funcional:
