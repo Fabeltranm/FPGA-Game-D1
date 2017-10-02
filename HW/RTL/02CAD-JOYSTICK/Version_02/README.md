@@ -20,6 +20,7 @@ El sistema que se va a implementar utiliza un módulo joystick que envía una se
 ## Descripción funcional:
 
 ![jfuncional](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/02CAD-JOYSTICK/Version_02/03%20document/img/funcionaladc.png)
+![divfuncional](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/02CAD-JOYSTICK/Version_02/03%20document/img/div.png?raw=true)
 
 ## Descripción Estructural:
 
