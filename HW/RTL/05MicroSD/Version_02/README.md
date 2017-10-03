@@ -1,4 +1,4 @@
-0# ******ALMACENAMIENTO SD******
+# ******ALMACENAMIENTO SD******
 ## Integrantes del equipo de trabajo:
 ### 1 Gabriel Hernán Cano González ghcanog@unal.edu.co
 ### 2 David Hernando Jiménez Rodríguez dhjimenezr@unal.edu.co
@@ -17,7 +17,7 @@ El sistema cuenta con señales de salida que controlan la tarjeta microSD, con *
 
 ## Descripción funcional:
 
-A continuación se muestra los diagramas de flujo de inicialización, lectura y escritura de la tarjeta.
+A continuación se muestra los diagramas de flujo de inicialización, lectura y escritura de la tarjeta
 
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/SPI0.png)
 
@@ -26,15 +26,17 @@ La señal **START** activa el **CINM** (módulo de inicialización de tarjetas) 
 La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura. La parte izquierda del diagrama describe la operación de lectura y la parte derecha la operación de escritura. La unidad de control decide en dos diferente comandos(17 - 18) para el modulo de lectura dependiendo de el valor de señal, este se enviará a través  del **MOSI**, y se tendrá una respuesta de la tarjeta a través del **MISO** e iniciará la lectura de los datos de la tarjeta junto con los bits **CRC**. En cuanto a la escritura el controlador genera el comando para la escritura(24 - 25) y empieza a escribir los datos. Al finalizar la escritura de datos los bits **CRC** son enviados a través de la linea **MISO**, indicando si la operación fue exitosa o no, en caso negativo se reinicia la escritura de los datos. Al completar la lectura o escritura el sistema verificará la señal de **RESET** para decidir si inicializar la tarjeta nuevamente o esperar una nueva señal de lectura o escritura 
 
 ## Descripción Estructural:
-
 ![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estructuralfinal.png)
-## Diagrama de Estados:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estados.PNG)
+## Diagrama de Estados:
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estados2.PNG)
+
 ## Arquitectura del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 ## Diagrama de bloques del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 ## referencias:
 1. https://jes-eurasipjournals.springeropen.com/articles/10.1186/s13639-016-0060-8
 2. http://www.dejazzer.com/ee379/lecture_notes/lec12_sd_card.pdf
