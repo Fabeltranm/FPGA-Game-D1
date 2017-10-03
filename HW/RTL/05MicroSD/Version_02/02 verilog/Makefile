@@ -1,10 +1,10 @@
-DESIGN = proyecto#Aquí va el nombre del proyecto
+DESIGN = shift#Aquí va el nombre del proyecto
 
 PINS = $(DESIGN).ucf
 
-DEVICE = xc3s500e-fg320-4 #Esto depende de cada tarjeta
+DEVICE = xc7a100t-csg324-1 #Esto depende de cada tarjeta
 
-BOARD = Nexys2 #Nombre de la tarjeta
+BOARD = Nexys4 #Nombre de la tarjeta
 
 BGFLAGS = -g TdoPin:PULLNONE -g DonePin:PULLUP \-g CRC:enable -g StartUpClk:CCLK
 XILINXCADROOT = /opt/Xilinx/14.4/ISE_DS/ISE/
