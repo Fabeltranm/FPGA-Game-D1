@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Ultrasonido_TB;
+module ultrasonido_TB;
 
 	// Inputs
 	reg ENABLE;
@@ -34,6 +34,7 @@ module Ultrasonido_TB;
 			#50;
 			clk = ~clk;
 		//end
+		// Add stimulus here
 
 	end
       

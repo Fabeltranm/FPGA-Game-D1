@@ -1,9 +1,9 @@
 module contador		(
 				
 				output wire	[7:0] count,
-				output wire	trigg,
+				output wire	pulse,
 				output wire	calculate,
-				input	ECHO,
+				input	sign,
 				input	ENABLE,
 				input	CLKOUT,
 				input	reset
@@ -13,37 +13,34 @@ module contador		(
 	initial 
 	begin
 		count0=0;
-		pulso=1;
+		pulse=0;
 		calculate=0;
 	end
 	
-	always@( posedge CLKOUT )
+	always@( reset || posedge CLKOUT )
 	begin
 		if(reset)
 		begin
-			pulso=1;
+			count0=0;
 			calculate=0;
+			pulse=0;
 		end
-		if(ENABLE && pulso)
+		//	Da la orden de mandar un pulso
+		if(ENABLE)
 		begin
-			trigg<=1;
-			if(trigg)
-			begin
-				pulso=0;
-			end
+			pulse=1'b1;
+		end
+		//
+		//	Cuenta el rango que tiene el pulso del ECHO del sensor
+		//
+		if(ECHO)
+		begin
+			count0=count0+1;
 		end
 		else
 		begin
-			trigg=0;
-			if(ECHO)
-			begin
-				count0=count0+1;
-			end
-			else
-			begin
-				assign count = count0;
-				calculate = 1;
-			end	
-		end
+			assign count = count0;
+			calculate = 1;
+		end	
 	end
 endmodule

@@ -13,7 +13,7 @@ IVERILOG        = iverilog
 
 
 
-SRC             = $(DESIGN).v contador.v divisorfrec.v multiplo.v 
+SRC             = $(DESIGN).v contador.v divisorfrec.v divisor.v divisorfrecgen.v genpulsos.v
 
 SIM_SRC = $(DESIGN)_TB.v          \
 
