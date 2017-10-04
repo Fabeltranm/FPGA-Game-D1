@@ -5,17 +5,19 @@ module Ultrasonido	(
 				output 		DONE,
 				input 		ENABLE,
 				input 		ECHO,
-				input			clk
+				input		clk,
+				input		reset
 
 			 );
 
-divisorfrec divisorfrec0(	
+divisorfrec	divisorfrec0	(	
 					.clk		(	clk	),
 					.CLKOUT	(	CLKOUT	)
 								);
 
 
-contador contador0	(
+contador	contador0	(
+					.reset	(	reset	),
 					.count	(	count	),
 					.trigg	(	trigg	),
 					.calculate	(	calculate	),
@@ -26,7 +28,8 @@ contador contador0	(
 
 
 
-multiplo multiplo0	(
+Divisor		divisor0	(
+					.reset	(	reset	),
 					.count	(	count	),
 					.calculate	(	calculate	),
 					.DONE		(	DONE	),

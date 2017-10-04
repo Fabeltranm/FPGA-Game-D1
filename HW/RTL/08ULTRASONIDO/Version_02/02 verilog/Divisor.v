@@ -1,10 +1,10 @@
-module	multiplo	(
-				input wire  [7:0]   count,
-				input wire		calculate,
-				input wire		reset,
-				output		DONE,
-				output		[7:0]	d
-			);
+module	Divisor (
+					input		reset,
+					input	[7:0]	count,
+					input		calculate,
+					output		DONE,
+					output	[7:0]	d
+							);
 	reg [7:0] registro;
 	initial
 	begin
@@ -27,5 +27,6 @@ module	multiplo	(
 			DONE = 1;
 		end
 	end
+
 
 endmodule
