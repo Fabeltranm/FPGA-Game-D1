@@ -1,4 +1,4 @@
-module Contador		(
+module contador		(
 				
 				output wire	[7:0] count,
 				output wire	pulse,
