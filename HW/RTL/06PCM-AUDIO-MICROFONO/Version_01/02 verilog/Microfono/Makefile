@@ -1,4 +1,4 @@
-DESIGN          = div_freq
+DESIGN          = microfono
 PINS            = $(DESIGN).ucf
 DEVICE          = xc7a100t-1csg324
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
@@ -12,7 +12,7 @@ IVERILOG        = iverilog
 
 
 
-SRC             = $(DESIGN).v
+SRC             = $(DESIGN).v div_freq.v
 
 SIM_SRC = $(DESIGN)_TB.v          \
 
