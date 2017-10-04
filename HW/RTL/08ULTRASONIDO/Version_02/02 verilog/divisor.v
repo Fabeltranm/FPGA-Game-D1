@@ -1,4 +1,4 @@
-module	Divisor (
+module	divisor (
 					input		reset,
 					input	[7:0]	count,
 					input		calculate,
