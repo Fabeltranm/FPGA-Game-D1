@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="MapLib" num="159" delta="new" >Net Timing constraints on signal <arg fmt="%s" index="1">clk</arg> are pushed forward through input buffer.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="warning" file="Pack" num="1653" delta="new" >At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE, consult the Xilinx Command Line Tools User Guide &quot;TRACE&quot; chapter.
+</msg>
+
+<msg type="info" file="Timing" num="3284" delta="new" >This timing report was generated using estimated delay information.  For accurate numbers, please refer to the post Place and Route timing report.</msg>
+
+<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="1861" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">videoencoder/clockgenerator/dcm_clk</arg>, consult the device Data Sheet.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="774" delta="new" >Unexpected DCM configuration. CLKOUT_PHASE_SHIFT is not configured VARIABLE for comp <arg fmt="%s" index="1">dcm_main</arg>. The PSEN pin is connected to an active signal. The PSEN pin should be connected to GND to guarantee the expected operation.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="1861" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">dcm_main</arg>, consult the device Data Sheet.
+</msg>
+
+</messages>
+

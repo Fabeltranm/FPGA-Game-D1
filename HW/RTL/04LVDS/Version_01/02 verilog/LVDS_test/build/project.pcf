@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Oct 04 10:11:43 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led" LOCATE = SITE "P12" LEVEL 1;
+COMP "clk" LOCATE = SITE "P17" LEVEL 1;
+COMP "channel1_n" LOCATE = SITE "P50" LEVEL 1;
+COMP "channel1_p" LOCATE = SITE "P51" LEVEL 1;
+COMP "channel2_n" LOCATE = SITE "P55" LEVEL 1;
+COMP "channel2_p" LOCATE = SITE "P56" LEVEL 1;
+COMP "channel3_n" LOCATE = SITE "P57" LEVEL 1;
+COMP "channel3_p" LOCATE = SITE "P58" LEVEL 1;
+COMP "channel4_n" LOCATE = SITE "P64" LEVEL 1;
+COMP "channel4_p" LOCATE = SITE "P65" LEVEL 1;
+COMP "clock_n" LOCATE = SITE "P61" LEVEL 1;
+COMP "clock_p" LOCATE = SITE "P62" LEVEL 1;
+NET "clk_IBUFG" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,325 @@
+Revision 3
+; Created by bitgen P.20131013 at Wed Oct  4 10:12:01 2017
+; Bit lines have the following form:
+; <offset> <frame address> <frame offset> <information>
+; <information> may be zero or more <kw>=<value> pairs
+; Block=<blockname     specifies the block associated with this
+;                      memory cell.
+;
+; Latch=<name>         specifies the latch associated with this memory cell.
+;
+; Net=<netname>        specifies the user net associated with this
+;                      memory cell.
+;
+; COMPARE=[YES | NO]   specifies whether or not it is appropriate
+;                      to compare this bit position between a
+;                      "program" and a "readback" bitstream.
+;                      If not present the default is NO.
+;
+; Ram=<ram id>:<bit>   This is used in cases where a CLB function
+; Rom=<ram id>:<bit>   generator is used as RAM (or ROM).  <Ram id>
+;                      will be either 'F', 'G', or 'M', indicating
+;                      that it is part of a single F or G function
+;                      generator used as RAM, or as a single RAM
+;                      (or ROM) built from both F and G.  <Bit> is
+;                      a decimal number.
+;
+; Info lines have the following form:
+; Info <name>=<value>  specifies a bit associated with the LCA
+;                      configuration options, and the value of
+;                      that bit.  The names of these bits may have
+;                      special meaning to software reading the .ll file.
+;
+Info STARTSEL0=1
+Bit   274560 0x0009001c      0 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274561 0x0009001c      1 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274562 0x0009001c      2 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274563 0x0009001c      3 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274564 0x0009001c      4 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274565 0x0009001c      5 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274566 0x0009001c      6 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274567 0x0009001c      7 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274568 0x0009001c      8 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274569 0x0009001c      9 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274570 0x0009001c     10 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274571 0x0009001c     11 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274572 0x0009001c     12 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274573 0x0009001c     13 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274574 0x0009001c     14 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274575 0x0009001c     15 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274576 0x0009001c     16 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274577 0x0009001c     17 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274578 0x0009001c     18 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274579 0x0009001c     19 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274580 0x0009001c     20 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274581 0x0009001c     21 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274582 0x0009001c     22 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274583 0x0009001c     23 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274584 0x0009001c     24 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274585 0x0009001c     25 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274586 0x0009001c     26 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274587 0x0009001c     27 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274591 0x0009001c     31 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274592 0x0009001c     32 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274596 0x0009001c     36 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274597 0x0009001c     37 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274598 0x0009001c     38 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274599 0x0009001c     39 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274600 0x0009001c     40 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274601 0x0009001c     41 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274602 0x0009001c     42 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274603 0x0009001c     43 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274604 0x0009001c     44 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274605 0x0009001c     45 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274606 0x0009001c     46 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274607 0x0009001c     47 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274608 0x0009001c     48 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274609 0x0009001c     49 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274610 0x0009001c     50 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274611 0x0009001c     51 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274612 0x0009001c     52 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274613 0x0009001c     53 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274614 0x0009001c     54 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274615 0x0009001c     55 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274616 0x0009001c     56 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274617 0x0009001c     57 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274618 0x0009001c     58 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274619 0x0009001c     59 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274620 0x0009001c     60 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274621 0x0009001c     61 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274622 0x0009001c     62 Block=OLOGIC_X6Y1 Type=DRP
+Bit   274623 0x0009001c     63 Block=OLOGIC_X6Y1 Type=DRP
+Bit   306864 0x000a001c     64 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306865 0x000a001c     65 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306866 0x000a001c     66 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306867 0x000a001c     67 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306868 0x000a001c     68 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306869 0x000a001c     69 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306870 0x000a001c     70 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306871 0x000a001c     71 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306872 0x000a001c     72 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306873 0x000a001c     73 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306874 0x000a001c     74 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306875 0x000a001c     75 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306876 0x000a001c     76 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306877 0x000a001c     77 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306878 0x000a001c     78 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306879 0x000a001c     79 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306880 0x000a001c     80 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306881 0x000a001c     81 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306882 0x000a001c     82 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306883 0x000a001c     83 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306884 0x000a001c     84 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306885 0x000a001c     85 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306886 0x000a001c     86 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306887 0x000a001c     87 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306888 0x000a001c     88 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306889 0x000a001c     89 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306890 0x000a001c     90 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306891 0x000a001c     91 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306895 0x000a001c     95 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306896 0x000a001c     96 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306900 0x000a001c    100 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306901 0x000a001c    101 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306902 0x000a001c    102 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306903 0x000a001c    103 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306904 0x000a001c    104 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306905 0x000a001c    105 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306906 0x000a001c    106 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306907 0x000a001c    107 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306908 0x000a001c    108 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306909 0x000a001c    109 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306910 0x000a001c    110 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306911 0x000a001c    111 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306912 0x000a001c    112 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306913 0x000a001c    113 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306914 0x000a001c    114 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306915 0x000a001c    115 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306916 0x000a001c    116 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306917 0x000a001c    117 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306918 0x000a001c    118 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306919 0x000a001c    119 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306920 0x000a001c    120 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306921 0x000a001c    121 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306922 0x000a001c    122 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306923 0x000a001c    123 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306924 0x000a001c    124 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306925 0x000a001c    125 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306926 0x000a001c    126 Block=OLOGIC_X7Y3 Type=DRP
+Bit   306927 0x000a001c    127 Block=OLOGIC_X7Y3 Type=DRP
+Bit   402544 0x000d001c     64 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402545 0x000d001c     65 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402546 0x000d001c     66 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402547 0x000d001c     67 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402548 0x000d001c     68 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402549 0x000d001c     69 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402550 0x000d001c     70 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402551 0x000d001c     71 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402552 0x000d001c     72 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402553 0x000d001c     73 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402554 0x000d001c     74 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402555 0x000d001c     75 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402556 0x000d001c     76 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402557 0x000d001c     77 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402558 0x000d001c     78 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402559 0x000d001c     79 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402560 0x000d001c     80 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402561 0x000d001c     81 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402562 0x000d001c     82 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402563 0x000d001c     83 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402564 0x000d001c     84 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402565 0x000d001c     85 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402566 0x000d001c     86 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402567 0x000d001c     87 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402568 0x000d001c     88 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402569 0x000d001c     89 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402570 0x000d001c     90 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402571 0x000d001c     91 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402575 0x000d001c     95 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402576 0x000d001c     96 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402580 0x000d001c    100 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402581 0x000d001c    101 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402582 0x000d001c    102 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402583 0x000d001c    103 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402584 0x000d001c    104 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402585 0x000d001c    105 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402586 0x000d001c    106 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402587 0x000d001c    107 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402588 0x000d001c    108 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402589 0x000d001c    109 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402590 0x000d001c    110 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402591 0x000d001c    111 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402592 0x000d001c    112 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402593 0x000d001c    113 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402594 0x000d001c    114 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402595 0x000d001c    115 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402596 0x000d001c    116 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402597 0x000d001c    117 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402598 0x000d001c    118 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402599 0x000d001c    119 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402600 0x000d001c    120 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402601 0x000d001c    121 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402602 0x000d001c    122 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402603 0x000d001c    123 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402604 0x000d001c    124 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402605 0x000d001c    125 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402606 0x000d001c    126 Block=OLOGIC_X9Y3 Type=DRP
+Bit   402607 0x000d001c    127 Block=OLOGIC_X9Y3 Type=DRP
+Bit   459680 0x000f001c      0 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459681 0x000f001c      1 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459682 0x000f001c      2 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459683 0x000f001c      3 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459684 0x000f001c      4 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459685 0x000f001c      5 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459686 0x000f001c      6 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459687 0x000f001c      7 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459688 0x000f001c      8 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459689 0x000f001c      9 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459690 0x000f001c     10 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459691 0x000f001c     11 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459692 0x000f001c     12 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459693 0x000f001c     13 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459694 0x000f001c     14 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459695 0x000f001c     15 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459696 0x000f001c     16 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459697 0x000f001c     17 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459698 0x000f001c     18 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459699 0x000f001c     19 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459700 0x000f001c     20 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459701 0x000f001c     21 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459702 0x000f001c     22 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459703 0x000f001c     23 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459704 0x000f001c     24 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459705 0x000f001c     25 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459706 0x000f001c     26 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459707 0x000f001c     27 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459711 0x000f001c     31 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459712 0x000f001c     32 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459716 0x000f001c     36 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459717 0x000f001c     37 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459718 0x000f001c     38 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459719 0x000f001c     39 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459720 0x000f001c     40 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459721 0x000f001c     41 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459722 0x000f001c     42 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459723 0x000f001c     43 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459724 0x000f001c     44 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459725 0x000f001c     45 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459726 0x000f001c     46 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459727 0x000f001c     47 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459728 0x000f001c     48 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459729 0x000f001c     49 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459730 0x000f001c     50 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459731 0x000f001c     51 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459732 0x000f001c     52 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459733 0x000f001c     53 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459734 0x000f001c     54 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459735 0x000f001c     55 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459736 0x000f001c     56 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459737 0x000f001c     57 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459738 0x000f001c     58 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459739 0x000f001c     59 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459740 0x000f001c     60 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459741 0x000f001c     61 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459742 0x000f001c     62 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459743 0x000f001c     63 Block=OLOGIC_X10Y1 Type=DRP
+Bit   459744 0x000f001c     64 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459745 0x000f001c     65 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459746 0x000f001c     66 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459747 0x000f001c     67 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459748 0x000f001c     68 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459749 0x000f001c     69 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459750 0x000f001c     70 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459751 0x000f001c     71 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459752 0x000f001c     72 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459753 0x000f001c     73 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459754 0x000f001c     74 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459755 0x000f001c     75 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459756 0x000f001c     76 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459757 0x000f001c     77 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459758 0x000f001c     78 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459759 0x000f001c     79 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459760 0x000f001c     80 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459761 0x000f001c     81 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459762 0x000f001c     82 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459763 0x000f001c     83 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459764 0x000f001c     84 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459765 0x000f001c     85 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459766 0x000f001c     86 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459767 0x000f001c     87 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459768 0x000f001c     88 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459769 0x000f001c     89 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459770 0x000f001c     90 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459771 0x000f001c     91 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459775 0x000f001c     95 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459776 0x000f001c     96 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459780 0x000f001c    100 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459781 0x000f001c    101 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459782 0x000f001c    102 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459783 0x000f001c    103 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459784 0x000f001c    104 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459785 0x000f001c    105 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459786 0x000f001c    106 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459787 0x000f001c    107 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459788 0x000f001c    108 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459789 0x000f001c    109 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459790 0x000f001c    110 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459791 0x000f001c    111 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459792 0x000f001c    112 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459793 0x000f001c    113 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459794 0x000f001c    114 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459795 0x000f001c    115 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459796 0x000f001c    116 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459797 0x000f001c    117 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459798 0x000f001c    118 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459799 0x000f001c    119 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459800 0x000f001c    120 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459801 0x000f001c    121 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459802 0x000f001c    122 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459803 0x000f001c    123 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459804 0x000f001c    124 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459805 0x000f001c    125 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459806 0x000f001c    126 Block=OLOGIC_X10Y3 Type=DRP
+Bit   459807 0x000f001c    127 Block=OLOGIC_X10Y3 Type=DRP
+Bit  1615390 0x0301001c    270 Block=OLOGIC_X0Y45 Type=DRP
+Bit  1615398 0x0301001c    278 Block=OLOGIC_X0Y45 Type=DRP

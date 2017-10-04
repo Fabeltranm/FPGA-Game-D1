@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/parallels/Downloads/LVDS_test/LVDS_test.v" Line 54: Port <arg fmt="%s" index="1">CLK180</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/parallels/Downloads/LVDS_test/LVDS_test.v" Line 41: Assignment to <arg fmt="%s" index="1">clkprueba</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/parallels/Downloads/LVDS_test/LVDS_test.v" Line 49: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/parallels/Downloads/LVDS_test/LVDS_test.v" Line 50: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/parallels/Downloads/LVDS_test/LVDS_test.v" Line 66: Assignment to <arg fmt="%s" index="1">clk_lckd</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/parallels/Downloads/LVDS_test/lvds_clockgen.v" Line 57: Port <arg fmt="%s" index="1">PRE</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/parallels/Downloads/LVDS_test/serializer.v" Line 64: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/parallels/Downloads/LVDS_test/serializer.v" Line 83: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/parallels/Downloads/LVDS_test/LVDS_test.v" Line 113: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">31</arg>-bit target.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Green_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Green_1&gt; &lt;Green_2&gt; &lt;Green_3&gt; &lt;Green_4&gt; &lt;Green_5&gt; &lt;Green_6&gt; &lt;Green_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Blue_1&gt; &lt;Blue_2&gt; &lt;Blue_3&gt; &lt;Blue_4&gt; &lt;Blue_5&gt; &lt;Blue_6&gt; &lt;Blue_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">Red_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Red_1&gt; &lt;Red_2&gt; &lt;Red_3&gt; &lt;Red_4&gt; &lt;Red_5&gt; &lt;Red_6&gt; &lt;Red_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LVDS_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LVDS_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LVDS_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LVDS_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LVDS_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LVDS_test</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/datacount</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/datacount&gt; &lt;videoencoder/channel3_ser/datacount&gt; &lt;videoencoder/channel2_ser/datacount&gt; &lt;videoencoder/channel1_ser/datacount&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/buffer_0_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/buffer_0_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/buffer_0_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/clockgenerator/lvdsclkman/buffer_0_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel3_ser/buffer_0_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/buffer_0_1&gt; &lt;videoencoder/channel3_ser/buffer_0_6&gt; &lt;videoencoder/channel3_ser/buffer_0_5&gt; &lt;videoencoder/channel3_ser/buffer_0_4&gt; &lt;videoencoder/channel3_ser/buffer_0_3&gt; &lt;videoencoder/channel2_ser/buffer_0_1&gt; &lt;videoencoder/channel2_ser/buffer_0_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/buffer_0_3&gt; &lt;videoencoder/channel2_ser/buffer_0_6&gt; &lt;videoencoder/channel2_ser/buffer_0_5&gt; &lt;videoencoder/channel2_ser/buffer_0_4&gt; &lt;videoencoder/channel2_ser/buffer_0_3&gt; &lt;videoencoder/channel2_ser/buffer_0_2&gt; &lt;videoencoder/channel1_ser/buffer_0_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/buffer_0_5&gt; &lt;videoencoder/channel1_ser/buffer_0_6&gt; &lt;videoencoder/channel1_ser/buffer_0_5&gt; &lt;videoencoder/channel1_ser/buffer_0_4&gt; &lt;videoencoder/channel1_ser/buffer_0_3&gt; &lt;videoencoder/channel1_ser/buffer_0_2&gt; &lt;videoencoder/channel1_ser/buffer_0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/outcount_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/outcount_0&gt; &lt;videoencoder/channel3_ser/outcount_0&gt; &lt;videoencoder/channel2_ser/outcount_0&gt; &lt;videoencoder/channel1_ser/outcount_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel3_ser/buffer_0_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/outcount_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/outcount_1&gt; &lt;videoencoder/channel3_ser/outcount_1&gt; &lt;videoencoder/channel2_ser/outcount_1&gt; &lt;videoencoder/channel1_ser/outcount_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/channel4_ser/buffer_0_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/buffer_0_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/outcount_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/outcount_2&gt; &lt;videoencoder/channel3_ser/outcount_2&gt; &lt;videoencoder/channel2_ser/outcount_2&gt; &lt;videoencoder/channel1_ser/outcount_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/DataInBuffer</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/DataInBuffer&gt; &lt;videoencoder/channel3_ser/DataInBuffer&gt; &lt;videoencoder/channel2_ser/DataInBuffer&gt; &lt;videoencoder/channel1_ser/DataInBuffer&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">videoencoder/clockgenerator/lvdsclkman/SendOK</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LVDS_test</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;videoencoder/channel4_ser/SendOK&gt; &lt;videoencoder/channel3_ser/SendOK&gt; &lt;videoencoder/channel2_ser/SendOK&gt; &lt;videoencoder/channel1_ser/SendOK&gt; </arg>
+</msg>
+
+</messages>
+
