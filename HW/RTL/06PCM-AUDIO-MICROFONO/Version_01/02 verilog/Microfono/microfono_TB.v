@@ -47,7 +47,7 @@ dataint = 1'b0;
 #40 dataint = 1'b0;
 #40 dataint = 1'b1;
 #70 dataint = 1'b0;
-#640 dataint = 1'b0;
+#650 dataint = 1'b0;
 #40 dataint = 1'b1;
 #40 dataint = 1'b0;
 end
