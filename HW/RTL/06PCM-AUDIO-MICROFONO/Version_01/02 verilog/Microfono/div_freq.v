@@ -1,6 +1,6 @@
 module div_freq #(
               parameter   fi     = 50000000 ,           
-              parameter   fs	= 10000000        
+              parameter   fs	 = 12500000        
   )(input clk, output reg clkout,input reset);
 
 

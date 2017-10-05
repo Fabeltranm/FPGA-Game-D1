@@ -11,8 +11,7 @@ module microfono
 
 );
 
-reg [0:31] count=
-0;
+reg [0:31] count;
 reg [17:0] sregt;
 reg done=0;
 reg ws=0;
@@ -24,11 +23,15 @@ always @(negedge  mclk, posedge enable)
 
 	if (enable) 
 	begin	
+	count<=0;
+	
 		if (count<=17)
 			begin
-			sregt<= {sregt[17:0],dataint};
+			done=0;
+			sregt<= {sregt[16:0],dataint};
 			count<=count+1;
-			end		
+			end	
+			
 			else if(dataint<=1'b0 && count<=30)
 			begin		
 			sdata<= sregt[17:0];
@@ -38,10 +41,12 @@ always @(negedge  mclk, posedge enable)
 			begin
 			count<=0;				
 			ws=!ws;	
+			done=1;
 			end
-	end	
+		end	
 	else
-	done=1;
+	begin
+	end
 
 
 endmodule
