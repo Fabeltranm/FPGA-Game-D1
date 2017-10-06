@@ -1,32 +1,50 @@
 module shift_TB;
 
-	reg [7:0] d;
+	wire [7:0] dataRe;
 	wire MOSI;
-	reg clk;
+	reg sclk;
 	reg reset;
-	shift uut(.d(d),.reset(reset),.clk(clk),.MOSI(MOSI));
+	reg MISO;
+	reg [7:0] dataSe;
+	shift uut(.dataRe(dataRe),.reset(reset),.sclk(sclk),.MOSI(MOSI),.MISO(MISO),.dataSe(dataSe));
 	
 always
 	begin
-	clk =1'b0;
+	sclk =1'b0;
 	#5;
-	clk=1'b1;
+	sclk=1'b1;
 	#5;
 	end
 
-initial begin
-	
+initial
+	begin
+	MISO=1;
 	reset=1;
-	#1;
+	#1
 	reset=0;
-	#1;
-        d= 8'b10101101;
-
+	#2;
+        dataSe= 8'b10101101;
+	#2
+	MISO=1;
+	#10
+	MISO=0;
+	#10
+	MISO=0;
+	#10
+	MISO=1;
+	#10
+	MISO=1;
+	#10
+	MISO=0;
+	#10
+	MISO=1;
+	#10
+	MISO=0;
 
 	end
 
 
-initial begin: TEST_CASE
+initial begin: TEST_CASE	
      $dumpfile("shift_TB.vcd");
      $dumpvars(-1, uut);
      #(200) $finish;

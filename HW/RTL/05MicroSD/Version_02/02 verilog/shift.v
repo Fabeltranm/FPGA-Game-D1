@@ -1,44 +1,78 @@
-module shift #(parameter N=8)(input clk, input reset,input [N-1:0] d, output MOSI);
+module shift #(parameter N=8)(input sclk, input reset, input [N-1:0] dataSe, output reg [N-1:0] dataRe, input MISO, output reg MOSI);
 
 
 // declaracion  de  variables
-reg [N-1:0] r_reg;
-reg [N-1:0] r_next;
+
+reg [N-1:0] r_regS;
+reg [N-1:0] r_nextS;
 
 
-proyecto des(.MOSI(MOSI),reset(reset));
 
-reg MOSI=1'b1;
 
 //carga de dato
-always @(d)
-	r_next=d;
+always @(dataSe)
+	r_nextS=dataSe;
 
 
 //register
-always @(posedge clk, posedge reset)
+always @(posedge sclk, posedge reset)
 	begin
 		if (reset)
-		r_reg<=0;
-	else
-		r_reg<=r_next;
+			begin
+			r_regS<=0;
+			MOSI=1;
+			end
+		else
+			r_regS<=r_nextS;
 
-end 
+	end 
 
-//Next_state
-always  @(negedge reset, negedge clk)
+//desplazamiento izquierda
+always  @(negedge reset, negedge sclk)
 	begin
 		if(reset)
-			r_next<=0;
+			r_nextS<=0;
 		else	
-			r_next<={r_reg[N-2:0], 1'b1};	
+			r_nextS<={r_regS[N-2:0], 1'b1};	
 	end
 
 // salida
 
-always @(negedge clk)
-	MOSI<=r_reg[N-1] ;
+always @(negedge sclk)
+	MOSI<=r_regS[N-1];
 
+
+reg [N-1:0] r_regR;
+reg [N-1:0] r_nextR;
+
+
+
+//registro
+
+always @(negedge sclk, negedge reset)
+	begin
+		if(reset)
+			r_regR<=0;
+		else
+			r_regR<=r_nextR;
+
+	end
+
+
+//desplazamiento derecha
+
+always @(posedge reset, posedge sclk)
+	begin
+
+		if(reset)
+			r_nextR<=0;
+		else
+			r_nextR<={MISO,r_regR[N-1:1]};
+	end
+
+
+always @(posedge sclk)
+	dataRe<=r_nextR;
 
 
 

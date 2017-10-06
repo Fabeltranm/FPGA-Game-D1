@@ -1,4 +1,4 @@
-DESIGN = shift#Aquí va el nombre del proyecto
+DESIGN = contador#Aquí va el nombre del proyecto
 
 PINS = $(DESIGN).ucf
 
