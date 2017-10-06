@@ -2,28 +2,19 @@
 
 module spi_TB;
 
+reg enable;
+reg reset;
 reg clk;
-reg run;
+reg MISO;
+reg RW;
+
+wire cs;
+wire DONE;
+wire MOSI;
 wire sclk;
 
-reg enable;
+spi uut(.dataIN(55),.EN(enable),.reset(reset),.clk(clk),.MISO(MISO),.RW(RW),.addres(55),.dataOUT(55),.DONE(DONE),.MOSI(MOSI),.CS(cs),.SCLK(sclk));
 
-spi uut(.dataIN(55),.EN(enable),.run(run),.sclk(sclk));
-
-
-	input [15:0] dataIN,
-	input EN,
-	input reset,
-	input clk,
-	input MISO,
-	input RW,
-	input [15:0] addres,
-	output [15:0] dataOUT,
-	output DONE,
-	output MOSI,
-	output CS,
-	output SCLK
-	);
 
 
 always
