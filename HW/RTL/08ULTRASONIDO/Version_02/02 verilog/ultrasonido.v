@@ -12,11 +12,13 @@ module ultrasonido	(
 
 divisorfrec	divisorfrec0	(	
 					.clk		(	clk	),
+					.ENABLE		(	ENABLE	),
 					.CLKOUT		(	CLKOUT	)
 								);
 
 divisorfrecgen	divisorfrecgen0	(	
 					.clk		(	clk	),
+					.ENABLE		(	ENABLE	),
 					.CLKOUT1	(	CLKOUT1	)
 								);
 
