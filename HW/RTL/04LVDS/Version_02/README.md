@@ -3,6 +3,7 @@
 ## Integrantes del equipo de trabajo:
 
 ###  Juan David González Muñoz judgonzalezmu@unal.edu.co
+###  Carlos Alberto Pérez Rodríguez caaperezro@unal.edu.co
 
 ## Descripción general del sistema:
 
