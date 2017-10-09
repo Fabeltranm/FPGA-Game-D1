@@ -2,21 +2,21 @@ module	divisorfrec	(
 				input           clk,
 				output          CLKOUT
 			);
-	reg count_1000;
+	reg [11:0] count_2924;
 	
 	initial
 	begin
 		CLKOUT=1'b1;
-		count_1000=0;
+		count_2924=0;
 	end
 	
 	always @(posedge clk) 
 	begin
-		count_1000 <= count_1000 + 1;
-		if(count_1000 == 1000)
+		count_2924 <= count_2924 + 1;
+		if(count_2924 == 2924)
 		begin
-			count<=0;
-			CLKOUT <= !CLKOUT;
+			count_2924<=0;
+			CLKOUT <= ~CLKOUT;
 		end
 	end
 endmodule
