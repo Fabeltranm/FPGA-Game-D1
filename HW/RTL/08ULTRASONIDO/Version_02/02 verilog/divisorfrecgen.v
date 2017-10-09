@@ -2,7 +2,7 @@ module	divisorfrec	(
 				input           clk,
 				output          CLKOUT1
 			);
-	reg count_1000;
+	reg [9:0] count_1000;
 	//
 	initial
 	begin
