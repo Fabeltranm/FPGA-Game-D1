@@ -20,6 +20,8 @@ La transmisión de los datos de los sistemas que utilizan este tipo de transmisi
 ![diagrama](https://user-images.githubusercontent.com/31424774/30913324-634817b0-a355-11e7-8e12-1b2ab39180be.jpeg)
 
 ## Descripción Estructural:
+![diagrama estructural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/04LVDS/Version_02/03%20document/estructural.png)
+  
 
 
 ## Diagrama de Estados:
