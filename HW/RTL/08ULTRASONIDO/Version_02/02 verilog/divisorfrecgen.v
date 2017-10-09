@@ -15,7 +15,7 @@ module	divisorfrec	(
 		count_1000 <= count_1000 + 1;
 		if(count_1000 == 1000)
 		begin
-			count<=0;
+			count_1000<=0;
 			CLKOUT1 <= !CLKOUT1;
 		end
 	end
