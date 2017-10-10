@@ -1,5 +1,5 @@
 module	divisorfrec	#(
-				top=12'b101101101100;// top=100MHz/34.2kHz=2924, error: 0.0132%
+				parameter top=12'b101101101100;// top=100MHz/34.2kHz=2924, error: 0.0132%
 			)
 			(
 				input           clk,
