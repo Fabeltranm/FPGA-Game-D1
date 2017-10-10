@@ -1,5 +1,4 @@
 module contador		(
-				
 				output wire	[7:0] count,
 				output wire	pulse,
 				output wire	calculate,
@@ -9,7 +8,7 @@ module contador		(
 				input	reset
 			);
 	reg [7:0] count0;
-	reg pulso
+	reg pulso;
 	initial 
 	begin
 		count0=0;
