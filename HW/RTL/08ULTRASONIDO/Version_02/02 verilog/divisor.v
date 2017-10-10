@@ -6,6 +6,9 @@ module	divisor (
 					output	[7:0]	d
 							);
 	reg [7:0] registro;
+	reg [7:0] registro0;
+	assign d = registro;
+	assign registro0=count;
 	initial
 	begin
 		registro=0;
@@ -17,13 +20,11 @@ module	divisor (
 		if(reset)
 		begin
 			registro=0;
-			d=0;
 			DONE=0;
 		end
 		else
 		begin
-			assign registro=count;
-			assign d = registro[7:0] >> 1;
+			registro = registro0 >> 1;
 			DONE = 1;
 		end
 	end
