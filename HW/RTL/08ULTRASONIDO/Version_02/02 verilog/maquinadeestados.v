@@ -9,7 +9,7 @@ module  maquinadeestados  (
   begin
     funcione=0;
   end
-  always@(posedge CLKOUT2 || orden)
+  always@(posedge CLKOUT2 && orden)
   begin
     case(orden)
       1'b0: funcione<=1'b0;
