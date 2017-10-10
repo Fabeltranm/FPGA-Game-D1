@@ -1,5 +1,5 @@
 // diseño de una fifo ciclica, para implementar en cada  bloque de proyecto
-// ferney alberto beltran 2016 electronica diggital 1 universidad Nacional
+// ferney alberto beltran 2016 electrónica digital 1 universidad Nacional
 
 module fifo
    #(
@@ -9,32 +9,40 @@ module fifo
    (
     input  clk, reset,
     input  rd, wr,
-    input  [dat_width-1:0] w_data,
-    output [dat_width-1:0] r_data
+    input  [dat_width-1:0] data_in,
+    output [dat_width-1:0] data_out,
     output empty, 
     output full
    );
 
-   //signal declaration
-   reg [B-1:0] array_reg [2**W-1:0];  // register array
-   reg [W-1:0] w_ptr_reg, w_ptr_next, w_ptr_succ;
-   reg [W-1:0] r_ptr_reg, r_ptr_next, r_ptr_succ;
+   
+   parameter depth = (1 << adr_width);
+
+   //declaración de registros 
+ 
+   reg [dat_width-1:0] ram [depth-1:0];// register array FIFO
+
+   reg [adr_width-1:0] w_ptr_reg, w_ptr_next;
+   reg [adr_width-1:0] r_ptr_reg, r_ptr_next;
    reg full_reg, empty_reg, full_next, empty_next;
    wire wr_en;
 
-   // body
-   // register file write operation
-   always @(posedge clk)
-      if (wr_en)
-         array_reg[w_ptr_reg] <= w_data;
-   // register file read operation
-   assign r_data = array_reg[r_ptr_reg];
-   // write enabled only when FIFO is not full
+
+   assign data_out = array_reg[r_ptr_reg];
    assign wr_en = wr & ~full_reg;
+
+   assign full = full_reg;
+   assign empty = empty_reg;
+
+   always @(posedge clk) begin
+      if (wr_en)
+         array_reg[w_ptr_reg] <= data_in;
+   end
+
 
    // fifo control logic
    // register for read and write pointers
-   always @(posedge clk, posedge reset)
+   always @(posedge clk, posedge reset) begin
       if (reset)
          begin
             w_ptr_reg <= 0;
@@ -49,47 +57,39 @@ module fifo
             full_reg <= full_next;
             empty_reg <= empty_next;
          end
-
-   // next-state logic for read and write pointers
+   end
+   
    always @*
    begin
-      // successive pointer values
-      w_ptr_succ = w_ptr_reg + 1;
-      r_ptr_succ = r_ptr_reg + 1;
-      // default: keep old values
-      w_ptr_next = w_ptr_reg;
-      r_ptr_next = r_ptr_reg;
+       
       full_next = full_reg;
       empty_next = empty_reg;
       case ({wr, rd})
-         // 2'b00:  no op
          2'b01: // read
             if (~empty_reg) // not empty
                begin
-                  r_ptr_next = r_ptr_succ;
+                  r_ptr_next = r_ptr_reg + 1;
                   full_next = 1'b0;
-                  if (r_ptr_succ==w_ptr_reg)
+                  if (r_ptr_next==w_ptr_reg)
                      empty_next = 1'b1;
                end
          2'b10: // write
             if (~full_reg) // not full
                begin
-                  w_ptr_next = w_ptr_succ;
+                  w_ptr_next = w_ptr_reg + 1;
                   empty_next = 1'b0;
-                  if (w_ptr_succ==r_ptr_reg)
+                  if (w_ptr_next==r_ptr_reg)
                      full_next = 1'b1;
                end
          2'b11: // write and read
             begin
-               w_ptr_next = w_ptr_succ;
-               r_ptr_next = r_ptr_succ;
+               w_ptr_next =  w_ptr_reg + 1;
+               r_ptr_next = r_ptr_reg + 1;
             end
       endcase
    end
 
-   // output
-   assign full = full_reg;
-   assign empty = empty_reg;
 
+  
 endmodule
 
