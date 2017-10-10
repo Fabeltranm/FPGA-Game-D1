@@ -14,7 +14,7 @@ module  maquinadeestados  (
     case(orden)
       1'b0: funcione<=1'b0;
       1'b1: funcione<=1'b1;
-    default: funcione <=  1'b0;
+      default: funcione <=  1'b0;
     endcase
     if(funcione)
     begin
