@@ -7,7 +7,6 @@ module	divisorfrec	#(
 				output          CLKOUT
 			);
 	reg [11:0] count_2924;
-	reg [11:0] top;
 	
 	initial
 	begin
