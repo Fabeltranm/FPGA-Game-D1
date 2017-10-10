@@ -16,7 +16,7 @@ Opera en una frecuencia de banda abierta a cualquier sistema que se encuentra en
 ## Descripción de la caja Funcional  (in/out)
 La caja funcional posee las señales Done, Busy y Enable las cuales se encargan de suministrar información sobre el estado del proceso de transferencia de datos, la señal de entrada d in es de 8 bits al igual que la de salida d out, estas señales corresponden a la información de entrada y salida del dispositivo, la salida TXD se refiere a los datos trasmitidos y la señal RXD a los datos recibidos.
 
-![inOut](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/caja%20negra%20bluetooth.png)
+![inOut](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/caja%20negra.png?raw=true)
 
 
 ## Descripción funcional:
