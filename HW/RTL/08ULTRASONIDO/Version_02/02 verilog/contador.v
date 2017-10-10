@@ -16,7 +16,7 @@ module contador		(
 		calculate=0;
 	end
 	
-	always@( reset || posedge CLKOUT )
+	always@( reset || (posedge CLKOUT && ENABLE) )
 	begin
 		if(reset)
 		begin
@@ -25,21 +25,24 @@ module contador		(
 			pulse=0;
 		end
 		//	Da la orden de mandar un pulso
-		if(ENABLE)
-		begin
-			pulse=1'b1;
-		end
-		//
-		//	Cuenta el rango que tiene el pulso del ECHO del sensor
-		//
-		if(ECHO)
-		begin
-			count0=count0+1;
-		end
 		else
 		begin
-			assign count = count0;
-			calculate = 1;
-		end	
+			if(ENABLE)
+			begin
+				pulse=1'b1;
+			end
+			//
+			//	Cuenta el rango que tiene el pulso del ECHO del sensor
+			//
+			if(ECHO)
+			begin
+				count0=count0+1;
+			end
+			else
+			begin
+				assign count = count0;
+				calculate = 1;
+			end
+		end
 	end
 endmodule
