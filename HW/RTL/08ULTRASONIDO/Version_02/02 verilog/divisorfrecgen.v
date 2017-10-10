@@ -1,5 +1,5 @@
 module	divisorfrecgen	#(
-		parameter top=10'b1111101000;// top=100MHz/100kHz=1000
+				parameter top=10'b1111101000;// top=100MHz/100kHz=1000
 			 )
 			(
 				input           clk,
