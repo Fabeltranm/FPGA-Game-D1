@@ -16,14 +16,11 @@ module	divisorfrec	#(
 	
 	always @(posedge clk) 
 	begin
-		if(ENABLE)
+		count_2924 <= count_2924 + 1;
+		if(count_2924 == top)
 		begin
-			count_2924 <= count_2924 + 1;
-			if(count_2924 == top)
-			begin
-				count_2924<=0;
-				CLKOUT <= ~CLKOUT;
-			end
+			count_2924<=0;
+			CLKOUT <= ~CLKOUT;
 		end
 	end
 endmodule
