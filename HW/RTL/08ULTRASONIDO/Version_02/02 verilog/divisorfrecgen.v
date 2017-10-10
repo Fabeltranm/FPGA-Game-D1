@@ -16,11 +16,11 @@ module	divisorfrecgen	#(
 	//
 	always @(posedge clk) 
 	begin
-			count_1000 <= count_1000 + 1;
-			if(count_1000 == top)
-			begin
-				count_1000<=0;
-				CLKOUT1 <= ~CLKOUT1;
-			end
+		count_1000 <= count_1000 + 1;
+		if(count_1000 == top)
+		begin
+			count_1000<=0;
+			CLKOUT1 <= ~CLKOUT1;
+		end
 	end
 endmodule
