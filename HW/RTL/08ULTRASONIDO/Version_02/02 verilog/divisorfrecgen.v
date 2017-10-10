@@ -3,7 +3,7 @@ module	divisorfrecgen	#(
 			 )
 			(
 				input           clk,
-				input		ENABLE
+				input		ENABLE,
 				output          CLKOUT1
 			);
 	reg [9:0] count_1000;
