@@ -1,16 +1,19 @@
-module	divisorfrec	(
+module	divisorfrec	#(
+				top=12'b101101101100;// top=100MHz/34.2kHz=2924, error: 0.0132%
+			)
+			(
 				input           clk,
 				input		ENABLE,
 				output          CLKOUT
 			);
-	reg [10:0] count_2924;
-	reg [10:0] top;
+	reg [11:0] count_2924;
+	reg [11:0] top;
 	
 	initial
 	begin
 		CLKOUT=1'b1;
 		count_2924=0;
-		top=11'b11000010001;// top=100MHz/(2*32.2kHz)=1553, error: 0.0132%
+		
 	end
 	
 	always @(posedge clk) 
