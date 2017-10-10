@@ -12,7 +12,6 @@ module	divisor (
 	initial
 	begin
 		registro=0;
-		d=0;
 		DONE=0;
 	end
 	always@(calculate || reset)
