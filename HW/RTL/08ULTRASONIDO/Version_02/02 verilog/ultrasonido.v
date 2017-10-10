@@ -1,4 +1,4 @@
-module	controlsensor	(
+module	ultrasonido	(
 				output [7:0]	d,
 				output 		trigg,
 				output 		DONE,
