@@ -1,8 +1,8 @@
 module  maquinadeestados  (
-                            input   clk,
-                            input   orden,
-                            output  ENABLE,
-                            output  reset
+                                  input   clk,
+                                  input   orden,
+                                  output  ENABLE,
+                                  output  reset
                            );
 meultrasonido meultrasonido0    (
                                   .reset    ( reset   ),
