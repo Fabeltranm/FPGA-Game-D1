@@ -1,4 +1,4 @@
-module  maquinadeestados  (
+module  meultrasonido  (
                             input CLKOUT2,
                             input orden,
                             output  ENABLE,
