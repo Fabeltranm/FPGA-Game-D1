@@ -13,7 +13,6 @@ module	divisorfrec	#(
 	begin
 		CLKOUT=1'b1;
 		count_2924=0;
-		
 	end
 	
 	always @(posedge clk) 
