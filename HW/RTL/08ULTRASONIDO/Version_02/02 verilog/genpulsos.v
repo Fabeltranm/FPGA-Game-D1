@@ -1,4 +1,4 @@
-module	GenPulsos	(
+module	genpulsos	(
 				input	pulse,
 				input	ECHO,
 				input	CLKOUT1,
