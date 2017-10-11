@@ -2,20 +2,22 @@ module microfono
 (
 	input		enable,
 	input		clk,
-	output reg 	[17:0]  sdata,
 	output		mclk,
-	output		ws,
+	output	reg	ws,
 	input		dataint,
 	input		reset,
-	output		done
+	output	reg	done
 
 );
+	 reg 	[17:0]  sdata;
+
+
 
 reg [0:31] count;
 reg [17:0] sregt;
-reg done;
-reg ws=0;
 
+
+initial ws =0;
 
 div_freq df(.clk(clk), .reset(reset),.clkout(mclk));
 

@@ -1,0 +1,12 @@
+## Clock pin for Nexys 2 Board
+NET "clk"         LOC = "B8";    # Bank = 0, Pin name = IP_L13P_0/GCLK8, Type = GCLK,                 Sch name = GCLK0
+
+NET "reset"       LOC = "G18";   
+NET "enable"       LOC = "H18"; 
+ NET "enable" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "mclk"       LOC = "L15";  #JA0
+NET "ws"         LOC = "K12"; 
+NET "dataint"     LOC = "L17";   
+NET "done"       LOC = "J13"; 
+
+

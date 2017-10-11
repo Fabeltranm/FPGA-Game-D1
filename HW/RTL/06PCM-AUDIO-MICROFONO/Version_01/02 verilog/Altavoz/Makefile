@@ -1,6 +1,6 @@
 DESIGN          = altavoz
 PINS            = $(DESIGN).ucf
-DEVICE          = xc7a100t-1csg324
+DEVICE          = XC3S500E-FG320-4
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
                    -g CRC:enable -g StartUpClk:CCLK
 
@@ -45,7 +45,7 @@ build/project.xst: build/project.src
 	echo "run" > $@
 	echo "-top $(DESIGN) " >> $@
 	echo "-p $(DEVICE)" >> $@
-	echo "-opt_mode Area" >> $@
+	echo |	"-opt_mode Area" >> $@
 	echo "-opt_level 1" >> $@
 	echo "-ifn project.src" >> $@
 	echo "-ifmt mixed" >> $@
