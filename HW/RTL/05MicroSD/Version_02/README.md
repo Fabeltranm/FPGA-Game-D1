@@ -19,7 +19,7 @@ El sistema cuenta con señales de salida que controlan la tarjeta microSD, con *
 
 A continuación se muestra los diagramas de flujo de inicialización, lectura y escritura de la tarjeta.
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/flujo.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiflujo.png)
 
 La señal **START** activa el **CINM** (módulo de inicialización de tarjetas) y reconoce la unidad de control con una señal **READY**. El modulo transcurre 74 o más ciclos de reloj para iniciar el protocolo **SPI**. La tarjeta se inicia primero con el comando **CMD0**, el controlador valida el rango de tensión en este para emitir el comando **CMD8** que identifica la versión de la tarjeta (versión 2). Por otra parte, el controlador genera los comandos **CMD55** y **ACMD41** para completar el proceso de inicialización. El controlador genera continuamente los comandos (**CMD55+ACMD41**) hasta que se inicialice la tarjeta y de una respuesta de **00000000**. El comando **CMD58** se genera para identificar el modo de direccionamiento de la tarjeta (direccionamiento de bloques o direccionamiento de byte). Si se genera el direccionamiento de bytes, se emite el comando **CMD16** para fijar la longitud de bloque de datos a 512 bytes. Seguido del proceso de inicialización, la tarjeta pasa al módulo inactivo hasta que se genere el comando para lectura y escritura.
 
@@ -27,10 +27,10 @@ La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura
 
 ## Descripción Estructural:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/block.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiestructura.png)
 ## Diagrama de Estados:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/estados.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiestado.png)
 ## Arquitectura del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ## Diagrama de bloques del periférico:
