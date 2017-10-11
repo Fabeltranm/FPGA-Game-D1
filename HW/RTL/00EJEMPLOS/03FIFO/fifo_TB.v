@@ -37,37 +37,55 @@ always #(tck/2) clk <= ~clk;
 
 initial begin
 #4;
-data_in=8'h10;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
+data_in="h"; #1 wr=1; #2 wr=0;
+data_in="o"; #1 wr=1; #2 wr=0;
+data_in="l"; #1 wr=1; #2 wr=0;
+data_in="a"; #1 wr=1; #2 wr=0;
+data_in=" "; #1 wr=1; #2 wr=0;
+data_in="m"; #1 wr=1; #2 wr=0;
+data_in="u"; #1 wr=1; #2 wr=0;
+data_in="n"; #1 wr=1; #2 wr=0;
+data_in="d"; #1 wr=1; #2 wr=0;
+data_in="o"; #1 wr=1; #2 wr=0;
+data_in="."; #1 wr=1; #2 wr=0;
+data_in="1"; #1 wr=1; #2 wr=0;
+data_in="2"; #1 wr=1; #2 wr=0;
+data_in="3"; #1 wr=1; #2 wr=0;
+data_in="4"; #1 wr=1; #2 wr=0;
+data_in="5"; #1 wr=1; #2 wr=0;
+data_in="6"; #1 wr=1; #2 wr=0;
+data_in="7"; #1 wr=1; #2 wr=0;
+data_in="8"; #1 wr=1; #2 wr=0;
+data_in="9"; #1 wr=1; #2 wr=0;
+data_in="0"; #1 wr=1; #2 wr=0;
 
 #1 rd=1; #2 rd=0;
 #1 rd=1; #2 rd=0;
 #1 rd=1; #2 rd=0;
 
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
+data_in="a"; #1 wr=1; #2 wr=0;
+data_in="b"; #1 wr=1; #2 wr=0;
+data_in="c"; #1 wr=1; #2 wr=0;
+data_in="d"; #1 wr=1; #2 wr=0;
 
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
-#1 wr=1; #2 wr=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
+#1 rd=1; #2 rd=0;
 
 
 end
