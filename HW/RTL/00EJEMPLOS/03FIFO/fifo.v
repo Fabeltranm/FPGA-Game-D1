@@ -39,7 +39,6 @@ module fifo
          array_reg[w_ptr_reg] <= data_in;
    end
 
-
    // fifo control logic
    // register for read and write pointers
    always @(posedge clk, posedge reset) begin
@@ -58,35 +57,41 @@ module fifo
             empty_reg <= empty_next;
          end
    end
+
+
    
-   always @*
+   always @(posedge reset, posedge wr, posedge rd)
    begin
-       
-      full_next = full_reg;
-      empty_next = empty_reg;
-      case ({wr, rd})
-         2'b01: // read
-            if (~empty_reg) // not empty
-               begin
-                  r_ptr_next = r_ptr_reg + 1;
-                  full_next = 1'b0;
-                  if (r_ptr_next==w_ptr_reg)
-                     empty_next = 1'b1;
-               end
-         2'b10: // write
-            if (~full_reg) // not full
-               begin
-                  w_ptr_next = w_ptr_reg + 1;
-                  empty_next = 1'b0;
-                  if (w_ptr_next==r_ptr_reg)
-                     full_next = 1'b1;
-               end
-         2'b11: // write and read
-            begin
-               w_ptr_next =  w_ptr_reg + 1;
-               r_ptr_next = r_ptr_reg + 1;
-            end
-      endcase
+      if (reset) begin
+	w_ptr_next =  0;
+        r_ptr_next =  0;       
+      end else begin
+	      full_next = full_reg;
+	      empty_next = empty_reg;
+	      case ({wr, rd})
+		 2'b01: // read
+		    if (~empty_reg) // not empty
+		       begin
+		          r_ptr_next = r_ptr_reg + 1;
+		          full_next = 1'b0;
+		          if (r_ptr_next==w_ptr_reg)
+		             empty_next = 1'b1;
+		       end
+		 2'b10: // write
+		    if (~full_reg) // not full
+		       begin
+		          w_ptr_next = w_ptr_reg + 1;
+		          empty_next = 1'b0;
+		          if (w_ptr_next==r_ptr_reg)
+		             full_next = 1'b1;
+		       end
+		 2'b11: // write and read
+		    begin
+		       w_ptr_next =  w_ptr_reg + 1;
+		       r_ptr_next = r_ptr_reg + 1;
+		    end
+	      endcase
+	end
    end
 
 
