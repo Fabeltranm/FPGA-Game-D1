@@ -1,13 +1,11 @@
 module spi
-	( 
-	input [15:0] dataIN,
+	#(parameter N=8)( 
+	input [N-1:0] dataIN,
 	input EN,
 	input reset,
 	input clk,
 	input MISO,
-	input RW,
-	input [15:0] addres,
-	output [15:0] dataOUT,
+	output [N-1:0] dataOUT,
 	output DONE,
 	output MOSI,
 	output CS,
@@ -17,12 +15,16 @@ module spi
 wire rund;
 wire sclk;
 wire done;
-assign SCLK =sclk;
+wire sclkn;
+
 assign DONE =done;
-comparador cmp(.EN(EN),.DONE(done),.CS(CS), .run(rund));
-divfreq  df(.run(rund), .clk(clk), .sclk(sclk));
-shift sh(.sclk(sclk), .reset(reset), .dataSe(dataIN), .dataRe(dataOUT), .MISO(MISO), .MOSI(MOSI));
-contador cnt (.sclk(sclk),.reset(reset), .DONE(done));
+assign SCLK=sclk;
+comparador cmp(.EN(EN),.CS(CS), .run(rund),.DONE(done));
+divfreq  df(.run(rund), .clk(clk), .sclk(sclk),.sclkn(sclkn));
+shifti shi(.sclkn(sclkn), .reset(reset), .dataSe(dataIN), .MOSI(MOSI));
+shiftd shd(.sclk(sclk), .reset(reset), .dataRe(dataOUT), .MISO(MISO));
+contador cnt (.sclkn(sclkn),.reset(reset), .DONE(done));
+
 
 
 

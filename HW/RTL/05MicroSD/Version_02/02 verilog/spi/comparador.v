@@ -10,17 +10,16 @@ always @(EN,DONE)
 		CS=0;
 		run=1;
 		end
-	else if(DONE&EN)
+	else if(EN&DONE==1)	
 		begin
 		CS=1;
 		run=0;
 		end
-	else	
+	else 	
 		begin
 		CS=1;
 		run=0;
 		end
-
 	
 	end
 

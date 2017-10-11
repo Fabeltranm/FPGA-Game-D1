@@ -1,20 +1,22 @@
 `timescale 1ns / 1ns
 
 module spi_TB;
-
-reg enable;
+parameter N=8;
+reg EN;
 reg reset;
 reg clk;
 reg MISO;
-reg [15:0] dataIN;
-wire [15:0] dataOUT;
-
+reg [N-1:0] dataIN;
+wire [N-1:0] dataOUT;
+wire sclkn;
 wire cs;
 wire DONE;
 wire MOSI;
-wire sclk;
+wire SCLK;
 
-spi uut(.dataIN(dataIN),.EN(enable),.reset(reset),.clk(clk),.MISO(MISO),.dataOUT(dataOUT),.DONE(DONE),.MOSI(MOSI),.CS(cs),.SCLK(sclk));
+spi uut(.dataIN(dataIN),.EN(EN),.reset(reset),.clk(clk),.MISO(MISO),.dataOUT(dataOUT),.DONE(DONE),.MOSI(MOSI),.CS(CS),.SCLK(SCLK));
+
+
 
 
 
@@ -30,54 +32,52 @@ always
 
 initial
 	begin
-	MISO=1;
+	EN=0;
 	reset=1;
-	enable=0;
-	#20;
+	MISO=1;
+	dataIN=0;
+	#5000
 	reset=0;
-	#10;
-	enable=1;
-	dataIN=16'hAB52;
+	EN=1;
+	dataIN=8'hA7;
+	
 	end
-reg [4:0] count=0;
+integer count=0;
 
-always @(posedge sclk)
+always @(posedge SCLK)
 	begin
-		if(count==15)
+		if(count==8)
 			count<=0;
 		else
-			count<=count+1;
+			count<=count+1'b1;
 	end
 
+reg [7:0] dataEn=8'hBC;
 
-always @(posedge sclk)
+always @(posedge SCLK)
 	begin
 
 	case(count)
-	0: MISO<=1;
-	1: MISO<=0;
-	2: MISO<=0;
-	3: MISO<=1;
-	4: MISO<=1;
-	5: MISO<=1;
-	6: MISO<=0;
-	7: MISO<=1;
-	8: MISO<=0;
-	9: MISO<=1;
-	10:MISO<=0;
-	11:MISO<=1;
-	12:MISO<=1;
-	13:MISO<=0;
-	14:MISO<=1;
-	15:MISO<=1;
+	0: MISO<=dataEn[0];
+	1: MISO<=dataEn[1];
+	2: MISO<=dataEn[2];
+	3: MISO<=dataEn[3];
+	4: MISO<=dataEn[4];
+	5: MISO<=dataEn[5];
+	6: MISO<=dataEn[6];
+	7: MISO<=dataEn[7];
 	endcase
 	end
 
+initial 
+	begin: TEST_MONITOR
+	$monitor ("time=", $time, " reset = %b EN = %b dataIN = %b SCLK = %b MOSI = %b MISO = %b CS = %b dataOUT = %h DONE = %b" ,reset, EN, dataIN, SCLK, MOSI, MISO, CS, dataOUT, DONE);
+	end
 
 initial begin: TEST_CASE	
      $dumpfile("spi_TB.vcd");
      $dumpvars(-1, uut);
-     #(20000) $finish;
+     #(50000) $finish;
    end
 
 endmodule

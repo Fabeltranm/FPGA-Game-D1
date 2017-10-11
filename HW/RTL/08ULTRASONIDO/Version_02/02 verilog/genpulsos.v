@@ -1,4 +1,4 @@
-module	GenPulsos	(
+module	genpulsos	(
 				input	pulse,
 				input	ECHO,
 				input	CLKOUT1,
@@ -22,14 +22,17 @@ module	GenPulsos	(
 		begin
 			Doit=0;
 			NoDoit=0;
-		end		
-		if(pulse)
-		begin
-			Doit<=1'b1;
 		end
-		if(pulse && Doit)
+		else
 		begin
-			NoDoit<=1'b1;
+			if(pulse)
+			begin
+				Doit<=1'b1;
+			end
+			if(pulse && Doit)
+			begin
+				NoDoit<=1'b1;
+			end
 		end
 	end
 	assign	sign=ECHO;
