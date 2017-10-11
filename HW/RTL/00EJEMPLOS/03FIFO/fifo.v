@@ -4,7 +4,7 @@
 module fifo
    #(
   	parameter adr_width = 4,
-	parameter dat_width = 8,
+	parameter dat_width = 8
    )
    (
     input  clk, reset,
@@ -20,7 +20,7 @@ module fifo
 
    //declaración de registros 
  
-   reg [dat_width-1:0] ram [depth-1:0];// register array FIFO
+   reg [dat_width-1:0] array_reg [depth-1:0];// register array FIFO
 
    reg [adr_width-1:0] w_ptr_reg, w_ptr_next;
    reg [adr_width-1:0] r_ptr_reg, r_ptr_next;
