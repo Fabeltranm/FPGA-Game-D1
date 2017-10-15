@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Oct 10 03:45:01 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "reset" LOCATE = SITE "R7" LEVEL 1;
+COMP "echo" LOCATE = SITE "U9" LEVEL 1;
+COMP "trigger" LOCATE = SITE "U8" LEVEL 1;
+SCHEMATIC END;
+
