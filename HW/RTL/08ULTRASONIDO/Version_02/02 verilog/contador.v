@@ -34,7 +34,7 @@ module contador		(
 			//
 			//	Cuenta el rango que tiene el pulso del ECHO del sensor
 			//
-			if(ECHO)
+			if(sign)
 			begin
 				count0=count0+1;
 			end
