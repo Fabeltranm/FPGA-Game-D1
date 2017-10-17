@@ -2,7 +2,7 @@ module contador		(
 				output wire	[7:0] count,
 				output wire	pulse,
 				output wire	calculate,
-				input	sign,
+				input	ECHO,
 				input	ENABLE,
 				input	CLKOUT,
 				input	reset
@@ -34,7 +34,7 @@ module contador		(
 			//
 			//	Cuenta el rango que tiene el pulso del ECHO del sensor
 			//
-			if(sign)
+			if(ECHO)
 			begin
 				count0=count0+1;
 			end
