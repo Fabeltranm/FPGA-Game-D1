@@ -23,11 +23,11 @@ divisorfrecgen	divisorfrecgen0	(
 
 genpulsos	genpulsos0	(
 					.pulse		(	pulse		),
-					.ECHO		(	ECHO		),
+					//.ECHO		(	ECHO		),
 					.CLKOUT1	(	CLKOUT1		),
 					.reset		(	reset		),
 					.trigg		(	trigg		),
-					.sign		(	sign		)
+					//.sign		(	sign		)
 				);
 
 
@@ -36,7 +36,8 @@ contador	contador0	(
 					.count		(	count		),
 					.pulse		(	pulse		),
 					.calculate	(	calculate	),
-					.sign		(	sign		),
+					//.sign		(	sign		),
+					.ECHO		(	ECHO		),
 					.ENABLE		(	ENABLE		),
 					.CLKOUT		(	CLKOUT		)
 				);
