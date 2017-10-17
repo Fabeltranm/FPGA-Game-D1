@@ -15,7 +15,7 @@ module	ps2	(
 		init=0;
 		regis=0;
 		regis0=0;
-		Rx_error<=0;
+		Rx_error=0;
 		DONE=0;
 	end
 	always@(posedge CLKOUT)
@@ -29,7 +29,7 @@ module	ps2	(
 //		lectura			//
 		if(init)
 		begin
-			regis[i]=data;
+			regis[i]=Rx;
 			i<=i+1;
 		end
 //		finalizar		//
@@ -37,20 +37,20 @@ module	ps2	(
 //		finalizar		//
 		if(i==9)
 		begin
-			if(regis[8]==!regis[7])
+			if(regis[8]==!regis[0])
 			begin
-				i<=0;
-				init<=0;
-				Rx_error<=0;
-				regis0<={regis[7:0]};
+				i=0;
+				init=0;
+				Rx_error=0;
+				regis0={regis[7:0]};
 				DONE=1;
 			end
 			else
 			begin
-				Rx_error<=1;
-				regis0<=0;
-				init<=0;
-				i<=0;
+				Rx_error=1;
+				regis0=0;
+				init=0;
+				i=0;
 				DONE=0;
 			end
 		end
