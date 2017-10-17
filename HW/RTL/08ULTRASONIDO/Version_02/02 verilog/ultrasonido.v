@@ -23,11 +23,12 @@ divisorfrecgen	divisorfrecgen0	(
 
 genpulsos	genpulsos0	(
 					.pulse		(	pulse		),
-					//.ECHO		(	ECHO		),
 					.CLKOUT1	(	CLKOUT1		),
 					.reset		(	reset		),
-					.trigg		(	trigg		),
-					//.sign		(	sign		)
+					//.ECHO		(	ECHO		),
+					//.sign		(	sign		),
+					.trigg		(	trigg		)
+
 				);
 
 
