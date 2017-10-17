@@ -2,13 +2,8 @@ module  meultrasonido  (
                             input	CLKOUT2,
                             input	orden,
                             output	ENABLE,
-                            output	reset,
-                          );
-	reg funcione;
-	initial
-	begin
-		funcione=0;
-	end
+                            output	reset
+                        );
 	always@(posedge CLKOUT2 || orden)
 	begin
 	case(orden)
