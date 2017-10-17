@@ -1,10 +1,10 @@
 module	genpulsos	(
-				input	pulse,
-				input	ECHO,
-				input	CLKOUT1,
-				input	reset,
-				output	trigg,
-				output	sign
+				input		pulse,
+				input		CLKOUT1,
+				input		reset,
+				//input		ECHO,
+				//output	sign,
+				output		trigg
 			);
 	reg	Doit;
 	reg	NoDoit;
@@ -35,5 +35,5 @@ module	genpulsos	(
 			end
 		end
 	end
-	assign	sign=ECHO;
+	//assign	sign=ECHO;
 endmodule
