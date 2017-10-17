@@ -37,7 +37,7 @@ module	ps2	(
 //		finalizar		//
 		if(i==9)
 		begin
-			if(regis[8]0==!regis[7])
+			if(regis[8]==!regis[7])
 			begin
 				i<=0;
 				init<=0;
