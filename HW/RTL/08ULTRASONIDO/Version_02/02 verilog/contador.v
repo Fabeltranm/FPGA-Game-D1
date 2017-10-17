@@ -3,6 +3,7 @@ module contador		(
 				output wire	pulse,
 				output wire	calculate,
 				input	ECHO,
+				//input	sign,
 				input	ENABLE,
 				input	CLKOUT,
 				input	reset
