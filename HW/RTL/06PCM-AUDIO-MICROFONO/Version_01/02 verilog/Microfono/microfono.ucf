@@ -1,7 +1,9 @@
 ## Clock pin for Nexys 3 Board
-NET "clk"            LOC = "V10" | IOSTANDARD = "LVCMOS33";   #Bank = 2, pin name = IO_L30N_GCLK0_USERCCLK,            Sch name = GCLK
+#NET "clk"            LOC = "V10" | IOSTANDARD = "LVCMOS33";   #Bank = 2, pin name = IO_L30N_GCLK0_USERCCLK,            Sch name = GCLK
+Net "clk" TNM_NET = sys_clk_pin;
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
 
-NET "reset"       LOC  = "T10";   
+NET "reset"       LOC = "T10";   
 NET "enable"       LOC = "T9"; 
  NET "enable" CLOCK_DEDICATED_ROUTE = FALSE;
 NET "mclk"       LOC = "T12";  #JA0
