@@ -6,15 +6,17 @@ TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%;
 NET "reset"			LOC = "U9";	
 NET "lr"			LOC = "U8";	
 
-NET "ledlr"			LOC = "T8";
-NET sregt<5>			LOC = "V9";
-NET sregt<4>			LOC = "R8";
-NET sregt<3>			LOC = "T6";
-NET sregt<2>			LOC = "T5";
-NET sregt<1>			LOC = "T4";
-NET sregt<0>			LOC = "U7";
+NET "ledres"			LOC = "T8";
+NET "ledlr"			LOC = "V9";
+NET "sregt<5>"			LOC = "R8";
+NET "sregt<4>"			LOC = "T6";
+NET "sregt<3>"			LOC = "T5";
+NET "sregt<2>"			LOC = "T4";
+NET "sregt<1>"			LOC = "U7";
+NET "sregt<0>"			LOC = "U6";
 
-#NET "mclk"			LOC = "J5";
-#NET "dataint"			LOC = "H5";
-#NET "ws"			LOC = "F5";
-	
+NET "mclk"			LOC = "J5";
+NET "dataint"			LOC = "H5";
+NET "ws"			LOC = "F5";
+
+

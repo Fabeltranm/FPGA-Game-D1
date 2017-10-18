@@ -12,12 +12,12 @@ reg [31:0] count;
 always @(posedge  clk)
 begin
 	if (reset) begin
-	led=1;
+	led=0;
 		count <= fi/fs;
 		clkout <=0;
 	end
 	else begin
-		led=0;
+		led=1;
 		count <=count-1;
 		if (count==0)begin
 			clkout <=~clkout;
