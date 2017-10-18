@@ -1,12 +1,8 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Oct 11 10:53:08 2017
+Tue Oct 17 12:43:18 2017
 
 drc -z project_r.ncd
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net done_cmp_le0000 is sourced
-   by a combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.

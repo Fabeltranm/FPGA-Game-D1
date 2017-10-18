@@ -6,25 +6,27 @@ module microfono
 	output	reg	ws,
 	input		dataint,
 	input		reset,
-	output	reg	done
-
-);
-	 reg 	[17:0]  sdata;
-
-
-
+	output	reg	done,
+	output   reg    er,		
+	output	reg	busy );
+	 
+reg [17:0]  sdata;
 reg [0:31] count;
 reg [17:0] sregt;
 
 
 initial ws =0;
 
-div_freq df(.clk(clk), .reset(reset),.clkout(mclk));
+div_freq df(.clk(clk),.reset(reset),.clkout(mclk));
 
-always @(negedge  mclk, posedge enable)
+always @(negedge  mclk)
 
+if (reset)
+begin
+er=0;
 	if (enable) 
 	begin	
+		busy=0;
 		done=0;
 		count<=0;
 		if (count<=17)  /* guarda 18 bits */
@@ -56,9 +58,12 @@ always @(negedge  mclk, posedge enable)
 						
 	end	
 	else
+	busy=1;
 	begin
 	end
-
-
-
+end
+else
+begin
+er=1;
+end
 endmodule

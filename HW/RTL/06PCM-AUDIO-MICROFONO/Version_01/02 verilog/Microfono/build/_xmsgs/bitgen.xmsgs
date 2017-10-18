@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Bitgen" num="275" delta="new" >Spartan-3E devices do not support bitstream readback of the Blockram resources in the -4C speedgrade.  If Blockram readback functionality is desired, it is suggested to target the -5C or -4I speedgrades.
-</msg>
-
-<msg type="warning" file="PhysDesignRules" num="372" delta="new" >Gated clock. Clock net <arg fmt="%s" index="1">done_cmp_le0000</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
-</msg>
-
 </messages>
 
