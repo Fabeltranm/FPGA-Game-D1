@@ -18,9 +18,9 @@ La caja funcional del módulo ultrasonido tiene como entradas, Pulse la cual int
 
 ## Descripción funcional:
 Emisor
-![diagrama funcional emisor](https://user-images.githubusercontent.com/31454781/30724524-f187170c-9f03-11e7-91d9-be5fb963ccbf.png)
+![diagrama funcional emisor](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_01/03%20document/imgs/Flow%20Diagram.png)
 Receptor
-![diagrama funcional receptor](https://user-images.githubusercontent.com/31454781/30725127-00ae9f80-9f08-11e7-89bc-fd5e4916cc9f.png)
+![diagrama funcional receptor](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/08ULTRASONIDO/Version_01/03%20document/imgs/Receptor%20Flow%20Diagram.png)
 
 ## Descripción Estructural:
 ![descripcion estructural](https://user-images.githubusercontent.com/31454781/30354243-07936dda-97f1-11e7-91cd-a085eb4cba08.png)
