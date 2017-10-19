@@ -62,24 +62,381 @@ Parsing module <div_freq>.
 Elaborating module <microfono>.
 
 Elaborating module <div_freq>.
-WARNING:HDLCompiler:462 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 36: if-condition does not match any sensitivity list edge
-WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 39: Signal <sregtr> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 40: Signal <count1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 40: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:462 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 64: if-condition does not match any sensitivity list edge
-WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 67: Signal <sregtl> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 68: Signal <count> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 68: Result of 7-bit expression is truncated to fit in 6-bit target.
-ERROR:HDLCompiler:1128 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 64: Assignment under multiple single edges is not supported for synthesis
-INFO - You can change the severity of this error message to warning using switch -change_error_to_warning "HDLCompiler:1128"
-Module microfono remains a blackbox, due to errors in its contents
-WARNING:HDLCompiler:1499 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 1: Empty module <microfono> remains a black box.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 42: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <microfono>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v".
+WARNING:Xst:2935 - Signal 'ws', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 6-bit register for signal <sregt>.
+    Found 6-bit register for signal <count1>.
+    Found 1-bit register for signal <ledlr>.
+    Found 6-bit adder for signal <count1[0]_GND_1_o_add_2_OUT> created at line 42.
+    Found 6-bit comparator greater for signal <n0000> created at line 37
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <microfono> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/div_freq.v".
+        fi = 100000000
+        fs = 2000000
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <clkout>.
+    Found 1-bit register for signal <led>.
+    Found 32-bit subtractor for signal <count[31]_GND_2_o_sub_2_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit subtractor                                     : 1
+ 6-bit adder                                           : 1
+# Registers                                            : 6
+ 1-bit register                                        : 3
+ 32-bit register                                       : 1
+ 6-bit register                                        : 2
+# Comparators                                          : 1
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <div_freq>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <div_freq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <microfono>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+Unit <microfono> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 32-bit down counter                                   : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Comparators                                          : 1
+ 6-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <microfono> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 0.
+FlipFlop sregt_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ledlr has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 54
+ Flip-Flops                                            : 54
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 117
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 1
+#      LUT2                        : 7
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 8
+#      MUXCY                       : 31
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 54
+#      FD                          : 1
+#      FDE                         : 17
+#      FDR                         : 31
+#      FDS                         : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 3
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  126800     0%  
+ Number of Slice LUTs:                   52  out of  63400     0%  
+    Number used as Logic:                52  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     55
+   Number with an unused Flip Flop:      11  out of     55    20%  
+   Number with an unused LUT:             3  out of     55     5%  
+   Number of fully used LUT-FF pairs:    41  out of     55    74%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    210     6%  
+    IOB Flip Flops/Latches:              10
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+df/clkout                          | NONE(sregt_0)          | 19    |
+clk                                | BUFGP                  | 35    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.207ns (Maximum Frequency: 237.706MHz)
+   Minimum input arrival time before clock: 2.076ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 2.553ns (frequency: 391.696MHz)
+  Total number of paths / destination ports: 127 / 36
+-------------------------------------------------------------------------
+Delay:               2.553ns (Levels of Logic = 1)
+  Source:            count1_2 (FF)
+  Destination:       ledlr (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: count1_2 to ledlr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.478   0.939  count1_2 (count1_2)
+     LUT6:I1->O           19   0.124   0.518  _n00221 (_n0022)
+     FDS:S                     0.494          ledlr
+    ----------------------------------------
+    Total                      2.553ns (1.096ns logic, 1.457ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.207ns (frequency: 237.706MHz)
+  Total number of paths / destination ports: 1618 / 63
+-------------------------------------------------------------------------
+Delay:               4.207ns (Levels of Logic = 3)
+  Source:            df/count_25 (FF)
+  Destination:       df/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/count_25 to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
+     LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_2_o_equal_3_o<31>5 (df/count[31]_GND_2_o_equal_3_o<31>4)
+     LUT6:I1->O            5   0.124   0.448  df/count[31]_GND_2_o_equal_3_o<31>7 (df/count[31]_GND_2_o_equal_3_o)
+     LUT2:I1->O           29   0.124   0.551  df/count[31]_GND_2_o_equal_3_o_01 (df/count[31]_GND_2_o_equal_3_o_0)
+     FDR:R                     0.494          df/count_0
+    ----------------------------------------
+    Total                      4.207ns (1.344ns logic, 2.863ns route)
+                                       (31.9% logic, 68.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              2.076ns (Levels of Logic = 2)
+  Source:            lr (PAD)
+  Destination:       ledlr (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: lr to ledlr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.939  lr_IBUF (lr_IBUF)
+     LUT6:I0->O           19   0.124   0.518  _n00221 (_n0022)
+     FDS:S                     0.494          ledlr
+    ----------------------------------------
+    Total                      2.076ns (0.619ns logic, 1.457ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              1.746ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.001   0.576  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           29   0.124   0.551  df/count[31]_GND_2_o_equal_3_o_01 (df/count[31]_GND_2_o_equal_3_o_0)
+     FDR:R                     0.494          df/count_0
+    ----------------------------------------
+    Total                      1.746ns (0.619ns logic, 1.127ns route)
+                                       (35.5% logic, 64.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            sregt_5 (FF)
+  Destination:       sregt<5> (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: sregt_5 to sregt<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.478   0.399  sregt_5 (sregt_5)
+     OBUF:I->O                 0.000          sregt_5_OBUF (sregt<5>)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            df/led (FF)
+  Destination:       ledres (PAD)
+  Source Clock:      clk rising
+
+  Data Path: df/led to ledres
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.399  df/led (df/led)
+     OBUF:I->O                 0.000          ledres_OBUF (ledres)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.207|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |    2.553|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.71 secs
+ 
 --> 
 
 
-Total memory usage is 344772 kilobytes
+Total memory usage is 504448 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

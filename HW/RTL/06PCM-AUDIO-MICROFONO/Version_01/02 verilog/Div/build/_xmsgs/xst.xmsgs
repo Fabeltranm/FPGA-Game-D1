@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/athalia/Escritorio/Div/div_freq.v" Line 21: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Div/div_freq.v" Line 21: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">count_6</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">div_freq</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

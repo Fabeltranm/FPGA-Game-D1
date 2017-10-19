@@ -1,6 +1,6 @@
 DESIGN          = div_freq
 PINS            = $(DESIGN).ucf
-DEVICE          = XC6SLX16-CSG324
+DEVICE          = XC7A100T-1CSG324
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
                    -g CRC:enable -g StartUpClk:CCLK
 

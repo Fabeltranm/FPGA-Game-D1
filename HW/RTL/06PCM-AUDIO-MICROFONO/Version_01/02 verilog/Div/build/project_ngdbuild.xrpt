@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Tue Oct 17 19:55:15 2017">
+  <application stringID="NgdBuild" timeStamp="Thu Oct 19 17:35:32 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -27,19 +27,19 @@
         <item stringID="User_EnvOsname" value="Ubuntu"/>
         <item stringID="User_EnvOsrelease" value="Ubuntu 17.04"/>
       </item>
-      <item stringID="User_EnvHost" value="athalia-TOSHIBA-NB515"/>
+      <item stringID="User_EnvHost" value="lisseth-300-1220la"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Atom(TM) CPU N2600   @ 1.60GHz"/>
-          <item stringID="speed" value="1000.000 MHz"/>
+          <item stringID="arch" value="AMD Athlon(tm) II X2 235e Processor"/>
+          <item stringID="speed" value="2700.000 MHz"/>
         </row>
       </table>
     </section>
     <task stringID="NGDBUILD_OPTION_SUMMARY">
       <section stringID="NGDBUILD_OPTION_SUMMARY">
-        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="XC6SLX16-CSG324"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="XC7A100T-1CSG324"/>
         <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="../div_freq.ucf"/>
       </section>
     </task>

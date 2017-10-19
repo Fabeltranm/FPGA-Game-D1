@@ -5,34 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="462" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 36: if-condition does not match any sensitivity list edge
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 42: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 39: Signal &lt;<arg fmt="%s" index="1">sregtr</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">ws</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">microfono</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 40: Signal &lt;<arg fmt="%s" index="1">count1</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 40: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="462" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 64: if-condition does not match any sensitivity list edge
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 67: Signal &lt;<arg fmt="%s" index="1">sregtl</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 68: Signal &lt;<arg fmt="%s" index="1">count</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 68: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1128" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 64: Assignment under multiple single edges is not supported for synthesis
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 1: Empty module &lt;<arg fmt="%s" index="1">microfono</arg>&gt; remains a black box.
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>
