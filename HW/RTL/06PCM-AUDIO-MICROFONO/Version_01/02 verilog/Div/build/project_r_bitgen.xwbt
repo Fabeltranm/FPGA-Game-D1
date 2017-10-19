@@ -1,0 +1,7 @@
+INFILE=/home/athalia/Escritorio/Div/build/project_r.ncd
+OUTFILE=/home/athalia/Escritorio/Div/build/project_r.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/athalia/Escritorio/Div/build
+LICENSE=WebPack
+USER_INFO=211378749_0_0_358
