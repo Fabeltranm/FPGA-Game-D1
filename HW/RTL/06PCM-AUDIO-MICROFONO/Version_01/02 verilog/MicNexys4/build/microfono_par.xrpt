@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Thu Oct 19 18:04:24 2017">
+  <application stringID="par" timeStamp="Thu Oct 19 18:36:53 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -48,7 +48,7 @@
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="32 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="33 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="32 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="32 secs "/>
       </section>
     </task>
@@ -2210,7 +2210,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Thu Oct 19 18:04:26 2017">
+  <application stringID="Par" timeStamp="Thu Oct 19 18:36:55 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -2238,7 +2238,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="AMD Athlon(tm) II X2 235e Processor"/>
-          <item stringID="speed" value="800.000 MHz"/>
+          <item stringID="speed" value="2700.000 MHz"/>
         </row>
       </table>
     </section>

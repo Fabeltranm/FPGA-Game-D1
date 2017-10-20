@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-lisseth-300-1220la::  Thu Oct 19 18:04:03 2017
+lisseth-300-1220la::  Thu Oct 19 18:36:31 2017
 
 par -w project.ncd project_r.ncd 
 
@@ -106,7 +106,7 @@ Finished initial Timing Analysis.  REAL time: 24 secs
 Starting Router
 
 
-Phase  1  : 203 unrouted;      REAL time: 26 secs 
+Phase  1  : 203 unrouted;      REAL time: 27 secs 
 
 Phase  2  : 154 unrouted;      REAL time: 27 secs 
 
@@ -178,7 +178,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 33 secs 
+Total REAL time to PAR completion: 32 secs 
 Total CPU time to PAR completion: 32 secs 
 
 Peak Memory Usage:  1038 MB

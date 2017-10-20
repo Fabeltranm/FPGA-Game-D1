@@ -429,12 +429,12 @@ df/clkout      |    2.553|         |         |         |
 
 
 Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 20.71 secs
+Total CPU time to Xst completion: 21.24 secs
  
 --> 
 
 
-Total memory usage is 504448 kilobytes
+Total memory usage is 504452 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

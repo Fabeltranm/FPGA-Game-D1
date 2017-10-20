@@ -8,7 +8,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 19 18:03:06 2017
+Mapped Date    : Thu Oct 19 18:35:34 2017
 
 Mapping design into LUTs...
 Writing file project.ngm...
@@ -18,7 +18,7 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 41 secs 
+Total REAL time at the beginning of Placer: 42 secs 
 Total CPU  time at the beginning of Placer: 41 secs 
 
 Phase 1.1  Initial Placement Analysis
@@ -48,10 +48,10 @@ Phase 8.8  Global Placement
 ..
 ................
 ................
-Phase 8.8  Global Placement (Checksum:53052c25) REAL time: 50 secs 
+Phase 8.8  Global Placement (Checksum:53052c25) REAL time: 51 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:53052c25) REAL time: 50 secs 
+Phase 9.5  Local Placement Optimization (Checksum:53052c25) REAL time: 51 secs 
 
 Phase 10.18  Placement Optimization
 Phase 10.18  Placement Optimization (Checksum:c4785a45) REAL time: 51 secs 

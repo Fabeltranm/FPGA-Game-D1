@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.20131013 at Thu Oct 19 18:05:26 2017
+; Created by bitgen P.20131013 at Thu Oct 19 18:37:52 2017
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
