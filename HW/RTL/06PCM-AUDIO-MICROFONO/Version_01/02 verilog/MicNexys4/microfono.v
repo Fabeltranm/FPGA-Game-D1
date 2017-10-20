@@ -23,14 +23,8 @@ div_freq df(.clk(clk), .reset(reset),.clkout(mclk),.led(ledres));
 always @(posedge  mclk)
 begin
 
-	//if (reset)
-	//begin
-	
-	//end
-	 
-	//else
-	//begin
-	
+	if (reset)
+	begin
 	if(lr)
 	begin
 		
@@ -44,9 +38,16 @@ begin
 		
 		else 
 		begin
-		
+		ledlr=0;
+		count1<=0;
 		end
 	end
+	end
+	 
+	//else
+	//begin
+	
+	
 	//end
 	
 end

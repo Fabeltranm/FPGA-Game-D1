@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.20131013 at Thu Oct 19 17:37:55 2017
+; Created by bitgen P.20131013 at Fri Oct 20 10:45:52 2017
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
@@ -31,14 +31,10 @@ Revision 3
 ;                      special meaning to software reading the .ll file.
 ;
 Info STARTSEL0=1
-Bit   333411 0x0000011f    515 Block=SLICE_X0Y108 Latch=AQ Net=count<0>
-Bit   333412 0x0000011f    516 Block=SLICE_X1Y108 Latch=AQ Net=count<1>
-Bit   333430 0x0000011f    534 Block=SLICE_X0Y108 Latch=BMUX Net=Result<1>
-Bit   333441 0x0000011f    545 Block=SLICE_X0Y108 Latch=CQ Net=count<2>
-Bit   333442 0x0000011f    546 Block=SLICE_X1Y108 Latch=CQ Net=count<4>
-Bit   333450 0x0000011f    554 Block=SLICE_X1Y108 Latch=CMUX Net=count<5>
-Bit   333460 0x0000011f    564 Block=SLICE_X1Y108 Latch=DMUX Net=clkout_rstpot
-Bit   333466 0x0000011f    570 Block=SLICE_X0Y108 Latch=DQ Net=count<3>
-Bit   333467 0x0000011f    571 Block=SLICE_X1Y108 Latch=DQ Net=clkout_OBUF
-Bit   333478 0x0000011f    582 Block=SLICE_X0Y109 Latch=AMUX Net=Result<4>
-Bit   333494 0x0000011f    598 Block=SLICE_X0Y109 Latch=BMUX Net=Result<5>
+Bit  2356899 0x00000a1f    771 Block=SLICE_X30Y112 Latch=AQ Net=count<0>
+Bit  2356924 0x00000a1f    796 Block=SLICE_X30Y112 Latch=BQ Net=count<1>
+Bit  2356930 0x00000a1f    802 Block=SLICE_X31Y112 Latch=CQ Net=count<2>
+Bit  2356937 0x00000a1f    809 Block=SLICE_X30Y112 Latch=CMUX Net=Result<2>
+Bit  2356947 0x00000a1f    819 Block=SLICE_X30Y112 Latch=DMUX Net=Result<3>
+Bit  2356955 0x00000a1f    827 Block=SLICE_X31Y112 Latch=DQ Net=count<3>
+Bit  2473306 0x00000a9f    826 Block=SLICE_X32Y112 Latch=DQ Net=clkout_OBUF
