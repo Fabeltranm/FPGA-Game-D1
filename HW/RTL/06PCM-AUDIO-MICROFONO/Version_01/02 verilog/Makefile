@@ -1,4 +1,4 @@
-DESIGN          = microfono
+DESIGN          = #agregar nombre archivo principal
 PINS            = $(DESIGN).ucf
 DEVICE          = XC7A100T-1CSG324 #XC3S500E-FG320-4(nexys2) XC6SLX16-CSG324C(nexys3) XC7A100T-1CSG324C(nexys4)
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
@@ -12,7 +12,7 @@ IVERILOG        = iverilog
 
 
 
-SRC             = $(DESIGN).v div_freq.v
+SRC             = $(DESIGN).v #agregar el resto de modulos $(DESIGN).v div_freq.v etc
 
 SIM_SRC = $(DESIGN)_TB.v          \
 
@@ -88,7 +88,7 @@ postsim: build/project.ngc
 iversim:  build/project.src
 	$(IVERILOG) -gno-io-range-error -o simulation/$(DESIGN)_TB.vvp $(VINCDIR) $(SRC) $(SIM_SRC) -s $(DESIGN)_TB
 	vvp simulation/$(DESIGN)_TB.vvp; mv $(DESIGN)_TB.vcd simulation/
-	gtkwave simulation/$(DESIGN)_TB.vcd&
+	gtkwave simulation/$(DESIGN)_TB.vcd& #si se borra esta linea ya no se abre una nueva ventana gtkwave
 
 upload: $(DESIGN).bit
 	scp $(DESIGN).bit root@$(SAKC_IP): 
