@@ -50,9 +50,9 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" into library work
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" into library work
 Parsing module <microfono>.
-Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/div_freq.v" into library work
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/div_freq.v" into library work
 Parsing module <div_freq>.
 
 =========================================================================
@@ -62,14 +62,14 @@ Parsing module <div_freq>.
 Elaborating module <microfono>.
 
 Elaborating module <div_freq>.
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 36: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v" Line 36: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <microfono>.
-    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v".
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/microfono.v".
 WARNING:Xst:2935 - Signal 'ws', unconnected in block 'microfono', is tied to its initial value (0).
     Found 6-bit register for signal <sregt>.
     Found 6-bit register for signal <count1>.
@@ -83,7 +83,7 @@ WARNING:Xst:2935 - Signal 'ws', unconnected in block 'microfono', is tied to its
 Unit <microfono> synthesized.
 
 Synthesizing Unit <div_freq>.
-    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/div_freq.v".
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/MicNexys4/div_freq.v".
         fi = 100000000
         fs = 2000000
     Found 32-bit register for signal <count>.
@@ -188,7 +188,7 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 121
+# BELS                             : 122
 #      GND                         : 1
 #      INV                         : 33
 #      LUT1                        : 1
@@ -196,7 +196,7 @@ Primitive and Black Box Usage:
 #      LUT3                        : 3
 #      LUT4                        : 2
 #      LUT5                        : 2
-#      LUT6                        : 7
+#      LUT6                        : 8
 #      MUXCY                       : 31
 #      VCC                         : 1
 #      XORCY                       : 32
@@ -220,14 +220,14 @@ Selected Device : 7a100tcsg324-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:              44  out of  126800     0%  
- Number of Slice LUTs:                   56  out of  63400     0%  
-    Number used as Logic:                56  out of  63400     0%  
+ Number of Slice LUTs:                   57  out of  63400     0%  
+    Number used as Logic:                57  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     58
-   Number with an unused Flip Flop:      14  out of     58    24%  
-   Number with an unused LUT:             2  out of     58     3%  
-   Number of fully used LUT-FF pairs:    42  out of     58    72%  
+ Number of LUT Flip Flop pairs used:     59
+   Number with an unused Flip Flop:      15  out of     59    25%  
+   Number with an unused LUT:             2  out of     59     3%  
+   Number of fully used LUT-FF pairs:    42  out of     59    71%  
    Number of unique control sets:         6
 
 IO Utilization: 
@@ -273,7 +273,7 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 4.207ns (Maximum Frequency: 237.706MHz)
-   Minimum input arrival time before clock: 1.807ns
+   Minimum input arrival time before clock: 2.040ns
    Maximum output required time after clock: 0.877ns
    Maximum combinational path delay: No path found
 
@@ -283,10 +283,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'df/clkout'
-  Clock period: 3.020ns (frequency: 331.126MHz)
+  Clock period: 3.018ns (frequency: 331.345MHz)
   Total number of paths / destination ports: 127 / 34
 -------------------------------------------------------------------------
-Delay:               3.020ns (Levels of Logic = 2)
+Delay:               3.018ns (Levels of Logic = 2)
   Source:            count1_1 (FF)
   Destination:       count1_5 (FF)
   Source Clock:      df/clkout rising
@@ -296,12 +296,12 @@ Delay:               3.020ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.478   0.933  count1_1 (count1_1)
-     LUT5:I0->O            3   0.124   0.435  n00001 (n0000)
-     LUT3:I2->O            6   0.124   0.432  _n00281 (_n0028)
+     FDRE:C->Q             4   0.478   0.939  count1_1 (count1_1)
+     LUT5:I0->O            2   0.124   0.427  n00001 (n0000)
+     LUT3:I2->O            6   0.124   0.432  _n00291 (_n0029)
      FDRE:R                    0.494          count1_5
     ----------------------------------------
-    Total                      3.020ns (1.220ns logic, 1.800ns route)
+    Total                      3.018ns (1.220ns logic, 1.798ns route)
                                        (40.4% logic, 59.6% route)
 
 =========================================================================
@@ -330,29 +330,30 @@ Delay:               4.207ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
-  Total number of paths / destination ports: 52 / 27
+  Total number of paths / destination ports: 54 / 27
 -------------------------------------------------------------------------
-Offset:              1.807ns (Levels of Logic = 2)
+Offset:              2.040ns (Levels of Logic = 3)
   Source:            reset (PAD)
-  Destination:       count1_5 (FF)
+  Destination:       ledlr (FF)
   Destination Clock: df/clkout rising
 
-  Data Path: reset to count1_5
+  Data Path: reset to ledlr
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   0.001   0.756  reset_IBUF (reset_IBUF)
-     LUT3:I0->O            6   0.124   0.432  _n00281 (_n0028)
-     FDRE:R                    0.494          count1_5
+     IBUF:I->O             8   0.001   0.985  reset_IBUF (reset_IBUF)
+     LUT6:I0->O            1   0.124   0.776  _n00341 (_n0034)
+     LUT4:I0->O            2   0.124   0.000  ledlr_rstpot (ledlr_rstpot)
+     FD:D                      0.030          ledlr
     ----------------------------------------
-    Total                      1.807ns (0.619ns logic, 1.188ns route)
-                                       (34.3% logic, 65.7% route)
+    Total                      2.040ns (0.279ns logic, 1.761ns route)
+                                       (13.7% logic, 86.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 35 / 35
 -------------------------------------------------------------------------
-Offset:              1.746ns (Levels of Logic = 2)
+Offset:              1.752ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       df/count_0 (FF)
   Destination Clock: clk rising
@@ -361,12 +362,12 @@ Offset:              1.746ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   0.001   0.576  reset_IBUF (reset_IBUF)
+     IBUF:I->O             8   0.001   0.582  reset_IBUF (reset_IBUF)
      LUT2:I0->O           29   0.124   0.551  df/count[31]_GND_2_o_equal_3_o_01 (df/count[31]_GND_2_o_equal_3_o_0)
      FDR:R                     0.494          df/count_0
     ----------------------------------------
-    Total                      1.746ns (0.619ns logic, 1.127ns route)
-                                       (35.5% logic, 64.5% route)
+    Total                      1.752ns (0.619ns logic, 1.133ns route)
+                                       (35.3% logic, 64.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
@@ -424,19 +425,19 @@ Clock to Setup on destination clock df/clkout
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-df/clkout      |    3.020|         |         |         |
+df/clkout      |    3.018|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 70.00 secs
-Total CPU time to Xst completion: 67.07 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.11 secs
  
 --> 
 
 
-Total memory usage is 504504 kilobytes
+Total memory usage is 504456 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

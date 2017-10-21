@@ -20,9 +20,9 @@ end
 
 initial
 begin
-reset =1'b1;
-#10;
 reset =1'b0;
+#10;
+reset =1'b1;
 
 end
 

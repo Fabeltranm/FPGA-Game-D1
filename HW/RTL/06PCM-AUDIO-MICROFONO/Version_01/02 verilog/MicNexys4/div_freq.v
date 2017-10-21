@@ -1,6 +1,6 @@
 module div_freq #(
               parameter   fi     = 100000000,           
-              parameter   fs	 = 2000000        //flckout=((2.38*fs)/500000)MHZ
+              parameter   fs	 = 5000000        //flckout=((2.38*fs)/500000)MHZ
   )(input clk, output reg clkout,input reset, output reg led);
 
 

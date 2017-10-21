@@ -25,23 +25,27 @@ begin
 
 	if (reset)
 	begin
-	if(lr)
-	begin
-		
-		if (count1<=5)  /* guarda 5 bits */
+		if(lr)
 		begin
 		
-		ledlr=1;
-		sregt<= {sregt[4:0],dataint};
-		count1<=count1+1;
-		end
+			if (count1<=5)  /* guarda 5 bits */
+			begin
 		
-		else 
+			ledlr=1;
+			sregt<= {sregt[4:0],dataint};
+			count1<=count1+1;
+			end
+		
+			else 
+			begin
+			
+			count1<=0;
+			end
+		end
+		else
 		begin
 		ledlr=0;
-		count1<=0;
 		end
-	end
 	end
 	 
 	//else
