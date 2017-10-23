@@ -1,6 +1,6 @@
 DESIGN          = microfono
 PINS            = $(DESIGN).ucf
-DEVICE          = XC3S500E-FG320-4
+DEVICE          = XC6SLX16-CSG324
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
                    -g CRC:enable -g StartUpClk:CCLK
 

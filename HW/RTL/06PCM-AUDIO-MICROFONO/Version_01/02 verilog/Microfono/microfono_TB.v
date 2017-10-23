@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module microfono_TB;
 
 reg dataint;

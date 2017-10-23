@@ -1,34 +1,53 @@
-module ultrasonido(input reset, input clk, input echo, output reg done, output reg trigger, output reg [31:0] distance);
+module ultrasonido(input reset, input clk, input echo, output reg done, output reg trigger, output reg [15:0] distance);
+	//Período de la FPGA T=10nS (Código Alterno)
 	//Declaración de parámetros
-	parameter divH = 10;
-	parameter divL = 40;
+	//Estos parámetros se encuentran  en nano segundos por el periodo de la FPGA 
+	parameter divH = 10000; 
+	parameter divL = 50000;
 	
 	//Contadores
 	integer countF;
-	integer countecho;
+	integer countEcho;
+	//integer distanceCm;
 	
 	//Trigger
 	always @(posedge clk) begin 
-		if (reset) begin 
-		done <= 0;
-		countF <= 0;
-		trigger <= 0;
-		end else begin
-			countF <= countF +1;
-			if (countF < divH)
-				trigger <= 1;
-			else if (countF < divL)
+		if (reset) 
+		begin 
+			done <= 0;
+			countF <= 0;
+			trigger <= 1;
+			//countEcho <=0;
+		end 
+		else 
+		begin
+			if (countF == divH+1)
 				trigger <= 0;
-			else 
-				countF <= 0;
-		end
-	
-	if (echo == 0)	begin	
-			distance <= countecho/5800;
-			countecho<=0;
-			done <= 1;
-		end else begin 
-			countecho <= countecho +1;
+			else
+			begin
+				if (countF == divL+1)
+				begin
+					trigger <= 1;
+					countF <= 0;
+				end
+				else 
+					countF <= countF +1;	
+			end
 		end
 	end
+	
+	//echo
+	always @(posedge clk) begin
+		if (echo == 0)	
+		begin	
+			distance <= countEcho/58000;
+			countEcho<=0;
+			//done <= 1;
+		end 
+		else 
+		begin 
+			countEcho <= countEcho +1;
+		end
+	end
+	
 endmodule

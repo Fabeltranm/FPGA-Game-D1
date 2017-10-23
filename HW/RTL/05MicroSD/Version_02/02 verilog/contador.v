@@ -1,37 +1,29 @@
-module contador #(parameter N=8)(input sclk, input reset, output reg DONE);
+module contador #(parameter N=8)(input sclkn, input reset, output reg done);
 
-reg [N-1:0] countD;
-reg [N-1:0] countA=0;
+integer countd=0;
 
-always @(posedge sclk, posedge reset)
+
+
+always @(posedge sclkn)
 	begin
 		if(reset)
-
-			countD<=0;
-
-		else
-			countD<=countA;			
+			begin
+			countd<=0;
+			done<=0;
+			end
+		else if(countd==N)
+			begin	
+			countd<=0;
+			done<=1;
+			end
+		else	
+			begin
+			countd<=countd+1;
+			done<=0;
+			end
 	end
 
-always @(negedge sclk, negedge reset)
-	begin
-		if(reset)
-			countA<=0;
 
-		else if(countA==N)	
-			countA<=0;
-		else
-			countA<=countD+1;
-	end
-
-
-always @(negedge sclk)
-	begin
-		if(countA==N)
-			DONE<=1;
-		else
-			DONE<=0;
-	end
 
 
 

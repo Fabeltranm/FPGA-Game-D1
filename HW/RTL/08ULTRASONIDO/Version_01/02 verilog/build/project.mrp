@@ -8,23 +8,23 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Oct 10 03:44:13 2017
+Mapped Date    : Sun Oct 22 11:54:45 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   36
+Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    40 out of 126,800    1%
-    Number used as Flip Flops:                  40
+  Number of Slice Registers:                    65 out of 126,800    1%
+    Number used as Flip Flops:                  65
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        835 out of  63,400    1%
-    Number used as logic:                      833 out of  63,400    1%
-      Number using O6 output only:             293
-      Number using O5 output only:              36
-      Number using O5 and O6:                  504
+  Number of Slice LUTs:                        761 out of  63,400    1%
+    Number used as logic:                      759 out of  63,400    1%
+      Number using O6 output only:             251
+      Number using O5 output only:              62
+      Number using O5 and O6:                  446
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
     Number used exclusively as route-thrus:      2
@@ -33,14 +33,14 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   274 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:          835
-    Number with an unused Flip Flop:           795 out of     835   95%
-    Number with an unused LUT:                   0 out of     835    0%
-    Number of fully used LUT-FF pairs:          40 out of     835    4%
-    Number of unique control sets:               4
+  Number of occupied Slices:                   242 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          761
+    Number with an unused Flip Flop:           696 out of     761   91%
+    Number with an unused LUT:                   0 out of     761    0%
+    Number of fully used LUT-FF pairs:          65 out of     761    8%
+    Number of unique control sets:               3
     Number of slice register sites lost
-      to control set restrictions:              16 out of 126,800    1%
+      to control set restrictions:               7 out of 126,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -51,9 +51,9 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        37 out of     210   17%
-    Number of LOCed IOBs:                        3 out of      37    8%
-    IOB Flip Flops:                             34
+  Number of bonded IOBs:                        21 out of     210   10%
+    Number of LOCed IOBs:                       21 out of      21  100%
+    IOB Flip Flops:                             17
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -64,8 +64,8 @@ Specific Feature Utilization:
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
   Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:       34 out of     300   11%
-    Number used as OLOGICE2s:                   34
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:       17 out of     300    5%
+    Number used as OLOGICE2s:                   17
     Number used as OLOGICE3s:                    0
     Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
@@ -91,11 +91,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.82
+Average Fanout of Non-Clock Nets:                3.81
 
-Peak Memory Usage:  1255 MB
-Total REAL time to MAP completion:  49 secs 
-Total CPU time to MAP completion:   44 secs 
+Peak Memory Usage:  1232 MB
+Total REAL time to MAP completion:  39 secs 
+Total CPU time to MAP completion:   39 secs 
 
 Table of Contents
 -----------------
@@ -118,179 +118,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:LIT:701 - PAD symbol "clk" has an undefined IOSTANDARD.
-WARNING:LIT:702 - PAD symbol "clk" is not constrained (LOC) to a specific
-   location.
-WARNING:PhysDesignRules:2452 - The IOB done is either not constrained (LOC) to a
-   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<30> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<31> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<7> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<8> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<5> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<6> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<15> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<9> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<16> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<17> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<18> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<0> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<19> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<3> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<4> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<1> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<2> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<10> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<11> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<12> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<13> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<14> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<25> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<26> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<27> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<28> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<29> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<20> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<21> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<22> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<23> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB distance<24> is either not constrained
-   (LOC) to a specific location and/or has an undefined I/O Standard
-   (IOSTANDARD). This condition may seriously affect the device and will be an
-   error in bitstream creation. It should be corrected by properly specifying
-   the pin location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB clk is either not constrained (LOC) to a
-   specific location and/or has an undefined I/O Standard (IOSTANDARD). This
-   condition may seriously affect the device and will be an error in bitstream
-   creation. It should be corrected by properly specifying the pin location and
-   I/O Standard.
 
 Section 3 - Informational
 -------------------------
@@ -303,9 +130,6 @@ INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
    1.050 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 37 IOs, 3 are locked
-   and 34 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -330,40 +154,24 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| clk                                | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| distance<0>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<1>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<2>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<3>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<4>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<5>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<6>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<7>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<8>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<9>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<10>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<11>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<12>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<13>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<14>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<15>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<16>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<17>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<18>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<19>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<20>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<21>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<22>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<23>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<24>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<25>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<26>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<27>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<28>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<29>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<30>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| distance<31>                       | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
-| done                               | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW | OFF          |          |          |
+| clk                                | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| distance<0>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<1>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<2>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<3>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<4>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<5>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<6>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<7>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<8>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<9>                        | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<10>                       | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<11>                       | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<12>                       | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<13>                       | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<14>                       | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| distance<15>                       | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| done                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | echo                               | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | reset                              | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | trigger                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |

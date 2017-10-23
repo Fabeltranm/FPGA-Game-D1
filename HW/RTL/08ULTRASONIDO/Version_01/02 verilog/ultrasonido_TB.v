@@ -22,18 +22,11 @@ trigger = 0;
 end
 
 initial begin
-reset = 1;
-#10
-reset = 0;
-#1
-done = 0;
-#1
-echo_s = 1;
-#20
-echo_s = 0;
-#1
-done <= 1;
-end 
+	reset=1;done=0;echo=1;#10;
+	reset=0;done=0;echo=1;#1;
+	reset=1;done=0;echo=1;#9;
+	reset=1;done=1;echo=0;#1;
+end
 			 
 initial begin: TEST_CASE
 	$dumpfile("ultrasonido_TB.vcd");

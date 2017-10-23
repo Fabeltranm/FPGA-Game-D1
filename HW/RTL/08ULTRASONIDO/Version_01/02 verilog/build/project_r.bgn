@@ -5,56 +5,10 @@ Loading device for application Rf_Device from file '7a100t.nph' in environment
    "ultrasonido" is an NCD, version 3.2, device xc7a100t, package csg324, speed
 -1
 
-Tue Oct 10 03:45:55 2017
+Sun Oct 22 11:56:15 2017
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -l -w -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK project_r.ncd 
 
-ERROR:Bitgen:342 - This design contains pins which have locations (LOC) that are
-   not user-assigned or I/O Standards (IOSTANDARD) that are not user-assigned. 
-   This may cause I/O contention or incompatibility with the board power or
-   connectivity affecting performance, signal integrity or in extreme cases
-   cause damage to the device or the components to which it is connected.  To
-   prevent this error, it is highly suggested to specify all pin locations and
-   I/O standards to avoid potential contention or conflicts and allow proper
-   bitstream creation.  To demote this error to a warning and allow bitstream
-   creation with unspecified I/O location or standards, you may apply the
-   following bitgen switch: -g UnconstrainedPins:Allow
-This message applies to the following I/O ports:
-   distance<29>
-   distance<27>
-   distance<26>
-   distance<31>
-   distance<25>
-   distance<28>
-   distance<30>
-   distance<18>
-   distance<23>
-   distance<16>
-   distance<21>
-   distance<0>
-   distance<24>
-   distance<17>
-   distance<20>
-   distance<19>
-   distance<22>
-   distance<10>
-   distance<7>
-   distance<2>
-   distance<3>
-   distance<4>
-   distance<5>
-   done
-   distance<9>
-   distance<8>
-   distance<14>
-   distance<6>
-   distance<11>
-   distance<15>
-   distance<13>
-   distance<12>
-   distance<1>
-   clk
-ERROR:Bitgen:157 - Bitgen will terminate because of the above errors.
 Summary of Bitgen Options:
 +----------------------+----------------------+
 | Option Name          | Current Setting      |
@@ -190,3 +144,9 @@ Summary of Bitgen Options:
 
 No constraints file was processed.
 
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Saving ll file in "project_r.ll".
+Creating bit map...
+Saving bit stream in "project_r.bit".
+Bitstream generation is complete.

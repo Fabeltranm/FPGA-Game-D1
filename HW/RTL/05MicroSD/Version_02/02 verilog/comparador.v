@@ -1,32 +1,27 @@
-module comparador (input EN,input DONE, output reg CS, output reg run);
+module comparador (input en,input done, output cs, output run);
+
+reg cs=1;
+reg run=0;
 
 
-
-
-always @(EN,DONE)
+always @(en,done)
 	begin
-	if(EN&DONE==0)
+	if(en&done==0)
 		begin
-		CS=0;
+		cs=0;
 		run=1;
 		end
-	else if(DONE&EN)
+	else if(en&done==1)	
 		begin
-		CS=1;
+		cs=1;
 		run=0;
 		end
-	else	
+	else 	
 		begin
-		CS=1;
+		cs=1;
 		run=0;
 		end
-
-	
+		
 	end
-
-
-
-
-
 
 endmodule
