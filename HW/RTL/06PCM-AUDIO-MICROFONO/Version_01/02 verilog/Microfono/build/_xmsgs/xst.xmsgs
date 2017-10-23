@@ -5,76 +5,76 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">sdata</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">sdata</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">done</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">done</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ws</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">ws</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">count</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">count</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">18</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">sregt</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">18</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">sregt</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">sregt_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sregt_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">microfono</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>
