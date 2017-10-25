@@ -8,7 +8,7 @@ module Transmision_TB(
 	wire TB_done, 
 	wire TB_busy,
 );
-Trasmision( .clk(TB_clk), .din(TB_din), .enable(TB_enable), .RW(TB_RW), .Tx(TB_Tx, .done(TB_done), .busy(TB_busy) );
+Trasmision uut( .clk(TB_clk), .din(TB_din), .enable(TB_enable), .RW(TB_RW), .Tx(TB_Tx, .done(TB_done), .busy(TB_busy) );
 always 
 begin
 #20
