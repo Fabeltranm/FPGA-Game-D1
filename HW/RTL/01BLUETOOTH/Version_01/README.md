@@ -35,7 +35,8 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 
 
 ## Descripción de la caja Funcional  (in/out)
-![diagrama estructural modulo de bluetoothlll](https://user-images.githubusercontent.com/14295760/30278225-7f5dcfea-96cf-11e7-9f66-f3708d3db18a.png)
+![yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy](https://user-images.githubusercontent.com/14295760/31620529-19aba786-b25d-11e7-927d-4d0d9ad21b59.png)
+
 
 ## Descripción funcional:
 
