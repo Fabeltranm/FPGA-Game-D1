@@ -6,7 +6,7 @@
 
 ### 2 Carlos Andrés Martínez Riveros caramartinezriv@unal.edu.co
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 3 Robinson Steven Cárdenas Ariza rscardenasa@unal.edu.co
 
 
 ## Descripción general del sistema:
@@ -49,7 +49,7 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 
 
 ## Descripción Estructural:
-![diagramaestructuralkkkk](https://user-images.githubusercontent.com/14295760/30240877-56cc237a-953e-11e7-8771-c15bf7f4a599.jpg)
+![laij](https://user-images.githubusercontent.com/14295760/32114130-291602ee-bb08-11e7-926a-23bd06dbbc02.jpg)
 
 
 ## Diagrama de Estados:
