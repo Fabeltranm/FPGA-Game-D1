@@ -40,7 +40,8 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 ## Descripción funcional:
 
 
-![diagramafuncionall](https://user-images.githubusercontent.com/14295760/30240890-7ab4de62-953e-11e7-8d60-f83b0530482c.jpg)
+Rx:
+[funcional rx](https://user-images.githubusercontent.com/14295760/32110996-d23cef2c-bafe-11e7-87d0-1436a2c1a87c.jpg)
 
 
 
