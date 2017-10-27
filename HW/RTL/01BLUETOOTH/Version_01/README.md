@@ -41,6 +41,9 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 
 ![funcional rx](https://user-images.githubusercontent.com/14295760/32111242-924083f6-baff-11e7-9ca5-edc5d76862e8.jpg)
 
+![funcionaltx](https://user-images.githubusercontent.com/14295760/32111827-4935cf16-bb01-11e7-983d-fa3f3298b902.jpg)
+
+
 
 
 
