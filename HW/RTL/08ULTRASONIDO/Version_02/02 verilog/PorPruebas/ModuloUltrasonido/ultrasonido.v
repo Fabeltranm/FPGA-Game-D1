@@ -8,7 +8,7 @@ module	ultrasonido	(
 				input		reset
 
 			 );
-
+	wire	[7:0]	count;
 divisorfrec	divisorfrec0	(	
 					.clk		(	clk		),
 					.CLKOUT		(	CLKOUT		)
