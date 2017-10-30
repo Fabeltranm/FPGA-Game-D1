@@ -44,7 +44,7 @@ begin
 		
 		else 
 		begin
-		count1=0;
+		count1<=0;
 		end
 	end
 	//end

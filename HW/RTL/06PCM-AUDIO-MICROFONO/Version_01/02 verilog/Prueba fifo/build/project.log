@@ -1,0 +1,336 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : controlador
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" into library work
+Parsing module <controlador>.
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/div_freq.v" into library work
+Parsing module <div_freq>.
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/microfono.v" into library work
+Parsing module <microfono>.
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" into library work
+Parsing module <fifo>.
+INFO:HDLCompiler:693 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 22. parameter declaration becomes local in fifo with formal parameter declaration list
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" Line 16: Port clk is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" Line 17: Port sregt is not connected to this instance
+
+Elaborating module <controlador>.
+WARNING:HDLCompiler:1016 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 20: Port ledlr is not connected to this instance
+
+Elaborating module <fifo>.
+
+Elaborating module <microfono>.
+
+Elaborating module <div_freq>.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/microfono.v" Line 42: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 79: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 87: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 94: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 95: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:552 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" Line 16: Input port clk is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <controlador>.
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v".
+        adr_width = 12
+        dat_width = 6
+WARNING:Xst:2898 - Port 'data_in', unconnected in block instance 'fi', is tied to GND.
+WARNING:Xst:2898 - Port 'clk', unconnected in block instance 'fi', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'fi', is tied to GND.
+WARNING:Xst:2898 - Port 'mclk', unconnected in block instance 'fi', is tied to GND.
+WARNING:Xst:2898 - Port 'dataint', unconnected in block instance 'fi', is tied to GND.
+WARNING:Xst:2898 - Port 'lr', unconnected in block instance 'fi', is tied to GND.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" line 16: Output port <empty> of the instance <fi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" line 16: Output port <full> of the instance <fi> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/controlador.v" line 17: Output port <sregt> of the instance <mi> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <controlador> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v".
+        adr_width = 12
+        dat_width = 6
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" line 20: Output port <ledlr> of the instance <mic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" line 20: Output port <ledres> of the instance <mic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" line 20: Output port <ws> of the instance <mic> is unconnected or connected to loadless signal.
+    Found 4096x6-bit dual-port RAM <Mram_array_reg> for signal <array_reg>.
+    Found 12-bit register for signal <r_ptr_reg>.
+    Found 1-bit register for signal <full_reg>.
+    Found 1-bit register for signal <empty_reg>.
+    Found 12-bit register for signal <w_ptr_next>.
+    Found 12-bit register for signal <r_ptr_next>.
+    Found 1-bit register for signal <full_next>.
+    Found 1-bit register for signal <empty_next>.
+    Found 12-bit register for signal <w_ptr_reg>.
+    Found 12-bit adder for signal <w_ptr_reg[11]_GND_2_o_add_15_OUT> created at line 94.
+    Found 12-bit adder for signal <r_ptr_reg[11]_GND_2_o_add_16_OUT> created at line 95.
+    Found 1-bit 4-to-1 multiplexer for signal <wr_empty_next_MUX_73_o> created at line 75.
+    Found 1-bit 4-to-1 multiplexer for signal <wr_full_next_MUX_72_o> created at line 75.
+    Found 12-bit comparator equal for signal <r_ptr_reg[11]_w_ptr_reg[11]_equal_11_o> created at line 81
+    Found 12-bit comparator equal for signal <w_ptr_reg[11]_r_ptr_reg[11]_equal_14_o> created at line 89
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <fifo> synthesized.
+
+Synthesizing Unit <microfono>.
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/microfono.v".
+WARNING:Xst:2935 - Signal 'ws', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 6-bit register for signal <sregt>.
+    Found 6-bit register for signal <count1>.
+    Found 1-bit register for signal <ledlr>.
+    Found 6-bit adder for signal <count1[0]_GND_3_o_add_2_OUT> created at line 42.
+    Found 6-bit comparator greater for signal <n0000> created at line 37
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <microfono> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/div_freq.v".
+        fi = 100000000
+        fs = 2000000
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <clkout>.
+    Found 1-bit register for signal <led>.
+    Found 32-bit subtractor for signal <count[31]_GND_4_o_sub_2_OUT> created at line 16.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x6-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 6
+ 12-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+ 6-bit adder                                           : 2
+# Registers                                            : 20
+ 1-bit register                                        : 10
+ 12-bit register                                       : 4
+ 32-bit register                                       : 2
+ 6-bit register                                        : 4
+# Comparators                                          : 4
+ 12-bit comparator equal                               : 2
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 4-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <count_16> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_17> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_18> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_19> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_20> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_21> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_22> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_23> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_24> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_25> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_26> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_27> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_28> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_29> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_30> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_31> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sregt_0> (without init value) has a constant value of 0 in block <mic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clkout> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_0> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_4> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_5> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_6> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_7> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_8> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_9> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_10> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_11> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_12> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_13> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_14> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_15> (without init value) has a constant value of 0 in block <df>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_1> (without init value) has a constant value of 0 in block <mic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_2> (without init value) has a constant value of 0 in block <mic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_3> (without init value) has a constant value of 0 in block <mic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_4> (without init value) has a constant value of 0 in block <mic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_5> (without init value) has a constant value of 0 in block <mic>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <fifo>.
+INFO:Xst:3226 - The RAM <Mram_array_reg> will be implemented as a BLOCK RAM, absorbing the following register(s): <r_ptr_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 6-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <mclk>          | rise     |
+    |     weA            | connected to signal <wr_en>         | high     |
+    |     addrA          | connected to signal <w_ptr_reg>     |          |
+    |     diA            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4096-word x 6-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <mclk>          | rise     |
+    |     addrB          | connected to signal <r_ptr_next>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <microfono>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+Unit <microfono> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x6-bit dual-port block RAM                        : 1
+# Adders/Subtractors                                   : 4
+ 12-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+# Counters                                             : 2
+ 6-bit up counter                                      : 2
+# Registers                                            : 134
+ Flip-Flops                                            : 134
+# Comparators                                          : 4
+ 12-bit comparator equal                               : 2
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 4-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <data_in<5>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDE instance <fi/mic/sregt_5>
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <data_in<4>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDE instance <fi/mic/sregt_4>
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <data_in<3>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDE instance <fi/mic/sregt_3>
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <data_in<2>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDE instance <fi/mic/sregt_2>
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <data_in<1>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDE instance <fi/mic/sregt_1>
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <data_in<0>>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDE instance <fi/mic/sregt_0>
+
+ERROR:Xst:528 - Multi-source in Unit <fifo> on signal <mclk>; this signal is connected to multiple drivers.
+Drivers are: 
+   Dangling signal <N1> in Unit <controlador> is tied to 0 by XST
+   Output signal of FDRE instance <fi/mic/df/clkout>
+
+
+Total REAL time to Xst completion: 65.00 secs
+Total CPU time to Xst completion: 62.96 secs
+ 
+--> 
+
+
+Total memory usage is 504936 kilobytes
+
+Number of errors   :    7 (   0 filtered)
+Number of warnings :   55 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

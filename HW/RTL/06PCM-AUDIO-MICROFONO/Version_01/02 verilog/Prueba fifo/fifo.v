@@ -25,18 +25,19 @@ microfono mic(.clk(clk), .reset(reset),.sregt(data_in),.dataint,.lr(lr),.mclk(mc
  
    reg [dat_width-1:0] array_reg [depth-1:0];// register array FIFO
 
-   reg [adr_width-1:0] w_ptr_reg, w_ptr_next;
+   reg [adr_width-1:0] w_ptr_reg;
+   reg [adr_width-1:0] w_ptr_next;
    reg [adr_width-1:0] r_ptr_reg, r_ptr_next;
    reg full_reg, empty_reg, full_next, empty_next;
    wire wr_en;
-
-
+   wire rw;
+  
    assign data_out = array_reg[r_ptr_reg];
    assign wr_en = wr & ~full_reg;
 
    assign full = full_reg;
    assign empty = empty_reg;
-
+   assign rw = rd | wr;
    always @(posedge mclk) begin
       if (wr_en)
          array_reg[w_ptr_reg] <= data_in;
@@ -44,26 +45,26 @@ microfono mic(.clk(clk), .reset(reset),.sregt(data_in),.dataint,.lr(lr),.mclk(mc
 
    // fifo control logic
    // register for read and write pointers
-   always @(posedge mclk, negedge reset) begin
+   always @(posedge mclk) begin
       if (reset)
          begin
-            w_ptr_reg <= 0;
-            r_ptr_reg <= 0;
-            full_reg <= 1'b0;
-            empty_reg <= 1'b1;
+            w_ptr_reg = 0;
+            r_ptr_reg = 0;
+            full_reg = 1'b0;
+            empty_reg = 1'b1;
          end
       else
          begin
-            w_ptr_reg <= w_ptr_next;
-            r_ptr_reg <= r_ptr_next;
-            full_reg <= full_next;
-            empty_reg <= empty_next;
+            w_ptr_reg = w_ptr_next;
+            r_ptr_reg = r_ptr_next;
+            full_reg = full_next;
+            empty_reg = empty_next;
          end
    end
 
 
    
-   always @(negedge reset, posedge wr, posedge rd)
+   always @(posedge rw)
    begin
       if (reset) begin
 	w_ptr_next =  0;
