@@ -1,5 +1,5 @@
 
-module microfono_TB;
+module controlador_TB;
 
 reg dataint;
 reg clk;
@@ -50,7 +50,7 @@ dataint = 1'b0;
 end
 	
 initial begin: TEST_CASE
-     $dumpfile("microfono_TB.vcd");
+     $dumpfile("controlador_TB.vcd");
      $dumpvars(-1, uut);
      #(10000) $finish;
    end

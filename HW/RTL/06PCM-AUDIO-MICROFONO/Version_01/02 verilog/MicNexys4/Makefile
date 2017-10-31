@@ -1,4 +1,4 @@
-DESIGN          = microfono
+DESIGN          = controlador
 PINS            = $(DESIGN).ucf
 DEVICE          = XC7A100T-1CSG324 #XC3S500E-FG320-4(nexys2) XC6SLX16-CSG324C(nexys3) XC7A100T-1CSG324C(nexys4)
 BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
@@ -12,7 +12,7 @@ IVERILOG        = iverilog
 
 
 
-SRC             = $(DESIGN).v div_freq.v
+SRC             = $(DESIGN).v div_freq.v microfono.v pwm.v
 
 SIM_SRC = $(DESIGN)_TB.v          \
 

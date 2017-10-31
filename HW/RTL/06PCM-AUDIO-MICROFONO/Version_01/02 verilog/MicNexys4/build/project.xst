@@ -1,5 +1,5 @@
 run
--top microfono 
+-top controlador 
 -p XC7A100T-1CSG324 
 -opt_mode Area
 -opt_level 1
