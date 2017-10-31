@@ -18,7 +18,8 @@ module fifo
    );
 
 microfono mic(.clk(clk), .reset(reset),.sregt(data_in),.dataint,.lr(lr),.mclk(mclk));
-  
+ trans
+receci 
   parameter depth = (1 << adr_width);
 
    //declaración de registros 
