@@ -1,4 +1,3 @@
-
 module controlador_TB;
 
 reg dataint;
@@ -7,8 +6,9 @@ reg mclk;
 reg ws;
 reg reset;
 reg lr;
-microfono uut(.reset(reset),.dataint(dataint),.clk(clk),.lr(lr));
 
+microfono uut(.reset(reset),.dataint(dataint),.clk(clk),.lr(lr));
+pwm pw(.PWM_out(PWM_out));
 always
 begin
 
@@ -51,8 +51,8 @@ end
 	
 initial begin: TEST_CASE
      $dumpfile("controlador_TB.vcd");
-     $dumpvars(-1, uut);
-     #(10000) $finish;
+     $dumpvars(-1, uut, pw);
+     #(100000) $finish;
    end
 
 endmodule //
