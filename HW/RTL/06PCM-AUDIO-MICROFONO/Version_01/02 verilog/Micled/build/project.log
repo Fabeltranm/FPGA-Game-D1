@@ -1,0 +1,604 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : XC7A100T-1CSG324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : microfono
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Micled/microfono.v" into library work
+Parsing module <microfono>.
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Micled/div_freq.v" into library work
+Parsing module <div_freq>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <microfono>.
+
+Elaborating module <div_freq>.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Micled/div_freq.v" Line 19: Result of 64-bit expression is truncated to fit in 32-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Micled/div_freq.v" Line 25: Result of 64-bit expression is truncated to fit in 32-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <microfono>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Micled/microfono.v".
+WARNING:Xst:2935 - Signal 'ws', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 1-bit register for signal <ledc>.
+    Found 6-bit register for signal <sregt>.
+    Found 128-bit register for signal <count1>.
+    Found 1-bit register for signal <ledlr>.
+    Found 128-bit adder for signal <count1[0]_GND_1_o_add_4_OUT> created at line 46.
+    Found 128-bit comparator greater for signal <n0000> created at line 31
+    Found 128-bit comparator greater for signal <n0002> created at line 42
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 136 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <microfono> synthesized.
+
+Synthesizing Unit <div_freq>.
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Micled/div_freq.v".
+        fi = 100000000
+        fs = 25.210084
+    Found 32-bit register for signal <count>.
+    Found 1-bit register for signal <clkout>.
+    Found 1-bit register for signal <led>.
+    Found 32-bit subtractor for signal <count[31]_GND_2_o_sub_2_OUT> created at line 16.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <div_freq> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 128-bit adder                                         : 1
+ 32-bit subtractor                                     : 1
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 128-bit register                                      : 1
+ 32-bit register                                       : 1
+ 6-bit register                                        : 1
+# Comparators                                          : 2
+ 128-bit comparator greater                            : 2
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <div_freq>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <div_freq> synthesized (advanced).
+
+Synthesizing (advanced) Unit <microfono>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+Unit <microfono> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 128-bit up counter                                    : 1
+ 32-bit down counter                                   : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+# Comparators                                          : 2
+ 128-bit comparator greater                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <microfono> ...
+WARNING:Xst:1293 - FF/Latch <count1_33> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_34> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_35> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_36> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_37> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_38> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_39> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_40> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_41> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_42> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_43> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_44> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_45> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_46> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_47> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_48> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_49> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_50> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_51> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_52> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_53> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_54> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_55> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_56> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_57> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_58> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_59> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_60> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_61> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_62> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_63> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_64> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_0> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_1> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_2> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_3> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_4> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_5> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_6> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_7> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_8> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_9> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_10> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_11> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_12> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_13> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_14> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_15> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_32> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_31> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_30> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_29> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_28> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_27> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_26> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_25> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_24> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_23> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_22> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_21> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_20> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_19> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_18> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_17> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_16> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_93> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_94> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_95> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_96> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_97> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_98> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_99> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_100> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_101> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_102> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_103> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_104> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_105> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_106> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_107> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_108> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_109> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_110> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_111> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_112> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_113> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_114> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_115> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_116> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_117> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_118> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_119> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_65> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_66> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_67> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_68> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_69> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_70> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_71> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_72> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_73> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_74> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_75> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_76> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_77> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_78> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_92> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_91> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_90> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_89> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_88> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_87> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_86> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_85> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_84> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_83> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_82> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_81> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_80> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count1_79> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_22> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_25> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_23> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_24> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_26> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_27> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_28> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_29> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_30> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <df/count_31> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 0.
+FlipFlop sregt_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop sregt_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ledlr has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ledc has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 169
+#      GND                         : 1
+#      INV                         : 24
+#      LUT1                        : 8
+#      LUT2                        : 2
+#      LUT3                        : 2
+#      LUT4                        : 3
+#      LUT5                        : 16
+#      LUT6                        : 3
+#      MUXCY                       : 79
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 48
+#      FD                          : 5
+#      FDE                         : 11
+#      FDR                         : 12
+#      FDRE                        : 8
+#      FDS                         : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 3
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              37  out of  126800     0%  
+ Number of Slice LUTs:                   58  out of  63400     0%  
+    Number used as Logic:                58  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     60
+   Number with an unused Flip Flop:      23  out of     60    38%  
+   Number with an unused LUT:             2  out of     60     3%  
+   Number of fully used LUT-FF pairs:    35  out of     60    58%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    210     7%  
+    IOB Flip Flops/Latches:              11
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+df/clkout                          | NONE(sregt_0)          | 23    |
+clk                                | BUFGP                  | 25    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.533ns (Maximum Frequency: 220.592MHz)
+   Minimum input arrival time before clock: 1.826ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 4.533ns (frequency: 220.592MHz)
+  Total number of paths / destination ports: 290 / 40
+-------------------------------------------------------------------------
+Delay:               4.533ns (Levels of Logic = 28)
+  Source:            count1_126 (FF)
+  Destination:       count1_127 (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: count1_126 to count1_127
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.478   0.925  count1_126 (count1_126)
+     LUT5:I0->O            1   0.124   0.000  Mcompar_n0000_lut<0> (Mcompar_n0000_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  Mcompar_n0000_cy<0> (Mcompar_n0000_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<1> (Mcompar_n0000_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<2> (Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<3> (Mcompar_n0000_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<4> (Mcompar_n0000_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<5> (Mcompar_n0000_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<6> (Mcompar_n0000_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<7> (Mcompar_n0000_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<8> (Mcompar_n0000_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<9> (Mcompar_n0000_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<10> (Mcompar_n0000_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<11> (Mcompar_n0000_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<12> (Mcompar_n0000_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<13> (Mcompar_n0000_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<14> (Mcompar_n0000_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<15> (Mcompar_n0000_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<16> (Mcompar_n0000_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<17> (Mcompar_n0000_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<18> (Mcompar_n0000_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<19> (Mcompar_n0000_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<20> (Mcompar_n0000_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<21> (Mcompar_n0000_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<22> (Mcompar_n0000_cy<22>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<23> (Mcompar_n0000_cy<23>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n0000_cy<24> (Mcompar_n0000_cy<24>)
+     MUXCY:CI->O           3   0.334   0.435  Mcompar_n0000_cy<25> (Mcompar_n0000_cy<25>)
+     LUT4:I3->O            8   0.124   0.445  _n00421 (_n0042)
+     FDRE:R                    0.494          count1_127
+    ----------------------------------------
+    Total                      4.533ns (2.728ns logic, 1.805ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.484ns (frequency: 287.026MHz)
+  Total number of paths / destination ports: 783 / 34
+-------------------------------------------------------------------------
+Delay:               3.484ns (Levels of Logic = 2)
+  Source:            df/count_1 (FF)
+  Destination:       df/count_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: df/count_1 to df/count_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.478   0.945  df/count_1 (df/count_1)
+     LUT6:I0->O           14   0.124   0.861  df/count[31]_GND_2_o_equal_3_o<31>1 (df/count[31]_GND_2_o_equal_3_o<31>)
+     LUT5:I1->O           10   0.124   0.458  df/count[31]_GND_2_o_equal_3_o_01 (df/count[31]_GND_2_o_equal_3_o_0)
+     FDR:R                     0.494          df/count_2
+    ----------------------------------------
+    Total                      3.484ns (1.220ns logic, 2.264ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 64 / 33
+-------------------------------------------------------------------------
+Offset:              1.826ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       count1_127 (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: reset to count1_127
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.001   0.762  reset_IBUF (reset_IBUF)
+     LUT4:I1->O            8   0.124   0.445  _n00421 (_n0042)
+     FDRE:R                    0.494          count1_127
+    ----------------------------------------
+    Total                      1.826ns (0.619ns logic, 1.207ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 25 / 25
+-------------------------------------------------------------------------
+Offset:              1.570ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.001   0.445  reset_IBUF (reset_IBUF)
+     INV:I->O             14   0.146   0.484  df/reset_inv1_INV_0 (df/reset_inv)
+     FDS:S                     0.494          df/count_0
+    ----------------------------------------
+    Total                      1.570ns (0.641ns logic, 0.929ns route)
+                                       (40.8% logic, 59.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            sregt_5 (FF)
+  Destination:       sregt<5> (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: sregt_5 to sregt<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.478   0.399  sregt_5 (sregt_5)
+     OBUF:I->O                 0.000          sregt_5_OBUF (sregt<5>)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            df/led (FF)
+  Destination:       ledres (PAD)
+  Source Clock:      clk rising
+
+  Data Path: df/led to ledres
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.478   0.399  df/led (df/led)
+     OBUF:I->O                 0.000          ledres_OBUF (ledres)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.484|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |    4.533|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.06 secs
+ 
+--> 
+
+
+Total memory usage is 504968 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  133 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
