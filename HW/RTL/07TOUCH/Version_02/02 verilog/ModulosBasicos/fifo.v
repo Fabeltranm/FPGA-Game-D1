@@ -10,7 +10,7 @@ module fifo #(
 		input  [dat_width-1:0] data_in,
 		output [dat_width-1:0] data_out,
 		output empty, 
-		output full
+		output full,
 	);
 
 
