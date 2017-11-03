@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 01 15:58:31 2017
+// Written by: Map P.20131013 on Thu Nov 02 19:25:54 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -19,13 +19,10 @@ COMP "mclk" LOCATE = SITE "J5" LEVEL 1;
 COMP "reset" LOCATE = SITE "U9" LEVEL 1;
 COMP "ledres" LOCATE = SITE "T8" LEVEL 1;
 TIMEGRP sys_clk_pin = BEL "df/led" BEL "df/count_2" BEL "df/count_0" BEL
-        "df/count_1" BEL "df/count_3" BEL "df/count_4" BEL "df/count_7" BEL
-        "df/count_5" BEL "df/count_6" BEL "df/count_8" BEL "df/count_9" BEL
-        "df/count_10" BEL "df/count_11" BEL "df/count_12" BEL "df/count_13"
-        BEL "df/count_16" BEL "df/count_14" BEL "df/count_15" BEL
-        "df/count_17" BEL "df/count_18" BEL "df/count_19" BEL "df/count_20"
-        BEL "df/count_21" BEL "df/clkout" BEL "clk_BUFGP/BUFG" BEL
-        "df/clkout_1";
+        "df/count_1" BEL "df/count_3" BEL "df/count_4" BEL "df/count_5" BEL
+        "df/count_6" BEL "df/count_8" BEL "df/count_9" BEL "df/count_10" BEL
+        "df/count_11" BEL "df/clkout" BEL "df/count_7" BEL "clk_BUFGP/BUFG"
+        BEL "df/clkout_1";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

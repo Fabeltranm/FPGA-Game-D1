@@ -8,6 +8,9 @@
 <msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
+<msg type="warning" file="Pack" num="2912" delta="new" >The LUT-1 inverter &quot;<arg fmt="%s" index="1">clkout_INV_19_o1_INV_0</arg>&quot; failed to join the &quot;<arg fmt="%s" index="2">OLOGICE2</arg>&quot; comp matched to output buffer &quot;<arg fmt="%s" index="3">clkout_OBUF</arg>&quot;.  This may result in suboptimal timing.  <arg fmt="%z" index="4">The LUT-1 inverter clkout_INV_19_o1_INV_0 drives multiple loads.</arg>
+</msg>
+
 <msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
 </msg>
 
