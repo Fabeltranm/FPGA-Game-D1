@@ -10,7 +10,7 @@ module microfono
 	input		dataint,
 	input		reset,
 	output reg [127:0] sregt,
-	output 		done
+	output 	reg	done
 
 
 );

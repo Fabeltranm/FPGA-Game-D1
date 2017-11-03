@@ -6,6 +6,7 @@ reg mclk;
 reg ws;
 reg reset;
 reg lr;
+reg PWM_out;
 
 microfono uut(.reset(reset),.dataint(dataint),.clk(clk),.lr(lr));
 pwm pw(.PWM_out(PWM_out));
