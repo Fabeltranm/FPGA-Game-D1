@@ -9,13 +9,15 @@ module microfono
 	output	reg	ws,
 	input		dataint,
 	input		reset,
-	output reg [5:0] sregt//sregtl
-	//output reg [5:0] sregtr
+	output wire [5:0] sregt
 
 
 );
 reg [0:127] count1=0;
 reg [127:0] sregtc;
+
+assign sregt = sregtc[127:122];
+
 initial ws=0;
 
 div_freq df(.clk(clk), .reset(reset),.clkout(mclk),.led(ledres));
@@ -28,32 +30,15 @@ begin
 		if(lr)
 		begin
 		ledlr=1;
-			if (count1<=5)  /* guarda 5 bits */
-			begin
+		ledc=1;
+		sregtc<= {sregtc[126:0],dataint};
 		
-			ledc=1;
-			sregt<= {sregt[4:0],dataint};
-			sregtc<= {sregtc[126:0],dataint};
-			count1<=count1+1;
-			end
-		
-			else 
-			begin
-				if(count1<=127)
-				begin
-				ledc=0;
-				sregtc<= {sregtc[126:0],dataint};
-				count1<=count1+1;
-				end
-				else
-				begin
-				count1<=0;
-				end
-			end
+				
 		end
 		else
 		begin
 		ledlr=0;
+		ledc=0;
 		end
 	end
 	 

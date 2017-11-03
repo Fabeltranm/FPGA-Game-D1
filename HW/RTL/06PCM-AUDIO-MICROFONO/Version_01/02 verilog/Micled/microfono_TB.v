@@ -52,7 +52,7 @@ end
 initial begin: TEST_CASE
      $dumpfile("microfono_TB.vcd");
      $dumpvars(-1, uut);
-     #(100000) $finish;
+     #(100000000) $finish;
    end
 
 endmodule //
