@@ -1,7 +1,17 @@
-module transmision (input rw, input wire clk_in, input wire clk_div, input wire [7:0] din, output busy, output done, output reg tx);
+module transmision (input rw,
+            input clk_in,
+            input reset, 
+            input wire [7:0] din, 
+            output busy, 
+            output done, 
+            output reg tx);
+
+
+
+ wire clk_div;
+Divisor_Frecuencia div(.clk_in(clk_in), .clk_div(clk_div), .reset(reset));
 
 parameter count = 8;
-
 reg [2:0] counter = 0; //registro para llevar el conteo
 
 initial begin
@@ -17,7 +27,7 @@ reg [7:0] data = 8'b11111111;
 reg [2:0] bitpos = 0;
 reg [1:0] state = STATE_IDLE;
 
-always @(posedge clk_in) begin
+always @(posedge clk_div) begin
 	case (state)
 	STATE_IDLE: begin
 		if (rw) begin

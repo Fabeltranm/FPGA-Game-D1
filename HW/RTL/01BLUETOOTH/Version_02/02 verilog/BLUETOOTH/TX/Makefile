@@ -10,7 +10,7 @@ SIM_COMP_SCRIPT = simulation/$(DESIGN)_TB.do
 SIMGEN_OPTIONS  = -p $(FPGA_ARCH) -lang $(LANGUAGE)
 IVERILOG        = iverilog
 
-SRC = $(DESIGN).v
+SRC = $(DESIGN).v Divisor_Frecuencia.v
 SIM_SRC = $(DESIGN)_TB.v          \
 
 
