@@ -19,7 +19,7 @@ El sistema cuenta con señales de salida que controlan la tarjeta microSD, con *
 
 A continuación se muestra los diagramas de flujo de inicialización, lectura y escritura de la tarjeta
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiflujo.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiflux.png)
 El diagrama anterior corresponde al SPI para la lectura y escritura de una tarjeta SD. Se inicia dando un valor inicial a las señales y registros necesarios y posteriormente se activa el proceso de lectura/escritura en la tarjeta cuando la señal **run**=1 activa el divisor de frecuencia y **cs**=0, el divisor genera el reloj **sclk** y en cada  flanco de bajada se envía el dato serializado a través del **mosi** y en el flanco de subida se lee el dato recibido por **miso**. Una vez finalizado el envío/recepción del dato se activa la señal **done**=1, se finaliza la operación del divisor de frecuencia con **run**=0 y **cs** y **countd** vuelven a su estado inicial y se reinicia el proceso por medio de la señal **reset**=1. 
 
 
@@ -33,10 +33,10 @@ Cuando el reloj **sclk** se encuentra activo se envía el comando **CMD0** esper
 La tarjeta se encontrará inactiva hasta tener una señal de lectura o escritura. La parte izquierda del diagrama describe la operación de lectura y la parte derecha la operación de escritura.El comando **CMD18** se enviará a través  del **MOSI**, y se tendrá una respuesta de la tarjeta a través del **MISO** e iniciará la lectura de los datos de la tarjeta junto con los bits **CRC**. En cuanto a la escritura el controlador genera el comando **CMD25** y empieza a escribir los datos. Al finalizar la escritura de datos los bits **CRC** son enviados a través de la linea **MISO**, indicando si la operación fue exitosa o no, en caso negativo se reinicia la escritura de los datos. Al completar la lectura o escritura el sistema verificará la señal de **RESET** para decidir si inicializar la tarjeta nuevamente o esperar una nueva señal de lectura o escritura 
 
 ## Descripción Estructural:
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiestructura.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiblock.png)
 
 ## Diagrama de Estados:
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spiestado.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_02/03%20document/spistate.png)
 
 ## Arquitectura del periférico:
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
