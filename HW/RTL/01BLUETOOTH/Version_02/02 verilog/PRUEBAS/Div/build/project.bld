@@ -5,7 +5,7 @@ Command Line: /opt/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -p
 XC7A100T-1CSG324 project.ngc -uc ../Divisor_Frecuencia.ucf
 
 Reading NGO file "/home/camila/Documentos/Proy.DigI/Códigos
-PD/Div/build/project.ngc" ...
+PD/BLUETOOTH/Div/build/project.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 459184 kilobytes
+Total memory usage is 459192 kilobytes
 
 Writing NGD file "project.ngd" ...
-Total REAL time to NGDBUILD completion:  4 sec
+Total REAL time to NGDBUILD completion:  5 sec
 Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "project.bld"...

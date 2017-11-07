@@ -1,23 +1,20 @@
 module Divisor_Frecuencia_TB;
+reg clk_in=0;
+reg reset;
 
-  reg clk;
- reg reset;
-div_freq uut(.clk(clk), .reset(reset));
+Divisor_Frecuencia uut(.clk_in(clk_in), .reset(reset));
+
+always #1 clk_in = ~clk_in;
 
 initial begin
-  clk =0;
-reset =1; #10;	
-  reset=0;
-  
+reset=1;
+#40;
+reset=0;  
 end
 
-
-always clk = #1 ~clk;
-
 initial begin: TEST_CASE
-     $dumpfile("div_freq_TB.vcd");
+     $dumpfile("Divisor_Frecuencia_TB.vcd");
      $dumpvars(-1, uut);
-     #(10000) $finish;
+     #(1000000) $finish;
    end
-
-endmodule //
+endmodule

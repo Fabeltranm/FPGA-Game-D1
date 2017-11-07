@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.20131013 at Fri Nov  3 05:19:53 2017
+; Created by bitgen P.20131013 at Tue Nov  7 06:41:59 2017
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
@@ -31,15 +31,15 @@ Revision 3
 ;                      special meaning to software reading the .ll file.
 ;
 Info STARTSEL0=1
-Bit   335747 0x0000011f   2851 Block=SLICE_X0Y144 Latch=AQ Net=count<0>
-Bit   335748 0x0000011f   2852 Block=SLICE_X1Y144 Latch=AQ Net=clk_div_OBUF
-Bit   335772 0x0000011f   2876 Block=SLICE_X0Y144 Latch=BQ Net=count<1>
-Bit   335777 0x0000011f   2881 Block=SLICE_X0Y144 Latch=CQ Net=count<2>
-Bit   335802 0x0000011f   2906 Block=SLICE_X0Y144 Latch=DQ Net=count<3>
-Bit   335811 0x0000011f   2915 Block=SLICE_X0Y145 Latch=AQ Net=count<4>
-Bit   335836 0x0000011f   2940 Block=SLICE_X0Y145 Latch=BQ Net=count<5>
-Bit   335841 0x0000011f   2945 Block=SLICE_X0Y145 Latch=CQ Net=count<6>
-Bit   335866 0x0000011f   2970 Block=SLICE_X0Y145 Latch=DQ Net=count<7>
-Bit   335875 0x0000011f   2979 Block=SLICE_X0Y146 Latch=AQ Net=count<8>
-Bit   335900 0x0000011f   3004 Block=SLICE_X0Y146 Latch=BQ Net=count<9>
-Bit   335905 0x0000011f   3009 Block=SLICE_X0Y146 Latch=CQ Net=count<10>
+Bit   335812 0x0000011f   2916 Block=SLICE_X1Y145 Latch=AQ Net=clk_div_OBUF
+Bit  1329891 0x0000059f   1539 Block=SLICE_X14Y124 Latch=AQ Net=count<0>
+Bit  1329916 0x0000059f   1564 Block=SLICE_X14Y124 Latch=BQ Net=count<1>
+Bit  1329921 0x0000059f   1569 Block=SLICE_X14Y124 Latch=CQ Net=count<2>
+Bit  1329946 0x0000059f   1594 Block=SLICE_X14Y124 Latch=DQ Net=count<3>
+Bit  1329987 0x0000059f   1635 Block=SLICE_X14Y125 Latch=AQ Net=count<4>
+Bit  1330012 0x0000059f   1660 Block=SLICE_X14Y125 Latch=BQ Net=count<5>
+Bit  1330017 0x0000059f   1665 Block=SLICE_X14Y125 Latch=CQ Net=count<6>
+Bit  1330042 0x0000059f   1690 Block=SLICE_X14Y125 Latch=DQ Net=count<7>
+Bit  1330051 0x0000059f   1699 Block=SLICE_X14Y126 Latch=AQ Net=count<8>
+Bit  1330076 0x0000059f   1724 Block=SLICE_X14Y126 Latch=BQ Net=count<9>
+Bit  1330081 0x0000059f   1729 Block=SLICE_X14Y126 Latch=CQ Net=count<10>
