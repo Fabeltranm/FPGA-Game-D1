@@ -1,4 +1,4 @@
-module m_ra (reset,bclk,done,lrclk);
+module m_ra (reset,bclk,done,lrclk,act);
 
 	// Declaracion de variables
 
@@ -6,28 +6,38 @@ module m_ra (reset,bclk,done,lrclk);
 	input wire bclk;
 	output reg done;
 	output reg lrclk;
-	output reg [16:0]count;
+	output reg act;
+	integer count=0;
 
 	//Registro ACUMULADOR
 
-	always @(posedge bclk)
+	always @(posedge bclk or posedge reset)
 		begin
 		if (reset)
 			begin
-				count<=0;
+				count <=0;
+				lrclk <=0;
+				done=0;
+				act=0;
 			end
-		else	
-			begin
-			if(count<=15)
+		else if(count < 16)
 				begin
-				count<= count+1;
+				if(count==0) begin
+					act <=1;
+					count=count+1;
+				end
+				else begin
+				count = count+1;
+				lrclk <= lrclk;
+				act=0;
+				end
 				end
 			else
 				begin
-				lrclk<=~lrclk;     
-				count<=0;   
-				done<=1;
+				lrclk <= ~lrclk;     
+				count <= 0;   
+				done <= 1;
 				end 
-			end
-		end
+			
+	end
 endmodule
