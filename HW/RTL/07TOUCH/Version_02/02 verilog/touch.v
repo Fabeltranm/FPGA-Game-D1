@@ -1,20 +1,19 @@
-module	touch	(
-					
-					input	wire		ENABLE,
-					input	wire		clk,
-                                  	input	wire		Rx,
-					input 	wire		reset,
-					output 	wire [7:0]	data,
-					output 	wire		DONE,
-					output 	wire 		CLKOUT
-				);
+module	touch	(	
+		input		ENABLE,
+		input		clk,
+          	input		Rx,
+		input		reset,
+		output 	[7:0]	data,
+		output 		DONE,
+		output 		CLKOUT,
+		);
 
-wire [7:0] data_in;
-wire 	   wr;
-wire 	   ps2_error;
-wire	   read;
-wire	   write;
-wire	   ps2_done;
+		wire [7:0] data_in;
+		wire 	   wr;
+		wire 	   ps2_error;
+		wire	   read;
+		wire	   write;
+		wire	   ps2_done;
 
 divisorfrec	divisorfrec0	(
 					.clk		(	clk		),
@@ -40,7 +39,7 @@ fifo		fifo0		(
 					.empty		(	fifo_ empty	)
 				);
 
-readController	readController0	(
+controller	controller0	(
 					.ENABLE		(	ENABLE		),
 					.reset		(	reset		),
 					.fifo_Empty	(	fifo_empty	),
