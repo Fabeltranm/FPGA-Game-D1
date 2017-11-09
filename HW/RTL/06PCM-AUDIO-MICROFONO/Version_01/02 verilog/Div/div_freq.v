@@ -1,13 +1,13 @@
 module div_freq #(
-              parameter   fi     = 100000000,           
-              parameter   fs	 = 8116883     //flckout=((0.238*fs)/500000)MHZ fs=Fout*500000/0.238
+              parameter   fi     = 50000000,        //<- fFPGA/2=fi  
+              parameter   fs	 = 38461.538        //<- flckout=fs
   )(input clk, output reg clkout,input reset, output reg led);
 
 
 
 initial led=0;
 
-reg [15:0] count;
+reg [31:0] count;
 
 always @(posedge  clk)
 begin
@@ -17,13 +17,13 @@ begin
 		if (count==0)begin
 			clkout <=~clkout;
 			count <= fi/fs;
-		end
+		end	
+
 	end
 	else begin
 	led=0;
 		count <= fi/fs;
 		clkout <=0;
-			
 	end	
 end
 
