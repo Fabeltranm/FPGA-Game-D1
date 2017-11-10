@@ -79,7 +79,7 @@ Unit <microfono> synthesized.
 Synthesizing Unit <div_freq>.
     Related source file is "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba1/div_freq.v".
         fi = 50000000
-        fs = 3225000
+        fs = 3125000
     Found 1-bit register for signal <clkout>.
     Found 32-bit register for signal <count>.
     Found 1-bit register for signal <led>.
@@ -165,19 +165,19 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 111
+# BELS                             : 108
 #      GND                         : 1
 #      INV                         : 32
 #      LUT1                        : 1
-#      LUT2                        : 7
+#      LUT2                        : 4
 #      LUT6                        : 6
 #      MUXCY                       : 31
 #      VCC                         : 1
 #      XORCY                       : 32
 # FlipFlops/Latches                : 37
 #      FD                          : 1
-#      FDR                         : 32
-#      FDS                         : 4
+#      FDR                         : 35
+#      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 8
@@ -192,14 +192,14 @@ Selected Device : 7a100tcsg324-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:              33  out of  126800     0%  
- Number of Slice LUTs:                   46  out of  63400     0%  
-    Number used as Logic:                46  out of  63400     0%  
+ Number of Slice LUTs:                   43  out of  63400     0%  
+    Number used as Logic:                43  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     46
-   Number with an unused Flip Flop:      13  out of     46    28%  
-   Number with an unused LUT:             0  out of     46     0%  
-   Number of fully used LUT-FF pairs:    33  out of     46    71%  
+ Number of LUT Flip Flop pairs used:     43
+   Number with an unused Flip Flop:      10  out of     43    23%  
+   Number with an unused LUT:             0  out of     43     0%  
+   Number of fully used LUT-FF pairs:    33  out of     43    76%  
    Number of unique control sets:         4
 
 IO Utilization: 
@@ -244,7 +244,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 4.213ns (Maximum Frequency: 237.380MHz)
+   Minimum period: 4.194ns (Maximum Frequency: 238.418MHz)
    Minimum input arrival time before clock: 1.720ns
    Maximum output required time after clock: 0.877ns
    Maximum combinational path delay: No path found
@@ -255,33 +255,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.213ns (frequency: 237.380MHz)
-  Total number of paths / destination ports: 1651 / 63
+  Clock period: 4.194ns (frequency: 238.418MHz)
+  Total number of paths / destination ports: 1651 / 66
 -------------------------------------------------------------------------
-Delay:               4.213ns (Levels of Logic = 3)
+Delay:               4.194ns (Levels of Logic = 3)
   Source:            df/count_25 (FF)
-  Destination:       df/count_4 (FF)
+  Destination:       df/count_1 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: df/count_25 to df/count_4
+  Data Path: df/count_25 to df/count_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
      LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_2_o_equal_2_o<31>5 (df/count[31]_GND_2_o_equal_2_o<31>4)
-     LUT6:I1->O            6   0.124   0.454  df/count[31]_GND_2_o_equal_2_o<31>7 (df/count[31]_GND_2_o_equal_2_o)
-     LUT2:I1->O           28   0.124   0.551  df/count[31]_GND_2_o_equal_2_o_01 (df/count[31]_GND_2_o_equal_2_o_0)
-     FDR:R                     0.494          df/count_4
+     LUT6:I1->O            3   0.124   0.435  df/count[31]_GND_2_o_equal_2_o<31>7 (df/count[31]_GND_2_o_equal_2_o)
+     LUT2:I1->O           31   0.124   0.551  df/count[31]_GND_2_o_equal_2_o_01 (df/count[31]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_1
     ----------------------------------------
-    Total                      4.213ns (1.344ns logic, 2.869ns route)
-                                       (31.9% logic, 68.1% route)
+    Total                      4.194ns (1.344ns logic, 2.850ns route)
+                                       (32.0% logic, 68.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              1.499ns (Levels of Logic = 2)
+Offset:              1.480ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       ampPWM (FF)
   Destination Clock: df/clkout rising
@@ -291,11 +291,11 @@ Offset:              1.499ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   0.001   0.413  reset_IBUF (reset_IBUF)
-     INV:I->O              8   0.146   0.445  df/reset_inv1_INV_0 (df/reset_inv)
+     INV:I->O              5   0.146   0.426  df/reset_inv1_INV_0 (df/reset_inv)
      FDR:R                     0.494          ampPWM
     ----------------------------------------
-    Total                      1.499ns (0.641ns logic, 0.858ns route)
-                                       (42.8% logic, 57.2% route)
+    Total                      1.480ns (0.641ns logic, 0.839ns route)
+                                       (43.3% logic, 56.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -303,16 +303,16 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              1.720ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       df/count_4 (FF)
+  Destination:       df/count_1 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to df/count_4
+  Data Path: reset to df/count_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   0.001   0.550  reset_IBUF (reset_IBUF)
-     LUT2:I0->O           28   0.124   0.551  df/count[31]_GND_2_o_equal_2_o_01 (df/count[31]_GND_2_o_equal_2_o_0)
-     FDR:R                     0.494          df/count_4
+     LUT2:I0->O           31   0.124   0.551  df/count[31]_GND_2_o_equal_2_o_01 (df/count[31]_GND_2_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_1
     ----------------------------------------
     Total                      1.720ns (0.619ns logic, 1.101ns route)
                                        (36.0% logic, 64.0% route)
@@ -365,19 +365,19 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.213|         |         |         |
+clk            |    4.194|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.31 secs
+Total CPU time to Xst completion: 8.65 secs
  
 --> 
 
 
-Total memory usage is 504308 kilobytes
+Total memory usage is 504304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
