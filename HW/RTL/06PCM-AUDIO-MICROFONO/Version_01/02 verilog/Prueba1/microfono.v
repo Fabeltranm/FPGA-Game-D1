@@ -18,15 +18,11 @@ div_freq df(.clk(clk), .reset(reset),.clkout(mclk),.led(ledres));
 
 always @(posedge  mclk)
 begin
-count<=count+1;
 	if (reset)
-	begin
-		if (count <= 16) 
 		begin
      		ampPWM <= micData;
     		end 
-	end
-
+	else ampPWM<=0;
 	
 end
 
