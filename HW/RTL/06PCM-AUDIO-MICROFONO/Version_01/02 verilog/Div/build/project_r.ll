@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.20131013 at Wed Nov  8 20:34:11 2017
+; Created by bitgen P.20131013 at Fri Nov 10 03:36:44 2017
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
@@ -31,20 +31,12 @@ Revision 3
 ;                      special meaning to software reading the .ll file.
 ;
 Info STARTSEL0=1
-Bit  2240611 0x0000099f    835 Block=SLICE_X28Y113 Latch=AQ Net=count<0>
-Bit  2240636 0x0000099f    860 Block=SLICE_X28Y113 Latch=BQ Net=count<1>
-Bit  2240649 0x0000099f    873 Block=SLICE_X28Y113 Latch=CMUX Net=Result<2>
-Bit  2240666 0x0000099f    890 Block=SLICE_X28Y113 Latch=DQ Net=count<3>
-Bit  2240678 0x0000099f    902 Block=SLICE_X28Y114 Latch=AMUX Net=Result<4>
-Bit  2240695 0x0000099f    919 Block=SLICE_X29Y114 Latch=BMUX Net=count<4>
-Bit  2240700 0x0000099f    924 Block=SLICE_X28Y114 Latch=BQ Net=count<5>
-Bit  2240701 0x0000099f    925 Block=SLICE_X29Y114 Latch=BQ Net=count<2>
-Bit  2240705 0x0000099f    929 Block=SLICE_X28Y114 Latch=CQ Net=count<6>
-Bit  2240706 0x0000099f    930 Block=SLICE_X29Y114 Latch=CQ Net=count<8>
-Bit  2240714 0x0000099f    938 Block=SLICE_X29Y114 Latch=CMUX Net=count<10>
-Bit  2240730 0x0000099f    954 Block=SLICE_X28Y114 Latch=DQ Net=count<7>
-Bit  2240742 0x0000099f    966 Block=SLICE_X28Y115 Latch=AMUX Net=Result<8>
-Bit  2240764 0x0000099f    988 Block=SLICE_X28Y115 Latch=BQ Net=count<9>
-Bit  2240777 0x0000099f   1001 Block=SLICE_X28Y115 Latch=CMUX Net=Result<10>
-Bit  2357028 0x00000a1f    900 Block=SLICE_X31Y114 Latch=AQ Net=clkout_OBUF
-Bit  2357029 0x00000a1f    901 Block=SLICE_X31Y114 Latch=AMUX Net=clkout_rstpot
+Bit  1006982 0x0000041f   1830 Block=SLICE_X10Y128 Latch=AMUX Net=Result<0>
+Bit  1006998 0x0000041f   1846 Block=SLICE_X10Y128 Latch=BMUX Net=Result<1>
+Bit  1007017 0x0000041f   1865 Block=SLICE_X10Y128 Latch=CMUX Net=Result<2>
+Bit  1007027 0x0000041f   1875 Block=SLICE_X10Y128 Latch=DMUX Net=Result<3>
+Bit  1007043 0x0000041f   1891 Block=SLICE_X10Y129 Latch=AQ Net=count<0>
+Bit  1007068 0x0000041f   1916 Block=SLICE_X10Y129 Latch=BQ Net=count<1>
+Bit  1007073 0x0000041f   1921 Block=SLICE_X10Y129 Latch=CQ Net=count<2>
+Bit  1007098 0x0000041f   1946 Block=SLICE_X10Y129 Latch=DQ Net=count<3>
+Bit  1007099 0x0000041f   1947 Block=SLICE_X11Y129 Latch=DQ Net=clkout_OBUF
