@@ -1,23 +1,28 @@
-module Divisor_Frecuencia #(
-              parameter   fi     = 100000000,           
-              parameter   fs	 = 76000     //flckout=((0.238*fs)/500000)MHZ fs=Fout*500000/0.238
-  )(input clk_in, output reg clk_div, input reset);
+module Divisor_Frecuencia(input clk_in, input reset, output reg clk_div);
 
-reg [15:0] count;
+reg [31:0] count;
+
+initial begin
+clk_div=0;
+end
 
 always @(posedge  clk_in)
+begin
+    if (reset)
     begin
-	if (reset) begin
-		count <=count-1;
-		if (count==0)begin
+        count<=0;
+        clk_div<=0;
+    end
+    else
+    begin
+		if (count==1300)
+        begin
 			clk_div <=~clk_div;
-			count <= fi/fs;
-		end
-	end
-	else begin
-		count <= fi/fs;
-		clk_div <=0;
-			
-	end	
+			count <= 0;
+	    end	
+        else begin
+            count <= count +1;
+        end
+    end
 end
 endmodule
