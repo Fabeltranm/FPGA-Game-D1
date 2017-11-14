@@ -8,7 +8,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 10 03:53:26 2017
+Mapped Date    : Tue Nov 14 10:40:17 2017
 
 Design Summary
 --------------
@@ -59,13 +59,13 @@ Specific Feature Utilization:
     Number used as BUFGs:                        1
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
-  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        1 out of     300    1%
-    Number used as ILOGICE2s:                    1
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        2 out of     300    1%
+    Number used as ILOGICE2s:                    2
   Number used as  ILOGICE3s:                     0
     Number used as ISERDESE2s:                   0
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        3 out of     300    1%
-    Number used as OLOGICE2s:                    3
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        2 out of     300    1%
+    Number used as OLOGICE2s:                    2
     Number used as OLOGICE3s:                    0
     Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
@@ -94,8 +94,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                2.18
 
 Peak Memory Usage:  1224 MB
-Total REAL time to MAP completion:  30 secs 
-Total CPU time to MAP completion:   30 secs 
+Total REAL time to MAP completion:  13 mins 21 secs 
+Total CPU time to MAP completion:   3 mins 53 secs 
 
 Table of Contents
 -----------------
@@ -121,6 +121,7 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
+INFO:LIT:243 - Logical network blck3 has no load.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -154,15 +155,15 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ampPWM                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
-| ampSD                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| bclk                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| bclk2                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | clk                                | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| din                                | IOB33            | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| dout                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | ledres                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| mclk                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
-| mclk2                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
-| micData                            | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| micLRSel                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| lrclk                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | reset                              | IOB33            | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| ws                                 | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

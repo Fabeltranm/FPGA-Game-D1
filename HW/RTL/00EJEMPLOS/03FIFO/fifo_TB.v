@@ -63,7 +63,7 @@ data_in="0"; #1 wr=1; #2 wr=0;
 #1 rd=1; #2 rd=0;
 #1 rd=1; #2 rd=0;
 
-data_in="a"; #1 wr=1; #2 wr=0;
+data_in="a"; #1 wr=1; rd=0;#2 wr=0;rd=1;
 data_in="b"; #1 wr=1; #2 wr=0;
 data_in="c"; #1 wr=1; #2 wr=0;
 data_in="d"; #1 wr=1; #2 wr=0;

@@ -8,7 +8,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Fri Nov 10 03:53:26 2017
+Mapped Date    : Tue Nov 14 10:40:17 2017
 
 Mapping design into LUTs...
 Writing file project.ngm...
@@ -18,52 +18,52 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 23 secs 
-Total CPU  time at the beginning of Placer: 23 secs 
+Total REAL time at the beginning of Placer: 8 mins 14 secs 
+Total CPU  time at the beginning of Placer: 2 mins 47 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:263fa29c) REAL time: 25 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e75e33e4) REAL time: 10 mins 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:263fa29c) REAL time: 25 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e75e33e4) REAL time: 11 mins 21 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:263fa29c) REAL time: 25 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e75e33e4) REAL time: 11 mins 22 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:4d17c166) REAL time: 28 secs 
+(Checksum:e3652ae) REAL time: 12 mins 38 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:4d17c166) REAL time: 28 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:e3652ae) REAL time: 12 mins 38 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:4d17c166) REAL time: 28 secs 
+Phase 6.3  Local Placement Optimization (Checksum:e3652ae) REAL time: 12 mins 39 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:4d17c166) REAL time: 28 secs 
+Phase 7.5  Local Placement Optimization (Checksum:e3652ae) REAL time: 12 mins 40 secs 
 
 Phase 8.8  Global Placement
 ..
 ................
 ................
-Phase 8.8  Global Placement (Checksum:d3e883ff) REAL time: 29 secs 
+Phase 8.8  Global Placement (Checksum:5c2904a0) REAL time: 13 mins 8 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:d3e883ff) REAL time: 29 secs 
+Phase 9.5  Local Placement Optimization (Checksum:5c2904a0) REAL time: 13 mins 8 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:63c6bb1f) REAL time: 29 secs 
+Phase 10.18  Placement Optimization (Checksum:c6d322b0) REAL time: 13 mins 9 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:63c6bb1f) REAL time: 29 secs 
+Phase 11.5  Local Placement Optimization (Checksum:c6d322b0) REAL time: 13 mins 9 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:63c6bb1f) REAL time: 29 secs 
+Phase 12.34  Placement Validation (Checksum:c6d322b0) REAL time: 13 mins 10 secs 
 
-Total REAL time to Placer completion: 29 secs 
-Total CPU  time to Placer completion: 29 secs 
+Total REAL time to Placer completion: 13 mins 10 secs 
+Total CPU  time to Placer completion: 3 mins 45 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -118,13 +118,13 @@ Specific Feature Utilization:
     Number used as BUFGs:                        1
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
-  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        1 out of     300    1%
-    Number used as ILOGICE2s:                    1
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        2 out of     300    1%
+    Number used as ILOGICE2s:                    2
   Number used as  ILOGICE3s:                     0
     Number used as ISERDESE2s:                   0
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        3 out of     300    1%
-    Number used as OLOGICE2s:                    3
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        2 out of     300    1%
+    Number used as OLOGICE2s:                    2
     Number used as OLOGICE3s:                    0
     Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
@@ -153,8 +153,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                2.18
 
 Peak Memory Usage:  1224 MB
-Total REAL time to MAP completion:  30 secs 
-Total CPU time to MAP completion:   30 secs 
+Total REAL time to MAP completion:  13 mins 21 secs 
+Total CPU time to MAP completion:   3 mins 53 secs 
 
 Mapping completed.
 See MAP report file "project.mrp" for details.

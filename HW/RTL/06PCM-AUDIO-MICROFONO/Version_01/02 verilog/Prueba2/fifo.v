@@ -7,16 +7,14 @@ module fifo
 	parameter dat_width = 16
    )
    (
-    input  clk, reset, mclk,
+    input  reset, clk,
     input  rd, wr,
     input  [dat_width-1:0] data_in,
     output [dat_width-1:0] data_out,
     output empty,
-    output full,
-    input micData
+    output full
    );
 
-microfono mic(.clk(clk),.reset(reset),.sregt(data_in),.mclk(mclk),.micData(micData));
 
   parameter depth = (1 << adr_width);
 
@@ -25,9 +23,9 @@ microfono mic(.clk(clk),.reset(reset),.sregt(data_in),.mclk(mclk),.micData(micDa
    reg [dat_width-1:0] array_reg [depth-1:0];// register array FIFO
 
    reg [adr_width-1:0] w_ptr_reg;
-   reg [adr_width-1:0] w_ptr_next;
-   reg [adr_width-1:0] r_ptr_reg, r_ptr_next;
-   reg full_reg, empty_reg, full_next, empty_next;
+   reg [adr_width-1:0] w_ptr_next=0;
+   reg [adr_width-1:0] r_ptr_reg, r_ptr_next=0;
+   reg full_reg, empty_reg, full_next=0, empty_next=1;
    wire wr_en;
    wire rw;
   
@@ -37,14 +35,14 @@ microfono mic(.clk(clk),.reset(reset),.sregt(data_in),.mclk(mclk),.micData(micDa
    assign full = full_reg;
    assign empty = empty_reg;
    assign rw = rd | wr;
-   always @(posedge mclk) begin
+   always @(posedge clk) begin
       if (wr_en)
-         array_reg[w_ptr_reg] <= data_in;
+         array_reg[w_ptr_reg] = data_in;
    end
 
    // fifo control logic
    // register for read and write pointers
-   always @(posedge mclk) begin
+   always @(posedge clk) begin
       if (reset)
          begin
             w_ptr_reg = 0;
@@ -67,7 +65,9 @@ microfono mic(.clk(clk),.reset(reset),.sregt(data_in),.mclk(mclk),.micData(micDa
    begin
       if (reset) begin
 	w_ptr_next =  0;
-        r_ptr_next =  0;       
+        r_ptr_next =  0;
+	full_next=0;
+	empty_next =1;
       end else begin
 	      full_next = full_reg;
 	      empty_next = empty_reg;

@@ -5,7 +5,7 @@ module microfono
 	input		clk,
 	output		bclk,
 	output    reg   ws,
-	output 	  reg	lrclk
+	output 	  reg	lrclk,
         input           din,    
         output      reg dout,
 	output          bclk2, 
@@ -23,11 +23,11 @@ initial ws <= 0;
 
 div_freq df(.clk(clk), .reset(reset),.clkout(bclk1),.led(ledres));
 
-always @(posedge  mclk)
+always @(posedge  bclk)
 begin
 	if (reset)
 		begin
-     		daout <= din;
+     		dout <= din;
     		end 
 	else dout<=0;
 	

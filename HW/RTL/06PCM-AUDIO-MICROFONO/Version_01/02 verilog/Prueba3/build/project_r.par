@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-furerh-X555LB::  Fri Nov 10 03:53:58 2017
+athalia-TOSHIBA-NB515::  Tue Nov 14 10:53:53 2017
 
 par -w project.ncd project_r.ncd 
 
@@ -64,13 +64,13 @@ Specific Feature Utilization:
     Number used as BUFGs:                        1
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
-  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        1 out of     300    1%
-    Number used as ILOGICE2s:                    1
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        2 out of     300    1%
+    Number used as ILOGICE2s:                    2
   Number used as  ILOGICE3s:                     0
     Number used as ISERDESE2s:                   0
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
-  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        3 out of     300    1%
-    Number used as OLOGICE2s:                    3
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        2 out of     300    1%
+    Number used as OLOGICE2s:                    2
     Number used as OLOGICE3s:                    0
     Number used as OSERDESE2s:                   0
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
@@ -100,33 +100,33 @@ Specific Feature Utilization:
 Overall effort level (-ol):   Standard 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 15 secs 
-Finished initial Timing Analysis.  REAL time: 15 secs 
+Starting initial Timing Analysis.  REAL time: 1 mins 55 secs 
+Finished initial Timing Analysis.  REAL time: 1 mins 55 secs 
 
 Starting Router
 
 
-Phase  1  : 150 unrouted;      REAL time: 16 secs 
+Phase  1  : 150 unrouted;      REAL time: 2 mins 4 secs 
 
-Phase  2  : 102 unrouted;      REAL time: 16 secs 
+Phase  2  : 103 unrouted;      REAL time: 2 mins 6 secs 
 
-Phase  3  : 21 unrouted;      REAL time: 17 secs 
+Phase  3  : 21 unrouted;      REAL time: 2 mins 6 secs 
 
-Phase  4  : 21 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  4  : 21 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 40 secs 
 
 Updating file: project_r.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 41 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 41 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 41 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 41 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
-Total REAL time to Router completion: 20 secs 
-Total CPU time to Router completion: 20 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 41 secs 
+Total REAL time to Router completion: 2 mins 41 secs 
+Total CPU time to Router completion: 2 mins 33 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -144,9 +144,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP |BUFGCTRL_X0Y31| No   |   13 |  0.126     |  1.736      |
+|           clk_BUFGP |BUFGCTRL_X0Y31| No   |   13 |  0.116     |  1.736      |
 +---------------------+--------------+------+------+------------+-------------+
-|           df/clkout |         Local|      |    2 |  0.000     |  3.233      |
+|           df/clkout |         Local|      |    2 |  0.000     |  1.218      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -166,8 +166,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     3.054ns|     6.946ns|       0|           0
-  pin" 100 MHz HIGH 50%                     | HOLD        |     0.316ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     3.753ns|     6.247ns|       0|           0
+  pin" 100 MHz HIGH 50%                     | HOLD        |     0.287ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -178,8 +178,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 21 secs 
-Total CPU time to PAR completion: 20 secs 
+Total REAL time to PAR completion: 2 mins 45 secs 
+Total CPU time to PAR completion: 2 mins 37 secs 
 
 Peak Memory Usage:  993 MB
 

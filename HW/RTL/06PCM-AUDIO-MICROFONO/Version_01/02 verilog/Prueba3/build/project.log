@@ -50,9 +50,9 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba1/microfono.v" into library work
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba3/microfono.v" into library work
 Parsing module <microfono>.
-Analyzing Verilog file "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba1/div_freq.v" into library work
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba3/div_freq.v" into library work
 Parsing module <div_freq>.
 
 =========================================================================
@@ -60,6 +60,7 @@ Parsing module <div_freq>.
 =========================================================================
 
 Elaborating module <microfono>.
+WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba3/microfono.v" Line 17: Assignment to bclk3 ignored, since the identifier is never used
 
 Elaborating module <div_freq>.
 
@@ -68,16 +69,16 @@ Elaborating module <div_freq>.
 =========================================================================
 
 Synthesizing Unit <microfono>.
-    Related source file is "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba1/microfono.v".
-WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'microfono', is tied to its initial value (1).
-    Found 1-bit register for signal <ampPWM>.
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba3/microfono.v".
+WARNING:Xst:2935 - Signal 'ws', unconnected in block 'microfono', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'lrclk', unconnected in block 'microfono', is tied to its initial value (0).
+    Found 1-bit register for signal <dout>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <microfono> synthesized.
 
 Synthesizing Unit <div_freq>.
-    Related source file is "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba1/div_freq.v".
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba3/div_freq.v".
         fi = 50000000
         fs = 3125000
     Found 1-bit register for signal <clkout>.
@@ -203,7 +204,7 @@ Slice Logic Distribution:
    Number of unique control sets:         4
 
 IO Utilization: 
- Number of IOs:                           9
+ Number of IOs:                          10
  Number of bonded IOBs:                   9  out of    210     4%  
     IOB Flip Flops/Latches:               4
 
@@ -231,7 +232,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-df/clkout                          | NONE(ampPWM)           | 1     |
+df/clkout                          | NONE(dout)             | 1     |
 clk                                | BUFGP                  | 36    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -283,16 +284,16 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
 -------------------------------------------------------------------------
 Offset:              1.480ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       ampPWM (FF)
+  Destination:       dout (FF)
   Destination Clock: df/clkout rising
 
-  Data Path: reset to ampPWM
+  Data Path: reset to dout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   0.001   0.413  reset_IBUF (reset_IBUF)
      INV:I->O              5   0.146   0.426  df/reset_inv1_INV_0 (df/reset_inv)
-     FDR:R                     0.494          ampPWM
+     FDR:R                     0.494          dout
     ----------------------------------------
     Total                      1.480ns (0.641ns logic, 0.839ns route)
                                        (43.3% logic, 56.7% route)
@@ -341,16 +342,16 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              0.877ns (Levels of Logic = 1)
-  Source:            ampPWM (FF)
-  Destination:       ampPWM (PAD)
+  Source:            dout (FF)
+  Destination:       dout (PAD)
   Source Clock:      df/clkout rising
 
-  Data Path: ampPWM to ampPWM
+  Data Path: dout to dout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.478   0.399  ampPWM (ampPWM_OBUF)
-     OBUF:I->O                 0.000          ampPWM_OBUF (ampPWM)
+     FDR:C->Q              1   0.478   0.399  dout (dout_OBUF)
+     OBUF:I->O                 0.000          dout_OBUF (dout)
     ----------------------------------------
     Total                      0.877ns (0.478ns logic, 0.399ns route)
                                        (54.5% logic, 45.5% route)
@@ -371,8 +372,8 @@ clk            |    4.194|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.65 secs
+Total REAL time to Xst completion: 114.00 secs
+Total CPU time to Xst completion: 77.71 secs
  
 --> 
 
@@ -380,6 +381,6 @@ Total CPU time to Xst completion: 8.65 secs
 Total memory usage is 504304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

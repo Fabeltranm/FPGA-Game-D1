@@ -1,6 +1,5 @@
 module controlador_TB;
 
-reg dataint;
 reg clk;
 reg mclk;
 reg ws;
@@ -8,12 +7,12 @@ reg reset;
 reg lr;
 reg rd;
 reg wr;
-reg data_in;
+reg [15:0]dataint;
 
 
 
-microfono uut(.clk(clk),.reset(reset),.micData(dataint));
-fifo uttf(.rd(rd),.wr(wr),.clk(clk),.reset(reset),.micData(dataint));
+fifo uttf(.rd(rd),.wr(wr),.clk(clk),.reset(reset),.data_in(dataint));
+
 always
 begin
 clk =1'b1;
@@ -24,41 +23,60 @@ end
 
 initial
 begin
-reset =1'b0;
-#10;
 reset =1'b1;
+#10;
+reset =1'b0;
 
 end
 initial
 begin
-wr=1'b1;
 rd =1'b0;
 end
 
 
 
 initial begin
-#100 dataint = 1'b1;
-#150 dataint = 1'b0;
-#150 dataint = 1'b1;
-#150 dataint = 1'b0;
-#150 dataint = 1'b0;
-#150 dataint = 1'b1;
-#150 dataint = 1'b0;
-#150 dataint = 1'b1;
-#100 dataint = 1'b1;
-#150 dataint = 1'b0;
-#150 dataint = 1'b1;
-#150 dataint = 1'b0;
-#150 dataint = 1'b0;
-#150 dataint = 1'b1;
-#150 dataint = 1'b0;
-#150 dataint = 1'b1;
+#10 dataint = 10'h0a;
+wr=1'b1;
+#1 wr=1'b0;
+#10 dataint = 10'h0c;
+wr=1'b1;
+#1 wr=1'b0;
+#10 dataint = 10'h1;
+wr=1'b1;
+#1 wr=1'b0;
+#10 dataint = 10'b0;
+wr=1'b1;
+#1 wr=1'b0;
+#10 dataint = 10'h11;
+wr=1'b1;
+#1 wr=1'b0;
+#10 dataint = 10'h1e;
+wr=1'b1;
+#1 wr=1'b0;
+
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+#10 rd=1'b0;
+#1 rd=1'b1;
+
 end
 	
 initial begin: TEST_CASE
      $dumpfile("controlador_TB.vcd");
-     $dumpvars(-1, uut,uttf);
+     $dumpvars(-1, uttf);
 
      #(10000) $finish;
    end
