@@ -9,6 +9,7 @@ module fifo # (parameter abits = 10, dbits = 16)(
 	output 			empty,
 	output 			full,
 	output [dbits-1:0]	dout,
+	output reg [dbits-1:0]	dout2,
 	output			micLRSel,
         output			ledres,
         output  		ampPWM,
@@ -19,9 +20,9 @@ module fifo # (parameter abits = 10, dbits = 16)(
 
 
 microfono mi(.clk(clk),.reset(reset),.mclk(mclk),.micLRSel(micLRSel),.micData(micData),.ledres(ledres),.done(clock),.sregt(din),.mclk2(mclk2));
-pwm   al(.clk(clk),.reset(reset),.mclk(mclk),.ampPWM(ampPWM),.ampSD(ampSD),.done(clock),.dout(dout));
+pwm   al(.clk(clk),.reset(reset),.mclk(mclk),.ampPWM(ampPWM),.ampSD(ampSD),.done(clock),.dout(dout2));
 
-
+initial dout2<=dout;
 wire db_wr, db_rd;
 reg dffw1, dffw2, dffr1, dffr2;
 reg [dbits-1:0] out;

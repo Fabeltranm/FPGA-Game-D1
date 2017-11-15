@@ -3,38 +3,43 @@ module pwm
 
 	input			clk,
 	input 			reset,
-	input    [15:0]	dout,
+	input  [15:0]		dout,
 	output			mclk,
-        output  reg		ampPWM,
+        output  		ampPWM,
         output  reg     	ampSD,
 	output  reg     	done
 
 );
 
-reg [15:0] count=16;
 
-
+reg [16:0] count=0;
+reg [15:0] sreg;
+wire init;
 initial done<=0;
 initial ampSD <= 1;
+initial sreg<=dout;
+
+assign init =(count==0)?1:0;
+assign ampPWM = sreg[15];
 
 div_freq df(.clk(clk), .reset(reset),.clkout(mclk),.led(ledres));
 
 always @(posedge  mclk)
 begin
+if (init)
+sreg <= dout;	
 	if (reset)
-     	ampPWM<=0; 	
+  	done<=0;
 	else 
-	begin	
-	done<=0;
-	ampPWM <= dout<<1;
-	count<=count-1;
-			if(count<=0)
+	begin
+		if (count<=15)  /*envia bit por bit*/
 			begin
-			ampPWM <= dout<<1;
+			sreg<=sreg<<1;		
+			count<=count+1;
 			done<=1;
-			count<=16;
 			end
-	
+		else
+		count<=0;
 	end
 end
 
