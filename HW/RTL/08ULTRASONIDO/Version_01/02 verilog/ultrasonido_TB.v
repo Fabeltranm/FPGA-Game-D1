@@ -16,7 +16,7 @@ module ultrasonido_TB;
 	end
 
 	initial 
-		begin
+		begin //Toca Multiplicar los valores por 10
 			reset = 0;
 			#10
 			reset = 1;
@@ -25,14 +25,14 @@ module ultrasonido_TB;
 			echo_s = 0;
 			#10
 			echo_s = 1;
-			#10000
+			#10000000 //1ms el countEcho me cuenta hasta 100000 con #1000000
 			echo_s = 0;
 		end
 		 
 	initial begin: TEST_CASE
 		$dumpfile("ultrasonido_TB.vcd");
     	$dumpvars(-1, uut);
-		#(1000000) $finish;
+		#(100000000) $finish;
 	end
 
 endmodule //
