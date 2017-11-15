@@ -1,4 +1,0 @@
-verilog work ../controlador.v
-verilog work ../div_freq.v
-verilog work ../microfono.v
-verilog work ../pwm.v
