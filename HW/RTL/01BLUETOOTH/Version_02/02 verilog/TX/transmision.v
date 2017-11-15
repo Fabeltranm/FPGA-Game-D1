@@ -29,7 +29,7 @@ reg [2:0] bitpos = 0;
 reg [1:0] state = STATE_IDLE;
 
 always @(posedge clk_div) begin 
-    done <= ~done; //done??
+    //done <= ~done; //done??
     if (reset)
         tx <= 1'b1; //busy=0?
     else begin
@@ -38,6 +38,7 @@ always @(posedge clk_div) begin
 	    		state <= STATE_START;
 	    		data <= din;
 	    		bitpos <= 0;
+                done<=0;
                 tx <= 1'b1;
     	    end
     	    STATE_START: begin
@@ -56,6 +57,7 @@ always @(posedge clk_div) begin
     	    end
         	STATE_STOP: begin
     			tx <= 1'b1;
+                done<=1;
     			state <= STATE_IDLE;
     	    end
     	    default: begin
