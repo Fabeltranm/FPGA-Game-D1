@@ -9,7 +9,7 @@ module microfono
         output  reg		ampPWM,
         output  reg     	ampSD,
 	output          	mclk2,
-	output  reg [15:0]	sregt,
+	output  reg 		sregt,
 	output  reg     	done 
 
 );
@@ -32,7 +32,7 @@ begin
 	begin	
 	done<=0;
 	ampPWM <= micData;
-	sregt<= {sregt[15:0],micData};
+	sregt<= micData;
 	count<=count-1;
 			if(count<=0)
 			begin

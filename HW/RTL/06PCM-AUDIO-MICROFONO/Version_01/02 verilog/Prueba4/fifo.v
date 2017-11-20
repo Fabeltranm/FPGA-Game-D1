@@ -1,4 +1,4 @@
-module fifo # (parameter abits = 10, dbits = 16)(
+module fifo # (parameter abits = 10, dbits = 1)(
 	input 			clock,
 	input 			clk,
    	input 			micData,
@@ -22,7 +22,7 @@ microfono mi(.clk(clk),.reset(reset),.mclk(mclk),.micLRSel(micLRSel),.micData(mi
 wire db_wr, db_rd;
 reg dffw1, dffw2, dffr1, dffr2;
 reg [dbits-1:0] out;
- 
+ reg [dbits-1:0] out2;
 always @ (posedge clock) dffw1 <= wr; 
 always @ (posedge clock) dffw2 <= dffw1;
  
@@ -123,6 +123,8 @@ always @(*)
 assign full = full_reg;
 assign empty = empty_reg;
 assign dout = out;
+assign dout=out2;
+assign ampPWM=out2;
 endmodule
 
 

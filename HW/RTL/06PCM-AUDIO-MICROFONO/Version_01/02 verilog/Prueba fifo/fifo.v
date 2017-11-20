@@ -1,4 +1,4 @@
-module fifo # (parameter abits = 3, dbits = 8)(
+module fifo # (parameter abits = 2, dbits = 7)(
     input  reset, clock,
     input  rd, wr,
     input  [dbits-1:0] din,
@@ -52,10 +52,12 @@ always @ (posedge clock or posedge reset)
  begin
   if (reset)
    begin
+   
    wr_reg <= 0;
    rd_reg <= 0;
    full_reg <= 1'b0;
    empty_reg <= 1'b1;
+   ledres=0;
    end
    
   else

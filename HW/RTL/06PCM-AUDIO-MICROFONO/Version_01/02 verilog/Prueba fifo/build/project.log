@@ -50,7 +50,7 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" into library work
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" into library work
 Parsing module <fifo>.
 
 =========================================================================
@@ -58,35 +58,35 @@ Parsing module <fifo>.
 =========================================================================
 
 Elaborating module <fifo>.
-WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 73: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 74: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 75: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 76: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <fifo>.
-    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v".
-        abits = 3
-        dbits = 8
-    Found 8x8-bit dual-port RAM <Mram_regarray> for signal <regarray>.
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v".
+        abits = 2
+        dbits = 7
+    Found 4x7-bit dual-port RAM <Mram_regarray> for signal <regarray>.
     Found 1-bit register for signal <empty>.
-    Found 3-bit register for signal <wr_reg>.
-    Found 3-bit register for signal <rd_reg>.
+    Found 2-bit register for signal <wr_reg>.
+    Found 2-bit register for signal <rd_reg>.
     Found 1-bit register for signal <full>.
+    Found 1-bit register for signal <ledres>.
     Found 1-bit register for signal <dffw2>.
     Found 1-bit register for signal <dffr1>.
     Found 1-bit register for signal <dffr2>.
-    Found 8-bit register for signal <dout>.
-    Found 1-bit register for signal <ledres>.
+    Found 7-bit register for signal <dout>.
     Found 1-bit register for signal <dffw1>.
-    Found 3-bit adder for signal <wr_succ> created at line 73.
-    Found 3-bit adder for signal <rd_succ> created at line 74.
-    Found 3-bit comparator not equal for signal <rd_reg[2]_wr_reg[2]_equal_15_o> created at line 89
+    Found 2-bit adder for signal <wr_succ> created at line 75.
+    Found 2-bit adder for signal <rd_succ> created at line 76.
+    Found 2-bit comparator not equal for signal <rd_reg[1]_wr_reg[1]_equal_15_o> created at line 91
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred  21 D-type flip-flop(s).
+	inferred  18 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <fifo> synthesized.
 
@@ -95,15 +95,15 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 8x8-bit dual-port RAM                                 : 1
+ 4x7-bit dual-port RAM                                 : 1
 # Adders/Subtractors                                   : 2
- 3-bit adder                                           : 2
+ 2-bit adder                                           : 2
 # Registers                                            : 10
  1-bit register                                        : 7
- 3-bit register                                        : 2
- 8-bit register                                        : 1
+ 2-bit register                                        : 2
+ 7-bit register                                        : 1
 # Comparators                                          : 1
- 3-bit comparator not equal                            : 1
+ 2-bit comparator not equal                            : 1
 
 =========================================================================
 
@@ -120,7 +120,7 @@ INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, abso
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     aspect ratio   | 4-word x 7-bit                      |          |
     |     mode           | read-first                          |          |
     |     clkA           | connected to signal <clock>         | rise     |
     |     weA            | connected to signal <wr_en>         | high     |
@@ -130,7 +130,7 @@ INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, abso
     | optimization       | area                                |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     aspect ratio   | 4-word x 7-bit                      |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <clock>         | rise     |
     |     enB            | connected to signal <db_rd>         | high     |
@@ -146,15 +146,15 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 8x8-bit dual-port block RAM                           : 1
+ 4x7-bit dual-port block RAM                           : 1
 # Adders/Subtractors                                   : 2
- 3-bit adder                                           : 2
+ 2-bit adder                                           : 2
 # Counters                                             : 2
- 3-bit up counter                                      : 2
+ 2-bit up counter                                      : 2
 # Registers                                            : 7
  Flip-Flops                                            : 7
 # Comparators                                          : 1
- 3-bit comparator not equal                            : 1
+ 2-bit comparator not equal                            : 1
 
 =========================================================================
 
@@ -169,7 +169,6 @@ Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block fifo, actual ratio is 0.
 FlipFlop empty_reg has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop full_reg has been replicated 1 time(s) to handle iob=true attribute.
-FlipFlop ledres has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -177,8 +176,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 16
- Flip-Flops                                            : 16
+# Registers                                            : 13
+ Flip-Flops                                            : 13
 
 =========================================================================
 
@@ -201,26 +200,27 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 18
+# BELS                             : 14
 #      GND                         : 1
 #      INV                         : 2
-#      LUT2                        : 6
-#      LUT3                        : 3
+#      LUT2                        : 4
+#      LUT3                        : 1
+#      LUT4                        : 1
 #      LUT5                        : 2
-#      LUT6                        : 3
+#      LUT6                        : 2
 #      VCC                         : 1
-# FlipFlops/Latches                : 16
-#      FD                          : 6
-#      FDC                         : 2
-#      FDCE                        : 6
+# FlipFlops/Latches                : 13
+#      FD                          : 4
+#      FDC                         : 3
+#      FDCE                        : 4
 #      FDP                         : 2
 # RAMS                             : 1
 #      RAMB18E1                    : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 22
-#      IBUF                        : 11
-#      OBUF                        : 11
+# IO Buffers                       : 20
+#      IBUF                        : 10
+#      OBUF                        : 10
 
 Device utilization summary:
 ---------------------------
@@ -229,20 +229,20 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              11  out of  126800     0%  
- Number of Slice LUTs:                   16  out of  63400     0%  
-    Number used as Logic:                16  out of  63400     0%  
+ Number of Slice Registers:               8  out of  126800     0%  
+ Number of Slice LUTs:                   12  out of  63400     0%  
+    Number used as Logic:                12  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     18
-   Number with an unused Flip Flop:       7  out of     18    38%  
-   Number with an unused LUT:             2  out of     18    11%  
-   Number of fully used LUT-FF pairs:     9  out of     18    50%  
+ Number of LUT Flip Flop pairs used:     14
+   Number with an unused Flip Flop:       6  out of     14    42%  
+   Number with an unused LUT:             2  out of     14    14%  
+   Number of fully used LUT-FF pairs:     6  out of     14    42%  
    Number of unique control sets:         4
 
 IO Utilization: 
- Number of IOs:                          23
- Number of bonded IOBs:                  23  out of    210    10%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    210    10%  
     IOB Flip Flops/Latches:               5
 
 Specific Feature Utilization:
@@ -271,7 +271,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 17    |
+clock                              | BUFGP                  | 14    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -286,8 +286,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 2.136ns (Maximum Frequency: 468.165MHz)
-   Minimum input arrival time before clock: 0.960ns
+   Minimum period: 2.098ns (Maximum Frequency: 476.644MHz)
+   Minimum input arrival time before clock: 0.947ns
    Maximum output required time after clock: 2.853ns
    Maximum combinational path delay: No path found
 
@@ -297,61 +297,60 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
-  Clock period: 2.136ns (frequency: 468.165MHz)
-  Total number of paths / destination ports: 102 / 29
+  Clock period: 2.098ns (frequency: 476.644MHz)
+  Total number of paths / destination ports: 76 / 21
 -------------------------------------------------------------------------
-Delay:               2.136ns (Levels of Logic = 2)
-  Source:            wr_reg_2 (FF)
-  Destination:       empty_reg (FF)
+Delay:               2.098ns (Levels of Logic = 1)
+  Source:            dffw1 (FF)
+  Destination:       wr_reg_0 (FF)
   Source Clock:      clock rising
   Destination Clock: clock rising
 
-  Data Path: wr_reg_2 to empty_reg
+  Data Path: dffw1 to wr_reg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             4   0.478   0.959  wr_reg_2 (wr_reg_2)
-     LUT6:I0->O            1   0.124   0.421  _n0081_inv_SW0 (N8)
-     LUT6:I5->O            2   0.124   0.000  empty_reg_rstpot (empty_reg_rstpot)
-     FDP:D                     0.030          empty_reg
+     FD:C->Q               6   0.478   0.952  dffw1 (dffw1)
+     LUT5:I0->O            2   0.124   0.405  _n0086_inv1 (_n0086_inv)
+     FDCE:CE                   0.139          wr_reg_0
     ----------------------------------------
-    Total                      2.136ns (0.756ns logic, 1.380ns route)
-                                       (35.4% logic, 64.6% route)
+    Total                      2.098ns (0.741ns logic, 1.357ns route)
+                                       (35.3% logic, 64.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 22 / 22
+  Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
-Offset:              0.960ns (Levels of Logic = 1)
+Offset:              0.947ns (Levels of Logic = 1)
   Source:            reset (PAD)
-  Destination:       wr_reg_0 (FF)
+  Destination:       ledres (FF)
   Destination Clock: clock rising
 
-  Data Path: reset to wr_reg_0
+  Data Path: reset to ledres
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            11   0.001   0.465  reset_IBUF (reset_IBUF)
-     FDCE:CLR                  0.494          wr_reg_0
+     IBUF:I->O             9   0.001   0.452  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.494          ledres
     ----------------------------------------
-    Total                      0.960ns (0.495ns logic, 0.465ns route)
-                                       (51.6% logic, 48.4% route)
+    Total                      0.947ns (0.495ns logic, 0.452ns route)
+                                       (52.3% logic, 47.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
 Offset:              2.853ns (Levels of Logic = 1)
   Source:            Mram_regarray (RAM)
-  Destination:       dout<7> (PAD)
+  Destination:       dout<6> (PAD)
   Source Clock:      clock rising
 
-  Data Path: Mram_regarray to dout<7>
+  Data Path: Mram_regarray to dout<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB18E1:CLKARDCLK->DOBDO7    1   2.454   0.399  Mram_regarray (dout_7_OBUF)
-     OBUF:I->O                 0.000          dout_7_OBUF (dout<7>)
+     RAMB18E1:CLKARDCLK->DOBDO6    1   2.454   0.399  Mram_regarray (dout_6_OBUF)
+     OBUF:I->O                 0.000          dout_6_OBUF (dout<6>)
     ----------------------------------------
     Total                      2.853ns (2.454ns logic, 0.399ns route)
                                        (86.0% logic, 14.0% route)
@@ -366,19 +365,19 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    2.136|         |         |         |
+clock          |    2.098|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 22.84 secs
+Total REAL time to Xst completion: 82.00 secs
+Total CPU time to Xst completion: 76.61 secs
  
 --> 
 
 
-Total memory usage is 504316 kilobytes
+Total memory usage is 504284 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

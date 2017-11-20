@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.20131013 at Thu Nov 16 18:43:52 2017
+; Created by bitgen P.20131013 at Fri Nov 17 09:06:05 2017
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
@@ -31,20 +31,17 @@ Revision 3
 ;                      special meaning to software reading the .ll file.
 ;
 Info STARTSEL0=1
-Bit 17670145 0x0040171f    801 Block=SLICE_X74Y62 Latch=CQ Net=dffr2
-Bit 17670164 0x0040171f    820 Block=SLICE_X75Y62 Latch=DMUX Net=dffw2
-Bit 17786467 0x0040179f    771 Block=SLICE_X76Y62 Latch=AQ Net=wr_reg<0>
-Bit 17786468 0x0040179f    772 Block=SLICE_X77Y62 Latch=AQ Net=full_reg
-Bit 17786486 0x0040179f    790 Block=SLICE_X76Y62 Latch=BMUX Net=wr_reg<2>
-Bit 17786487 0x0040179f    791 Block=SLICE_X77Y62 Latch=BMUX Net=_n0099_inv
-Bit 17786492 0x0040179f    796 Block=SLICE_X76Y62 Latch=BQ Net=wr_reg<1>
-Bit 17786515 0x0040179f    819 Block=SLICE_X76Y62 Latch=DMUX Net=_n0088_inv
-Bit 17786516 0x0040179f    820 Block=SLICE_X77Y62 Latch=DMUX Net=N10
-Bit 17993315 0x0040189f    771 Block=SLICE_X78Y62 Latch=AQ Net=empty_reg
-Bit 17993316 0x0040189f    772 Block=SLICE_X79Y62 Latch=AQ Net=rd_reg<0>
-Bit 17993335 0x0040189f    791 Block=SLICE_X79Y62 Latch=BMUX Net=rd_reg<2>
-Bit 17993341 0x0040189f    797 Block=SLICE_X79Y62 Latch=BQ Net=rd_reg<1>
-Bit 18664892 0x00401b9f     92 Block=SLICE_X88Y51 Latch=BQ Net=ledres_OBUF
+Bit 17669988 0x0040171f    644 Block=SLICE_X75Y60 Latch=AQ Net=wr_reg<0>
+Bit 17670013 0x0040171f    669 Block=SLICE_X75Y60 Latch=BQ Net=wr_reg<1>
+Bit 17670017 0x0040171f    673 Block=SLICE_X74Y60 Latch=CQ Net=dffr2
+Bit 17670042 0x0040171f    698 Block=SLICE_X74Y60 Latch=DQ Net=dffw2
+Bit 17786339 0x0040179f    643 Block=SLICE_X76Y60 Latch=AQ Net=rd_reg<0>
+Bit 17786340 0x0040179f    644 Block=SLICE_X77Y60 Latch=AQ Net=full_reg
+Bit 17786359 0x0040179f    663 Block=SLICE_X77Y60 Latch=BMUX Net=_n0097_inv
+Bit 17786369 0x0040179f    673 Block=SLICE_X76Y60 Latch=CQ Net=rd_reg<1>
+Bit 17786377 0x0040179f    681 Block=SLICE_X76Y60 Latch=CMUX Net=N6
+Bit 17786387 0x0040179f    691 Block=SLICE_X76Y60 Latch=DMUX Net=_n0086_inv
+Bit 17993188 0x0040189f    644 Block=SLICE_X79Y60 Latch=AQ Net=empty_reg
 Bit 28920752 0x00c00180    816 Block=RAMB18_X3Y25 Ram=B:BIT1
 Bit 28920753 0x00c00180    817 Block=RAMB18_X3Y25 Ram=B:BIT65
 Bit 28920754 0x00c00180    818 Block=RAMB18_X3Y25 Ram=B:BIT129
