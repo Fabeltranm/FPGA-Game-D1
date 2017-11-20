@@ -1,5 +1,6 @@
-module transmision (input clk_in,
-                    input reset, //reset=0 para transmitir
+module transmision (input rw, 
+                    input clk_in,
+                    input reset,
                     input wire [7:0] din,   
                     output busy, 
                     output reg done,
@@ -28,16 +29,18 @@ reg [2:0] bitpos = 0;
 reg [1:0] state = STATE_IDLE;
 
 always @(posedge clk_div) begin 
-    done <= ~done; //done??
     if (reset)
         tx <= 1'b1; //busy=0?
     else begin
         case (state)
 	        STATE_IDLE: begin
+                if (rw)begin
 	    		state <= STATE_START;
 	    		data <= din;
 	    		bitpos <= 0;
                 tx <= 1'b1;
+                done<=0;
+                end
     	    end
     	    STATE_START: begin
     			tx <= 1'b0;
@@ -59,6 +62,7 @@ always @(posedge clk_div) begin
     	    end
     	    default: begin
     		    tx <= 1'b1;
+                done<=1;
     	    	state <= STATE_IDLE;
     	    end
     	endcase
