@@ -6,18 +6,20 @@ module microfono
 	output		mclk,
 	output    reg   micLRSel,
         input           micData,    
-        output      reg    ampPWM,
-        output   reg       ampSD,
-	output           mclk2,
+        output    reg   ampPWM,
+        output    reg   ampSD,
+	output          mclk2,
 	input		rd,wr,
 	output		empty,
-	output		full  
+	output		full,
+	output    	dout  
 
 );
 
 fifo fi(.reset(reset),.din(micData),.dout(dout),.clock(mclk),.rd(rd),.wr(wr),.empty(empty),.full(full));
 
 wire mclk1;
+
 
 assign mclk2=mclk1;
 assign mclk=mclk1;
@@ -33,6 +35,10 @@ begin
 		begin
      		ampPWM<=0;
     		end 
+	else 
+		begin
+		ampPWM<=dout;
+		end
 	
 	
 end

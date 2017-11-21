@@ -1,4 +1,4 @@
-module fifo # (parameter abits = 38, dbits = 1)(
+module fifo # (parameter abits = 7, dbits = 1)(
     input  reset, clock,
     input  rd, wr,
     input  [dbits-1:0] din,

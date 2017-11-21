@@ -1,42 +1,53 @@
 module microfono
 (
-	input			reset,	
-	input         		micData, 
-	input			clk,
-	output			mclk,
-	output	reg		micLRSel,
-        output			ledres,
-	output          	mclk2,
-	output  reg [15:0]	sregt,
-	output  reg     	done 
+	input 		reset,	
+	output 		ledres,
+	input		clk,
+	output		mclk,
+	output    reg   micLRSel,
+        input           micData,    
+        output    reg   ampPWM,
+        output    reg   ampSD,
+	input		rd,wr,
+	output		empty,
+	output		full,
+	output    [7:0]	dout,
+	output reg [7:0] sregt  
 
 );
 
-reg [15:0] count=16;
+fifo fi(.reset(reset),.din(sregt),.dout(dout),.clock(mclk),.rd(rd),.wr(wr),.empty(empty),.full(full));
+pwm df(.ampSD(ampSD), .reset(reset),.mclk(mclk),.ampPWM(ampPWM),.clk(clk),.[7:0]dout(dout));
 
-assign mclk2=mclk1;
-assign mclk=mclk1;
-initial done<=0;
+
+
+reg [7:0] count= 0;
+
 initial micLRSel <= 0;
+initial ampSD <= 1;
 
-div_freq df(.clk(clk), .reset(reset),.clkout(mclk1),.led(ledres));
 
 always @(posedge  mclk)
 begin
 	if (reset)
-     	sregt<=0; 	
+		begin
+     		ampPWM<=0;
+    		end 
 	else 
-	begin	
-	done<=0;
-	sregt<= {sregt[15:0],micData};
-	count<=count-1;
-			if(count<=0)
+		begin
+		if(count==7)
 			begin
-			done<=1;
-			count<=16;
+			count=count+1;
+			sregt<= {sregt[6:0],micData};		
 			end
+			else		
+			begin
+			sregt<=0; 
+			count<=0;
+			end
+		end
 	
-	end
+	
 end
 
 
