@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Tue Nov 21 11:55:36 2017"><group name="NetStatistics">
+<item name="NumNets_Active" rev="2">
+<attrib name="value" value="19"/></item>
+<item name="NumNets_Gnd" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNets_Vcc" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BOUNCEIN" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BUFGROUT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BUFINP2OUT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_CLKPIN" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_GENERIC" rev="2">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Active_GLOBAL" rev="2">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Active_IOBIN2OUT" rev="2">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="2">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Active_OUTBOUND" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_OUTPUT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_PADINPUT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_PADOUTPUT" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_PINFEED" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_SINGLE" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_VQUAD" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_BOUNCEIN" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_HVCCGNDOUT" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_IOBIN2OUT" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_IOBOUTPUT" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_PADINPUT" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_PINFEED" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Vcc_HVCCGNDOUT" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Vcc_IOBIN2OUT" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Vcc_IOBOUTPUT" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Vcc_PADINPUT" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Vcc_PINFEED" rev="2">
+<attrib name="value" value="2"/></item>
+</group>
+<group name="SiteStatistics">
+<item name="BUFG-BUFGCTRL" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="IOB33-IOB33M" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="IOB33-IOB33S" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="OLOGICE2-OLOGICE3" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="AGG_IO" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="AGG_LOCED_IO" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="NUM_BONDED_IOB33" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="NUM_BUFG" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="NUM_IOB_FF" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="NUM_LOCED_IOB33" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="NUM_OLOGICE2" rev="1">
+<attrib name="value" value="1"/></item>
+</group>
+</DesignStatistics>
+<DeviceUsage TimeStamp="Tue Nov 21 11:55:36 2017"><group name="SiteSummary">
+<item name="BUFG" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="BUFG_BUFG" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="IOB33" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+<item name="IOB33_INBUF_EN" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="5"/></item>
+<item name="IOB33_OUTBUF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="7"/></item>
+<item name="OLOGICE2" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="OLOGICE2_OUTFF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="PAD" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+</group>
+</DeviceUsage>
+<ReportConfigData TimeStamp="Tue Nov 21 11:55:36 2017"><group name="IOB33_INBUF_EN">
+<item name="IBUF_LOW_PWR" rev="2">
+<attrib name="TRUE" value="5"/></item>
+</group>
+<group name="OLOGICE2">
+<item name="CLK" rev="2">
+<attrib name="CLK" value="1"/><attrib name="CLK_INV" value="0"/></item>
+<item name="D1" rev="2">
+<attrib name="D1" value="0"/><attrib name="D1_INV" value="1"/></item>
+</group>
+<group name="OLOGICE2_OUTFF">
+<item name="CK" rev="2">
+<attrib name="CK" value="1"/><attrib name="CK_INV" value="0"/></item>
+<item name="D1" rev="2">
+<attrib name="D1" value="0"/><attrib name="D1_INV" value="1"/></item>
+<item name="INIT_OQ" rev="2">
+<attrib name="0" value="1"/></item>
+<item name="OUTFFTYPE" rev="2">
+<attrib name="FF" value="1"/></item>
+</group>
+</ReportConfigData>
+<ReportPinData TimeStamp="Tue Nov 21 11:55:36 2017"><group name="IOB33_OUTBUF">
+<item name="IN" rev="2">
+<attrib name="value" value="7"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="7"/></item>
+</group>
+<group name="BUFG_BUFG">
+<item name="I0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="O" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="PAD">
+<item name="PAD" rev="2">
+<attrib name="value" value="12"/></item>
+</group>
+<group name="IOB33_INBUF_EN">
+<item name="OUT" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="PAD" rev="2">
+<attrib name="value" value="5"/></item>
+</group>
+<group name="OLOGICE2">
+<item name="CLK" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="D1" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="OQ" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB33">
+<item name="I" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="O" rev="2">
+<attrib name="value" value="7"/></item>
+<item name="PAD" rev="2">
+<attrib name="value" value="12"/></item>
+</group>
+<group name="OLOGICE2_OUTFF">
+<item name="CK" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="D1" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="Q" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="BUFG">
+<item name="I0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="O" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+</ReportPinData>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

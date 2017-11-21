@@ -1,4 +1,4 @@
-module microfono
+module pwm
 (
 	input 		reset,	
 	output 		ledres,
@@ -6,29 +6,29 @@ module microfono
 	output		mclk,
         input           micData,    
         output    reg   ampPWM,
-        output    reg   ampSD,
-	output    reg [7:0] dout
+        output    reg	ampSD,
+	input     [7:0] dout
  
 
 );
 
 
-reg [7:0] count= 0;
-
+reg [3:0] count;
 initial ampSD <= 1;
-div_freq df(.clk(clk), .reset(reset),.clkout(mclk),.led(ledres));
+
 
 always @(posedge  mclk)
 begin
+count<=0;
 	if (reset)
 		begin
      		ampPWM<=0;
     		end 
 	else 
 		begin
-		if (count==7)
+		if (count<=7)
 			begin
-			ampPWM<=[count] dout;
+			ampPWM<=dout[count];
 			count<=count+1;
 			end
 		else
@@ -39,8 +39,5 @@ begin
 	
 	
 end
-
-
-
 
 endmodule
