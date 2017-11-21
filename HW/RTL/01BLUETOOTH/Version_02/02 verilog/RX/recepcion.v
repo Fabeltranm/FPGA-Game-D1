@@ -1,14 +1,14 @@
 module recepcion(input rx,
-                 output reg rcv, 
+                 output reg avail, 
                  input clk_in,
                  input reset,
                  output reg [7:0] dout,
                  output clk_div);
-wire clk_div;
+
 Divisor_Frecuencia div(.clk_in(clk_in), .clk_div(clk_div), .reset(reset));
 
 initial begin
-    rcv=0;
+    avail=0;
 	dout = 8'b00000000; 
 end
 
@@ -21,18 +21,18 @@ reg [3:0] bitpos = 0;
 reg [7:0] scratch = 8'b00000000;
 
 always @(posedge clk_div) begin 
-        rcv<=0;
+        avail<=0;
 		case (state)
 		RX_STATE_START: begin
 			if (rx==0) begin
-                rcv<=0;
+                avail<=0;
                 bitpos <= 0;
 				scratch <= 0;				
                 state <= RX_STATE_DATA;
 			end
 		end
-        RX_STATE_DATA: begin
-    			if(bitpos<=7) begin
+        RX_STATE_DATA: begin 			
+                if(bitpos<=7) begin
     				scratch[bitpos] <= rx;
     				bitpos<=bitpos+1;
     			end
@@ -44,7 +44,7 @@ always @(posedge clk_div) begin
 			if (rx==1) begin
 				state <= RX_STATE_START;
 				dout <= scratch;
-				rcv <= 1;
+				avail <= 1;
 			end
 		end
 		default: begin
