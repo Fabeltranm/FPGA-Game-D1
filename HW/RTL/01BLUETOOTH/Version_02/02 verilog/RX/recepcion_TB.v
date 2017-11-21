@@ -1,12 +1,12 @@
 module recepcion_TB;
     reg rx=1;
-    wire rcv;
+    wire avail;
 	reg clk_in;
     wire clk_div;
 	reg reset=0;
 	wire [7:0] dout;
 
-    recepcion rec(.rx(rx),.clk_in(clk_in),.reset(reset),.dout(dout),.rcv(rcv),.clk_div(clk_div));
+    recepcion rec(.rx(rx),.clk_in(clk_in),.reset(reset),.dout(dout),.avail(avail),.clk_div(clk_div));
  
     reg [3:0] bitpos = 0; 
     reg [3:0] counter = 0;  
@@ -26,9 +26,12 @@ module recepcion_TB;
                 rx<=data[bitpos];
                 bitpos<=bitpos+1;    
             end
-            else begin
-                counter <= 0;                            
-                rx<=1;        
+            else begin                           
+                rx<=1; 
+                if (avail==1)begin
+                    counter<=0;
+                    bitpos<=0;       
+                end            
             end
         end        
         else if (counter<3)
