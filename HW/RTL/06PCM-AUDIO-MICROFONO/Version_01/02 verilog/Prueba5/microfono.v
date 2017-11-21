@@ -6,39 +6,52 @@ module microfono
 	output		mclk,
 	output    reg   micLRSel,
         input           micData,    
-        output    reg   ampPWM,
-        output    reg   ampSD,
+        output          ampPWM,
+        output          ampSD,
 	input		rd,wr,
 	output		empty,
-	output		full,
-	output    [7:0]	dout,
-	output reg [7:0] sregt  
+	output		full
+	//output 	  [7:0] dout,
+	 
 
 );
 
-fifo fi(.reset(reset),.din(sregt),.dout(dout),.clock(mclk),.rd(rd),.wr(wr),.empty(empty),.full(full));
-pwm df(.ampSD(ampSD), .reset(reset),.mclk(mclk),.ampPWM(ampPWM),.clk(clk),.[7:0]dout(dout));
+wire [7:0] dout;
+wire [7:0] dout1;
+wire mclk1;
+wire mclk2;
+wire mclk3;
+reg [7:0] sregt;
+
+fifo fi(.reset(reset),.din(sregt),.dout(dout),.clock(mclk2),.rd(rd),.wr(wr),.empty(empty),.full(full));
+pwm pw(.ampSD(ampSD), .reset(reset),.mclk(mclk1),.ampPWM(ampPWM),.clk(clk),.dout(dout1));
+div_freq df(.clk(clk), .reset(reset),.clkout(mclk3),.led(ledres));
 
 
+reg [7:0] count;
+assign mlck3=mclk1;
+assign mclk2=mclk1;
+assign mclk1=mclk;
 
-reg [7:0] count= 0;
+assign dout1=dout;
 
 initial micLRSel <= 0;
-initial ampSD <= 1;
+//initial ampSD <= 1;
 
 
 always @(posedge  mclk)
 begin
+count<=0;
 	if (reset)
 		begin
-     		ampPWM<=0;
+     		sregt<=0;
     		end 
 	else 
 		begin
-		if(count==7)
+		if(count<=6)
 			begin
-			count=count+1;
-			sregt<= {sregt[6:0],micData};		
+			sregt<= {sregt[6:0],micData};	
+			count<=count+1;	
 			end
 			else		
 			begin
@@ -50,7 +63,5 @@ begin
 	
 end
 
-
-
-
 endmodule
+
