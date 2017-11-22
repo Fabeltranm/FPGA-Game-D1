@@ -3,19 +3,19 @@
 
 module fifo
    #(
-  	parameter adr_width = 10,
+  	parameter adr_width = 5,
 	parameter dat_width = 8
    )
    (
     input  clk, reset,
-    input  rd, wr,
+    input  rd1, wr1,
     input  [dat_width-1:0] data_in,
     output [dat_width-1:0] data_out,
     output empty, 
     output full
    );
 
-   
+   reg wr, rd;
    parameter depth = (1 << adr_width);
 
    //declaración de registros 
@@ -26,7 +26,10 @@ module fifo
    reg [adr_width-1:0] r_ptr_reg, r_ptr_next;
    reg full_reg, empty_reg, full_next, empty_next;
    wire wr_en;
-
+reg [31:0] count;
+initial wr<=0;
+initial rd<=0;
+initial count<=0;
 
    assign data_out = array_reg[r_ptr_reg];
    assign wr_en = wr & ~full_reg;
@@ -41,6 +44,83 @@ module fifo
 
    // fifo control logic
    // register for read and write pointers
+ always @(posedge clk) begin
+wr=0;	
+if (wr1==1)
+	begin
+		        if (count==0)
+			begin
+				wr <=~wr;
+				count <= 2;
+			end	
+			else 
+			begin
+				count <=count-1;
+			end
+	end
+	else 
+	begin
+	wr=0;
+	end
+ end
+always @(negedge clk) begin
+wr=0;	
+if (wr1==1)
+	begin
+		        if (count==0)
+			begin
+				wr <=~wr;
+				count <= 1;
+			end	
+			else 
+			begin
+				count <=count-1;
+			end
+	end
+	else 
+	begin
+	wr=0;
+	end
+ end
+
+
+ always @(posedge clk) begin
+	if (rd1)
+	begin
+		        if (count==0)
+			begin
+				rd <=~rd;
+				count <= 1;
+			end	
+			else 
+			begin
+				count <=count-1;
+			end
+	end
+	else 
+	begin
+	rd=0;
+	end
+ end
+ always @(posedge clk) begin
+	if (rd1)
+	begin
+		        if (count==0)
+			begin
+				rd <=~rd;
+				count <= 2;
+			end	
+			else 
+			begin
+				count <=count-1;
+			end
+	end
+	else 
+	begin
+	rd=0;
+	end
+ end
+
    always @(posedge clk, posedge reset) begin
       if (reset)
          begin

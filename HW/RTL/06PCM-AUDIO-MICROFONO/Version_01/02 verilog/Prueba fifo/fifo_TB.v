@@ -7,7 +7,7 @@ reg wr;
 reg dataint;
 
 
-fifo uttf(.rd(rd),.wr(wr),.micData(dataint),.clk(clk),.reset(reset));
+fifo uttf(.rd(rd),.wr(wr),.din(dataint),.clock(clk),.reset(reset));
 
 
 always
