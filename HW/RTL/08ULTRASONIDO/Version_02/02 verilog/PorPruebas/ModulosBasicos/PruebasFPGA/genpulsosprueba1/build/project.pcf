@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 07 13:35:57 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "pulse" LOCATE = SITE "U9" LEVEL 1;
+COMP "trigg" LOCATE = SITE "B13" LEVEL 1;
+COMP "reset" LOCATE = SITE "U8" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "divisorfrecgen0/count_1000_0" BEL
+        "divisorfrecgen0/count_1000_1" BEL "divisorfrecgen0/count_1000_2" BEL
+        "divisorfrecgen0/count_1000_3" BEL "divisorfrecgen0/count_1000_4" BEL
+        "divisorfrecgen0/count_1000_5" BEL "divisorfrecgen0/count_1000_6" BEL
+        "divisorfrecgen0/count_1000_7" BEL "divisorfrecgen0/count_1000_8" BEL
+        "divisorfrecgen0/count_1000_9" BEL "divisorfrecgen0/CLKOUT1" BEL
+        "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+
