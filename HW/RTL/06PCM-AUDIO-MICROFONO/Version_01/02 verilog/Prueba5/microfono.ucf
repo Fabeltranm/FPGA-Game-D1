@@ -12,17 +12,12 @@ NET "ledres"			LOC = "T8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_
 
 NET "empty"			LOC = "V9"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L21N_T3_DQS_34,	Sch name = LED1
 NET "full"			LOC = "R8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L24P_T3_34,		Sch name = LED2
+NET "done"			LOC = "T6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = IO_L23N_T3_34,		Sch name = LED3
+
 NET "rd"			LOC = "T16"	| IOSTANDARD = "LVCMOS33";		#Bank = CONFIG, Pin name = IO_L15N_T2_DQS_DOUT_CSO_B_14,	Sch name = BTNL
 NET "wr"			LOC = "R10"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_25_14,				Sch name = BTNR
 
-#NET "dout<0>"			LOC = "R12"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L5P_T0_DQ06_14,					Sch name = CRAM_DQ0
-#NET "dout<1>"			LOC = "T11"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L19P_T3_A10_D26_14,				Sch name = CRAM_DQ1
-#NET "dout<2>"			LOC = "U12"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L20P_T3_A08)D24_14,				Sch name = CRAM_DQ2
-#NET "dout<3>"			LOC = "R13"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L5N_T0_D07_14,					Sch name = CRAM_DQ3
-#NET "dout<4>"			LOC = "U18"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L17N_T2_A13_D29_14,				Sch name = CRAM_DQ4
-#NET "dout<5>"			LOC = "R17"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L12N_T1_MRCC_14,					Sch name = CRAM_DQ5
-#NET "dout<6>"			LOC = "T18"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L7N_T1_D10_14,					Sch name = CRAM_DQ6
-#NET "dout<7>"			LOC = "R18"	| IOSTANDARD = "LVCMOS33";		#Bank = 14, Pin name = IO_L7P_T1_D09_14,					Sch name = CRAM_DQ7
+
 
 
 NET "mclk"			LOC = "J5"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name =IO_25_35,	Sch name = M_CLK

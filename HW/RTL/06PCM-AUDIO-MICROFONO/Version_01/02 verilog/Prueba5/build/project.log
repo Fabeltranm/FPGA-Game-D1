@@ -62,10 +62,10 @@ Parsing module <pwm>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 30: Port ledres is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 32: Port ledres is not connected to this instance
 
 Elaborating module <microfono>.
-WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 23: Assignment to mclk3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 24: Assignment to mclk3 ignored, since the identifier is never used
 
 Elaborating module <fifo>.
 WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" Line 75: Result of 5-bit expression is truncated to fit in 4-bit target.
@@ -75,8 +75,9 @@ Elaborating module <pwm>.
 WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v" Line 32: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <div_freq>.
-WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 55: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 30: Input port micData is not connected on this instance
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 57: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 58: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 32: Input port micData is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -85,16 +86,18 @@ WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFO
 Synthesizing Unit <microfono>.
     Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v".
 WARNING:Xst:2898 - Port 'micData', unconnected in block instance 'pw', is tied to GND.
-INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 30: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 30: Output port <mclk> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 32: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 32: Output port <mclk> of the instance <pw> is unconnected or connected to loadless signal.
 WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
-    Found 8-bit register for signal <sregt>.
     Found 8-bit register for signal <count>.
-    Found 8-bit adder for signal <count[7]_GND_1_o_add_3_OUT> created at line 55.
-    Found 8-bit comparator greater for signal <n0002> created at line 52
+    Found 1-bit register for signal <done>.
+    Found 8-bit register for signal <sregt1>.
+    Found 8-bit register for signal <sregt>.
+    Found 8-bit adder for signal <count[7]_GND_1_o_add_3_OUT> created at line 58.
+    Found 8-bit comparator greater for signal <count[7]_INV_42_o> created at line 55
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  16 D-type flip-flop(s).
+	inferred  25 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <microfono> synthesized.
 
@@ -165,11 +168,11 @@ Macro Statistics
  32-bit subtractor                                     : 1
  4-bit adder                                           : 3
  8-bit adder                                           : 1
-# Registers                                            : 16
- 1-bit register                                        : 9
+# Registers                                            : 18
+ 1-bit register                                        : 10
  32-bit register                                       : 1
  4-bit register                                        : 3
- 8-bit register                                        : 3
+ 8-bit register                                        : 4
 # Comparators                                          : 3
  4-bit comparator greater                              : 1
  4-bit comparator not equal                            : 1
@@ -196,15 +199,23 @@ WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_3> is unconnected in b
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_4> is unconnected in block <fi>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_5> is unconnected in block <fi>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_6> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_0> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_1> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_2> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_3> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_4> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_5> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_6> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_0> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_1> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_2> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_3> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_4> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_5> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_6> is unconnected in block <microfono>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_7> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt1_7> is unconnected in block <microfono>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_7> is unconnected in block <fi>.
-WARNING:Xst:2677 - Node <sregt_0> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <sregt_1> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <sregt_2> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <sregt_3> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <sregt_4> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <sregt_5> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <sregt_6> of sequential type is unconnected in block <microfono>.
 
 Synthesizing (advanced) Unit <div_freq>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
@@ -259,8 +270,8 @@ Macro Statistics
  32-bit down counter                                   : 1
  4-bit up counter                                      : 3
  8-bit up counter                                      : 1
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 26
+ Flip-Flops                                            : 26
 # Comparators                                          : 3
  4-bit comparator greater                              : 1
  4-bit comparator not equal                            : 1
@@ -286,15 +297,46 @@ WARNING:Xst:2677 - Node <sregt_4> of sequential type is unconnected in block <mi
 WARNING:Xst:2677 - Node <sregt_5> of sequential type is unconnected in block <microfono>.
 WARNING:Xst:2677 - Node <sregt_6> of sequential type is unconnected in block <microfono>.
 WARNING:Xst:2677 - Node <sregt_7> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_2> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_1> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_5> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_3> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_4> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_6> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_7> of sequential type is unconnected in block <microfono>.
-WARNING:Xst:2677 - Node <count_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_4> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_5> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_6> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt1_7> of sequential type is unconnected in block <microfono>.
 WARNING:Xst:2677 - Node <fi/Mram_regarray> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:1293 - FF/Latch <count_7> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_6> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_5> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_4> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_31> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_30> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_29> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_28> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_27> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_26> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_24> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_23> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_25> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_22> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_21> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_20> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_19> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_18> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_17> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_15> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_14> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_16> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_13> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_12> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_11> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_10> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_9> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_8> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_6> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_5> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <df/count_7> has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -302,6 +344,7 @@ Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 0.
 FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop fi/empty_reg has been replicated 1 time(s) to handle iob=true attribute.
 FlipFlop fi/full_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop done has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -309,8 +352,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 51
- Flip-Flops                                            : 51
+# Registers                                            : 30
+ Flip-Flops                                            : 30
 
 =========================================================================
 
@@ -333,30 +376,30 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 125
+# BELS                             : 50
 #      GND                         : 1
-#      INV                         : 34
-#      LUT1                        : 1
-#      LUT2                        : 6
-#      LUT3                        : 2
-#      LUT4                        : 4
+#      INV                         : 8
+#      LUT1                        : 4
+#      LUT2                        : 4
+#      LUT3                        : 3
+#      LUT4                        : 3
 #      LUT5                        : 5
-#      LUT6                        : 8
-#      MUXCY                       : 31
+#      LUT6                        : 5
+#      MUXCY                       : 7
 #      VCC                         : 1
-#      XORCY                       : 32
-# FlipFlops/Latches                : 51
-#      FD                          : 5
-#      FDC                         : 2
-#      FDCE                        : 8
+#      XORCY                       : 9
+# FlipFlops/Latches                : 30
+#      FD                          : 7
+#      FDCE                        : 10
 #      FDP                         : 2
-#      FDR                         : 33
+#      FDR                         : 6
+#      FDRE                        : 4
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 10
+# IO Buffers                       : 11
 #      IBUF                        : 3
-#      OBUF                        : 7
+#      OBUF                        : 8
 
 Device utilization summary:
 ---------------------------
@@ -365,21 +408,21 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              45  out of  126800     0%  
- Number of Slice LUTs:                   60  out of  63400     0%  
-    Number used as Logic:                60  out of  63400     0%  
+ Number of Slice Registers:              23  out of  126800     0%  
+ Number of Slice LUTs:                   32  out of  63400     0%  
+    Number used as Logic:                32  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     62
-   Number with an unused Flip Flop:      17  out of     62    27%  
-   Number with an unused LUT:             2  out of     62     3%  
-   Number of fully used LUT-FF pairs:    43  out of     62    69%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:     34
+   Number with an unused Flip Flop:      11  out of     34    32%  
+   Number with an unused LUT:             2  out of     34     5%  
+   Number of fully used LUT-FF pairs:    21  out of     34    61%  
+   Number of unique control sets:         9
 
 IO Utilization: 
- Number of IOs:                          12
- Number of bonded IOBs:                  11  out of    210     5%  
-    IOB Flip Flops/Latches:               6
+ Number of IOs:                          13
+ Number of bonded IOBs:                  12  out of    210     5%  
+    IOB Flip Flops/Latches:               7
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -405,8 +448,8 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 35    |
-df/clkout                          | NONE(fi/rd_reg_3)      | 16    |
+clk                                | BUFGP                  | 8     |
+df/clkout                          | NONE(count_0)          | 22    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -418,8 +461,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 4.194ns (Maximum Frequency: 238.418MHz)
-   Minimum input arrival time before clock: 1.812ns
+   Minimum period: 2.962ns (Maximum Frequency: 337.610MHz)
+   Minimum input arrival time before clock: 1.693ns
    Maximum output required time after clock: 0.877ns
    Maximum combinational path delay: No path found
 
@@ -429,90 +472,95 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.194ns (frequency: 238.418MHz)
-  Total number of paths / destination ports: 1618 / 65
+  Clock period: 2.688ns (frequency: 372.058MHz)
+  Total number of paths / destination ports: 52 / 11
 -------------------------------------------------------------------------
-Delay:               4.194ns (Levels of Logic = 3)
-  Source:            df/count_25 (FF)
-  Destination:       df/count_1 (FF)
+Delay:               2.688ns (Levels of Logic = 7)
+  Source:            df/count_0 (FF)
+  Destination:       df/count_4 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: df/count_25 to df/count_1
+  Data Path: df/count_0 to df/count_4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
-     LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_5_o_equal_2_o<31>5 (df/count[31]_GND_5_o_equal_2_o<31>4)
-     LUT6:I1->O            3   0.124   0.435  df/count[31]_GND_5_o_equal_2_o<31>7 (df/count[31]_GND_5_o_equal_2_o)
-     LUT2:I1->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
-     FDR:R                     0.494          df/count_1
+     FDR:C->Q              4   0.478   0.441  df/count_0 (df/count_0)
+     LUT1:I0->O            1   0.124   0.000  df/Mcount_count_cy<0>_rt (df/Mcount_count_cy<0>_rt)
+     MUXCY:S->O            1   0.472   0.000  df/Mcount_count_cy<0> (df/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  df/Mcount_count_cy<1> (df/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  df/Mcount_count_cy<2> (df/Mcount_count_cy<2>)
+     MUXCY:CI->O           0   0.029   0.000  df/Mcount_count_cy<3> (df/Mcount_count_cy<3>)
+     XORCY:CI->O           1   0.510   0.421  df/Mcount_count_xor<4> (Result<4>1)
+     LUT6:I5->O            1   0.124   0.000  df/Mcount_count_eqn_41 (df/Mcount_count_eqn_4)
+     FDS:D                     0.030          df/count_4
     ----------------------------------------
-    Total                      4.194ns (1.344ns logic, 2.850ns route)
-                                       (32.0% logic, 68.0% route)
+    Total                      2.688ns (1.826ns logic, 0.862ns route)
+                                       (67.9% logic, 32.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'df/clkout'
-  Clock period: 2.969ns (frequency: 336.814MHz)
-  Total number of paths / destination ports: 144 / 22
+  Clock period: 2.962ns (frequency: 337.610MHz)
+  Total number of paths / destination ports: 160 / 34
 -------------------------------------------------------------------------
-Delay:               2.969ns (Levels of Logic = 3)
-  Source:            fi/dffr1 (FF)
+Delay:               2.962ns (Levels of Logic = 3)
+  Source:            fi/dffr2 (FF)
   Destination:       fi/empty_reg (FF)
   Source Clock:      df/clkout rising
   Destination Clock: df/clkout rising
 
-  Data Path: fi/dffr1 to fi/empty_reg
+  Data Path: fi/dffr2 to fi/empty_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.478   0.946  fi/dffr1 (fi/dffr1)
+     FD:C->Q               4   0.478   0.939  fi/dffr2 (fi/dffr2)
      LUT5:I0->O            2   0.124   0.722  fi/_n0112_inv21 (fi/_n0112_inv2)
      LUT5:I2->O            1   0.124   0.421  fi/_n0078_inv (fi/_n0078_inv)
      LUT4:I3->O            2   0.124   0.000  fi/empty_reg_rstpot (fi/empty_reg_rstpot)
      FDP:D                     0.030          fi/empty_reg
     ----------------------------------------
-    Total                      2.969ns (0.880ns logic, 2.089ns route)
-                                       (29.6% logic, 70.4% route)
+    Total                      2.962ns (0.880ns logic, 2.082ns route)
+                                       (29.7% logic, 70.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 35 / 35
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              1.812ns (Levels of Logic = 2)
+Offset:              1.578ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       df/count_1 (FF)
+  Destination:       df/count_2 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to df/count_1
+  Data Path: reset to df/count_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            17   0.001   0.642  reset_IBUF (reset_IBUF)
-     LUT2:I0->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
-     FDR:R                     0.494          df/count_1
+     IBUF:I->O            19   0.001   0.540  reset_IBUF (reset_IBUF)
+     LUT6:I5->O            4   0.124   0.419  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_2
     ----------------------------------------
-    Total                      1.812ns (0.619ns logic, 1.193ns route)
-                                       (34.2% logic, 65.8% route)
+    Total                      1.578ns (0.619ns logic, 0.959ns route)
+                                       (39.2% logic, 60.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
-  Total number of paths / destination ports: 14 / 14
+  Total number of paths / destination ports: 24 / 24
 -------------------------------------------------------------------------
-Offset:              1.000ns (Levels of Logic = 1)
+Offset:              1.693ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       fi/rd_reg_3 (FF)
+  Destination:       count_0 (FF)
   Destination Clock: df/clkout rising
 
-  Data Path: reset to fi/rd_reg_3
+  Data Path: reset to count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            17   0.001   0.505  reset_IBUF (reset_IBUF)
-     FDCE:CLR                  0.494          fi/wr_reg_0
+     IBUF:I->O            19   0.001   0.655  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            4   0.124   0.419  _n00331 (_n0033)
+     FDRE:R                    0.494          count_0
     ----------------------------------------
-    Total                      1.000ns (0.495ns logic, 0.505ns route)
-                                       (49.5% logic, 50.5% route)
+    Total                      1.693ns (0.619ns logic, 1.074ns route)
+                                       (36.6% logic, 63.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -535,7 +583,7 @@ Offset:              0.877ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              0.877ns (Levels of Logic = 1)
   Source:            fi/empty_reg_1 (FF)
@@ -562,7 +610,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.194|         |         |         |
+clk            |    2.688|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock df/clkout
@@ -570,21 +618,21 @@ Clock to Setup on destination clock df/clkout
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-df/clkout      |    2.969|         |         |         |
+df/clkout      |    2.962|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 22.51 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 22.37 secs
  
 --> 
 
 
-Total memory usage is 504696 kilobytes
+Total memory usage is 504724 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   53 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

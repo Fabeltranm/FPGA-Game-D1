@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Nov 21 20:20:46 2017
+Tue Nov 21 22:46:39 2017
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -294,7 +294,7 @@ T2|||VCCO_34|||34|||||3.30||||
 T3||IOB33S|IO_L11N_T1_SRCC_34|UNUSED||34|||||||||
 T4||IOB33S|IO_L12N_T1_MRCC_34|UNUSED||34|||||||||
 T5||IOB33M|IO_L12P_T1_MRCC_34|UNUSED||34|||||||||
-T6||IOB33S|IO_L23N_T3_34|UNUSED||34|||||||||
+T6|done|IOB33|IO_L23N_T3_34|OUTPUT|LVCMOS33|34|12|SLOW||||LOCATED|YES|NONE|
 T7|||GND||||||||||||
 T8|ledres|IOB33|IO_L24N_T3_34|OUTPUT|LVCMOS33|34|12|SLOW||||LOCATED|YES|NONE|
 T9||IOB33M|IO_L24P_T3_A01_D17_14|UNUSED||14|||||||||
