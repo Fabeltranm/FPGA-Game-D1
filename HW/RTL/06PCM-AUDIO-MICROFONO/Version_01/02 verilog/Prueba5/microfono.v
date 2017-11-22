@@ -28,7 +28,7 @@ reg [7:0] sregt1;
 
 reg [7:0] sregt;
 
-fifo fi(.reset(reset),.din(sregt1),.dout(dout),.clock(mclk),.rd(rd),.wr(wr),.empty(empty),.full(full));
+fifo fi(.reset(reset),.din(sregt1),.dout(dout),.clock(done),.rd(rd),.wr(wr),.empty(empty),.full(full));
 pwm pw(.ampSD(ampSD), .reset(reset),.mclk(mclk2),.ampPWM(ampPWM),.clk(clk),.dout(dout1));
 div_freq df(.clk(clk), .reset(reset),.clkout(mclk1),.led(ledres));
 
