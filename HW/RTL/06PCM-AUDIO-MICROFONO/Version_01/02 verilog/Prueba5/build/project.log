@@ -50,50 +50,48 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" into library work
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" into library work
 Parsing module <microfono>.
-Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/div_freq.v" into library work
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/div_freq.v" into library work
 Parsing module <div_freq>.
-Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" into library work
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" into library work
 Parsing module <fifo>.
-Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v" into library work
+Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v" into library work
 Parsing module <pwm>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 27: Port ledres is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 30: Port ledres is not connected to this instance
 
 Elaborating module <microfono>.
+WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 23: Assignment to mclk3 ignored, since the identifier is never used
 
 Elaborating module <fifo>.
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" Line 75: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" Line 76: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" Line 75: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v" Line 76: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <pwm>.
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v" Line 32: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v" Line 32: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <div_freq>.
-WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 28: Assignment to mclk3 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 32: Assignment to mlck3 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 54: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:552 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 27: Input port micData is not connected on this instance
+WARNING:HDLCompiler:413 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 55: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" Line 30: Input port micData is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <microfono>.
-    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v".
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v".
 WARNING:Xst:2898 - Port 'micData', unconnected in block instance 'pw', is tied to GND.
-INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 27: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 28: Output port <clkout> of the instance <df> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <mclk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 30: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/microfono.v" line 30: Output port <mclk> of the instance <pw> is unconnected or connected to loadless signal.
 WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
     Found 8-bit register for signal <sregt>.
     Found 8-bit register for signal <count>.
-    Found 8-bit adder for signal <count[7]_GND_1_o_add_3_OUT> created at line 54.
-    Found 8-bit comparator greater for signal <n0003> created at line 51
+    Found 8-bit adder for signal <count[7]_GND_1_o_add_3_OUT> created at line 55.
+    Found 8-bit comparator greater for signal <n0002> created at line 52
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
@@ -101,31 +99,31 @@ WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied 
 Unit <microfono> synthesized.
 
 Synthesizing Unit <fifo>.
-    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v".
-        abits = 1
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/fifo.v".
+        abits = 4
         dbits = 8
-    Found 2x8-bit dual-port RAM <Mram_regarray> for signal <regarray>.
+    Found 16x8-bit dual-port RAM <Mram_regarray> for signal <regarray>.
     Found 1-bit register for signal <empty_reg>.
-    Found 1-bit register for signal <wr_reg>.
-    Found 1-bit register for signal <rd_reg>.
+    Found 4-bit register for signal <wr_reg>.
+    Found 4-bit register for signal <rd_reg>.
     Found 1-bit register for signal <full_reg>.
     Found 1-bit register for signal <dffw2>.
     Found 1-bit register for signal <dffr1>.
     Found 1-bit register for signal <dffr2>.
     Found 8-bit register for signal <out>.
     Found 1-bit register for signal <dffw1>.
-    Found 1-bit adder for signal <wr_succ> created at line 75.
-    Found 1-bit adder for signal <rd_succ> created at line 76.
-    Found 1-bit comparator not equal for signal <rd_reg[0]_wr_reg[0]_equal_13_o> created at line 91
+    Found 4-bit adder for signal <wr_succ> created at line 75.
+    Found 4-bit adder for signal <rd_succ> created at line 76.
+    Found 4-bit comparator not equal for signal <rd_reg[3]_wr_reg[3]_equal_15_o> created at line 91
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred  16 D-type flip-flop(s).
+	inferred  22 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <fifo> synthesized.
 
 Synthesizing Unit <pwm>.
-    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v".
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/pwm.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <micData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <ledres> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -144,7 +142,7 @@ WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'pwm', is tied to its in
 Unit <pwm> synthesized.
 
 Synthesizing Unit <div_freq>.
-    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/div_freq.v".
+    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba5/div_freq.v".
         fi = 50000000
         fs = 3125000
     Found 32-bit register for signal <count>.
@@ -162,20 +160,19 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 2x8-bit dual-port RAM                                 : 1
+ 16x8-bit dual-port RAM                                : 1
 # Adders/Subtractors                                   : 5
- 1-bit adder                                           : 2
  32-bit subtractor                                     : 1
- 4-bit adder                                           : 1
+ 4-bit adder                                           : 3
  8-bit adder                                           : 1
 # Registers                                            : 16
- 1-bit register                                        : 11
+ 1-bit register                                        : 9
  32-bit register                                       : 1
- 4-bit register                                        : 1
+ 4-bit register                                        : 3
  8-bit register                                        : 3
 # Comparators                                          : 3
- 1-bit comparator not equal                            : 1
  4-bit comparator greater                              : 1
+ 4-bit comparator not equal                            : 1
  8-bit comparator greater                              : 1
 # Multiplexers                                         : 2
  1-bit 8-to-1 multiplexer                              : 1
@@ -187,28 +184,20 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <count_1> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <count_0> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_7> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_6> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_5> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_4> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_3> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_2> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_1> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <out_0> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_reg_0> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <wr_reg_0> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <dffw1> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <full_reg> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <dffr1> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <empty_reg> (without init value) has a constant value of 1 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dffr2> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dffw2> (without init value) has a constant value of 0 in block <fi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_0> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_1> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_2> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_3> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_4> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_5> is unconnected in block <fi>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_6> is unconnected in block <fi>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <sregt_7> is unconnected in block <microfono>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <out_7> is unconnected in block <fi>.
 WARNING:Xst:2677 - Node <sregt_0> of sequential type is unconnected in block <microfono>.
 WARNING:Xst:2677 - Node <sregt_1> of sequential type is unconnected in block <microfono>.
 WARNING:Xst:2677 - Node <sregt_2> of sequential type is unconnected in block <microfono>.
@@ -222,14 +211,14 @@ The following registers are absorbed into counter <count>: 1 register on signal 
 Unit <div_freq> synthesized (advanced).
 
 Synthesizing (advanced) Unit <fifo>.
-The following registers are absorbed into counter <wr_reg_0>: 1 register on signal <wr_reg_0>.
-The following registers are absorbed into counter <rd_reg_0>: 1 register on signal <rd_reg_0>.
+The following registers are absorbed into counter <wr_reg>: 1 register on signal <wr_reg>.
+The following registers are absorbed into counter <rd_reg>: 1 register on signal <rd_reg>.
 INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, absorbing the following register(s): <out>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     mode           | read-first                          |          |
     |     clkA           | connected to signal <clock>         | rise     |
     |     weA            | connected to signal <wr_en>         | high     |
@@ -239,7 +228,7 @@ INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, abso
     | optimization       | area                                |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <clock>         | rise     |
     |     enB            | connected to signal <db_rd>         | high     |
@@ -263,19 +252,18 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 2x8-bit dual-port block RAM                           : 1
+ 16x8-bit dual-port block RAM                          : 1
 # Adders/Subtractors                                   : 2
- 1-bit adder                                           : 2
+ 4-bit adder                                           : 2
 # Counters                                             : 5
- 1-bit up counter                                      : 2
  32-bit down counter                                   : 1
- 4-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
  8-bit up counter                                      : 1
 # Registers                                            : 17
  Flip-Flops                                            : 17
 # Comparators                                          : 3
- 1-bit comparator not equal                            : 1
  4-bit comparator greater                              : 1
+ 4-bit comparator not equal                            : 1
  8-bit comparator greater                              : 1
 # Multiplexers                                         : 1
  1-bit 8-to-1 multiplexer                              : 1
@@ -286,30 +274,34 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <ampPWM> (without init value) has a constant value of 0 in block <pwm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <empty_reg> (without init value) has a constant value of 1 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <full_reg> (without init value) has a constant value of 0 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dffw1> (without init value) has a constant value of 0 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dffr1> (without init value) has a constant value of 0 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dffw2> (without init value) has a constant value of 0 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dffr2> (without init value) has a constant value of 0 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sregt_0> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_1> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_2> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_3> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_4> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_5> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_6> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <sregt_7> (without init value) has a constant value of 0 in block <microfono>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <df/clkout> of sequential type is unconnected in block <microfono>.
-INFO:Xst:2146 - In block <fifo>, Counter <wr_reg_0> <rd_reg_0> are equivalent, XST will keep only <wr_reg_0>.
-WARNING:Xst:1710 - FF/Latch <wr_reg_0> (without init value) has a constant value of 0 in block <fifo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <fi/Mram_regarray> of sequential type is unconnected in block <microfono>.
 
 Optimizing unit <microfono> ...
+
+Optimizing unit <fifo> ...
+WARNING:Xst:2677 - Node <sregt_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_4> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_5> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_6> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <sregt_7> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_2> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_1> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_5> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_3> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_4> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_6> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_7> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <count_0> of sequential type is unconnected in block <microfono>.
+WARNING:Xst:2677 - Node <fi/Mram_regarray> of sequential type is unconnected in block <microfono>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block microfono, actual ratio is 0.
+FlipFlop df/clkout has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fi/empty_reg has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop fi/full_reg has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -317,8 +309,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1
- Flip-Flops                                            : 1
+# Registers                                            : 51
+ Flip-Flops                                            : 51
 
 =========================================================================
 
@@ -341,16 +333,29 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3
+# BELS                             : 125
 #      GND                         : 1
-#      INV                         : 1
+#      INV                         : 34
+#      LUT1                        : 1
+#      LUT2                        : 6
+#      LUT3                        : 2
+#      LUT4                        : 4
+#      LUT5                        : 5
+#      LUT6                        : 8
+#      MUXCY                       : 31
 #      VCC                         : 1
-# FlipFlops/Latches                : 1
-#      FD                          : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 51
+#      FD                          : 5
+#      FDC                         : 2
+#      FDCE                        : 8
+#      FDP                         : 2
+#      FDR                         : 33
+#      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 8
-#      IBUF                        : 1
+# IO Buffers                       : 10
+#      IBUF                        : 3
 #      OBUF                        : 7
 
 Device utilization summary:
@@ -360,20 +365,21 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    1  out of  63400     0%  
-    Number used as Logic:                 1  out of  63400     0%  
+ Number of Slice Registers:              45  out of  126800     0%  
+ Number of Slice LUTs:                   60  out of  63400     0%  
+    Number used as Logic:                60  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      1
-   Number with an unused Flip Flop:       1  out of      1   100%  
-   Number with an unused LUT:             0  out of      1     0%  
-   Number of fully used LUT-FF pairs:     0  out of      1     0%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     62
+   Number with an unused Flip Flop:      17  out of     62    27%  
+   Number with an unused LUT:             2  out of     62     3%  
+   Number of fully used LUT-FF pairs:    43  out of     62    69%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          12
- Number of bonded IOBs:                   9  out of    210     4%  
-    IOB Flip Flops/Latches:               1
+ Number of bonded IOBs:                  11  out of    210     5%  
+    IOB Flip Flops/Latches:               6
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -399,8 +405,10 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1     |
+clk                                | BUFGP                  | 35    |
+df/clkout                          | NONE(fi/rd_reg_3)      | 16    |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -410,8 +418,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: 0.975ns
+   Minimum period: 4.194ns (Maximum Frequency: 238.418MHz)
+   Minimum input arrival time before clock: 1.812ns
    Maximum output required time after clock: 0.877ns
    Maximum combinational path delay: No path found
 
@@ -420,28 +428,95 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 1 / 1
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.194ns (frequency: 238.418MHz)
+  Total number of paths / destination ports: 1618 / 65
 -------------------------------------------------------------------------
-Offset:              0.975ns (Levels of Logic = 2)
-  Source:            reset (PAD)
-  Destination:       df/led (FF)
+Delay:               4.194ns (Levels of Logic = 3)
+  Source:            df/count_25 (FF)
+  Destination:       df/count_1 (FF)
+  Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: reset to df/led
+  Data Path: df/count_25 to df/count_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.001   0.399  reset_IBUF (reset_IBUF)
-     INV:I->O              1   0.146   0.399  df/reset_INV_41_o1_INV_0 (df/reset_INV_41_o)
-     FD:D                      0.030          df/led
+     FDR:C->Q              2   0.478   0.945  df/count_25 (df/count_25)
+     LUT6:I0->O            1   0.124   0.919  df/count[31]_GND_5_o_equal_2_o<31>5 (df/count[31]_GND_5_o_equal_2_o<31>4)
+     LUT6:I1->O            3   0.124   0.435  df/count[31]_GND_5_o_equal_2_o<31>7 (df/count[31]_GND_5_o_equal_2_o)
+     LUT2:I1->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_1
     ----------------------------------------
-    Total                      0.975ns (0.177ns logic, 0.798ns route)
-                                       (18.2% logic, 81.8% route)
+    Total                      4.194ns (1.344ns logic, 2.850ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'df/clkout'
+  Clock period: 2.969ns (frequency: 336.814MHz)
+  Total number of paths / destination ports: 144 / 22
+-------------------------------------------------------------------------
+Delay:               2.969ns (Levels of Logic = 3)
+  Source:            fi/dffr1 (FF)
+  Destination:       fi/empty_reg (FF)
+  Source Clock:      df/clkout rising
+  Destination Clock: df/clkout rising
+
+  Data Path: fi/dffr1 to fi/empty_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.478   0.946  fi/dffr1 (fi/dffr1)
+     LUT5:I0->O            2   0.124   0.722  fi/_n0112_inv21 (fi/_n0112_inv2)
+     LUT5:I2->O            1   0.124   0.421  fi/_n0078_inv (fi/_n0078_inv)
+     LUT4:I3->O            2   0.124   0.000  fi/empty_reg_rstpot (fi/empty_reg_rstpot)
+     FDP:D                     0.030          fi/empty_reg
+    ----------------------------------------
+    Total                      2.969ns (0.880ns logic, 2.089ns route)
+                                       (29.6% logic, 70.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              1.812ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       df/count_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to df/count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   0.001   0.642  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           31   0.124   0.551  df/count[31]_GND_5_o_equal_2_o_01 (df/count[31]_GND_5_o_equal_2_o_0)
+     FDR:R                     0.494          df/count_1
+    ----------------------------------------
+    Total                      1.812ns (0.619ns logic, 1.193ns route)
+                                       (34.2% logic, 65.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'df/clkout'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              1.000ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       fi/rd_reg_3 (FF)
+  Destination Clock: df/clkout rising
+
+  Data Path: reset to fi/rd_reg_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   0.001   0.505  reset_IBUF (reset_IBUF)
+     FDCE:CLR                  0.494          fi/wr_reg_0
+    ----------------------------------------
+    Total                      1.000ns (0.495ns logic, 0.505ns route)
+                                       (49.5% logic, 50.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
 Offset:              0.877ns (Levels of Logic = 1)
   Source:            df/led (FF)
@@ -459,22 +534,57 @@ Offset:              0.877ns (Levels of Logic = 1)
                                        (54.5% logic, 45.5% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'df/clkout'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            fi/empty_reg_1 (FF)
+  Destination:       empty (PAD)
+  Source Clock:      df/clkout rising
+
+  Data Path: fi/empty_reg_1 to empty
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.478   0.399  fi/empty_reg_1 (fi/empty_reg_1)
+     OBUF:I->O                 0.000          empty_OBUF (empty)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.194|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock df/clkout
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+df/clkout      |    2.969|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 70.00 secs
-Total CPU time to Xst completion: 69.28 secs
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 22.51 secs
  
 --> 
 
 
-Total memory usage is 504668 kilobytes
+Total memory usage is 504696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   63 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 
