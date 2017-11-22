@@ -4,7 +4,7 @@ module  meultrasonido  (
                             output	reg	ENABLE,
                             output	reg	reset
                           );
-	always@(posedge CLKOUT2 or orden)
+	always@(posedge CLKOUT2)
 	begin
 	case(orden)
 		1'b0:	

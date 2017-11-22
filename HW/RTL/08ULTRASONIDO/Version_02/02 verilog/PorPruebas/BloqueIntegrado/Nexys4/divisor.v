@@ -16,7 +16,7 @@ module	divisor (
 		registro0=0;
 		DONE=0;
 	end
-	always@(calculate or reset or posedge CLKOUTD)
+	always@(posedge CLKOUTD)
 	begin
 		logico=(registro0[7]||registro0[6]||registro0[5]||registro0[4]||registro0[3]||registro0[2]||registro0[1]||registro0[0]);
 		if(reset)

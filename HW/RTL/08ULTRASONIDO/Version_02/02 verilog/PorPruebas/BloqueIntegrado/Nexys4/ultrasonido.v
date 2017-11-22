@@ -8,7 +8,8 @@ module	ultrasonido	(
 				input		reset
 
 			 );
-	wire	[7:0]	count;
+wire [7:0] count;
+
 divisorfrec	divisorfrec0	(	
 					.clk		(	clk		),
 					.CLKOUT		(	CLKOUT		)
@@ -46,7 +47,7 @@ contador	contador0	(
 
 divisor		divisor0	(
 					.reset		(	reset		),
-					.count		(	count		),
+					.count		(	count/*[7:0]*/	),
 					.calculate	(	calculate	),
 					.DONE		(	DONE		),
 					.d		(	d		),

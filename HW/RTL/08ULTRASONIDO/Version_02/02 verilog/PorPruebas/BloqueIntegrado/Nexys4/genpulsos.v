@@ -12,16 +12,16 @@ module	genpulsos	(
 	
 	initial
 	begin
-		Doit=0;
-		NoDoit=0;
+		Doit<=0;
+		NoDoit<=0;
 	end
 
-	always@(reset or pulse or posedge CLKOUT1)
+	always@(posedge CLKOUT1)
 	begin
 		if(reset)
 		begin
-			Doit=0;
-			NoDoit=0;
+			Doit<=0;
+			NoDoit<=0;
 		end
 		else
 		begin

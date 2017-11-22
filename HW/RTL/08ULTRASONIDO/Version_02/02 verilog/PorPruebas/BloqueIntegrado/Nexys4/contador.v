@@ -18,7 +18,7 @@ module contador		(
 		calculate=0;
 	end
 	
-	always@(reset or posedge CLKOUT or ENABLE)
+	always@(posedge CLKOUT)
 	begin
 		logico=(count0[7]||count0[6]||count0[5]||count0[4]||count0[3]||count0[2]||count0[1]||count0[0]);
 		if(reset)
