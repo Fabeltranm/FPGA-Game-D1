@@ -5,13 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 69: Signal &lt;<arg fmt="%s" index="1">full_reg</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v" Line 92: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1128" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 69: Assignment under multiple single edges is not supported for synthesis
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v" Line 100: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"/home/lisseth/FPGA-Game-D1/HW/RTL/00EJEMPLOS/03FIFO/fifo.v" Line 4: Empty module &lt;<arg fmt="%s" index="1">fifo</arg>&gt; remains a black box.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v" Line 107: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/daniel/Documentos/Digital/Proyecto/Touch/MódulosBásicos/FIFO/fifo.v" Line 108: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_array_reg</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 </messages>

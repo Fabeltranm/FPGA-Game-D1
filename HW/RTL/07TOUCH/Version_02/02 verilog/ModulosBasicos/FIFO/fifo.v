@@ -26,6 +26,7 @@ module fifo
    reg [adr_width-1:0] r_ptr_reg, r_ptr_next;
    reg full_reg, empty_reg, full_next, empty_next;
    wire wr_en;
+	reg	[1:0]	orden;
 
 
    assign data_out = array_reg[r_ptr_reg];
@@ -58,9 +59,25 @@ module fifo
          end
    end
 
+	always @(posedge clk)
+	begin
+		if(wr&&!rd)
+		begin
+			orden = 2'b01;
+		end
+		if(!wr&&rd)
+		begin
+			orden = 2'b10;
+		end
+		if(wr&&rd)
+		begin
+			orden = 2'b11;
+		end
+	end
 
    
-   always @(posedge reset, posedge wr, posedge rd)
+   //always @(posedge reset or posedge wr or posedge rd)
+	always @(posedge clk)
    begin
       if (reset) begin
 	w_ptr_next =  0;
@@ -68,7 +85,7 @@ module fifo
       end else begin
 	      full_next = full_reg;
 	      empty_next = empty_reg;
-	      case ({wr, rd})
+	      case (orden)
 		 2'b01: // read
 		    if (~empty_reg) // not empty
 		       begin
