@@ -7,13 +7,13 @@ module pwm
         input           micData,    
         output    reg   ampPWM,
         output    reg	ampSD,
-	input     [320:0] dout
+	input     [7:0] dout
  
 
 );
 
 
-reg [320:0] count;
+reg [7:0] count;
 initial ampSD <= 1;
 
 
@@ -26,7 +26,7 @@ count<=0;
     		end 
 	else 
 		begin
-		if (count<=320)
+		if (count<=7)
 			begin
 			ampPWM<=dout[count];
 			count<=count+1;
