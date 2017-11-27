@@ -12,7 +12,14 @@ initial count<= fi/fs;
 
 always @(posedge  clk)
 begin
-	if (reset) begin
+	if (reset) 
+	begin
+	led=0;
+	count <= fi/fs;
+	clkout <=0;
+	end
+	else 	
+	begin
 	led=1;
 		
 		if (count==0)begin
@@ -24,11 +31,6 @@ begin
 		end
 
 	end
-	else begin
-	led=0;
-		count <= fi/fs;
-		clkout <=0;
-	end	
 end
 
 

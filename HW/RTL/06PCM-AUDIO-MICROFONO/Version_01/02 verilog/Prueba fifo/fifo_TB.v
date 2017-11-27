@@ -4,7 +4,7 @@ reg clk;
 reg reset;
 reg rd;
 reg wr;
-reg dataint;
+reg[7:0] dataint;
 
 
 fifo uttf(.rd(rd),.wr(wr),.din(dataint),.clock(clk),.reset(reset));
@@ -26,7 +26,14 @@ end
 
 initial
 begin
-wr = 1'b1;
+
+wr = 1'b0;
+#3430;
+wr=1'b1;
+#34300;
+wr = 1'b0;
+#34300;
+/*wr = 1'b1;
 #3430;
 wr=1'b0;
 #3430;
@@ -64,11 +71,7 @@ wr=1'b0;
 #3430;
 wr = 1'b1;
 #3430;
-wr=1'b0;
-#3430;
-wr = 1'b1;
-#3430;
-wr=1'b0;
+wr=1'b0;*/
 end
 initial
 begin
@@ -76,9 +79,10 @@ begin
 rd=1'b0;
 #64300;
 rd=1'b1;
-#3430;
+#34300;
 rd=1'b0;
 #3430;
+/*
 rd=1'b1;
 #3430;
 rd=1'b0;
@@ -137,18 +141,18 @@ rd=1'b0;
 #3430;
 rd=1'b1;
 #3430;
-rd=1'b0;
+rd=1'b0;*/
 end
 
 
 initial begin
 
-#3430 dataint = 1'b0;
-#3430 dataint = 1'b1;
-#3430 dataint = 1'b0;
-#3430 dataint = 1'b1;
-#3430 dataint = 1'b0;
-#3430 dataint = 1'b1;
+#3430 dataint = 7'h1;
+#34 dataint = 7'h0;
+#34 dataint = 7'hA;
+#34 dataint = 7'h3;
+#3430 dataint = 7'hA;
+#3430 dataint = 7'h05;
 #3430 dataint = 1'b0;
 #3430 dataint = 1'b1;
 #3430 dataint = 1'b0;

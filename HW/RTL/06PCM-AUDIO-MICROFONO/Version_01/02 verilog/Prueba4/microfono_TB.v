@@ -18,7 +18,7 @@ end
 initial
 begin
 reset =1'b1;
-#10;
+#10000;
 reset =1'b0;
 end
 
@@ -26,7 +26,7 @@ initial
 begin
 rd = 1'b0;
 wr = 1'b0;
-#1000 wr = 1'b1;
+#10000 wr = 1'b1;
 #15000 wr = 1'b0;
 
 
