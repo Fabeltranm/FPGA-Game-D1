@@ -9,7 +9,7 @@ module microfono
         output          ampPWM,
         output          ampSD,
 	output reg	done,
-	output wire [7:0] dout
+	output reg [7:0] dout
 	 
 
 );

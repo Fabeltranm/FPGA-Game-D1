@@ -1,10 +1,10 @@
 
 module microfono_TB;
 
-reg reset, clk, micData,rd,wr;  
+reg reset, clk, micData;  
    
 
-microfono uut(.reset(reset),.micData(micData),.clk(clk),.rd(rd),.wr(wr));
+microfono uut(.reset(reset),.micData(micData),.clk(clk));
 
 always
 begin
@@ -22,16 +22,6 @@ reset =1'b1;
 reset =1'b0;
 end
 
-initial
-begin
-rd = 1'b0;
-wr = 1'b0;
-#1000 wr = 1'b1;
-#15000 wr = 1'b0;
-
-
-#15010 rd = 1'b1;
-end
 
 
 initial begin

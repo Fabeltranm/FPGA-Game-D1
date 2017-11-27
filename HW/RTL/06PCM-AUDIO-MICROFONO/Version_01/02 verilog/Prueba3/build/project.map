@@ -1,0 +1,33 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Map Application Log File for Design 'microfono'
+
+Design Information
+------------------
+Command Line   : map -pr b -p XC7A100T-1CSG324 project.ngd 
+Target Device  : xc7a100t
+Target Package : csg324
+Target Speed   : -1
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Sun Nov 26 23:18:54 2017
+
+Mapping design into LUTs...
+Writing file project.ngm...
+Running directed packing...
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=T6) which requires the combination of the symbols listed
+   below to be packed into a single IOB33 component.
+
+   The directed pack was not possible because: More than one pad symbol.
+   The symbols involved are:
+   	PAD symbol "dout<0>" (Pad Signal = dout<0>)
+   	BUF symbol "dout<0>_OBUF" (Output Signal = dout<0>)
+   	PAD symbol "done.PAD" (Pad Signal = done)
+
+Mapping completed.
+See MAP report file "project.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0

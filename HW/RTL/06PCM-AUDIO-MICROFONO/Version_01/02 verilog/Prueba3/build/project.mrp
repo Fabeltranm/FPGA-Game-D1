@@ -1,0 +1,38 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'microfono'
+
+Design Information
+------------------
+Command Line   : map -pr b -p XC7A100T-1CSG324 project.ngd 
+Target Device  : xc7a100t
+Target Package : csg324
+Target Speed   : -1
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Sun Nov 26 23:18:54 2017
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Pack:2811 - Directed packing was unable to obey the user design
+   constraints (LOC=T6) which requires the combination of the symbols listed
+   below to be packed into a single IOB33 component.
+
+   The directed pack was not possible because: More than one pad symbol.
+   The symbols involved are:
+   	PAD symbol "dout<0>" (Pad Signal = dout<0>)
+   	BUF symbol "dout<0>_OBUF" (Output Signal = dout<0>)
+   	PAD symbol "done.PAD" (Pad Signal = done)
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network micData_IBUF has no load.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
