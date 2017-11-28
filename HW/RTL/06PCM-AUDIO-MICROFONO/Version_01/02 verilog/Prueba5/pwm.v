@@ -1,49 +1,43 @@
 module pwm
 (
-
-	input			clk,
-	input 			reset,
-	input  [15:0]		dout,
-	output			mclk,
-        output  		ampPWM,
-        output  reg     	ampSD,
-	output  reg     	done
+	input 		reset,	
+	output 		ledres,
+	input		clk,
+	output		mclk,
+        input           micData,    
+        output    reg   ampPWM,
+        output    reg	ampSD,
+	input     [320:0] dout
+ 
 
 );
 
 
-reg [16:0] count=0;
-reg [15:0] sreg;
-wire init;
-initial done<=0;
+reg [320:0] count;
 initial ampSD <= 1;
-initial sreg<=dout;
 
-assign init =(count==0)?1:0;
-assign ampPWM = sreg[15];
-
-div_freq df(.clk(clk), .reset(reset),.clkout(mclk),.led(ledres));
 
 always @(posedge  mclk)
 begin
-if (init)
-sreg <= dout;	
+count<=0;
 	if (reset)
-  	done<=0;
+		begin
+     		ampPWM<=0;
+    		end 
 	else 
-	begin
-		if (count<=15)  /*envia bit por bit*/
+		begin
+		if (count<=320)
 			begin
-			sreg<=sreg<<1;		
+			ampPWM<=dout[count];
 			count<=count+1;
-			done<=1;
 			end
 		else
-		count<=0;
-	end
+			begin
+			count<=0;
+			end
+		end
+	
+	
 end
-
-
-
 
 endmodule
