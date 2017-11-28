@@ -30,7 +30,7 @@ reg [7:0] sregt;
 
 reg [7:0] count;
 
-
+assign dout=dout1;
 assign dout1=sregt1;
 
 initial micLRSel <= 0;

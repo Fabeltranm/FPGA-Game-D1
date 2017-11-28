@@ -1,4 +1,4 @@
-module fifo # (parameter abits = 38000, dbits = 8)(
+module fifo # (parameter abits = 20, dbits = 8)(
     input  reset, clock,
     input  rd, wr,
     input  [dbits-1:0] din,
@@ -35,7 +35,7 @@ reg full_reg, empty_reg, full_next, empty_next;
 
 assign wr_en = db_wr & ~full; //only write if write signal is high and fifo is not full
 
-always @ (posedge clock)
+always @ (posedge clock)//only write 
 begin
 
 	if(wr && ~rd)
@@ -57,7 +57,7 @@ begin
    
  
 end
-always @ (posedge clock)
+always @ (posedge clock)//only read
 begin
 
 	if(rd && ~wr)
