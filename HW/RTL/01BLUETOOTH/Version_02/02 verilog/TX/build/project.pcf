@@ -1,0 +1,35 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 21 11:14:35 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "din<2>" LOCATE = SITE "R6" LEVEL 1;
+COMP "din<3>" LOCATE = SITE "R5" LEVEL 1;
+COMP "din<4>" LOCATE = SITE "V7" LEVEL 1;
+COMP "din<5>" LOCATE = SITE "V6" LEVEL 1;
+COMP "din<6>" LOCATE = SITE "V5" LEVEL 1;
+COMP "din<7>" LOCATE = SITE "U4" LEVEL 1;
+COMP "clk_uart" LOCATE = SITE "G14" LEVEL 1;
+COMP "rw" LOCATE = SITE "V2" LEVEL 1;
+COMP "tx" LOCATE = SITE "D4" LEVEL 1;
+COMP "done" LOCATE = SITE "V9" LEVEL 1;
+COMP "reset" LOCATE = SITE "U9" LEVEL 1;
+COMP "busy" LOCATE = SITE "T8" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "E3" LEVEL 1;
+COMP "din<0>" LOCATE = SITE "U8" LEVEL 1;
+COMP "din<1>" LOCATE = SITE "R7" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "div/clk_div" BEL "div/count_0" BEL "div/count_1"
+        BEL "div/count_2" BEL "div/count_3" BEL "div/count_4" BEL
+        "div/count_5" BEL "div/count_6" BEL "div/count_7" BEL "div/count_8"
+        BEL "div/count_9" BEL "div/count_10" BEL "div/count_11" BEL
+        "div/count_12" BEL "div/count_13" BEL "div/count_14" BEL
+        "div/count_15" BEL "div/count_16" BEL "div/count_17" BEL
+        "div/count_18" BEL "div/count_19" BEL "div/count_20" BEL
+        "div/count_21" BEL "div/count_22" BEL "div/count_23" BEL
+        "div/count_24" BEL "div/count_25" BEL "div/count_26" BEL
+        "div/count_27" BEL "div/count_28" BEL "div/count_29" BEL
+        "div/count_30" BEL "div/count_31" BEL "clk_in_BUFGP/BUFG" BEL
+        "div/clk_div_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

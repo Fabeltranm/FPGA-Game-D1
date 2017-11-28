@@ -15,7 +15,7 @@ SIMGEN_OPTIONS = -p $(FPGA_ARCH) -lang $(LANGUAGE)
 
 IVERILOG = iverilog
 
-SRC = $(DESIGN).v contador.v shifti.v shiftd.v divfreq.v comparador.v
+SRC = $(DESIGN).v 
 
 SIM_SRC = $(DESIGN)_TB.v
 

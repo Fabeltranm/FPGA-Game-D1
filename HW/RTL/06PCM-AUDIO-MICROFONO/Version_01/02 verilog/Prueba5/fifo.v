@@ -1,32 +1,20 @@
-module fifo # (parameter abits = 10, dbits = 16)(
-	input 			clock,
-	input 			clk,
-   	input 			micData,
-	input 			reset,
-	input 			wr,
-	input 			rd,
-	input [dbits-1:0]	din,
-	output 			empty,
-	output 			full,
-	output [dbits-1:0]	dout,
-	output reg [dbits-1:0]	dout2,
-	output			micLRSel,
-        output			ledres,
-        output  		ampPWM,
-        output  	     	ampSD,
-	output 			mclk,
-	output			mclk2
+module fifo # (parameter abits =6, dbits = 321)(
+    input  reset, clock,
+    input  rd, wr,
+    input  [dbits-1:0] din,
+    output [dbits-1:0] dout,
+    output empty,
+    output full
+    //output reg ledres
     );
 
 
-microfono mi(.clk(clk),.reset(reset),.mclk(mclk),.micLRSel(micLRSel),.micData(micData),.ledres(ledres),.done(clock),.sregt(din),.mclk2(mclk2));
-pwm   al(.clk(clk),.reset(reset),.mclk(mclk),.ampPWM(ampPWM),.ampSD(ampSD),.done(clock),.dout(dout2));
 
-initial dout2<=dout;
 wire db_wr, db_rd;
 reg dffw1, dffw2, dffr1, dffr2;
 reg [dbits-1:0] out;
- 
+//initial ledres = 0;
+
 always @ (posedge clock) dffw1 <= wr; 
 always @ (posedge clock) dffw2 <= dffw1;
  
@@ -64,10 +52,12 @@ always @ (posedge clock or posedge reset)
  begin
   if (reset)
    begin
+   
    wr_reg <= 0;
    rd_reg <= 0;
    full_reg <= 1'b0;
    empty_reg <= 1'b1;
+  // ledres=0;
    end
    
   else
@@ -76,6 +66,7 @@ always @ (posedge clock or posedge reset)
    rd_reg <= rd_next;
    full_reg <= full_next;
    empty_reg <= empty_next;
+   //ledres=1;
    end
  end
   

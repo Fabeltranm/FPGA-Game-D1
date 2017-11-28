@@ -1,46 +1,85 @@
-module fifo # (parameter abits = 10, dbits = 16)(
-	input 			clock,
-	input 			clk,
-   	input 			micData,
-	input 			reset,
-	input 			wr,
-	input 			rd,
-	input [dbits-1:0]	din,
-	output 			empty,
-	output 			full,
-	output [dbits-1:0]	dout,
-	output			micLRSel,
-        output			ledres,
-        output  		ampPWM,
-        output  	     	ampSD,
-	output 			mclk,
-	output			mclk2
+module fifo # (parameter abits = 20, dbits = 8)(
+    input  reset, clock,
+    input  rd, wr,
+    input  [dbits-1:0] din,
+    output [dbits-1:0] dout,
+    output empty,
+    output full,
+    output reg ledres
     );
 
-microfono mi(.clk(clk),.reset(reset),.mclk(mclk),.micLRSel(micLRSel),.micData(micData),.ledres(ledres),.ampPWM(ampPWM),.ampSD(ampSD),.done(clock),.sregt(din),.mclk2(mclk2));
 
-wire db_wr, db_rd;
-reg dffw1, dffw2, dffr1, dffr2;
+
+wire db_wr;
+wire db_rd;
+reg dffw1, dffr1;
 reg [dbits-1:0] out;
+initial ledres = 0;
+reg [1:0] count;
+reg [1:0] count1;
+//always @ (posedge clock) dffw1 <= ~wr; 
+//always @ (posedge clock) dffw2 <= rd;
  
-always @ (posedge clock) dffw1 <= wr; 
-always @ (posedge clock) dffw2 <= dffw1;
+assign db_wr = dffw1; //monostable multivibrator to detect only one pulse of the button
+
+//always @ (posedge clock) dffr1 <= rd;
+//always @ (posedge clock) dffr2 <= dffr1;
  
-assign db_wr = ~dffw1 & dffw2; //monostable multivibrator to detect only one pulse of the button
- 
-always @ (posedge clock) dffr1 <= rd;
-always @ (posedge clock) dffr2 <= dffr1;
- 
-assign db_rd = ~dffr1 & dffr2; //monostable multivibrator to detect only one pulse of the button
+assign db_rd = dffr1; //monostable multivibrator to detect only one pulse of the button
  
  
 reg [dbits-1:0] regarray[2**abits-1:0]; //number of words in fifo = 2^(number of address bits)
 reg [abits-1:0] wr_reg, wr_next, wr_succ; //points to the register that needs to be written to
 reg [abits-1:0] rd_reg, rd_next, rd_succ; //points to the register that needs to be read from
 reg full_reg, empty_reg, full_next, empty_next;
- 
+
 assign wr_en = db_wr & ~full; //only write if write signal is high and fifo is not full
+
+always @ (posedge clock)//only write 
+begin
+
+	if(wr && ~rd)
+	begin
+		if(count)
+		begin
+		//dffr1<=0;
+		dffw1<=0;
+		count<=count+1;
+		end		
+		else 
+		begin	
+		//dffr1<=0;	
+		dffw1<=1;
+		count<=0;
+		end
+	end
+	else dffw1<=0;
+   
  
+end
+always @ (posedge clock)//only read
+begin
+
+	if(rd && ~wr)
+	begin
+		if(count1)
+		begin
+		//dffw1<=0;
+		dffr1<=0;
+		count1<=count1+1;
+		end		
+		else 
+		begin
+		//dffw1<=0;		
+		dffr1<=1;
+		count1<=0;
+		end
+	end
+	else dffr1<=0;
+   
+ 
+end
+
 //always block for write operation
 always @ (posedge clock)
  begin
@@ -60,10 +99,12 @@ always @ (posedge clock or posedge reset)
  begin
   if (reset)
    begin
+   
    wr_reg <= 0;
    rd_reg <= 0;
    full_reg <= 1'b0;
    empty_reg <= 1'b1;
+   ledres=0;
    end
    
   else
@@ -72,10 +113,11 @@ always @ (posedge clock or posedge reset)
    rd_reg <= rd_next;
    full_reg <= full_next;
    empty_reg <= empty_next;
+   ledres=1;
    end
  end
   
-always @(*)
+always @(clock)
  begin
   wr_succ = wr_reg + 1; //assigned to new value as wr_next cannot be tested for in same always block
   rd_succ = rd_reg + 1; //assigned to new value as rd_next cannot be tested for in same always block
@@ -124,6 +166,8 @@ assign full = full_reg;
 assign empty = empty_reg;
 assign dout = out;
 endmodule
+
+
 
 
 

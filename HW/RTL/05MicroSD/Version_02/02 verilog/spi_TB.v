@@ -17,8 +17,8 @@ wire sclk;
 spi uut(.datain(datain),.en(en),.reset(reset),.clk(clk),.miso(miso),.dataout(dataout),.done(done),.mosi(mosi),.cs(cs),.sclk(sclk));
 
 
+reg [N-1:0] dataEn;
 
-reg [7:0] dataEn=8'b10101001;
 
 always
 	begin
@@ -36,23 +36,25 @@ initial
 	en=0;
 	reset=1;
 	miso=1;
-	datain=8'b10110110;
-	dataEn=8'b10101001;
-	#10000
-	en=1;
+	datain=8'haa;
+	dataEn=8'h56;
+	#200;
 	reset=0;
-	#35800;
-	en=0;
-	reset=1;
-	datain=8'b01101011;
-	dataEn=8'hAB;
-	#10000
+	#1000;
 	en=1;
-	reset=0;
-	#35800;
+	#80000;
 	en=0;
-	reset=1;
+	datain=8'ha4;
+	dataEn=8'hA1;
+	#1000;
+	en=1;
+
+	#80000;
+	en=0;
+	
+
 	end
+
 
 
 
@@ -60,7 +62,7 @@ integer count=0;
 
 always @(negedge sclk)
 	begin
-		if(count==7)
+		if(count==8)
 			count<=0;
 		else
 			count<=count+1'b1;
@@ -68,7 +70,7 @@ always @(negedge sclk)
 
 
 
-always @(negedge sclk)
+always @(count)
 	begin
 
 	case(count)

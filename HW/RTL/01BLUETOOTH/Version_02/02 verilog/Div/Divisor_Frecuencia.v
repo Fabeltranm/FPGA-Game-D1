@@ -15,7 +15,7 @@ begin
     end
     else
     begin
-		if (count==1300)
+		if (count==5200)
         begin
 			clk_div <=~clk_div;
 			count <= 0;

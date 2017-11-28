@@ -9,7 +9,11 @@ module	ps2	(
 	reg	[7:0]	regis0;
 	reg	[3:0]	i;
 	reg	[3:0]	j;
+	reg	[1:0]	k;
 	reg	init;
+	reg	DoIt;
+	//reg	NoDoIt;
+	//reg	MakeIt=(DoIt && ~NoDoIt);
 	initial
 	begin
 		i=0;
@@ -19,6 +23,9 @@ module	ps2	(
 		regis0=0;
 		Rx_error=0;
 		DONE=0;
+		k=0;
+		DoIt=1;
+		//NoDoIt=0;
 	end
 	always@(posedge CLKOUT)
 	begin
@@ -33,10 +40,32 @@ module	ps2	(
 		begin
 			regis[i]=Rx;
 			i<=i+1;
-			if(regis[i])
+			if(regis[i]&&(i<8))
 			begin
 				j=j+1;
 			end
+		end
+		if(DoIt)
+		begin
+			k<=k+1;
+		end
+		if(k==3)
+		begin
+			DONE=0;
+			DoIt=0;
+			Rx_error=0;
+		end
+		if(!DoIt)
+		begin
+			k<=0;
+		end
+		if(i==9)
+		begin
+			DoIt=1;
+		end
+		else
+		begin
+			
 		end
 //		finalizar		//
 //		finalizar		//
@@ -45,8 +74,6 @@ module	ps2	(
 		begin
 			if(!(j%2)&&(regis[8]))
 			begin
-				i<=0;
-				init=0;
 				Rx_error=0;
 				regis0={regis[7:0]};
 				DONE=1;
@@ -55,10 +82,11 @@ module	ps2	(
 			begin
 				Rx_error=1;
 				regis0=0;
-				init=0;
-				i<=0;
 				DONE=0;
 			end
+			j=0;
+			i<=0;
+			init=0;
 		end
 	end
 	assign	DATA=regis0;
