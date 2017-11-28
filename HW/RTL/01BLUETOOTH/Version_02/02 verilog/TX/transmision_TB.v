@@ -16,14 +16,14 @@ initial begin
 reset=1'b1;
 #100
 reset=1'b0;
-#74000
+#96000
 reset=1'b1;
 end
 
 initial begin
 #20
 rw = 1;
-din = 8'b00110011;
+din = 8'b01110001;
 #4000
 rw = 0;
 end
