@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="137" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;clk&quot; TNM_NET = sys_clk_pin;&gt; [../fifo.ucf(3)]</arg>: No appropriate instances for the TNM constraint are driven by &quot;<arg fmt="%s" index="2">clk</arg>&quot;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="new" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%;&gt; [../fifo.ucf(4)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">sys_clk_pin</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="191" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sys_clk_pin</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_sys_clk_pin</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%;&gt; [../fifo.ucf(4)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%;&gt; [../fifo.ucf(4)]</arg>
+</msg>
+
+</messages>
+

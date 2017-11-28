@@ -18,7 +18,7 @@ reg [7:0] count;
 initial ampSD <= 1;
 
 
-always @(negedge  mclk )
+always @(posedge  mclk )
 begin
 
 	if (reset)
