@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Nov 26 20:59:09 2017
+Mon Nov 27 11:53:31 2017
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -93,7 +93,7 @@ D17||IOB33S|IO_L16N_T2_A27_15|UNUSED||15|||||||||
 D18||IOB33S|IO_L21N_T3_DQS_A18_15|UNUSED||15|||||||||
 E1||IOB33S|IO_L18N_T2_35|UNUSED||35|||||||||
 E2||IOB33M|IO_L14P_T2_SRCC_35|UNUSED||35|||||||||
-E3|clock|IOB33|IO_L12P_T1_MRCC_35|INPUT|LVCMOS33|35||||NONE||LOCATED|NO|NONE|
+E3|clk|IOB33|IO_L12P_T1_MRCC_35|INPUT|LVCMOS33|35||||NONE||LOCATED|NO|NONE|
 E4|||GND||||||||||||
 E5||IOB33S|IO_L5N_T0_AD13N_35|UNUSED||35|||||||||
 E6||IOB33M|IO_L5P_T0_AD13P_35|UNUSED||35|||||||||

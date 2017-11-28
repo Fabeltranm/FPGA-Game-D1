@@ -40,11 +40,11 @@ end//-----------------address_decoder--------------------
 
 
 
-always @(negedge clk) begin//-------------------- escritura de registros
+//always @(negedge clk) begin//-------------------- escritura de registros
 
-d_out_pdm= (s[0]) ? d_out[7:0] : d_out_pdm; // data in uart
+//d_out_pdm= (s[0]) ? d_out[7:0] : d_out_pdm; // data in uart
 
-end//------------------------------------------- escritura de registros	
+//end//------------------------------------------- escritura de registros	
 
 
 
@@ -52,7 +52,7 @@ end//------------------------------------------- escritura de registros
 always @(negedge clk) begin//-----------------------mux_4 :  multiplexa salidas del periferico
 case (s)
 3'b010: d_out[0]= pdm_done;	
-
+3'b010: d_out[7:0]= d_out_pdm;
 
 
 default: d_out=0;

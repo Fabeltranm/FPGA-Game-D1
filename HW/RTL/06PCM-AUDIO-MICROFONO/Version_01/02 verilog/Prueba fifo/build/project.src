@@ -1,1 +1,2 @@
 verilog work ../fifo.v
+verilog work ../div_freq.v

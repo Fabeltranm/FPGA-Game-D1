@@ -1,5 +1,5 @@
-module fifo # (parameter abits = 4, dbits = 8)(
-    input  reset, clock,
+module fifo # (parameter abits = 10, dbits = 8)(
+    input  reset, clk,
     input  rd, wr,
     input  [dbits-1:0] din,
     output [dbits-1:0] dout,
@@ -7,8 +7,12 @@ module fifo # (parameter abits = 4, dbits = 8)(
     output full,
     output reg ledres
     );
+wire clock1;
+wire clock2;
 
-
+assign clock2=clock1;
+assign clock=clock1;
+div_freq df(.clk(clk), .reset(reset),.clkout(clock1));
 
 wire db_wr;
 wire db_rd;
@@ -44,13 +48,13 @@ begin
 		begin
 		//dffr1<=0;
 		dffw1<=0;
-		count<=count+1;
+		count<=count-1;
 		end		
 		else 
 		begin	
 		//dffr1<=0;	
 		dffw1<=1;
-		count<=0;
+		count<=1;
 		end
 	end
 	else dffw1<=0;
@@ -66,13 +70,13 @@ begin
 		begin
 		//dffw1<=0;
 		dffr1<=0;
-		count1<=count1+1;
+		count1<=count1-1;
 		end		
 		else 
 		begin
 		//dffw1<=0;		
 		dffr1<=1;
-		count1<=0;
+		count1<=1;
 		end
 	end
 	else dffr1<=0;
