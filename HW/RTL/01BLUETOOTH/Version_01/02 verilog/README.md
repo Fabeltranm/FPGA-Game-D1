@@ -1,1 +1,2 @@
-cÃ³digo  en verilog de  mÃ³dulo
+código  en verilog de  módulo
+
