@@ -1,5 +1,5 @@
 Revision 3
-; Created by bitgen P.20131013 at Tue Nov  7 06:41:59 2017
+; Created by bitgen P.20131013 at Mon Nov 20 10:17:20 2017
 ; Bit lines have the following form:
 ; <offset> <frame address> <frame offset> <information>
 ; <information> may be zero or more <kw>=<value> pairs
@@ -32,14 +32,17 @@ Revision 3
 ;
 Info STARTSEL0=1
 Bit   335812 0x0000011f   2916 Block=SLICE_X1Y145 Latch=AQ Net=clk_div_OBUF
-Bit  1329891 0x0000059f   1539 Block=SLICE_X14Y124 Latch=AQ Net=count<0>
-Bit  1329916 0x0000059f   1564 Block=SLICE_X14Y124 Latch=BQ Net=count<1>
-Bit  1329921 0x0000059f   1569 Block=SLICE_X14Y124 Latch=CQ Net=count<2>
-Bit  1329946 0x0000059f   1594 Block=SLICE_X14Y124 Latch=DQ Net=count<3>
-Bit  1329987 0x0000059f   1635 Block=SLICE_X14Y125 Latch=AQ Net=count<4>
-Bit  1330012 0x0000059f   1660 Block=SLICE_X14Y125 Latch=BQ Net=count<5>
-Bit  1330017 0x0000059f   1665 Block=SLICE_X14Y125 Latch=CQ Net=count<6>
-Bit  1330042 0x0000059f   1690 Block=SLICE_X14Y125 Latch=DQ Net=count<7>
-Bit  1330051 0x0000059f   1699 Block=SLICE_X14Y126 Latch=AQ Net=count<8>
-Bit  1330076 0x0000059f   1724 Block=SLICE_X14Y126 Latch=BQ Net=count<9>
-Bit  1330081 0x0000059f   1729 Block=SLICE_X14Y126 Latch=CQ Net=count<10>
+Bit  2473635 0x00000a9f   1155 Block=SLICE_X32Y118 Latch=AQ Net=count<0>
+Bit  2473660 0x00000a9f   1180 Block=SLICE_X32Y118 Latch=BQ Net=count<1>
+Bit  2473665 0x00000a9f   1185 Block=SLICE_X32Y118 Latch=CQ Net=count<2>
+Bit  2473690 0x00000a9f   1210 Block=SLICE_X32Y118 Latch=DQ Net=count<3>
+Bit  2473699 0x00000a9f   1219 Block=SLICE_X32Y119 Latch=AQ Net=count<4>
+Bit  2473719 0x00000a9f   1239 Block=SLICE_X33Y119 Latch=BMUX Net=Mcount_count_val
+Bit  2473724 0x00000a9f   1244 Block=SLICE_X32Y119 Latch=BQ Net=count<5>
+Bit  2473729 0x00000a9f   1249 Block=SLICE_X32Y119 Latch=CQ Net=count<6>
+Bit  2473754 0x00000a9f   1274 Block=SLICE_X32Y119 Latch=DQ Net=count<7>
+Bit  2473763 0x00000a9f   1283 Block=SLICE_X32Y120 Latch=AQ Net=count<8>
+Bit  2473788 0x00000a9f   1308 Block=SLICE_X32Y120 Latch=BQ Net=count<9>
+Bit  2473793 0x00000a9f   1313 Block=SLICE_X32Y120 Latch=CQ Net=count<10>
+Bit  2473818 0x00000a9f   1338 Block=SLICE_X32Y120 Latch=DQ Net=count<11>
+Bit  2473827 0x00000a9f   1347 Block=SLICE_X32Y121 Latch=AQ Net=count<12>

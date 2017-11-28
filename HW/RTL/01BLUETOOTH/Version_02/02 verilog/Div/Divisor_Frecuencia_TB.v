@@ -7,8 +7,8 @@ Divisor_Frecuencia uut(.clk_in(clk_in), .reset(reset));
 always #1 clk_in = ~clk_in;
 
 initial begin
-reset=1;
-#40;
+//reset=1;
+//#10000;
 reset=0;  
 end
 

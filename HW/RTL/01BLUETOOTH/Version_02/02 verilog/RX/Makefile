@@ -1,25 +1,24 @@
 DESIGN          = recepcion
 PINS            = $(DESIGN).ucf
 DEVICE          = xc7a100t-1csg324
-BGFLAGS         =  -g TdoPin:PULLNONE -g DonePin:PULLUP \
-                   -g CRC:enable -g StartUpClk:CCLK
-
-XILINXCADROOT   = /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin/ise
-SIM_CMD         = vsim
+BGFLAGS         = -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK
+XILINXCADROOT   = /opt/14.7/ISE_DS/ISE
+SIM_CMD         = vsim 
 SIM_COMP_SCRIPT = simulation/$(DESIGN)_TB.do
 SIMGEN_OPTIONS  = -p $(FPGA_ARCH) -lang $(LANGUAGE)
 IVERILOG        = iverilog
 
-SRC = $(DESIGN).v
+
+SRC 		=	$(DESIGN).v Divisor_Frecuencia.v
+
 SIM_SRC = $(DESIGN)_TB.v          \
-
-
+ 
 all:            bits
 
-remake:         clean-build all
+remake:         cleanall all
 
 clean:
-	rm -f *~ */*~ a.out *.log *.key *.edf *.ps trace.dat
+	rm -f *~ */*~ a.out *.log *.key *.edf *.ps trace.dat 
 	rm -f *.bit
 	rm -rf build
 
@@ -77,6 +76,7 @@ postsim: build/project.ngc
 	cd build && iverilog -Wall \
 	-y $(XILINXCADROOT)/verilog/src/unisims \
 	-y $(XILINXCADROOT)/verilog/src/XilinxCoreLib \
+	-y $(XILINXCADROOT)/verilog/src/glbl.v \
 	project.v ../$(DESIGN)_TB.v -o $(DESIGN).bin
 	cd build && vvp $(DESIGN).bin
 	gtkwave build/$(DESIGN)_TB.vcd&
@@ -87,5 +87,3 @@ iversim:  build/project.src
 	vvp simulation/$(DESIGN)_TB.vvp; mv $(DESIGN)_TB.vcd simulation/
 	gtkwave simulation/$(DESIGN)_TB.vcd&
 
-upload: $(DESIGN).bit
-	scp $(DESIGN).bit root@$(SAKC_IP):

@@ -4,6 +4,7 @@ reg [31:0] count;
 
 initial begin
 clk_div=0;
+count<=0;
 end
 
 always @(posedge  clk_in)
@@ -15,9 +16,9 @@ begin
     end
     else
     begin
-		if (count==1300)
+		if (count==5200)
         begin
-			clk_div <=~clk_div;
+			clk_div <= ~clk_div;
 			count <= 0;
 	    end	
         else begin

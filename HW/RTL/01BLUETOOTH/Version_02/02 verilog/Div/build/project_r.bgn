@@ -1,13 +1,13 @@
 Release 14.7 - Bitgen P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Loading device for application Rf_Device from file '7a100t.nph' in environment
-/opt/14.7/ISE_DS/ISE/.
+/opt/Xilinx/14.7/ISE_DS/ISE/.
    "Divisor_Frecuencia" is an NCD, version 3.2, device xc7a100t, package csg324,
 speed -1
 
-Tue Nov  7 06:41:55 2017
+Mon Nov 20 10:17:16 2017
 
-/opt/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -l -w -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK project_r.ncd 
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -l -w -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK project_r.ncd 
 
 Summary of Bitgen Options:
 +----------------------+----------------------+
