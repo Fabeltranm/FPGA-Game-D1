@@ -4,7 +4,7 @@ Loading device for application Rf_Device from file '7a100t.nph' in environment
 /opt/Xilinx/14.7/ISE_DS/ISE/.
    "div_freq" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
 
-Fri Nov 10 03:36:39 2017
+Wed Nov 29 08:31:33 2017
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -l -w -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK project_r.ncd 
 

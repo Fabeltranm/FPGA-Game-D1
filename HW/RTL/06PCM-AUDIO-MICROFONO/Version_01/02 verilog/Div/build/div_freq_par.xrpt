@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Fri Nov 10 03:36:07 2017">
+  <application stringID="par" timeStamp="Wed Nov 29 08:31:06 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/furerh/bin:/home/furerh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/home/camila/bin:/home/camila/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="XILINX"/>
@@ -24,16 +24,16 @@
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
-        <item stringID="User_EnvOsname" value="Ubuntu"/>
-        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.2 LTS"/>
+        <item stringID="User_EnvOsname" value="LinuxMint"/>
+        <item stringID="User_EnvOsrelease" value="Linux Mint 18.1 Serena"/>
       </item>
-      <item stringID="User_EnvHost" value="furerh-X555LB"/>
+      <item stringID="User_EnvHost" value="camila"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"/>
-          <item stringID="speed" value="2506.555 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz"/>
+          <item stringID="speed" value="3096.031 MHz"/>
         </row>
       </table>
     </section>
@@ -44,12 +44,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="20 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="19 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="16 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="16 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="20 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="20 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="17 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="17 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -68,8 +68,8 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGCTRL_X0Y31"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="4.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.120000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="7.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.118000"/>
             <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.738000"/>
           </row>
         </table>
@@ -2134,14 +2134,14 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Fri Nov 10 03:36:08 2017">
+  <application stringID="Par" timeStamp="Wed Nov 29 08:31:07 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/furerh/bin:/home/furerh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/home/camila/bin:/home/camila/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="XILINX"/>
@@ -2153,31 +2153,31 @@
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
-        <item stringID="User_EnvOsname" value="Ubuntu"/>
-        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.2 LTS"/>
+        <item stringID="User_EnvOsname" value="LinuxMint"/>
+        <item stringID="User_EnvOsrelease" value="Linux Mint 18.1 Serena"/>
       </item>
-      <item stringID="User_EnvHost" value="furerh-X555LB"/>
+      <item stringID="User_EnvHost" value="camila"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"/>
-          <item stringID="speed" value="2402.624 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz"/>
+          <item stringID="speed" value="3075.414 MHz"/>
         </row>
       </table>
     </section>
     <task label="Device Utilization Summary" stringID="PAR_DEVICE_UTLIZATION">
       <section stringID="PAR_SLICE_REPORTING">
-        <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="5">
-          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="5"/>
+        <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="14">
+          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="14"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="63400" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="10">
+        <item AVAILABLE="63400" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="20">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="1"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="7"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="2"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="5"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="14"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ANDO6" value="0"/>
@@ -2197,14 +2197,14 @@
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="15850" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="4">
-          <item AVAILABLE="11100" dataType="int" stringID="PAR_NUM_SLICEL" value="4"/>
+        <item AVAILABLE="15850" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="7">
+          <item AVAILABLE="11100" dataType="int" stringID="PAR_NUM_SLICEL" value="7"/>
           <item AVAILABLE="4750" dataType="int" stringID="PAR_NUM_SLICEM" value="0"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="10">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="5"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="20">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="8"/>
           <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="0"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="5"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="12"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">

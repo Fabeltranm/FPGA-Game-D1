@@ -50,7 +50,7 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Div/div_freq.v" into library work
+Analyzing Verilog file "/home/camila/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Div/div_freq.v" into library work
 Parsing module <div_freq>.
 
 =========================================================================
@@ -64,9 +64,9 @@ Elaborating module <div_freq>.
 =========================================================================
 
 Synthesizing Unit <div_freq>.
-    Related source file is "/home/furerh/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Div/div_freq.v".
+    Related source file is "/home/camila/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Div/div_freq.v".
         fi = 50000000
-        fs = 3225000
+        fs = 9600
     Found 1-bit register for signal <clkout>.
     Found 32-bit register for signal <count>.
     Found 1-bit register for signal <led>.
@@ -135,15 +135,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_16> has a con
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_15> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_14> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_13> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_12> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_11> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_10> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_9> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_8> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_7> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_6> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_5> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <count_4> has a constant value of 0 in block <div_freq>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -156,8 +147,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 7
- Flip-Flops                                            : 7
+# Registers                                            : 16
+ Flip-Flops                                            : 16
 
 =========================================================================
 
@@ -180,18 +171,19 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 19
+# BELS                             : 50
 #      GND                         : 1
-#      INV                         : 4
+#      INV                         : 13
 #      LUT1                        : 1
-#      LUT5                        : 5
-#      MUXCY                       : 3
+#      LUT4                        : 7
+#      LUT6                        : 2
+#      MUXCY                       : 12
 #      VCC                         : 1
-#      XORCY                       : 4
-# FlipFlops/Latches                : 7
+#      XORCY                       : 13
+# FlipFlops/Latches                : 16
 #      FD                          : 1
-#      FDR                         : 2
-#      FDS                         : 4
+#      FDR                         : 10
+#      FDS                         : 5
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 3
@@ -205,16 +197,16 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:               5  out of  126800     0%  
- Number of Slice LUTs:                   10  out of  63400     0%  
-    Number used as Logic:                10  out of  63400     0%  
+ Number of Slice Registers:              14  out of  126800     0%  
+ Number of Slice LUTs:                   23  out of  63400     0%  
+    Number used as Logic:                23  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     10
-   Number with an unused Flip Flop:       5  out of     10    50%  
-   Number with an unused LUT:             0  out of     10     0%  
-   Number of fully used LUT-FF pairs:     5  out of     10    50%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:     23
+   Number with an unused Flip Flop:       9  out of     23    39%  
+   Number with an unused LUT:             0  out of     23     0%  
+   Number of fully used LUT-FF pairs:    14  out of     23    60%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                           4
@@ -245,7 +237,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 7     |
+clk                                | BUFGP                  | 16    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -256,8 +248,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 2.671ns (Maximum Frequency: 374.322MHz)
-   Minimum input arrival time before clock: 1.478ns
+   Minimum period: 3.186ns (Maximum Frequency: 313.873MHz)
+   Minimum input arrival time before clock: 1.854ns
    Maximum output required time after clock: 0.877ns
    Maximum combinational path delay: No path found
 
@@ -267,36 +259,32 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 2.671ns (frequency: 374.322MHz)
-  Total number of paths / destination ports: 36 / 6
+  Clock period: 3.186ns (frequency: 313.873MHz)
+  Total number of paths / destination ports: 288 / 23
 -------------------------------------------------------------------------
-Delay:               2.671ns (Levels of Logic = 6)
-  Source:            count_0 (FF)
-  Destination:       count_3 (FF)
+Delay:               3.186ns (Levels of Logic = 2)
+  Source:            count_1 (FF)
+  Destination:       count_1 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: count_0 to count_3
+  Data Path: count_1 to count_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              6   0.478   0.454  count_0 (count_0)
-     LUT1:I0->O            1   0.124   0.000  Mcount_count_cy<0>_rt (Mcount_count_cy<0>_rt)
-     MUXCY:S->O            1   0.472   0.000  Mcount_count_cy<0> (Mcount_count_cy<0>)
-     MUXCY:CI->O           1   0.029   0.000  Mcount_count_cy<1> (Mcount_count_cy<1>)
-     MUXCY:CI->O           0   0.029   0.000  Mcount_count_cy<2> (Mcount_count_cy<2>)
-     XORCY:CI->O           1   0.510   0.421  Mcount_count_xor<3> (Result<3>)
-     LUT5:I4->O            1   0.124   0.000  Mcount_count_eqn_31 (Mcount_count_eqn_3)
-     FDS:D                     0.030          count_3
+     FDR:C->Q              2   0.478   0.945  count_1 (count_1)
+     LUT6:I0->O            7   0.124   0.576  count[31]_GND_1_o_equal_2_o<31>1 (count[31]_GND_1_o_equal_2_o<31>)
+     LUT4:I2->O            8   0.124   0.445  count[31]_GND_1_o_equal_2_o_01 (count[31]_GND_1_o_equal_2_o_0)
+     FDR:R                     0.494          count_1
     ----------------------------------------
-    Total                      2.671ns (1.796ns logic, 0.875ns route)
-                                       (67.2% logic, 32.8% route)
+    Total                      3.186ns (1.220ns logic, 1.966ns route)
+                                       (38.3% logic, 61.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 7 / 7
+  Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              1.478ns (Levels of Logic = 2)
+Offset:              1.854ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       count_1 (FF)
   Destination Clock: clk rising
@@ -305,12 +293,12 @@ Offset:              1.478ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.405  reset_IBUF (reset_IBUF)
-     INV:I->O              6   0.146   0.432  reset_inv1_INV_0 (reset_inv)
-     FDS:S                     0.494          count_1
+     IBUF:I->O             3   0.001   0.790  reset_IBUF (reset_IBUF)
+     LUT4:I0->O            8   0.124   0.445  count[31]_GND_1_o_equal_2_o_01 (count[31]_GND_1_o_equal_2_o_0)
+     FDR:R                     0.494          count_1
     ----------------------------------------
-    Total                      1.478ns (0.641ns logic, 0.837ns route)
-                                       (43.4% logic, 56.6% route)
+    Total                      1.854ns (0.619ns logic, 1.235ns route)
+                                       (33.4% logic, 66.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -341,21 +329,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    2.671|         |         |         |
+clk            |    3.186|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.43 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.06 secs
  
 --> 
 
 
-Total memory usage is 504264 kilobytes
+Total memory usage is 502964 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   28 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
