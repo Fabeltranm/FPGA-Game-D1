@@ -1,5 +1,6 @@
-module fifo # (parameter abits = 2, dbits = 7)(
+module fifo # (parameter abits = 20, dbits = 8)(
     input  reset, clock,
+    input clk,
     input  rd, wr,
     input  [dbits-1:0] din,
     output [dbits-1:0] dout,
@@ -10,29 +11,55 @@ module fifo # (parameter abits = 2, dbits = 7)(
 
 
 
-wire db_wr, db_rd;
-reg dffw1, dffw2, dffr1, dffr2;
+wire db_wr;
+wire db_rd;
+wire dffw1, dffr1;
 reg [dbits-1:0] out;
 initial ledres = 0;
+reg  count;
+reg  count1;
+assign dffw1 =~count;
 
-always @ (posedge clock) dffw1 <= wr; 
-always @ (posedge clock) dffw2 <= dffw1;
+//always @ (posedge clock) dffw1 <= ~wr; 
+//always @ (posedge clock) dffw2 <= rd;
  
-assign db_wr = ~dffw1 & dffw2; //monostable multivibrator to detect only one pulse of the button
+assign db_wr = dffw1; //monostable multivibrator to detect only one pulse of the button
+
+//always @ (posedge clock) dffr1 <= rd;
+//always @ (posedge clock) dffr2 <= dffr1;
  
-always @ (posedge clock) dffr1 <= rd;
-always @ (posedge clock) dffr2 <= dffr1;
- 
-assign db_rd = ~dffr1 & dffr2; //monostable multivibrator to detect only one pulse of the button
+assign db_rd = dffr1; //monostable multivibrator to detect only one pulse of the button
  
  
 reg [dbits-1:0] regarray[2**abits-1:0]; //number of words in fifo = 2^(number of address bits)
 reg [abits-1:0] wr_reg, wr_next, wr_succ; //points to the register that needs to be written to
 reg [abits-1:0] rd_reg, rd_next, rd_succ; //points to the register that needs to be read from
 reg full_reg, empty_reg, full_next, empty_next;
+
+assign wr_en = wr & ~full; //only write if write signal is high and fifo is not full
+assign rd_en = rd & ~empty; //only write if write signal is high and fifo is not full
+
+always @ (posedge clock)//only write 
+begin
+
+	if(wr && ~rd)
+	     count= ~count;		
+	else 
+	     count=0;
+   
+end
+
+always @ (posedge clock)//only read
+begin
+
+	if(rd && ~wr)
+	 count1= ~count1;		
+	else 
+	     count1=0;
+   
  
-assign wr_en = db_wr & ~full; //only write if write signal is high and fifo is not full
- 
+end
+
 //always block for write operation
 always @ (posedge clock)
  begin
@@ -44,7 +71,7 @@ always @ (posedge clock)
 //always block for read operation
 always @ (posedge clock)
  begin
-  if(db_rd)
+  if(rd_en)
    out <= regarray[rd_reg];
  end
 
@@ -70,7 +97,7 @@ always @ (posedge clock or posedge reset)
    end
  end
   
-always @(*)
+always @(posedge clock)
  begin
   wr_succ = wr_reg + 1; //assigned to new value as wr_next cannot be tested for in same always block
   rd_succ = rd_reg + 1; //assigned to new value as rd_next cannot be tested for in same always block
@@ -79,7 +106,7 @@ always @(*)
   full_next = full_reg;  //defaults state stays the same
   empty_next = empty_reg;  //defaults state stays the same
    
-   case({db_wr,db_rd})
+   case({wr,rd})
     //2'b00: do nothing LOL..
      
     2'b01: //read
@@ -119,6 +146,8 @@ assign full = full_reg;
 assign empty = empty_reg;
 assign dout = out;
 endmodule
+
+
 
 
 

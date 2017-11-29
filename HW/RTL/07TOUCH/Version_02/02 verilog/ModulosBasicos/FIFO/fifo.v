@@ -3,7 +3,7 @@
 
 module fifo
    #(
-  	parameter adr_width = 4,
+  	parameter adr_width = 10,
 	parameter dat_width = 8
    )
    (
