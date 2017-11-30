@@ -8,37 +8,37 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 28 09:10:56 2017
+Mapped Date    : Wed Nov 29 21:27:49 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:    1
 Slice Logic Utilization:
-  Number of Slice Registers:                   848 out of 126,800    1%
-    Number used as Flip Flops:                 848
+  Number of Slice Registers:                   840 out of 126,800    1%
+    Number used as Flip Flops:                 840
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      1,876 out of  63,400    2%
-    Number used as logic:                    1,871 out of  63,400    2%
-      Number using O6 output only:             230
-      Number using O5 output only:           1,599
-      Number using O5 and O6:                   42
+  Number of Slice LUTs:                      1,862 out of  63,400    2%
+    Number used as logic:                    1,858 out of  63,400    2%
+      Number using O6 output only:             224
+      Number using O5 output only:           1,593
+      Number using O5 and O6:                   41
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
-    Number used exclusively as route-thrus:      5
+    Number used exclusively as route-thrus:      4
       Number with same-slice register load:      0
-      Number with same-slice carry load:         5
+      Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   502 out of  15,850    3%
-  Number of LUT Flip Flop pairs used:        1,881
-    Number with an unused Flip Flop:         1,033 out of   1,881   54%
-    Number with an unused LUT:                   5 out of   1,881    1%
-    Number of fully used LUT-FF pairs:         843 out of   1,881   44%
-    Number of unique control sets:              13
+  Number of occupied Slices:                   495 out of  15,850    3%
+  Number of LUT Flip Flop pairs used:        1,864
+    Number with an unused Flip Flop:         1,024 out of   1,864   54%
+    Number with an unused LUT:                   2 out of   1,864    1%
+    Number of fully used LUT-FF pairs:         838 out of   1,864   44%
+    Number of unique control sets:              12
     Number of slice register sites lost
       to control set restrictions:              64 out of 126,800    1%
 
@@ -51,9 +51,9 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        13 out of     210    6%
-    Number of LOCed IOBs:                       13 out of      13  100%
-    IOB Flip Flops:                              5
+  Number of bonded IOBs:                        12 out of     210    5%
+    Number of LOCed IOBs:                       12 out of      12  100%
+    IOB Flip Flops:                              6
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
@@ -62,7 +62,10 @@ Specific Feature Utilization:
     Number used as BUFGs:                        2
     Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
-  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        1 out of     300    1%
+    Number used as ILOGICE2s:                    1
+  Number used as  ILOGICE3s:                     0
+    Number used as ISERDESE2s:                   0
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
   Number of OLOGICE2/OLOGICE3/OSERDESE2s:        5 out of     300    1%
     Number used as OLOGICE2s:                    5
@@ -93,9 +96,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.32
 
-Peak Memory Usage:  1232 MB
-Total REAL time to MAP completion:  5 mins 17 secs 
-Total CPU time to MAP completion:   5 mins 9 secs 
+Peak Memory Usage:  1277 MB
+Total REAL time to MAP completion:  3 mins 41 secs 
+Total CPU time to MAP completion:   3 mins 16 secs 
 
 Table of Contents
 -----------------
@@ -118,20 +121,13 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:2912 - The LUT-1 inverter "reset_inv1_INV_0" failed to join the
-   "OLOGICE2" comp matched to output buffer "ledres_OBUF".  This may result in
-   suboptimal timing.  The LUT-1 inverter reset_inv1_INV_0 drives multiple
-   loads.
-WARNING:Pack:2912 - The LUT-1 inverter "df/clkout_INV_13_o1_INV_0" failed to
+WARNING:Pack:2912 - The LUT-1 inverter "df/clkout_INV_10_o1_INV_0" failed to
    join the "OLOGICE2" comp matched to output buffer "mclk_OBUF".  This may
-   result in suboptimal timing.  The LUT-1 inverter df/clkout_INV_13_o1_INV_0
+   result in suboptimal timing.  The LUT-1 inverter df/clkout_INV_10_o1_INV_0
    drives multiple loads.
-WARNING:PhysDesignRules:367 - The signal <micData_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network micData_IBUF has no load.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -165,15 +161,14 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ampPWM                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ampPWM                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | ampSD                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | clk                                | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| done                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | empty                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | full                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | ledres                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | mclk                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
-| micData                            | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| micData                            | IOB33            | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
 | micLRSel                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | rd                                 | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | reset                              | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |

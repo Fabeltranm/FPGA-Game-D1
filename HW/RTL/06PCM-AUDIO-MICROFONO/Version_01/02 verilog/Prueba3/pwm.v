@@ -4,7 +4,6 @@ module pwm
 	output 		ledres,
 	input		clk,
 	output		mclk,
-        input           micData,    
         output    reg   ampPWM,
         output    reg	ampSD,
 	input     [7:0] dout,

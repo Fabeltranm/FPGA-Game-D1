@@ -5,7 +5,7 @@ Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -p
 XC7A100T-1CSG324 project.ngc -uc ../microfono.ucf
 
 Reading NGO file
-"/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02
+"/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02
 verilog/prueba4.3/build/project.ngc" ...
 Gathering constraint information from source properties...
 Done.
@@ -28,10 +28,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 470376 kilobytes
+Total memory usage is 470240 kilobytes
 
 Writing NGD file "project.ngd" ...
-Total REAL time to NGDBUILD completion: 2 min  3 sec
-Total CPU time to NGDBUILD completion:  2 min  1 sec
+Total REAL time to NGDBUILD completion:  28 sec
+Total CPU time to NGDBUILD completion:   25 sec
 
 Writing NGDBUILD log file "project.bld"...

@@ -1,4 +1,4 @@
-module fifo # (parameter abits = 20, dbits = 1)(
+module fifo # (parameter abits = 400, dbits = 1)(
     input  reset, clock,
     input  rd, wr,
     input  [dbits-1:0] din,
@@ -44,13 +44,13 @@ begin
 		begin
 		//dffr1<=0;
 		dffw1<=0;
-		count<=count-1;
+		count<=count+1;
 		end		
 		else 
 		begin	
 		//dffr1<=0;	
 		dffw1<=1;
-		count<=1;
+		count<=0;
 		end
 	end
 	else dffw1<=0;

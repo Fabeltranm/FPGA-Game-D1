@@ -1,7 +1,7 @@
 
 module microfono_TB;
 
-reg reset, clk, micData;  
+reg reset, clk, micData, micData1;  
    
 
 microfono uut(.reset(reset),.micData(micData),.clk(clk));
