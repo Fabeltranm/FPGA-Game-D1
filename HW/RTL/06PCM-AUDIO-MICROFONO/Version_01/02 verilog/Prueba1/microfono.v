@@ -6,9 +6,9 @@ module microfono
 	output		mclk,
 	output    reg   micLRSel,
         input           micData,    
-        output      reg    ampPWM,
-        output   reg       ampSD,
-	output           mclk2  
+        output   reg    ampPWM,
+        output   reg    ampSD,
+	output          mclk2  
 
 );
 

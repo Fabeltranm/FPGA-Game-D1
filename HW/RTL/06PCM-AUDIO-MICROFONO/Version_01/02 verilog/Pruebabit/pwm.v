@@ -8,7 +8,7 @@ module pwm
         output    reg   ampPWM,
         output    reg	ampSD,
 	input     	dout,
-	input 		done
+	input  		enable
 //	input 		empty1
  //
 
@@ -23,12 +23,12 @@ begin
 
 	if (reset)
 		begin
-     		ampPWM<=0;
+     		ampPWM=0;
     		end 
 	else 
 		begin
-		ampPWM<=dout;
-		
+		if (enable)
+		ampPWM=dout;
 		end
 		
 

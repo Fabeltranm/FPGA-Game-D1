@@ -7,7 +7,8 @@ module microfono
 	output    reg   micLRSel,
         input           micData,    
         output          ampPWM,
-        output          ampSD
+        output          ampSD,
+	input		enable
 	//output 	done
 	 
 
@@ -30,7 +31,7 @@ assign mclk=mclk1;
 initial micLRSel <= 0;
 //initial done=0;
 
-pwm pw(.ampSD(ampSD), .reset(reset),.mcl(mclk5),.ampPWM(ampPWM),.clk(clk),.dout(micData1));
+pwm pw(.ampSD(ampSD), .reset(reset),.mcl(mclk5),.ampPWM(ampPWM),.clk(clk),.dout(micData1),.enable(enable));
 div_freq df(.clk(clk), .reset(reset),.clkout(mclk1),.led(ledres));
 
 

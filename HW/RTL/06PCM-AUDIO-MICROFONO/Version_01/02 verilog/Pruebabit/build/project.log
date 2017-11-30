@@ -50,37 +50,36 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" into library work
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" into library work
 Parsing module <microfono>.
-Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/div_freq.v" into library work
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/div_freq.v" into library work
 Parsing module <div_freq>.
-Analyzing Verilog file "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/pwm.v" into library work
+Analyzing Verilog file "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/pwm.v" into library work
 Parsing module <pwm>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 33: Port ledres is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 34: Port ledres is not connected to this instance
 
 Elaborating module <microfono>.
-WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 21: Assignment to mclk5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 22: Assignment to mclk5 ignored, since the identifier is never used
 
 Elaborating module <pwm>.
-WARNING:HDLCompiler:1127 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 33: Assignment to mclk5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 34: Assignment to mclk5 ignored, since the identifier is never used
 
 Elaborating module <div_freq>.
-WARNING:HDLCompiler:552 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 33: Input port micData is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" Line 34: Input port micData is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <microfono>.
-    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v".
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v".
 WARNING:Xst:2898 - Port 'micData', unconnected in block instance 'pw', is tied to GND.
-WARNING:Xst:2898 - Port 'done', unconnected in block instance 'pw', is tied to GND.
-INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" line 33: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" line 33: Output port <mcl> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" line 34: Output port <ledres> of the instance <pw> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/microfono.v" line 34: Output port <mcl> of the instance <pw> is unconnected or connected to loadless signal.
 WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied to its initial value (0).
     Found 1-bit register for signal <micData1>.
     Summary:
@@ -88,10 +87,9 @@ WARNING:Xst:2935 - Signal 'micLRSel', unconnected in block 'microfono', is tied 
 Unit <microfono> synthesized.
 
 Synthesizing Unit <pwm>.
-    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/pwm.v".
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/pwm.v".
 WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <micData> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <done> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <ledres> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <mcl> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'pwm', is tied to its initial value (1).
@@ -101,7 +99,7 @@ WARNING:Xst:2935 - Signal 'ampSD', unconnected in block 'pwm', is tied to its in
 Unit <pwm> synthesized.
 
 Synthesizing Unit <div_freq>.
-    Related source file is "/home/lisseth/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/div_freq.v".
+    Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Pruebabit/div_freq.v".
         fi = 50000000
         fs = 3125000
     Found 32-bit register for signal <count>.
@@ -257,7 +255,7 @@ Slice Logic Distribution:
    Number of unique control sets:         3
 
 IO Utilization: 
- Number of IOs:                           8
+ Number of IOs:                           9
  Number of bonded IOBs:                   7  out of    210     3%  
     IOB Flip Flops/Latches:               2
 
@@ -388,8 +386,8 @@ clk            |    2.688|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 23.84 secs
+Total REAL time to Xst completion: 67.00 secs
+Total CPU time to Xst completion: 64.95 secs
  
 --> 
 
@@ -397,6 +395,6 @@ Total CPU time to Xst completion: 23.84 secs
 Total memory usage is 504428 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   44 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

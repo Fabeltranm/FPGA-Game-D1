@@ -1,9 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 30 00:08:21 2017
+// Written by: Map P.20131013 on Thu Nov 30 10:34:29 2017
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "enable" LOCATE = SITE "U8" LEVEL 1;
 COMP "micData" LOCATE = SITE "H5" LEVEL 1;
 COMP "ampPWM" LOCATE = SITE "A11" LEVEL 1;
 COMP "ampSD" LOCATE = SITE "D12" LEVEL 1;

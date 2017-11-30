@@ -8,7 +8,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 30 00:07:10 2017
+Mapped Date    : Thu Nov 30 10:31:35 2017
 
 Mapping design into LUTs...
 Writing file project.ngm...
@@ -18,54 +18,56 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 57 secs 
-Total CPU  time at the beginning of Placer: 45 secs 
+Total REAL time at the beginning of Placer: 2 mins 22 secs 
+Total CPU  time at the beginning of Placer: 2 mins 20 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d6aa80b8) REAL time: 1 mins 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e7fdd0cd) REAL time: 2 mins 33 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:d6aa80b8) REAL time: 1 mins 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e7fdd0cd) REAL time: 2 mins 33 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d6aa80b8) REAL time: 1 mins 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e7fdd0cd) REAL time: 2 mins 33 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:be8f2f00) REAL time: 1 mins 5 secs 
+(Checksum:598c0658) REAL time: 2 mins 49 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:be8f2f00) REAL time: 1 mins 5 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:598c0658) REAL time: 2 mins 49 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:be8f2f00) REAL time: 1 mins 5 secs 
+Phase 6.3  Local Placement Optimization (Checksum:598c0658) REAL time: 2 mins 50 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:be8f2f00) REAL time: 1 mins 5 secs 
+Phase 7.5  Local Placement Optimization (Checksum:598c0658) REAL time: 2 mins 50 secs 
 
 Phase 8.8  Global Placement
 ..
 ................
 ................
-Phase 8.8  Global Placement (Checksum:788f9c6) REAL time: 1 mins 7 secs 
+Phase 8.8  Global Placement (Checksum:c2c128fb) REAL time: 2 mins 52 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:788f9c6) REAL time: 1 mins 7 secs 
+Phase 9.5  Local Placement Optimization (Checksum:c2c128fb) REAL time: 2 mins 52 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:a44984a6) REAL time: 1 mins 7 secs 
+Phase 10.18  Placement Optimization (Checksum:5bff483b) REAL time: 2 mins 53 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:a44984a6) REAL time: 1 mins 7 secs 
+Phase 11.5  Local Placement Optimization (Checksum:5bff483b) REAL time: 2 mins 53 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:a44984a6) REAL time: 1 mins 7 secs 
+Phase 12.34  Placement Validation (Checksum:5bff483b) REAL time: 2 mins 53 secs 
 
-Total REAL time to Placer completion: 1 mins 8 secs 
-Total CPU  time to Placer completion: 52 secs 
+Total REAL time to Placer completion: 2 mins 53 secs 
+Total CPU  time to Placer completion: 2 mins 51 secs 
 Running post-placement packing...
 Writing output files...
+WARNING:PhysDesignRules:367 - The signal <enable_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <micData_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 
@@ -74,7 +76,7 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    2
 Slice Logic Utilization:
   Number of Slice Registers:                     6 out of 126,800    1%
     Number used as Flip Flops:                   6
@@ -109,8 +111,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         8 out of     210    3%
-    Number of LOCed IOBs:                        8 out of       8  100%
+  Number of bonded IOBs:                         9 out of     210    4%
+    Number of LOCed IOBs:                        9 out of       9  100%
     IOB Flip Flops:                              2
 
 Specific Feature Utilization:
@@ -149,11 +151,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.33
+Average Fanout of Non-Clock Nets:                2.19
 
-Peak Memory Usage:  1250 MB
-Total REAL time to MAP completion:  1 mins 16 secs 
-Total CPU time to MAP completion:   54 secs 
+Peak Memory Usage:  1205 MB
+Total REAL time to MAP completion:  3 mins 1 secs 
+Total CPU time to MAP completion:   2 mins 58 secs 
 
 Mapping completed.
 See MAP report file "project.mrp" for details.

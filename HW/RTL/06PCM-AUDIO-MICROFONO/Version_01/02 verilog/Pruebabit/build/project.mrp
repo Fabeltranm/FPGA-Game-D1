@@ -8,12 +8,12 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 30 00:07:10 2017
+Mapped Date    : Thu Nov 30 10:31:35 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    2
 Slice Logic Utilization:
   Number of Slice Registers:                     6 out of 126,800    1%
     Number used as Flip Flops:                   6
@@ -48,8 +48,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         8 out of     210    3%
-    Number of LOCed IOBs:                        8 out of       8  100%
+  Number of bonded IOBs:                         9 out of     210    4%
+    Number of LOCed IOBs:                        9 out of       9  100%
     IOB Flip Flops:                              2
 
 Specific Feature Utilization:
@@ -88,11 +88,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.33
+Average Fanout of Non-Clock Nets:                2.19
 
-Peak Memory Usage:  1250 MB
-Total REAL time to MAP completion:  1 mins 16 secs 
-Total CPU time to MAP completion:   54 secs 
+Peak Memory Usage:  1205 MB
+Total REAL time to MAP completion:  3 mins 1 secs 
+Total CPU time to MAP completion:   2 mins 58 secs 
 
 Table of Contents
 -----------------
@@ -115,12 +115,18 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:367 - The signal <enable_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <micData_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network micData_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   enable_IBUF
+   To see the details of these info messages, please use the -detail switch.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -157,6 +163,7 @@ Section 6 - IOB Properties
 | ampPWM                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | ampSD                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | clk                                | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| enable                             | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | ledres                             | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | mclk                               | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
 | micData                            | IOB33            | INPUT     | LVCMOS33             |       |          |      |              |          |          |
