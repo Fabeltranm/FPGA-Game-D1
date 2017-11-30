@@ -60,10 +60,8 @@ Parsing module <div_freq>.
 =========================================================================
 
 Elaborating module <fifo>.
-WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 26: Assignment to db_wr ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 31: Assignment to db_rd ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 102: Result of 21-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 103: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 75: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v" Line 76: Result of 8-bit expression is truncated to fit in 7-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -71,33 +69,27 @@ WARNING:HDLCompiler:413 - "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFO
 
 Synthesizing Unit <fifo>.
     Related source file is "/home/athalia/FPGA-Game-D1/HW/RTL/06PCM-AUDIO-MICROFONO/Version_01/02 verilog/Prueba fifo/fifo.v".
-        abits = 20
-        dbits = 8
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1048576x8-bit dual-port RAM <Mram_regarray> for signal <regarray>.
+        abits = 7
+        dbits = 1
+    Found 128x1-bit dual-port RAM <Mram_regarray> for signal <regarray>.
     Found 1-bit register for signal <empty>.
-    Found 20-bit register for signal <wr_reg>.
-    Found 20-bit register for signal <rd_reg>.
+    Found 7-bit register for signal <wr_reg>.
+    Found 7-bit register for signal <rd_reg>.
     Found 1-bit register for signal <full>.
     Found 1-bit register for signal <ledres>.
-    Found 8-bit register for signal <dout>.
-    Found 20-bit register for signal <wr_next>.
-    Found 20-bit register for signal <rd_next>.
-    Found 1-bit register for signal <full_next>.
-    Found 1-bit register for signal <empty_next>.
-    Found 20-bit adder for signal <_n0060> created at line 102.
-    Found 20-bit adder for signal <rd_reg[19]_GND_1_o_add_12_OUT> created at line 103.
-    Found 20-bit 3-to-1 multiplexer for signal <wr_wr_reg[19]_wide_mux_17_OUT> created at line 109.
-    Found 20-bit 4-to-1 multiplexer for signal <wr_rd_reg[19]_wide_mux_18_OUT> created at line 109.
-    Found 1-bit 4-to-1 multiplexer for signal <wr_empty_reg_Mux_19_o> created at line 109.
-    Found 1-bit 4-to-1 multiplexer for signal <wr_full_reg_Mux_20_o> created at line 109.
-    Found 20-bit comparator equal for signal <rd_reg[19]_wr_reg[19]_equal_14_o> created at line 118
+    Found 1-bit register for signal <dffw2>.
+    Found 1-bit register for signal <dffr1>.
+    Found 1-bit register for signal <dffr2>.
+    Found 1-bit register for signal <dout>.
+    Found 1-bit register for signal <dffw1>.
+    Found 7-bit adder for signal <wr_succ> created at line 75.
+    Found 7-bit adder for signal <rd_succ> created at line 76.
+    Found 7-bit comparator not equal for signal <rd_reg[6]_wr_reg[6]_equal_13_o> created at line 91
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred  93 D-type flip-flop(s).
+	inferred  22 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred  12 Multiplexer(s).
 Unit <fifo> synthesized.
 
 =========================================================================
@@ -105,21 +97,14 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 1048576x8-bit dual-port RAM                           : 1
+ 128x1-bit dual-port RAM                               : 1
 # Adders/Subtractors                                   : 2
- 20-bit adder                                          : 2
+ 7-bit adder                                           : 2
 # Registers                                            : 10
- 1-bit register                                        : 5
- 20-bit register                                       : 4
- 8-bit register                                        : 1
+ 1-bit register                                        : 8
+ 7-bit register                                        : 2
 # Comparators                                          : 1
- 20-bit comparator equal                               : 1
-# Multiplexers                                         : 12
- 1-bit 2-to-1 multiplexer                              : 6
- 1-bit 4-to-1 multiplexer                              : 2
- 20-bit 2-to-1 multiplexer                             : 2
- 20-bit 3-to-1 multiplexer                             : 1
- 20-bit 4-to-1 multiplexer                             : 1
+ 7-bit comparator not equal                            : 1
 
 =========================================================================
 
@@ -129,12 +114,14 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <fifo>.
-INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, absorbing the following register(s): <out>
+The following registers are absorbed into counter <wr_reg>: 1 register on signal <wr_reg>.
+The following registers are absorbed into counter <rd_reg>: 1 register on signal <rd_reg>.
+INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, absorbing the following register(s): <out_0>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 1048576-word x 8-bit                |          |
+    |     aspect ratio   | 128-word x 1-bit                    |          |
     |     mode           | read-first                          |          |
     |     clkA           | connected to signal <clock>         | rise     |
     |     weA            | connected to signal <wr_en>         | high     |
@@ -144,10 +131,10 @@ INFO:Xst:3226 - The RAM <Mram_regarray> will be implemented as a BLOCK RAM, abso
     | optimization       | area                                |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 1048576-word x 8-bit                |          |
+    |     aspect ratio   | 128-word x 1-bit                    |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <clock>         | rise     |
-    |     enB            | connected to signal <rd_en>         | high     |
+    |     enB            | connected to signal <db_rd>         | high     |
     |     addrB          | connected to signal <rd_reg>        |          |
     |     doB            | connected to signal <dout>          |          |
     -----------------------------------------------------------------------
@@ -160,19 +147,15 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 1048576x8-bit dual-port block RAM                     : 1
+ 128x1-bit dual-port block RAM                         : 1
 # Adders/Subtractors                                   : 2
- 20-bit adder                                          : 2
-# Registers                                            : 85
- Flip-Flops                                            : 85
+ 7-bit adder                                           : 2
+# Counters                                             : 2
+ 7-bit up counter                                      : 2
+# Registers                                            : 7
+ Flip-Flops                                            : 7
 # Comparators                                          : 1
- 20-bit comparator equal                               : 1
-# Multiplexers                                         : 12
- 1-bit 2-to-1 multiplexer                              : 6
- 1-bit 4-to-1 multiplexer                              : 2
- 20-bit 2-to-1 multiplexer                             : 2
- 20-bit 3-to-1 multiplexer                             : 1
- 20-bit 4-to-1 multiplexer                             : 1
+ 7-bit comparator not equal                            : 1
 
 =========================================================================
 
@@ -194,8 +177,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 91
- Flip-Flops                                            : 91
+# Registers                                            : 23
+ Flip-Flops                                            : 23
 
 =========================================================================
 
@@ -218,32 +201,27 @@ Top Level Output File Name         : project.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 257
+# BELS                             : 31
 #      GND                         : 1
 #      INV                         : 2
-#      LUT1                        : 38
-#      LUT2                        : 2
-#      LUT3                        : 1
-#      LUT4                        : 3
-#      LUT5                        : 40
-#      LUT6                        : 58
-#      MUXCY                       : 47
-#      MUXF7                       : 16
-#      MUXF8                       : 8
+#      LUT2                        : 3
+#      LUT3                        : 5
+#      LUT4                        : 4
+#      LUT5                        : 9
+#      LUT6                        : 6
 #      VCC                         : 1
-#      XORCY                       : 40
-# FlipFlops/Latches                : 91
-#      FD                          : 42
-#      FDC                         : 43
-#      FDE                         : 4
+# FlipFlops/Latches                : 23
+#      FD                          : 4
+#      FDC                         : 3
+#      FDCE                        : 14
 #      FDP                         : 2
-# RAMS                             : 256
-#      RAMB36E1                    : 256
+# RAMS                             : 1
+#      RAMB18E1                    : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 22
-#      IBUF                        : 11
-#      OBUF                        : 11
+# IO Buffers                       : 8
+#      IBUF                        : 4
+#      OBUF                        : 4
 
 Device utilization summary:
 ---------------------------
@@ -252,28 +230,26 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              88  out of  126800     0%  
- Number of Slice LUTs:                  144  out of  63400     0%  
-    Number used as Logic:               144  out of  63400     0%  
+ Number of Slice Registers:              18  out of  126800     0%  
+ Number of Slice LUTs:                   29  out of  63400     0%  
+    Number used as Logic:                29  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    186
-   Number with an unused Flip Flop:      98  out of    186    52%  
-   Number with an unused LUT:            42  out of    186    22%  
-   Number of fully used LUT-FF pairs:    46  out of    186    24%  
-   Number of unique control sets:         3
+ Number of LUT Flip Flop pairs used:     31
+   Number with an unused Flip Flop:      13  out of     31    41%  
+   Number with an unused LUT:             2  out of     31     6%  
+   Number of fully used LUT-FF pairs:    16  out of     31    51%  
+   Number of unique control sets:         4
 
 IO Utilization: 
- Number of IOs:                          24
- Number of bonded IOBs:                  23  out of    210    10%  
-    IOB Flip Flops/Latches:               3
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    210     4%  
+    IOB Flip Flops/Latches:               5
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:              256  out of    135   189% (*) 
-    Number using Block RAM only:        256
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
-
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -296,281 +272,24 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 347   |
+clock                              | BUFGP                  | 24    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-FindSrcOfAsyncThruGates : 100 (1)
-FindSrcOfAsyncThruGates : 200 (1)
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-N279(Mram_regarray210:CASCADEOUTA) | NONE(Mram_regarray2)   | 1     |
-N281(Mram_regarray210:CASCADEOUTB) | NONE(Mram_regarray2)   | 1     |
-N283(Mram_regarray129:CASCADEOUTA) | NONE(Mram_regarray1)   | 1     |
-N285(Mram_regarray129:CASCADEOUTB) | NONE(Mram_regarray1)   | 1     |
-N287(Mram_regarray310:CASCADEOUTA) | NONE(Mram_regarray3)   | 1     |
-N289(Mram_regarray310:CASCADEOUTB) | NONE(Mram_regarray3)   | 1     |
-N291(Mram_regarray410:CASCADEOUTA) | NONE(Mram_regarray4)   | 1     |
-N293(Mram_regarray410:CASCADEOUTB) | NONE(Mram_regarray4)   | 1     |
-N295(Mram_regarray710:CASCADEOUTA) | NONE(Mram_regarray7)   | 1     |
-N297(Mram_regarray710:CASCADEOUTB) | NONE(Mram_regarray7)   | 1     |
-N299(Mram_regarray510:CASCADEOUTA) | NONE(Mram_regarray5)   | 1     |
-N301(Mram_regarray510:CASCADEOUTB) | NONE(Mram_regarray5)   | 1     |
-N303(Mram_regarray610:CASCADEOUTA) | NONE(Mram_regarray6)   | 1     |
-N305(Mram_regarray610:CASCADEOUTB) | NONE(Mram_regarray6)   | 1     |
-N307(Mram_regarray810:CASCADEOUTA) | NONE(Mram_regarray8)   | 1     |
-N309(Mram_regarray810:CASCADEOUTB) | NONE(Mram_regarray8)   | 1     |
-N311(Mram_regarray910:CASCADEOUTA) | NONE(Mram_regarray9)   | 1     |
-N313(Mram_regarray910:CASCADEOUTB) | NONE(Mram_regarray9)   | 1     |
-N315(Mram_regarray1210:CASCADEOUTA)| NONE(Mram_regarray12)  | 1     |
-N317(Mram_regarray1210:CASCADEOUTB)| NONE(Mram_regarray12)  | 1     |
-N319(Mram_regarray1010:CASCADEOUTA)| NONE(Mram_regarray10)  | 1     |
-N321(Mram_regarray1010:CASCADEOUTB)| NONE(Mram_regarray10)  | 1     |
-N323(Mram_regarray1110:CASCADEOUTA)| NONE(Mram_regarray11)  | 1     |
-N325(Mram_regarray1110:CASCADEOUTB)| NONE(Mram_regarray11)  | 1     |
-N327(Mram_regarray131:CASCADEOUTA) | NONE(Mram_regarray13)  | 1     |
-N329(Mram_regarray131:CASCADEOUTB) | NONE(Mram_regarray13)  | 1     |
-N331(Mram_regarray141:CASCADEOUTA) | NONE(Mram_regarray14)  | 1     |
-N333(Mram_regarray141:CASCADEOUTB) | NONE(Mram_regarray14)  | 1     |
-N335(Mram_regarray171:CASCADEOUTA) | NONE(Mram_regarray17)  | 1     |
-N337(Mram_regarray171:CASCADEOUTB) | NONE(Mram_regarray17)  | 1     |
-N339(Mram_regarray151:CASCADEOUTA) | NONE(Mram_regarray15)  | 1     |
-N341(Mram_regarray151:CASCADEOUTB) | NONE(Mram_regarray15)  | 1     |
-N343(Mram_regarray161:CASCADEOUTA) | NONE(Mram_regarray16)  | 1     |
-N345(Mram_regarray161:CASCADEOUTB) | NONE(Mram_regarray16)  | 1     |
-N347(Mram_regarray181:CASCADEOUTA) | NONE(Mram_regarray18)  | 1     |
-N349(Mram_regarray181:CASCADEOUTB) | NONE(Mram_regarray18)  | 1     |
-N351(Mram_regarray191:CASCADEOUTA) | NONE(Mram_regarray19)  | 1     |
-N353(Mram_regarray191:CASCADEOUTB) | NONE(Mram_regarray19)  | 1     |
-N355(Mram_regarray201:CASCADEOUTA) | NONE(Mram_regarray20)  | 1     |
-N357(Mram_regarray201:CASCADEOUTB) | NONE(Mram_regarray20)  | 1     |
-N359(Mram_regarray211:CASCADEOUTA) | NONE(Mram_regarray21)  | 1     |
-N361(Mram_regarray211:CASCADEOUTB) | NONE(Mram_regarray21)  | 1     |
-N363(Mram_regarray221:CASCADEOUTA) | NONE(Mram_regarray22)  | 1     |
-N365(Mram_regarray221:CASCADEOUTB) | NONE(Mram_regarray22)  | 1     |
-N367(Mram_regarray231:CASCADEOUTA) | NONE(Mram_regarray23)  | 1     |
-N369(Mram_regarray231:CASCADEOUTB) | NONE(Mram_regarray23)  | 1     |
-N371(Mram_regarray261:CASCADEOUTA) | NONE(Mram_regarray26)  | 1     |
-N373(Mram_regarray261:CASCADEOUTB) | NONE(Mram_regarray26)  | 1     |
-N375(Mram_regarray241:CASCADEOUTA) | NONE(Mram_regarray24)  | 1     |
-N377(Mram_regarray241:CASCADEOUTB) | NONE(Mram_regarray24)  | 1     |
-N379(Mram_regarray251:CASCADEOUTA) | NONE(Mram_regarray25)  | 1     |
-N381(Mram_regarray251:CASCADEOUTB) | NONE(Mram_regarray25)  | 1     |
-N383(Mram_regarray271:CASCADEOUTA) | NONE(Mram_regarray27)  | 1     |
-N385(Mram_regarray271:CASCADEOUTB) | NONE(Mram_regarray27)  | 1     |
-N387(Mram_regarray281:CASCADEOUTA) | NONE(Mram_regarray28)  | 1     |
-N389(Mram_regarray281:CASCADEOUTB) | NONE(Mram_regarray28)  | 1     |
-N391(Mram_regarray311:CASCADEOUTA) | NONE(Mram_regarray31)  | 1     |
-N393(Mram_regarray311:CASCADEOUTB) | NONE(Mram_regarray31)  | 1     |
-N395(Mram_regarray291:CASCADEOUTA) | NONE(Mram_regarray29)  | 1     |
-N397(Mram_regarray291:CASCADEOUTB) | NONE(Mram_regarray29)  | 1     |
-N399(Mram_regarray301:CASCADEOUTA) | NONE(Mram_regarray30)  | 1     |
-N401(Mram_regarray301:CASCADEOUTB) | NONE(Mram_regarray30)  | 1     |
-N403(Mram_regarray321:CASCADEOUTA) | NONE(Mram_regarray32)  | 1     |
-N405(Mram_regarray321:CASCADEOUTB) | NONE(Mram_regarray32)  | 1     |
-N407(Mram_regarray331:CASCADEOUTA) | NONE(Mram_regarray33)  | 1     |
-N409(Mram_regarray331:CASCADEOUTB) | NONE(Mram_regarray33)  | 1     |
-N411(Mram_regarray361:CASCADEOUTA) | NONE(Mram_regarray36)  | 1     |
-N413(Mram_regarray361:CASCADEOUTB) | NONE(Mram_regarray36)  | 1     |
-N415(Mram_regarray341:CASCADEOUTA) | NONE(Mram_regarray34)  | 1     |
-N417(Mram_regarray341:CASCADEOUTB) | NONE(Mram_regarray34)  | 1     |
-N419(Mram_regarray351:CASCADEOUTA) | NONE(Mram_regarray35)  | 1     |
-N421(Mram_regarray351:CASCADEOUTB) | NONE(Mram_regarray35)  | 1     |
-N423(Mram_regarray371:CASCADEOUTA) | NONE(Mram_regarray37)  | 1     |
-N425(Mram_regarray371:CASCADEOUTB) | NONE(Mram_regarray37)  | 1     |
-N427(Mram_regarray381:CASCADEOUTA) | NONE(Mram_regarray38)  | 1     |
-N429(Mram_regarray381:CASCADEOUTB) | NONE(Mram_regarray38)  | 1     |
-N431(Mram_regarray391:CASCADEOUTA) | NONE(Mram_regarray39)  | 1     |
-N433(Mram_regarray391:CASCADEOUTB) | NONE(Mram_regarray39)  | 1     |
-N435(Mram_regarray401:CASCADEOUTA) | NONE(Mram_regarray40)  | 1     |
-N437(Mram_regarray401:CASCADEOUTB) | NONE(Mram_regarray40)  | 1     |
-N439(Mram_regarray411:CASCADEOUTA) | NONE(Mram_regarray41)  | 1     |
-N441(Mram_regarray411:CASCADEOUTB) | NONE(Mram_regarray41)  | 1     |
-N443(Mram_regarray421:CASCADEOUTA) | NONE(Mram_regarray42)  | 1     |
-N445(Mram_regarray421:CASCADEOUTB) | NONE(Mram_regarray42)  | 1     |
-N447(Mram_regarray451:CASCADEOUTA) | NONE(Mram_regarray45)  | 1     |
-N449(Mram_regarray451:CASCADEOUTB) | NONE(Mram_regarray45)  | 1     |
-N451(Mram_regarray431:CASCADEOUTA) | NONE(Mram_regarray43)  | 1     |
-N453(Mram_regarray431:CASCADEOUTB) | NONE(Mram_regarray43)  | 1     |
-N455(Mram_regarray441:CASCADEOUTA) | NONE(Mram_regarray44)  | 1     |
-N457(Mram_regarray441:CASCADEOUTB) | NONE(Mram_regarray44)  | 1     |
-N459(Mram_regarray461:CASCADEOUTA) | NONE(Mram_regarray46)  | 1     |
-N461(Mram_regarray461:CASCADEOUTB) | NONE(Mram_regarray46)  | 1     |
-N463(Mram_regarray471:CASCADEOUTA) | NONE(Mram_regarray47)  | 1     |
-N465(Mram_regarray471:CASCADEOUTB) | NONE(Mram_regarray47)  | 1     |
-N467(Mram_regarray501:CASCADEOUTA) | NONE(Mram_regarray50)  | 1     |
-N469(Mram_regarray501:CASCADEOUTB) | NONE(Mram_regarray50)  | 1     |
-N471(Mram_regarray481:CASCADEOUTA) | NONE(Mram_regarray48)  | 1     |
-N473(Mram_regarray481:CASCADEOUTB) | NONE(Mram_regarray48)  | 1     |
-N475(Mram_regarray491:CASCADEOUTA) | NONE(Mram_regarray49)  | 1     |
-N477(Mram_regarray491:CASCADEOUTB) | NONE(Mram_regarray49)  | 1     |
-N479(Mram_regarray511:CASCADEOUTA) | NONE(Mram_regarray51)  | 1     |
-N481(Mram_regarray511:CASCADEOUTB) | NONE(Mram_regarray51)  | 1     |
-N483(Mram_regarray521:CASCADEOUTA) | NONE(Mram_regarray52)  | 1     |
-N485(Mram_regarray521:CASCADEOUTB) | NONE(Mram_regarray52)  | 1     |
-N487(Mram_regarray551:CASCADEOUTA) | NONE(Mram_regarray55)  | 1     |
-N489(Mram_regarray551:CASCADEOUTB) | NONE(Mram_regarray55)  | 1     |
-N491(Mram_regarray531:CASCADEOUTA) | NONE(Mram_regarray53)  | 1     |
-N493(Mram_regarray531:CASCADEOUTB) | NONE(Mram_regarray53)  | 1     |
-N495(Mram_regarray541:CASCADEOUTA) | NONE(Mram_regarray54)  | 1     |
-N497(Mram_regarray541:CASCADEOUTB) | NONE(Mram_regarray54)  | 1     |
-N499(Mram_regarray561:CASCADEOUTA) | NONE(Mram_regarray56)  | 1     |
-N501(Mram_regarray561:CASCADEOUTB) | NONE(Mram_regarray56)  | 1     |
-N503(Mram_regarray571:CASCADEOUTA) | NONE(Mram_regarray57)  | 1     |
-N505(Mram_regarray571:CASCADEOUTB) | NONE(Mram_regarray57)  | 1     |
-N507(Mram_regarray581:CASCADEOUTA) | NONE(Mram_regarray58)  | 1     |
-N509(Mram_regarray581:CASCADEOUTB) | NONE(Mram_regarray58)  | 1     |
-N511(Mram_regarray591:CASCADEOUTA) | NONE(Mram_regarray59)  | 1     |
-N513(Mram_regarray591:CASCADEOUTB) | NONE(Mram_regarray59)  | 1     |
-N515(Mram_regarray601:CASCADEOUTA) | NONE(Mram_regarray60)  | 1     |
-N517(Mram_regarray601:CASCADEOUTB) | NONE(Mram_regarray60)  | 1     |
-N519(Mram_regarray611:CASCADEOUTA) | NONE(Mram_regarray61)  | 1     |
-N521(Mram_regarray611:CASCADEOUTB) | NONE(Mram_regarray61)  | 1     |
-N523(Mram_regarray641:CASCADEOUTA) | NONE(Mram_regarray64)  | 1     |
-N525(Mram_regarray641:CASCADEOUTB) | NONE(Mram_regarray64)  | 1     |
-N527(Mram_regarray621:CASCADEOUTA) | NONE(Mram_regarray62)  | 1     |
-N529(Mram_regarray621:CASCADEOUTB) | NONE(Mram_regarray62)  | 1     |
-N531(Mram_regarray631:CASCADEOUTA) | NONE(Mram_regarray63)  | 1     |
-N533(Mram_regarray631:CASCADEOUTB) | NONE(Mram_regarray63)  | 1     |
-N535(Mram_regarray651:CASCADEOUTA) | NONE(Mram_regarray65)  | 1     |
-N537(Mram_regarray651:CASCADEOUTB) | NONE(Mram_regarray65)  | 1     |
-N539(Mram_regarray661:CASCADEOUTA) | NONE(Mram_regarray66)  | 1     |
-N541(Mram_regarray661:CASCADEOUTB) | NONE(Mram_regarray66)  | 1     |
-N543(Mram_regarray691:CASCADEOUTA) | NONE(Mram_regarray69)  | 1     |
-N545(Mram_regarray691:CASCADEOUTB) | NONE(Mram_regarray69)  | 1     |
-N547(Mram_regarray671:CASCADEOUTA) | NONE(Mram_regarray67)  | 1     |
-N549(Mram_regarray671:CASCADEOUTB) | NONE(Mram_regarray67)  | 1     |
-N551(Mram_regarray681:CASCADEOUTA) | NONE(Mram_regarray68)  | 1     |
-N553(Mram_regarray681:CASCADEOUTB) | NONE(Mram_regarray68)  | 1     |
-N555(Mram_regarray701:CASCADEOUTA) | NONE(Mram_regarray70)  | 1     |
-N557(Mram_regarray701:CASCADEOUTB) | NONE(Mram_regarray70)  | 1     |
-N559(Mram_regarray711:CASCADEOUTA) | NONE(Mram_regarray71)  | 1     |
-N561(Mram_regarray711:CASCADEOUTB) | NONE(Mram_regarray71)  | 1     |
-N563(Mram_regarray741:CASCADEOUTA) | NONE(Mram_regarray74)  | 1     |
-N565(Mram_regarray741:CASCADEOUTB) | NONE(Mram_regarray74)  | 1     |
-N567(Mram_regarray721:CASCADEOUTA) | NONE(Mram_regarray72)  | 1     |
-N569(Mram_regarray721:CASCADEOUTB) | NONE(Mram_regarray72)  | 1     |
-N571(Mram_regarray731:CASCADEOUTA) | NONE(Mram_regarray73)  | 1     |
-N573(Mram_regarray731:CASCADEOUTB) | NONE(Mram_regarray73)  | 1     |
-N575(Mram_regarray751:CASCADEOUTA) | NONE(Mram_regarray75)  | 1     |
-N577(Mram_regarray751:CASCADEOUTB) | NONE(Mram_regarray75)  | 1     |
-N579(Mram_regarray761:CASCADEOUTA) | NONE(Mram_regarray76)  | 1     |
-N581(Mram_regarray761:CASCADEOUTB) | NONE(Mram_regarray76)  | 1     |
-N583(Mram_regarray771:CASCADEOUTA) | NONE(Mram_regarray77)  | 1     |
-N585(Mram_regarray771:CASCADEOUTB) | NONE(Mram_regarray77)  | 1     |
-N587(Mram_regarray781:CASCADEOUTA) | NONE(Mram_regarray78)  | 1     |
-N589(Mram_regarray781:CASCADEOUTB) | NONE(Mram_regarray78)  | 1     |
-N591(Mram_regarray791:CASCADEOUTA) | NONE(Mram_regarray79)  | 1     |
-N593(Mram_regarray791:CASCADEOUTB) | NONE(Mram_regarray79)  | 1     |
-N595(Mram_regarray801:CASCADEOUTA) | NONE(Mram_regarray80)  | 1     |
-N597(Mram_regarray801:CASCADEOUTB) | NONE(Mram_regarray80)  | 1     |
-N599(Mram_regarray831:CASCADEOUTA) | NONE(Mram_regarray83)  | 1     |
-N601(Mram_regarray831:CASCADEOUTB) | NONE(Mram_regarray83)  | 1     |
-N603(Mram_regarray811:CASCADEOUTA) | NONE(Mram_regarray81)  | 1     |
-N605(Mram_regarray811:CASCADEOUTB) | NONE(Mram_regarray81)  | 1     |
-N607(Mram_regarray821:CASCADEOUTA) | NONE(Mram_regarray82)  | 1     |
-N609(Mram_regarray821:CASCADEOUTB) | NONE(Mram_regarray82)  | 1     |
-N611(Mram_regarray841:CASCADEOUTA) | NONE(Mram_regarray84)  | 1     |
-N613(Mram_regarray841:CASCADEOUTB) | NONE(Mram_regarray84)  | 1     |
-N615(Mram_regarray851:CASCADEOUTA) | NONE(Mram_regarray85)  | 1     |
-N617(Mram_regarray851:CASCADEOUTB) | NONE(Mram_regarray85)  | 1     |
-N619(Mram_regarray881:CASCADEOUTA) | NONE(Mram_regarray88)  | 1     |
-N621(Mram_regarray881:CASCADEOUTB) | NONE(Mram_regarray88)  | 1     |
-N623(Mram_regarray861:CASCADEOUTA) | NONE(Mram_regarray86)  | 1     |
-N625(Mram_regarray861:CASCADEOUTB) | NONE(Mram_regarray86)  | 1     |
-N627(Mram_regarray871:CASCADEOUTA) | NONE(Mram_regarray87)  | 1     |
-N629(Mram_regarray871:CASCADEOUTB) | NONE(Mram_regarray87)  | 1     |
-N631(Mram_regarray891:CASCADEOUTA) | NONE(Mram_regarray89)  | 1     |
-N633(Mram_regarray891:CASCADEOUTB) | NONE(Mram_regarray89)  | 1     |
-N635(Mram_regarray901:CASCADEOUTA) | NONE(Mram_regarray90)  | 1     |
-N637(Mram_regarray901:CASCADEOUTB) | NONE(Mram_regarray90)  | 1     |
-N639(Mram_regarray931:CASCADEOUTA) | NONE(Mram_regarray93)  | 1     |
-N641(Mram_regarray931:CASCADEOUTB) | NONE(Mram_regarray93)  | 1     |
-N643(Mram_regarray911:CASCADEOUTA) | NONE(Mram_regarray91)  | 1     |
-N645(Mram_regarray911:CASCADEOUTB) | NONE(Mram_regarray91)  | 1     |
-N647(Mram_regarray921:CASCADEOUTA) | NONE(Mram_regarray92)  | 1     |
-N649(Mram_regarray921:CASCADEOUTB) | NONE(Mram_regarray92)  | 1     |
-N651(Mram_regarray941:CASCADEOUTA) | NONE(Mram_regarray94)  | 1     |
-N653(Mram_regarray941:CASCADEOUTB) | NONE(Mram_regarray94)  | 1     |
-N655(Mram_regarray951:CASCADEOUTA) | NONE(Mram_regarray95)  | 1     |
-N657(Mram_regarray951:CASCADEOUTB) | NONE(Mram_regarray95)  | 1     |
-N659(Mram_regarray961:CASCADEOUTA) | NONE(Mram_regarray96)  | 1     |
-N661(Mram_regarray961:CASCADEOUTB) | NONE(Mram_regarray96)  | 1     |
-N663(Mram_regarray971:CASCADEOUTA) | NONE(Mram_regarray97)  | 1     |
-N665(Mram_regarray971:CASCADEOUTB) | NONE(Mram_regarray97)  | 1     |
-N667(Mram_regarray981:CASCADEOUTA) | NONE(Mram_regarray98)  | 1     |
-N669(Mram_regarray981:CASCADEOUTB) | NONE(Mram_regarray98)  | 1     |
-N671(Mram_regarray991:CASCADEOUTA) | NONE(Mram_regarray99)  | 1     |
-N673(Mram_regarray991:CASCADEOUTB) | NONE(Mram_regarray99)  | 1     |
-N675(Mram_regarray1021:CASCADEOUTA)| NONE(Mram_regarray102) | 1     |
-N677(Mram_regarray1021:CASCADEOUTB)| NONE(Mram_regarray102) | 1     |
-N679(Mram_regarray1001:CASCADEOUTA)| NONE(Mram_regarray100) | 1     |
-N681(Mram_regarray1001:CASCADEOUTB)| NONE(Mram_regarray100) | 1     |
-N683(Mram_regarray1011:CASCADEOUTA)| NONE(Mram_regarray101) | 1     |
-N685(Mram_regarray1011:CASCADEOUTB)| NONE(Mram_regarray101) | 1     |
-N687(Mram_regarray1031:CASCADEOUTA)| NONE(Mram_regarray103) | 1     |
-N689(Mram_regarray1031:CASCADEOUTB)| NONE(Mram_regarray103) | 1     |
-N691(Mram_regarray1041:CASCADEOUTA)| NONE(Mram_regarray104) | 1     |
-N693(Mram_regarray1041:CASCADEOUTB)| NONE(Mram_regarray104) | 1     |
-N695(Mram_regarray1071:CASCADEOUTA)| NONE(Mram_regarray107) | 1     |
-N697(Mram_regarray1071:CASCADEOUTB)| NONE(Mram_regarray107) | 1     |
-N699(Mram_regarray1051:CASCADEOUTA)| NONE(Mram_regarray105) | 1     |
-N701(Mram_regarray1051:CASCADEOUTB)| NONE(Mram_regarray105) | 1     |
-N703(Mram_regarray1061:CASCADEOUTA)| NONE(Mram_regarray106) | 1     |
-N705(Mram_regarray1061:CASCADEOUTB)| NONE(Mram_regarray106) | 1     |
-N707(Mram_regarray1081:CASCADEOUTA)| NONE(Mram_regarray108) | 1     |
-N709(Mram_regarray1081:CASCADEOUTB)| NONE(Mram_regarray108) | 1     |
-N711(Mram_regarray1091:CASCADEOUTA)| NONE(Mram_regarray109) | 1     |
-N713(Mram_regarray1091:CASCADEOUTB)| NONE(Mram_regarray109) | 1     |
-N715(Mram_regarray1121:CASCADEOUTA)| NONE(Mram_regarray112) | 1     |
-N717(Mram_regarray1121:CASCADEOUTB)| NONE(Mram_regarray112) | 1     |
-N719(Mram_regarray1101:CASCADEOUTA)| NONE(Mram_regarray110) | 1     |
-N721(Mram_regarray1101:CASCADEOUTB)| NONE(Mram_regarray110) | 1     |
-N723(Mram_regarray1111:CASCADEOUTA)| NONE(Mram_regarray111) | 1     |
-N725(Mram_regarray1111:CASCADEOUTB)| NONE(Mram_regarray111) | 1     |
-N727(Mram_regarray1131:CASCADEOUTA)| NONE(Mram_regarray113) | 1     |
-N729(Mram_regarray1131:CASCADEOUTB)| NONE(Mram_regarray113) | 1     |
-N731(Mram_regarray1141:CASCADEOUTA)| NONE(Mram_regarray114) | 1     |
-N733(Mram_regarray1141:CASCADEOUTB)| NONE(Mram_regarray114) | 1     |
-N735(Mram_regarray1151:CASCADEOUTA)| NONE(Mram_regarray115) | 1     |
-N737(Mram_regarray1151:CASCADEOUTB)| NONE(Mram_regarray115) | 1     |
-N739(Mram_regarray1161:CASCADEOUTA)| NONE(Mram_regarray116) | 1     |
-N741(Mram_regarray1161:CASCADEOUTB)| NONE(Mram_regarray116) | 1     |
-N743(Mram_regarray1171:CASCADEOUTA)| NONE(Mram_regarray117) | 1     |
-N745(Mram_regarray1171:CASCADEOUTB)| NONE(Mram_regarray117) | 1     |
-N747(Mram_regarray1181:CASCADEOUTA)| NONE(Mram_regarray118) | 1     |
-N749(Mram_regarray1181:CASCADEOUTB)| NONE(Mram_regarray118) | 1     |
-N751(Mram_regarray1211:CASCADEOUTA)| NONE(Mram_regarray121) | 1     |
-N753(Mram_regarray1211:CASCADEOUTB)| NONE(Mram_regarray121) | 1     |
-N755(Mram_regarray1191:CASCADEOUTA)| NONE(Mram_regarray119) | 1     |
-N757(Mram_regarray1191:CASCADEOUTB)| NONE(Mram_regarray119) | 1     |
-N759(Mram_regarray1201:CASCADEOUTA)| NONE(Mram_regarray120) | 1     |
-N761(Mram_regarray1201:CASCADEOUTB)| NONE(Mram_regarray120) | 1     |
-N763(Mram_regarray1221:CASCADEOUTA)| NONE(Mram_regarray122) | 1     |
-N765(Mram_regarray1221:CASCADEOUTB)| NONE(Mram_regarray122) | 1     |
-N767(Mram_regarray1231:CASCADEOUTA)| NONE(Mram_regarray123) | 1     |
-N769(Mram_regarray1231:CASCADEOUTB)| NONE(Mram_regarray123) | 1     |
-N771(Mram_regarray1261:CASCADEOUTA)| NONE(Mram_regarray126) | 1     |
-N773(Mram_regarray1261:CASCADEOUTB)| NONE(Mram_regarray126) | 1     |
-N775(Mram_regarray1241:CASCADEOUTA)| NONE(Mram_regarray124) | 1     |
-N777(Mram_regarray1241:CASCADEOUTB)| NONE(Mram_regarray124) | 1     |
-N779(Mram_regarray1251:CASCADEOUTA)| NONE(Mram_regarray125) | 1     |
-N781(Mram_regarray1251:CASCADEOUTB)| NONE(Mram_regarray125) | 1     |
-N783(Mram_regarray1271:CASCADEOUTA)| NONE(Mram_regarray127) | 1     |
-N785(Mram_regarray1271:CASCADEOUTB)| NONE(Mram_regarray127) | 1     |
-N787(Mram_regarray1281:CASCADEOUTA)| NONE(Mram_regarray128) | 1     |
-N789(Mram_regarray1281:CASCADEOUTB)| NONE(Mram_regarray128) | 1     |
+wr_en(wr_en1:O)                    | NONE(Mram_regarray)    | 2     |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 4.388ns (Maximum Frequency: 227.880MHz)
-   Minimum input arrival time before clock: 2.235ns
-   Maximum output required time after clock: 2.757ns
+   Minimum period: 3.689ns (Maximum Frequency: 271.076MHz)
+   Minimum input arrival time before clock: 1.013ns
+   Maximum output required time after clock: 2.853ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -579,90 +298,67 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
-  Clock period: 4.388ns (frequency: 227.880MHz)
-  Total number of paths / destination ports: 996 / 94
+  Clock period: 3.689ns (frequency: 271.076MHz)
+  Total number of paths / destination ports: 296 / 51
 -------------------------------------------------------------------------
-Delay:               4.388ns (Levels of Logic = 22)
-  Source:            rd_reg_0 (FF)
-  Destination:       empty_next (FF)
+Delay:               3.689ns (Levels of Logic = 5)
+  Source:            rd_reg_1 (FF)
+  Destination:       empty_reg (FF)
   Source Clock:      clock rising
   Destination Clock: clock rising
 
-  Data Path: rd_reg_0 to empty_next
+  Data Path: rd_reg_1 to empty_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q            258   0.478   0.601  rd_reg_0 (rd_reg_0)
-     INV:I->O              1   0.146   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_lut<0>_INV_0 (Madd_rd_reg[19]_GND_1_o_add_12_OUT_lut<0>)
-     MUXCY:S->O            1   0.472   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<0> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<0>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<1> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<1>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<2> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<2>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<3> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<3>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<4> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<4>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<5> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<5>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<6> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<6>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<7> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<7>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<8> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<8>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<9> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<9>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<10> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<10>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<11> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<11>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<12> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<12>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<13> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<13>)
-     MUXCY:CI->O           1   0.029   0.000  Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<14> (Madd_rd_reg[19]_GND_1_o_add_12_OUT_cy<14>)
-     XORCY:CI->O           2   0.510   0.722  Madd_rd_reg[19]_GND_1_o_add_12_OUT_xor<15> (rd_reg[19]_GND_1_o_add_12_OUT<15>)
-     LUT6:I3->O            1   0.124   0.000  Mcompar_rd_reg[19]_wr_reg[19]_equal_14_o_lut<5> (Mcompar_rd_reg[19]_wr_reg[19]_equal_14_o_lut<5>)
-     MUXCY:S->O            1   0.472   0.000  Mcompar_rd_reg[19]_wr_reg[19]_equal_14_o_cy<5> (Mcompar_rd_reg[19]_wr_reg[19]_equal_14_o_cy<5>)
-     MUXCY:CI->O           1   0.029   0.000  Mcompar_rd_reg[19]_wr_reg[19]_equal_14_o_cy<6> (rd_reg[19]_wr_reg[19]_equal_14_o)
-     MUXCY:CI->O           1   0.029   0.000  Mmux_wr_empty_reg_Mux_19_o11_cy (rd_reg[19]_wr_reg[19]_equal_14_o_l1)
-     MUXCY:CI->O           1   0.365   0.000  Mmux_wr_empty_reg_Mux_19_o11_cy1 (wr_empty_reg_Mux_19_o)
-     FD:D                      0.030          empty_next
+     FDCE:C->Q             7   0.478   0.576  rd_reg_1 (rd_reg_1)
+     LUT2:I0->O            2   0.124   0.722  Result<1>11 (Result<1>1)
+     LUT6:I3->O            1   0.124   0.421  _n0076_inv1 (_n0076_inv1)
+     LUT6:I5->O            1   0.124   0.421  _n0076_inv2 (_n0076_inv2)
+     LUT6:I5->O            1   0.124   0.421  _n0076_inv3 (_n0076_inv)
+     LUT4:I3->O            2   0.124   0.000  empty_reg_rstpot (empty_reg_rstpot)
+     FDP:D                     0.030          empty_reg
     ----------------------------------------
-    Total                      4.388ns (3.065ns logic, 1.323ns route)
-                                       (69.9% logic, 30.1% route)
+    Total                      3.689ns (1.128ns logic, 2.561ns route)
+                                       (30.6% logic, 69.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 393 / 347
+  Total number of paths / destination ports: 22 / 22
 -------------------------------------------------------------------------
-Offset:              2.235ns (Levels of Logic = 4)
-  Source:            wr (PAD)
-  Destination:       full_next (FF)
+Offset:              1.013ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       ledres (FF)
   Destination Clock: clock rising
 
-  Data Path: wr to full_next
+  Data Path: reset to ledres
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            60   0.001   0.695  wr_IBUF (wr_IBUF)
-     LUT3:I1->O            1   0.124   0.716  Mmux_wr_full_reg_Mux_20_o12 (Mmux_wr_full_reg_Mux_20_o11)
-     LUT6:I3->O            1   0.124   0.421  Mmux_wr_full_reg_Mux_20_o13_SW0 (N792)
-     LUT6:I5->O            1   0.124   0.000  Mmux_wr_full_reg_Mux_20_o16 (wr_full_reg_Mux_20_o)
-     FD:D                      0.030          full_next
+     IBUF:I->O            19   0.001   0.518  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.494          ledres
     ----------------------------------------
-    Total                      2.235ns (0.403ns logic, 1.832ns route)
-                                       (18.0% logic, 82.0% route)
+    Total                      1.013ns (0.495ns logic, 0.518ns route)
+                                       (48.9% logic, 51.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 91 / 11
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
-Offset:              2.757ns (Levels of Logic = 4)
-  Source:            inst_LPM_FF_2 (FF)
-  Destination:       dout<7> (PAD)
+Offset:              2.853ns (Levels of Logic = 1)
+  Source:            Mram_regarray (RAM)
+  Destination:       dout<0> (PAD)
   Source Clock:      clock rising
 
-  Data Path: inst_LPM_FF_2 to dout<7>
+  Data Path: Mram_regarray to dout<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             32   0.478   1.092  inst_LPM_FF_2 (inst_LPM_FF_2)
-     LUT6:I0->O            1   0.124   0.000  inst_LPM_MUX1_51 (inst_LPM_MUX1_51)
-     MUXF7:I1->O           1   0.368   0.000  inst_LPM_MUX1_4_f7 (inst_LPM_MUX1_4_f7)
-     MUXF8:I0->O           1   0.296   0.399  inst_LPM_MUX1_2_f8 (dout_1_OBUF)
-     OBUF:I->O                 0.000          dout_1_OBUF (dout<1>)
+     RAMB18E1:CLKARDCLK->DOBDO0    1   2.454   0.399  Mram_regarray (dout_0_OBUF)
+     OBUF:I->O                 0.000          dout_0_OBUF (dout<0>)
     ----------------------------------------
-    Total                      2.757ns (1.266ns logic, 1.491ns route)
-                                       (45.9% logic, 54.1% route)
+    Total                      2.853ns (2.454ns logic, 0.399ns route)
+                                       (86.0% logic, 14.0% route)
 
 =========================================================================
 
@@ -674,21 +370,21 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    4.388|         |         |         |
+clock          |    3.689|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 570.00 secs
-Total CPU time to Xst completion: 561.93 secs
+Total REAL time to Xst completion: 68.00 secs
+Total CPU time to Xst completion: 66.96 secs
  
 --> 
 
 
-Total memory usage is 999356 kilobytes
+Total memory usage is 504324 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
