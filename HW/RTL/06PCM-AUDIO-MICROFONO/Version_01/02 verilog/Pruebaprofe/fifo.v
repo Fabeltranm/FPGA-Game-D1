@@ -1,29 +1,29 @@
-module fifo # (parameter abits = 2, dbits = 7)(
+module fifo # (parameter abits = 5, dbits = 1)(
     input  reset, clock,
     input  rd, wr,
     input  [dbits-1:0] din,
     output [dbits-1:0] dout,
     output empty,
-    output full,
+    output full
     //output reg ledres
     );
 
 
 
 wire db_wr, db_rd;
-reg dffw1, dffw2, dffr1, dffr2;
+//reg dffw1, dffw2, dffr1, dffr2;
 reg [dbits-1:0] out;
-initial ledres = 0;
+//initial ledres = 0;
 
-always @ (posedge clock) dffw1 <= wr; 
-always @ (posedge clock) dffw2 <= dffw1;
+//always @ (posedge clock) dffw1 <= wr; 
+//always @ (posedge clock) dffw2 <= dffw1;
  
-assign db_wr = ~dffw1 & dffw2; //monostable multivibrator to detect only one pulse of the button
+assign db_wr = wr; //monostable multivibrator to detect only one pulse of the button
  
-always @ (posedge clock) dffr1 <= rd;
-always @ (posedge clock) dffr2 <= dffr1;
+//always @ (posedge clock) dffr1 <= rd;
+//always @ (posedge clock) dffr2 <= dffr1;
  
-assign db_rd = ~dffr1 & dffr2; //monostable multivibrator to detect only one pulse of the button
+assign db_rd = rd; //monostable multivibrator to detect only one pulse of the button
  
  
 reg [dbits-1:0] regarray[2**abits-1:0]; //number of words in fifo = 2^(number of address bits)
@@ -37,16 +37,18 @@ assign wr_en = db_wr & ~full; //only write if write signal is high and fifo is n
 always @ (posedge clock)
  begin
   if(wr_en)
+	begin
    regarray[wr_reg] <= din;  //at wr_reg location of regarray store what is given at din
- 
+   out <= regarray[rd_reg];
+ end
  end
   
 //always block for read operation
-always @ (posedge clock)
- begin
-  if(db_rd)
-   out <= regarray[rd_reg];
- end
+//always @ (posedge clock)
+ //begin
+  //if(db_rd)
+   //out <= regarray[rd_reg];
+ //end
 
 always @ (posedge clock or posedge reset)
  begin

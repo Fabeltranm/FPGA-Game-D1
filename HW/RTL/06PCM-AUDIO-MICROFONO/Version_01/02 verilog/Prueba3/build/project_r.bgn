@@ -4,7 +4,7 @@ Loading device for application Rf_Device from file '7a100t.nph' in environment
 /opt/Xilinx/14.7/ISE_DS/ISE/.
    "microfono" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
 
-Mon Nov 27 20:53:49 2017
+Thu Nov 30 00:41:09 2017
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -l -w -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK project_r.ncd 
 
@@ -144,7 +144,10 @@ Summary of Bitgen Options:
 No constraints file was processed.
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
+WARNING:PhysDesignRules:367 - The signal <micData_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
 Saving ll file in "project_r.ll".
 Creating bit map...
 Saving bit stream in "project_r.bit".

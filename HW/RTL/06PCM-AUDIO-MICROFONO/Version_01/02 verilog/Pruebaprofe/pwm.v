@@ -3,13 +3,13 @@ module pwm
 	input 		reset,	
 	output 		ledres,
 	input		clk,
-	output		mclk,
+	output		mcl,
         input           micData,    
         output    reg   ampPWM,
         output    reg	ampSD,
 	input     	dout,
-	input 		done1,
-	input 		empty
+	output 	reg	done1,
+	input 		empty1
  
 
 );
@@ -18,7 +18,7 @@ module pwm
 initial ampSD <= 1;
 initial done1<= 0;
 
-always @(posedge  mclk )
+always @(posedge  mcl )
 begin
 
 	if (reset)
@@ -27,11 +27,15 @@ begin
     		end 
 	else 
 		begin
-		if(~empty)
-		begin
-		ampPWM<=dout;
-		done1<=~done1;
-		end
+			if(~empty1)
+			begin
+			ampPWM<=dout;
+			done1<=~done1;
+			end
+			else 
+			begin
+		done1<=0;
+			end
 		end
 		
 

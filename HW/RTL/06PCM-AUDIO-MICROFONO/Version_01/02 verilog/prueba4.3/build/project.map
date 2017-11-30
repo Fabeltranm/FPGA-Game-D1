@@ -8,7 +8,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Wed Nov 29 15:51:09 2017
+Mapped Date    : Wed Nov 29 21:27:49 2017
 
 Mapping design into LUTs...
 Writing file project.ngm...
@@ -22,52 +22,52 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 2 mins 55 secs 
-Total CPU  time at the beginning of Placer: 2 mins 46 secs 
+Total REAL time at the beginning of Placer: 1 mins 6 secs 
+Total CPU  time at the beginning of Placer: 49 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:e9456141) REAL time: 4 mins 8 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e9456141) REAL time: 1 mins 30 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:e9456141) REAL time: 4 mins 10 secs 
+Phase 2.7  Design Feasibility Check (Checksum:e9456141) REAL time: 1 mins 30 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:e9456141) REAL time: 4 mins 10 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e9456141) REAL time: 1 mins 30 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:59f4015f) REAL time: 4 mins 48 secs 
+(Checksum:59f4015f) REAL time: 1 mins 35 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:59f4015f) REAL time: 4 mins 48 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:59f4015f) REAL time: 1 mins 35 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:59f4015f) REAL time: 4 mins 48 secs 
+Phase 6.3  Local Placement Optimization (Checksum:59f4015f) REAL time: 1 mins 36 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:59f4015f) REAL time: 4 mins 48 secs 
+Phase 7.5  Local Placement Optimization (Checksum:59f4015f) REAL time: 1 mins 36 secs 
 
 Phase 8.8  Global Placement
 ................
 .................................................................
 .................................................................
-Phase 8.8  Global Placement (Checksum:b9f855e9) REAL time: 15 mins 36 secs 
+Phase 8.8  Global Placement (Checksum:b9f855e9) REAL time: 3 mins 33 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:b9f855e9) REAL time: 15 mins 36 secs 
+Phase 9.5  Local Placement Optimization (Checksum:b9f855e9) REAL time: 3 mins 33 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:b1ac3640) REAL time: 15 mins 43 secs 
+Phase 10.18  Placement Optimization (Checksum:b1ac3640) REAL time: 3 mins 37 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:b1ac3640) REAL time: 15 mins 43 secs 
+Phase 11.5  Local Placement Optimization (Checksum:b1ac3640) REAL time: 3 mins 37 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:b1ac3640) REAL time: 15 mins 44 secs 
+Phase 12.34  Placement Validation (Checksum:b1ac3640) REAL time: 3 mins 37 secs 
 
-Total REAL time to Placer completion: 15 mins 46 secs 
-Total CPU  time to Placer completion: 15 mins 32 secs 
+Total REAL time to Placer completion: 3 mins 37 secs 
+Total CPU  time to Placer completion: 3 mins 13 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -159,9 +159,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.32
 
-Peak Memory Usage:  1232 MB
-Total REAL time to MAP completion:  16 mins 4 secs 
-Total CPU time to MAP completion:   15 mins 44 secs 
+Peak Memory Usage:  1277 MB
+Total REAL time to MAP completion:  3 mins 41 secs 
+Total CPU time to MAP completion:   3 mins 16 secs 
 
 Mapping completed.
 See MAP report file "project.mrp" for details.

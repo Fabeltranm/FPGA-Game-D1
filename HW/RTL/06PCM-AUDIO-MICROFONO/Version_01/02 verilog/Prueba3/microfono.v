@@ -7,9 +7,7 @@ module microfono
 	output    reg   micLRSel,
         input           micData,    
         output          ampPWM,
-        output          ampSD,
-	output reg	done,
-	output wire [7:0] dout
+        output          ampSD
 	 
 
 );
@@ -22,25 +20,19 @@ assign mclk=mclk1;
 
 
 
-wire [7:0] dout1;
-
-reg [7:0] sregt1;
-
 reg [7:0] sregt;
 
-reg [7:0] count;
 
-assign dout=dout1;
-assign dout1=sregt;
 
 initial micLRSel <= 0;
 
 initial sregt <= 0;
-initial sregt1 <= 0;
 
-pwm pw(.ampSD(ampSD), .reset(reset),.mclk(mclk3),.ampPWM(ampPWM),.clk(clk),.dout(dout1));
+pwm pw(.ampSD(ampSD), .reset(reset),.mclk(mclk3),.ampPWM(ampPWM),.clk(clk),.dout(sregt));
 div_freq df(.clk(clk), .reset(reset),.clkout(mclk1),.led(ledres));
 
+
+reg micData1;
 
 always @(posedge  mclk)
 begin
@@ -51,18 +43,8 @@ begin
     		end 
 	else 
 		begin
-		if(count<=7)
-			begin
-			sregt<= {sregt[7:0],micData};	
-			count<=count+1;	
-			done<=0;
-			end
-			else		
-			begin
-			count<=0;
-			done<=1;
-			sregt1<=sregt;
-			end
+		micData1=micData;
+		sregt<= {sregt[7:0],micData};
 		end
 	
 	
