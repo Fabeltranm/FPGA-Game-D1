@@ -86,4 +86,3 @@ iversim:  build/project.src
 	$(IVERILOG) -gno-io-range-error -o simulation/$(DESIGN)_TB.vvp $(VINCDIR) $(SRC) $(SIM_SRC) -s $(DESIGN)_TB
 	vvp simulation/$(DESIGN)_TB.vvp; mv $(DESIGN)_TB.vcd simulation/
 	gtkwave simulation/$(DESIGN)_TB.vcd&
-
