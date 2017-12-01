@@ -1,18 +1,13 @@
-module transmision (input rw, 
+module transmision (input enable, 
                     input clk_in,
                     input reset,
                     input wire [7:0] din,   
                     output busy, 
-                    output reg done,
-                    output clk_uart, 
+                    output reg done, 
                     output reg tx);
-
-wire clk_div;
-Divisor_Frecuencia div(.clk_in(clk_in), .clk_div(clk_div), .reset(reset));
 
 parameter count = 8;
 
-assign clk_uart = clk_div;
 
 initial begin
 	tx <= 1'b1;
@@ -24,21 +19,22 @@ parameter STATE_START	= 2'b01;
 parameter STATE_DATA	= 2'b10;
 parameter STATE_STOP	= 2'b11;
 
-reg [7:0] data = 8'b11111111;
-reg [2:0] bitpos = 0;
+reg [8:0] data = 8'b11111111;
+reg [3:0] bitpos = 0;
 reg [1:0] state = STATE_IDLE;
+reg [31:0] counter=0;
 
-always @(posedge clk_div) begin 
+always @(posedge clk_in) begin 
     if (reset)
-        tx <= 1'b1; //busy=0?
+        tx <= 1'b1;
     else begin
         case (state)
 	        STATE_IDLE: begin
                 done<=0;
                 tx <= 1'b1;
-                if (rw)begin
+                if (enable)begin
 	    		    state <= STATE_START;
-	    		    data <= din;
+	    		    data <= {1'h01,din};
 	    		    bitpos <= 0;
                 end
     	    end
@@ -46,15 +42,17 @@ always @(posedge clk_div) begin
     			tx <= 1'b0;
     			state <= STATE_DATA;
     	    end
-    	    STATE_DATA: begin
-    			if (bitpos == count-1)begin
-    				tx<=data[bitpos]; 
-    				state <= STATE_STOP;
-    			end
-    			else begin
-    				tx<=data[bitpos];
-    				bitpos <= bitpos + 1;
-    			end
+    	    STATE_DATA: begin  
+        			if(bitpos <= count)begin
+                        counter <= counter +1; 
+                        if (counter==5208) begin
+           				tx<=data[bitpos];
+    		    		bitpos <= bitpos + 1;
+                        counter<=0;
+                           if (bitpos==count)
+                            state<=STATE_STOP;
+    		    	    end
+                    end
     	    end
         	STATE_STOP: begin
     			tx <= 1'b1;
