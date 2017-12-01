@@ -1,18 +1,24 @@
-module adc(input Din,
+module adc(      input wire Din,
 		 input clk_in,
 		 input reset,
-                 output reg [7:0] D0,
+		 input rd,
                  output clk_div,
-		 output reg done);
+		 output reg done,
+		 output wire [7:0] D0f
+);
+reg [7:0] D0;
 
 Divisor_Frecuencia div(.clk_in(clk_in), .clk_div(clk_div), .reset(reset));
+fifo fif(.clk_div(clk_div), .reset(reset), .rd(rd), .wr(done), .data_in(D0), .data_out(D0f));
 
 initial begin
-	D0 = 8'b00000000; 
+
+
 end
 parameter CS_STATE_START	= 2'b00;
 parameter CS_STATE_DATA		= 2'b01;
 parameter CS_STATE_STOP		= 2'b10;
+
 
 reg [1:0] state = CS_STATE_START;
 reg [3:0] bitpos = 0;

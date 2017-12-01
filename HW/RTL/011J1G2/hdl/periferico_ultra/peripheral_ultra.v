@@ -9,7 +9,7 @@ module peripheral_ultra(clk , rst , d_in , cs , addr , rd , wr, d_out,  trigg, e
   input wr;
   output reg [15:0]d_out;
   output trigg;
-   output echo;
+   input echo;
 
 //------------------------------------ regs and wires-------------------------------
 
@@ -38,14 +38,14 @@ end//-----------------address_decoder--------------------
 
 
 
-wire busymachete= (uart_busy  | uart_enable);
+
 
 always @(negedge clk) begin//-------------------- escritura de registros
 
 
 	if (s[0]==1) 
 	begin
-	    enable=1;
+		enable=d_in[0];
 	end
 end//------------------------------------------- escritura de registros	
 
@@ -55,7 +55,7 @@ end//------------------------------------------- escritura de registros
 always @(negedge clk) begin//-----------------------mux_4 :  multiplexa salidas del periferico
 case (s)	
 5'b00010: d_out[0]= done;	
-5'b00100: d_out[0]= dout;
+	5'b00100: d_out[7:0]= dout;
 
 default: d_out=0;
 endcase

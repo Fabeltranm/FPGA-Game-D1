@@ -21,9 +21,10 @@ UART		= uart
 dp_RAM		= dpRAM
 BT          = periferico_BT
 AUD         = periferico_audio
+UL			= periferico_ultra
 
 
-SRC             = $(DESIGN).v j1.v dpram.v $(UART)/uart.v $(UART)/peripheral_uart.v $(MULT)/peripheral_mult.v  $(MULT_32)/acc.v  $(MULT_32)/comp.v  $(MULT_32)/control_mult.v  $(MULT_32)/lsr.v  $(MULT_32)/rsr.v  $(MULT_32)/mult_32.v $(DIV)/peripheral_div.v $(DIV_16)/control_div.v $(DIV_16)/counter_div.v $(DIV_16)/div_16.v $(DIV_16)/final_result.v $(DIV_16)/lsr_div.v $(DIV_16)/subtractor.v $(dp_RAM)/core_peripheric.v $(dp_RAM)/dualport_RAM.v $(dp_RAM)/dpRAM_interface.v $(BT)/bluetooth.v $(BT)/Divisor_Frecuencia.v $(BT)/recepcion.v $(BT)/transmision.v $(BT)/peripheral_bt.v $(AUD)/div_freq.v $(AUD)/fifo.v $(AUD)/microfono.v $(AUD)/peripheral_audio.v
+SRC             = $(DESIGN).v j1.v dpram.v $(UART)/uart.v $(UART)/peripheral_uart.v $(MULT)/peripheral_mult.v  $(MULT_32)/acc.v  $(MULT_32)/comp.v  $(MULT_32)/control_mult.v  $(MULT_32)/lsr.v  $(MULT_32)/rsr.v  $(MULT_32)/mult_32.v $(DIV)/peripheral_div.v $(DIV_16)/control_div.v $(DIV_16)/counter_div.v $(DIV_16)/div_16.v $(DIV_16)/final_result.v $(DIV_16)/lsr_div.v $(DIV_16)/subtractor.v $(dp_RAM)/core_peripheric.v $(dp_RAM)/dualport_RAM.v $(dp_RAM)/dpRAM_interface.v $(BT)/bluetooth.v $(BT)/Divisor_Frecuencia.v $(BT)/recepcion.v $(BT)/transmision.v $(BT)/peripheral_bt.v $(AUD)/div_freq.v $(AUD)/fifo.v $(AUD)/microfono.v $(AUD)/peripheral_audio.v $(UL)/peripheral_ultra.v $(UL)/ultrasonido.v $(UL)/contador.v $(UL)/divisor.v $(UL)/genpulsos.v $(UL)/divisorfrec.v $(UL)/divisorfrecd.v $(UL)/divisorfrecgen.v
 
 SIM_SRC = $(DESIGN)_TB.v          \
 

@@ -1,39 +1,47 @@
 module adc_TB;
-reg Din;
-reg clk_in=0;
+reg Din=0;
+reg clk_in;
 wire clk_div;
-reg CS=0;
 reg reset=0;
-wire [7:0] Dout;
+wire [7:0] D0;
 
-	adc rec(.Din(Din), .reset(reset), .clk_in(clk_in), .clk_div(clk_div), .Dout(Dout));
+    adc rec(.Din(Din), .reset(reset), .clk_in(clk_in), .clk_div(clk_div), .done(done));
  
-    reg [7:0] dato = 8'b10101010;
+    reg [7:0] dato = 8'b00110011;
     reg [3:0] counter = 0;    
     reg [3:0] bitpos = 0; 
      always #1 clk_in = ~clk_in;
 
     initial begin        
-        clk_in=0;   
-	CS=1;
-	#1000
-	CS=0;
+        clk_in=0;	
+reset=1;	
+#100 
+reset=0;
     end
-     always @(negedge clk_div)begin
-    counter <= counter+1;     
+    always @(negedge clk_div)begin
+            counter <= counter+1;
             if(bitpos<=7)begin    
                 Din<=dato[bitpos];
                 bitpos<=bitpos+1;    
             end
-                if (counter==7)begin
-                    counter<=0;
-                    bitpos<=0;       
-                end            
-            end
-        end        
-        else if (counter<3)
-            Din=1;
-        else if (counter==3)
-            Din=0;
+            else begin                           
+            if (done==1)begin
+                 counter<=0;
+                 bitpos<=1; 
+		 Din<=1;
+                end           
+       end        
+       
     end
-endmodule
+
+
+   initial begin: TEST_CASE
+
+      $dumpfile("adc_TB.vcd");
+      $dumpvars(0, adc_TB);
+
+
+      $display("FIN de la simulacion");
+      #1000000 $finish;
+    end
+     endmodule
