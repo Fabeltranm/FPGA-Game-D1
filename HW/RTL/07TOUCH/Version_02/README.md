@@ -4,9 +4,7 @@
 
 ### 1 Christian Camilo Cuestas Ibáñez cccuestasi@unal.edu.co
 
-### 2 Jonathan Smith Moreno Sánchez josmorenosa@unal.edu.co
-
-### 3 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
+### 2 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
 
 
 ## Descripción general del sistema: (tomado del documento de clase)
