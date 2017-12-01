@@ -4,6 +4,13 @@ h# FF00 constant mult_a  \ no cambiar estos tres
 h# FF02 constant mult_b  \ hacen parte de otras
 h# FF04 constant mult_p  \ definiciones
 
+\ memory map pwm
+h# 6400 constant enablepwm	
+h# 6402 constant fullpwm
+h# 6404 constant emptypwm
+h# 6408 constant doutmic
+
+
 \ memory map ultra
 h# 6400 constant ultra_enable	
 h# 6402 constant ultra_done
@@ -13,6 +20,7 @@ h# 6404 constant ultra_data
 h# 6500 constant enable
 h# 6502 constant full
 h# 6504 constant empty
+h# 6508 constant dout
 
 
 \ memory map bt:

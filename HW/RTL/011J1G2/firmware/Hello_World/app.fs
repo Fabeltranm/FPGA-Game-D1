@@ -25,6 +25,18 @@ begin ultra_done @ d# 0 = until
 ultra_data @
 ;
 
+: escribirmicrofono
+begin enable @ d# 0= until
+empty@ 
+dout!
+;
+
+: leeraltavoz
+begin enable@d# 0= until
+done!
+;
+
+
 : trans_bt
 begin bt_busy @ d# 0 = until
 bt_tx !
@@ -58,7 +70,9 @@ trans_bt
 mida
 medir_longitud
 trans_bt
-;
+
+escribirmicrofono
+leeraltavoz
 \ do
 \    1+
 \    dup

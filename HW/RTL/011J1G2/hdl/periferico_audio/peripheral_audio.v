@@ -11,8 +11,9 @@ module peripheral_audio(clk , rst , d_in , cs,wr,rd , addr, d_out, mclk, ledres,
   output ledres;
   output mclk;
   output micLRSel;
-  input  micData;  
-
+  input  micData; 
+ 
+  wire doutmic;
   wire full;
   wire empty; 
   reg enable;	 
@@ -33,6 +34,7 @@ case (addr)
 4'h0:begin s = (cs && wr) ? 3'b001 : 3'b000 ;end //enable
 4'h2:begin s = (cs && rd) ? 3'b010 : 3'b000 ;end //full
 4'h4:begin s = (cs && rd) ? 3'b100 : 3'b000 ;end //empty
+4'h8:begin s = (cs && rd) ? 3'b111 : 3'b000 ;end //dout
 default:begin s=3'b000 ; end
 endcase
 end//-----------------address_decoder--------------------
@@ -57,6 +59,7 @@ always @(negedge clk) begin//-----------------------mux_4 :  multiplexa salidas 
 case (s)
 3'b010: d_out[0]= full;	
 3'b100: d_out[0]= empty;
+3'b111: d_out[0]= dout;
 default: d_out=0;
 endcase
 end//----------------------------------------------mux_4

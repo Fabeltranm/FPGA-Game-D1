@@ -9,7 +9,8 @@ module microfono
 	output 	        dout,
 	output 		full,
 	output		empty,
-	input		enable
+	input		enable,
+	output          dout
 	 
 
 );
