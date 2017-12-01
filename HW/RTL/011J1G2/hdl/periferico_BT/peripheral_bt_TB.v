@@ -31,7 +31,7 @@ peripheral_bt uut (.clk(clk) , .rst(reset) , .d_in(d_in) , .cs(cs) , .addr(addr)
 
 
    initial begin  // Initialize Inputs
-      clk = 0; reset = 1; start = 0; d_in = 16'd0035; addr = 16'h0000; cs=1; rd=0; wr=1;
+      clk = 0; reset = 1; start = 0; d_in = 16'd0035; addr = 16'h0000; cs=1; rd=1; wr=0;
 	
    end
 
@@ -78,7 +78,7 @@ peripheral_bt uut (.clk(clk) , .rst(reset) , .d_in(d_in) , .cs(cs) , .addr(addr)
 
 	d_in = 16'h0002;	//envio 1
 	addr = 16'h0000;
-	cs=1; rd=0; wr=1;
+	cs=1; rd=1; wr=0;
 
    end
 	 

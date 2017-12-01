@@ -7,12 +7,12 @@ module j1soc_TB ();
 
 reg sys_clk_i, sys_rst_i;
 wire  uart_tx, ledout; 
-wire bt_tx, bt_rx;
+wire bt_tx, bt_rx, ledres,mclk,micLRSel,micData;
 
 
-j1soc uut (
-	 uart_tx, ledout, sys_clk_i, sys_rst_i, bt_tx, bt_rx
-);
+j1soc uut  (uart_tx, ledout,
+   sys_clk_i, sys_rst_i,
+    bt_tx, bt_rx,ledres,mclk,micLRSel,micData);
 
 initial begin
   sys_clk_i   = 1;

@@ -4,6 +4,12 @@ h# FF00 constant mult_a  \ no cambiar estos tres
 h# FF02 constant mult_b  \ hacen parte de otras
 h# FF04 constant mult_p  \ definiciones
 
+\ memory map audio:
+h# 6500 constant enable
+h# 6502 constant full
+h# 6504 constant empty
+
+
 \ memory map bt:
 h# 6600 constant bt_tx	
 h# 6602 constant bt_done
