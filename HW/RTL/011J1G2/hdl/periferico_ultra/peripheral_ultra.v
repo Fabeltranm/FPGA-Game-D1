@@ -55,7 +55,7 @@ end//------------------------------------------- escritura de registros
 always @(negedge clk) begin//-----------------------mux_4 :  multiplexa salidas del periferico
 case (s)	
 5'b00010: d_out[0]= done;	
-5'b00100: d_out[0]= dout;
+	5'b00100: d_out[7:0]= dout;
 
 default: d_out=0;
 endcase
