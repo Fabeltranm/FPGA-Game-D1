@@ -17,6 +17,9 @@ h# 7008 @ \ lee lo que hay en el registro h# 7008, queda almacenado en la pila
 h# 700A @ \ lee lo que hay en el registro h# 700A, queda almacenado en la pila
 
 ;
+: mida
+begin ultra_enable ! d# 1
+;
 : medir_longitud
 begin ultra_done @ d# 0 = until
 ultra_data @
@@ -51,6 +54,11 @@ div_c @
 
 trans_bt
 trans_bt
+
+mida
+medir_longitud
+trans_bt
+;
 \ do
 \    1+
 \    dup
