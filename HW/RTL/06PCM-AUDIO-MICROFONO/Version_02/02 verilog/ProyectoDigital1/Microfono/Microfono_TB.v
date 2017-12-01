@@ -1,30 +1,30 @@
 `timescale 10ns / 100ps
 module Microfono_TB;
-
-	reg reset;
+	
 	reg clk;
-	reg enable;
-	reg d_in;
+	reg reset;
+	reg rec;
+	reg play;
 	wire bclk;
-	wire ws;
-	wire [17:0] d_out;
-	wire done;
+	wire lrsel;
+	reg data_in;
+	wire data_out;
+	wire ampSD;
+	wire rd;
+	wire wr;
 
 	Microfono DUT(
-		.reset(reset),
 		.clk(clk),
-		.enable(enable),
-		.d_in(d_in),
+		.reset(reset),
+		.rec(rec),
+		.play(play),
 		.bclk(bclk),
-		.ws(ws),
-		//.d_out(d_out),
-		.done(done),
-
-		.full(full),
-		.empty(empty),
+		.lrsel(lrsel),
+		.data_in(data_in),
+		.data_out(data_out),
+		.ampSD(ampSD),
 		.rd(rd),
-		.data_out(d_out)
-		
+		.wr(wr)
 	);
 
 	always
@@ -34,7 +34,7 @@ module Microfono_TB;
 
 	always
 		begin
-			#2021 d_in = ~d_in;
+			#2021 data_in = ~data_in;
 		end	
 
 	initial
@@ -48,13 +48,17 @@ module Microfono_TB;
 		begin
 			clk = 1'b0;
 			reset = 1'b1;
-			enable = 1'b0;
-			d_in = 1'b1;
+			data_in = 1'b1;
+			rec = 1'b0;
+			play = 1'b0;
 
-			#1 reset = 1'b0;
+			#100000 reset = 1'b0;
 
-			#1 enable = 1'b1;
-			#1 enable = 1'b0;
+			#1 rec = 1'b1;
+			#1000000 rec = 1'b0;
+
+			#500000 play = 1'b1;
+			#100000 play = 1'b0;
 
 		end
 
