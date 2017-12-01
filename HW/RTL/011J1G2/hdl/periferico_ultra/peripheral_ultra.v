@@ -9,7 +9,7 @@ module peripheral_ultra(clk , rst , d_in , cs , addr , rd , wr, d_out,  trigg, e
   input wr;
   output reg [15:0]d_out;
   output trigg;
-   output echo;
+   input echo;
 
 //------------------------------------ regs and wires-------------------------------
 

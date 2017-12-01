@@ -19,7 +19,7 @@ module peripheral_ultra_TB;
    wire trigg;
    reg	echo;
 
-peripheral_ultra uut (.clk(clk) , .rst(reset) , .d_in(d_in) , .cs(cs) , .addr(addr) , .rd(rd) , .wr(wr), .d_out(d_out), trigg(trigg), echo(echo) );
+peripheral_ultra uut (.clk(clk) , .rst(reset) , .d_in(d_in) , .cs(cs) , .addr(addr) , .rd(rd) , .wr(wr), .d_out(d_out), .trigg(trigg), .echo(echo) );
 
 
    parameter PERIOD          = 20;
