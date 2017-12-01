@@ -15,9 +15,9 @@ El sistema de transmisión LVDS (low voltage differential signaling) es un siste
 
 El periférico que utilizaremos será el módulo LCD HB140WX1-100 fabricado por BOE, cuyas especificaciones generales y eléctricas son, respectivamente:
 
-<img width="605" alt="char1" src="https://user-images.githubusercontent.com/24497588/29882290-2e74afc4-8d72-11e7-8079-b6cfcb9ef6dc.png">
+<img width="780" alt="screen shot 2017-12-01 at 13 46 46" src="https://user-images.githubusercontent.com/24497588/33498203-840570c0-d69e-11e7-8c30-f0b23baf312d.png">
 
-<img width="602" alt="char2" src="https://user-images.githubusercontent.com/24497588/29882289-2e65e7c8-8d72-11e7-91d9-59c25bac1744.png">
+<img width="790" alt="screen shot 2017-12-01 at 13 47 16" src="https://user-images.githubusercontent.com/24497588/33498204-8528bf20-d69e-11e7-93f1-6a163d64c80c.png">
 
 ## Descripción de la caja Funcional  (in/out)
 
@@ -50,7 +50,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Diagrama de bloques del periférico:
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<img width="1675" alt="screen shot 2017-12-01 at 13 44 29" src="https://user-images.githubusercontent.com/24497588/33498341-f5c10120-d69e-11e7-8b4d-233fa4308fa8.png">
 
 ## Referencias:
 
