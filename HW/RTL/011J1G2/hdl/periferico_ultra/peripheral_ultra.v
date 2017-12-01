@@ -39,6 +39,7 @@ end//-----------------address_decoder--------------------
 
 
 
+
 always @(negedge clk) begin//-------------------- escritura de registros
 
 
