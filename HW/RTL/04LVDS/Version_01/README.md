@@ -56,5 +56,3 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 https://en.wikipedia.org/wiki/Low-voltage_differential_signaling
 http://www.ti.com/lit/ug/slld009/slld009.pdf
-http://waf-e.dubudisk.com/hidisplay.co.kr/hidisplaycokr/O185Q3t/DubuDisk/public/HB140WX1-100.pdf
-
