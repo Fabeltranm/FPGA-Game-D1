@@ -4,6 +4,11 @@ h# FF00 constant mult_a  \ no cambiar estos tres
 h# FF02 constant mult_b  \ hacen parte de otras
 h# FF04 constant mult_p  \ definiciones
 
+\ memory map ultra
+h# 6400 constant ultra_enable	
+h# 6402 constant ultra_done
+h# 6404 constant ultra_data
+
 \ memory map audio:
 h# 6500 constant enable
 h# 6502 constant full
