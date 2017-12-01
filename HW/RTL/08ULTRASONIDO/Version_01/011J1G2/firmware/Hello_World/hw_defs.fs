@@ -9,19 +9,6 @@ h# 6400 constant ultra_enable
 h# 6402 constant ultra_done
 h# 6404 constant ultra_data
 
-\ memory map audio:
-h# 6500 constant enable
-h# 6502 constant full
-h# 6504 constant empty
-
-
-\ memory map bt:
-h# 6600 constant bt_tx	
-h# 6602 constant bt_done
-h# 6604 constant bt_avail
-h# 6606 constant bt_busy
-h# 6608 constant bt_rx
-
 \ memory map multiplier:
 h# 6700 constant multi_a	
 h# 6702 constant multi_b
