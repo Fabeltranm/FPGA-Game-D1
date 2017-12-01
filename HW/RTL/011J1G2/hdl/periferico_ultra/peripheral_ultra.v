@@ -45,7 +45,7 @@ always @(negedge clk) begin//-------------------- escritura de registros
 
 	if (s[0]==1) 
 	begin
-	    enable=1;
+		enable=d_in[0];
 	end
 end//------------------------------------------- escritura de registros	
 

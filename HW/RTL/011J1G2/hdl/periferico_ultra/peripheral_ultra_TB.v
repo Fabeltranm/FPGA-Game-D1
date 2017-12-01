@@ -46,6 +46,10 @@ peripheral_ultra uut (.clk(clk) , .rst(reset) , .d_in(d_in) , .cs(cs) , .addr(ad
          #(PERIOD*DUTY_CYCLE);
        end
    end
+	
+	initial begin
+		echo = 1'b1;#700000;
+	end
 
    initial begin // Reset the system, Start the image capture process
       forever begin 
@@ -67,26 +71,26 @@ peripheral_ultra uut (.clk(clk) , .rst(reset) , .d_in(d_in) , .cs(cs) , .addr(ad
          @ (posedge clk);
        end
 
-	d_in = 16'h0001;	//envio 1
+	d_in = 16'h0001;	//mida distancia
 	addr = 16'h0000;
 	cs=1; rd=0; wr=1;
 	
-	addr = 16'h0002;
+	addr = 16'h0002;	//mire disponibilidad
 	cs=1; rd=1; wr=0;
 	
        for(i=0; i<40000; i=i+1) begin
          @ (posedge clk);
        end
 
-	d_in = 16'h0002;	//envio 1
-	addr = 16'h0000;
+	d_in = 16'h0001;	
+	addr = 16'h0004;
 	cs=1; rd=1; wr=0;
 
    end
 	 
 end
    initial begin: TEST_CASE
-     $dumpfile("peripheral_bt_TB.vcd");
+	   $dumpfile("peripheral_ultra_TB.vcd");
      $dumpvars(-1, uut);
 	
      #10 -> reset_trigger;
