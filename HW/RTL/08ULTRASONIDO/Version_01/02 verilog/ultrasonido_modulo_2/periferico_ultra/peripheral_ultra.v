@@ -38,7 +38,6 @@ end//-----------------address_decoder--------------------
 
 
 
-wire busymachete= (uart_busy  | uart_enable);
 
 always @(negedge clk) begin//-------------------- escritura de registros
 
