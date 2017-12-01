@@ -1,6 +1,6 @@
 DESIGN          = adc
 PINS            = $(DESIGN).ucf
-DEVICE          = XC3S500E-FG320-4
+DEVICE          = xc7a100t-1csg324
 BGFLAGS         = -g TdoPin:PULLNONE -g DonePin:PULLUP -g CRC:enable -g StartUpClk:CCLK
 XILINXCADROOT   = /opt/14.7/ISE_DS/ISE
 SIM_CMD         = vsim 
@@ -9,7 +9,7 @@ SIMGEN_OPTIONS  = -p $(FPGA_ARCH) -lang $(LANGUAGE)
 IVERILOG        = iverilog
 
 
-SRC 		=	$(DESIGN).v Divisor_Frecuencia.v
+SRC 		=	$(DESIGN).v Divisor_Frecuencia.v fifo.v
 
 SIM_SRC = $(DESIGN)_TB.v          \
  
@@ -80,9 +80,13 @@ postsim: build/project.ngc
 	project.v ../$(DESIGN)_TB.v -o $(DESIGN).bin
 	cd build && vvp $(DESIGN).bin
 	gtkwave build/$(DESIGN)_TB.vcd&
-
+iver:  build/project.src
+	$(IVERILOG) -gno-io-range-error -o simulation/$(DESIGN)_TB.vvp $(VINCDIR) $(SRC) $(SIM_SRC) -s $(DESIGN)_TB
+	vvp simulation/$(DESIGN)_TB.vvp; mv $(DESIGN)_TB.vcd simulation/
+	
 
 iversim:  build/project.src
 	$(IVERILOG) -gno-io-range-error -o simulation/$(DESIGN)_TB.vvp $(VINCDIR) $(SRC) $(SIM_SRC) -s $(DESIGN)_TB
 	vvp simulation/$(DESIGN)_TB.vvp; mv $(DESIGN)_TB.vcd simulation/
 	gtkwave simulation/$(DESIGN)_TB.vcd&
+
