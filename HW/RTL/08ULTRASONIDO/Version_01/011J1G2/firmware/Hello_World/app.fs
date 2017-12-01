@@ -25,10 +25,6 @@ begin ultra_done @ d# 0 = until
 ultra_data @
 ;
 
-: trans_bt
-begin bt_busy @ d# 0 = until
-bt_tx !
-;
 : multiplicar		 \ utiliza peripheral_mult.v
 swap multi_a !
 multi_b !
@@ -50,14 +46,8 @@ div_c @
 
 : main 
 
- d# 5 d# 3
-
-trans_bt
-trans_bt
-
 mida
 medir_longitud
-trans_bt
 ;
 \ do
 \    1+
