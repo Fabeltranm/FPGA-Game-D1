@@ -20,8 +20,11 @@ verilog work ../divider/div_16/subtractor.v
 verilog work ../dpRAM/core_peripheric.v
 verilog work ../dpRAM/dualport_RAM.v
 verilog work ../dpRAM/dpRAM_interface.v
-verilog work ../periferico_BT/bluetooth.v
-verilog work ../periferico_BT/Divisor_Frecuencia.v
-verilog work ../periferico_BT/recepcion.v
-verilog work ../periferico_BT/transmision.v
-verilog work ../periferico_BT/peripheral_bt.v
+verilog work ../periferico_ultra/peripheral_ultra.v
+verilog work ../periferico_ultra/ultrasonido.v
+verilog work ../periferico_ultra/contador.v
+verilog work ../periferico_ultra/divisor.v
+verilog work ../periferico_ultra/genpulsos.v
+verilog work ../periferico_ultra/divisorfrec.v
+verilog work ../periferico_ultra/divisorfrecd.v
+verilog work ../periferico_ultra/divisorfrecgen.v

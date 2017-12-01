@@ -23,6 +23,7 @@ begin ultra_enable ! d# 1
 : medir_longitud
 begin ultra_done @ d# 0 = until
 ultra_data @
+emit_uart
 ;
 
 : multiplicar		 \ utiliza peripheral_mult.v

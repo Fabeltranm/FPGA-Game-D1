@@ -3,15 +3,11 @@ module j1soc#(
               parameter   bootram_file     = "../firmware/Hello_World/j1.mem"       // For simulation         
 )
     (uart_tx, ledout,
-   sys_clk_i, sys_rst_i,
-    bt_tx, bt_rx,ledres,mclk,micLRSel,trigg,echo);
+   sys_clk_i, sys_rst_i,ledres,micLRSel,trigg,echo);
 
    input sys_clk_i, sys_rst_i;
    output uart_tx;
    output ledout;
-    input bt_rx;
-    output bt_tx;
-    output mclk;
     output ledres;
     output micLRSel;
     output trigg;
@@ -41,16 +37,16 @@ module j1soc#(
 
   j1 #(bootram_file)  cpu0(sys_clk_i, sys_rst_i, j1_io_din, j1_io_rd, j1_io_wr, j1_io_addr, j1_io_dout);
 
-  peripheral_mult  per_m (.clk(sys_clk_i), .rst(sys_rst_i), .d_in(j1_io_dout), .cs(cs[4]), .addr(j1_io_addr[3:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(mult_dout) );
+	peripheral_mult  per_m (.clk(sys_clk_i), .rst(sys_rst_i), .d_in(j1_io_dout), .cs(cs[2]), .addr(j1_io_addr[3:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(mult_dout) );
 
-  peripheral_div  per_d (.clk(sys_clk_i), .rst(sys_rst_i), .d_in(j1_io_dout), .cs(cs[5]), .addr(j1_io_addr[3:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(div_dout));
+	peripheral_div  per_d (.clk(sys_clk_i), .rst(sys_rst_i), .d_in(j1_io_dout), .cs(cs[3]), .addr(j1_io_addr[3:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(div_dout));
 
-  peripheral_uart  per_u (.clk(sys_clk_i), .rst(sys_rst_i), .d_in(j1_io_dout), .cs(cs[6]), .addr(j1_io_addr[3:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(uart_dout), .uart_tx(uart_tx), .ledout(ledout));
+	peripheral_uart  per_u (.clk(sys_clk_i), .rst(sys_rst_i), .d_in(j1_io_dout), .cs(cs[4]), .addr(j1_io_addr[3:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(uart_dout), .uart_tx(uart_tx), .ledout(ledout));
 
-  peripheral_ultra per_ultra ( .clk(sys_clk_i) , .rst(sys_rst_i) , .d_in(j1_io_dout) , .cs(cs[1]) , .addr(j1_io_addr[3:0]) , .rd(j1_io_rd) , .wr(j1_io_wr), .d_out(ultra_dout),  .trigg(trigg), .echo(echo) )
+  peripheral_ultra per_ultra ( .clk(sys_clk_i) , .rst(sys_rst_i) , .d_in(j1_io_dout) , .cs(cs[1]) , .addr(j1_io_addr[3:0]) , .rd(j1_io_rd) , .wr(j1_io_wr), .d_out(ultra_dout),  .trigg(trigg), .echo(echo) );
 
 
-  dpRAM_interface dpRm(.clk(sys_clk_i), .d_in(j1_io_dout), .cs(cs[7]), .addr(j1_io_addr[7:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(dp_ram_dout));
+	dpRAM_interface dpRm(.clk(sys_clk_i), .d_in(j1_io_dout), .cs(cs[5]), .addr(j1_io_addr[7:0]), .rd(j1_io_rd), .wr(j1_io_wr), .d_out(dp_ram_dout));
 
 
   // ============== Chip_Select (Addres decoder) ========================  // se hace con los 8 bits mas significativos de j1_io_addr
