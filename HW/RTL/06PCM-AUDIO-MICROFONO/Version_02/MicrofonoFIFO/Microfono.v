@@ -37,7 +37,7 @@ module Microfono(clk, reset, rec, play, bclk, lrsel, data_in, data_out, ampSD, r
 					fclk = 1'b1;
 				end	
 				else
-				if (fifo_counter == 2) // fclk = 500KHz
+				if (fifo_counter == 2) 
 					begin
 						fifo_counter = 1;
 						fclk = ~fclk;
