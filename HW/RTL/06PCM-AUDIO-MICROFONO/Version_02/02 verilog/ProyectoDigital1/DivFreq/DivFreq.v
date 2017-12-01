@@ -1,13 +1,15 @@
-module DivFreq (reset,clk,en_clk,bclk);
+module DivFreq (reset,clk,bclk);
 
 	// ENTRADAS Y SALIDAS DEL SISTEMA
 
 	input wire reset;
 	input wire clk;
-	input wire en_clk;
-	output reg bclk;
+	output wire bclk;
 
-	reg [5:0] count = 6'h00;
+	reg [5:0] count = 0;
+	reg clock = 1'b0;
+
+	assign bclk = clock;
 
 	//-- Registro
 
@@ -15,26 +17,21 @@ module DivFreq (reset,clk,en_clk,bclk);
 		begin
 		  if (reset)
 			begin
-				count = 6'h00;
-				bclk = 1'b0;
+				count = 0;
+				clock = 1'b1;
 			end	
 		  else
-			if (en_clk)
-				if (count == 50)
-					begin
-						count = 6'h01;
-						bclk = ~bclk;
-					end
-				else
-					begin
-						count = count + 6'h01;
-						bclk= bclk;
-					end
+			if (count == 50)
+				begin
+					count = 1;
+					clock = ~clock;
+				end
 			else
 				begin
-					count = count;
-					bclk = bclk;
+					count = count + 1;
+					clock = clock;
 				end
+
 		end
 		
 endmodule
