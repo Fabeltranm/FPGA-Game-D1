@@ -1,4 +1,4 @@
-DESIGN = contador#Aquí va el nombre del proyecto
+DESIGN = spi#Aquí va el nombre del proyecto
 
 PINS = $(DESIGN).ucf
 
@@ -15,7 +15,7 @@ SIMGEN_OPTIONS = -p $(FPGA_ARCH) -lang $(LANGUAGE)
 
 IVERILOG = iverilog
 
-SRC = $(DESIGN).v
+SRC = $(DESIGN).v 
 
 SIM_SRC = $(DESIGN)_TB.v
 

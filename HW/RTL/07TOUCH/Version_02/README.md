@@ -4,9 +4,7 @@
 
 ### 1 Christian Camilo Cuestas Ibáñez cccuestasi@unal.edu.co
 
-### 2 Jonathan Smith Moreno Sánchez josmorenosa@unal.edu.co
-
-### 3 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
+### 2 Daniel Alejandro Rodríguez Chávez daarodriguezch@unal.edu.co
 
 
 ## Descripción general del sistema: (tomado del documento de clase)
@@ -21,14 +19,14 @@ El sistema de comunicación del <i>TouchScreen</i> tiene como entrada **Rx**, po
 
 ## Descripción funcional:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20Funcional%20Touch)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20Funcional%20Touch.jpg)
 
 ## Descripción Estructural:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20Estructural%20Touch)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20Estructural%20Touch.jpg)
 ## Diagrama de Estados:
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20de%20Estado%20Touch)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/07TOUCH/Version_02/03%20document/img/D.%20de%20Estado%20Touch.jpg)
 
 ## Arquitectura del periférico:
 

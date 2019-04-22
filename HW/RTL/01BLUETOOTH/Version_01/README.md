@@ -6,7 +6,7 @@
 
 ### 2 Carlos Andrés Martínez Riveros caramartinezriv@unal.edu.co
 
-### 3 Nombre1 nombre2 apelido1 apellido2 correo@electronico
+### 3 Robinson Steven Cárdenas Ariza rscardenasa@unal.edu.co
 
 
 ## Descripción general del sistema:
@@ -35,17 +35,22 @@ Un dispositivo que transmita los caracteres ASCII 'O' y 'K' tendría que crear d
 
 
 ## Descripción de la caja Funcional  (in/out)
-![diagrama estructural modulo de bluetoothlll](https://user-images.githubusercontent.com/14295760/30278225-7f5dcfea-96cf-11e7-9f66-f3708d3db18a.png)
+![yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy](https://user-images.githubusercontent.com/14295760/31620529-19aba786-b25d-11e7-927d-4d0d9ad21b59.png)
+
 
 ## Descripción funcional:
 
+![funcional rx](https://user-images.githubusercontent.com/14295760/32111242-924083f6-baff-11e7-9ca5-edc5d76862e8.jpg)
 
-![diagramafuncionall](https://user-images.githubusercontent.com/14295760/30240890-7ab4de62-953e-11e7-8d60-f83b0530482c.jpg)
+
+![funcionaltx](https://user-images.githubusercontent.com/14295760/32112168-255c212a-bb02-11e7-9a4c-50fe7fd12b05.jpg)
+
+
 
 
 
 ## Descripción Estructural:
-![diagramaestructuralkkkk](https://user-images.githubusercontent.com/14295760/30240877-56cc237a-953e-11e7-8771-c15bf7f4a599.jpg)
+![laij](https://user-images.githubusercontent.com/14295760/32114130-291602ee-bb08-11e7-926a-23bd06dbbc02.jpg)
 
 
 ## Diagrama de Estados:

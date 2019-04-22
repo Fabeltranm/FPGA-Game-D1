@@ -33,18 +33,18 @@ La prioridad o esencia del sistema es la **Solicitud de Control** y la **Solicit
 La caja negra o caja funcional posee una entrada de relog (clk) al dispositivo maestro, una entrada de datos (Data(IN)) por medio de la cual se envian los datos a guardar en el dispositivo de almacenamiento desde el procesador central, una entrada de habilitacion (enable) que permite indicarle al dispositivo maestro que se quiere almacenar o leer datos, una entrada de direccion (addr) que permite indicar la direccion de memoria dela micro SD en la cual se almacenara o de la cual se leeran los datos, una entrada (R/W) que indica si se esta requieriendo un proceso de lectura de datos o uno de almacenamiento, una salida (done) que indica si el sistema esta disponible para leer o almacenar datos, una salida de datos (data(out)) por medio de la cual se entregan los datos en caso de una solicitud de lectura de datos y las cuatro lineas (clk, MOSI, MISO, CS) del protocolo SPI entre el dispositivo maestro (FPGA) y el esclavo (tarjeta micro SD).
 
 
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Cajafuncional(1).PNG).
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Cajafuncional3.png).
 
 
 ## Descripción funcional:
 
 El diagrama funcional inicia con la lectura de los valores de las entrada de reloj y Enable. Adicionalmente se asume que Done esta en 1, es decir, que el driver esta listo para recibir ordenes. En el momento en el que Enable sea igual a 1, se procede a cargar los valores de R/W y addr. Despues de ello, se verifica el valor que posee la entrada R/W y apartir de el se procede dos formas:
 
-  1. El proceso de almacenamiento de datos posee un proceso que serializa los datos ingresados paralelamente en cada uno de los pines del arreglo Data(in) y posteriormente se hace uso del protocolo SPI para transferencia de datos con la micro SD.
+  1. El proceso de almacenamiento de datos posee un protocolo que serializa los datos ingresados paralelamente en cada uno de los pines del arreglo Data(in) y posteriormente se hace uso del protocolo SPI para transferencia de datos con la micro SD.
   2. El proceso de lectura de datos toma la información deseada por medio del protocolo SPI (almacenada en la micro SD) y posteriormente se realiza un proceso de conversion de tipo serial a paralelo el cual se entrega por el bus de salida Data(out)[15:0]
   
  
-![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/Diagramfuncional.png)
+![](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/05MicroSD/Version_01/03%20document/diagrama_funcional(2).PNG)
 
 Protocolo SPI
 

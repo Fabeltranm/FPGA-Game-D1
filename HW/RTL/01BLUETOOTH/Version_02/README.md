@@ -16,21 +16,22 @@ Opera en una frecuencia de banda abierta a cualquier sistema que se encuentra en
 ## Descripción de la caja Funcional  (in/out)
 La caja funcional posee las señales Done, Busy y Enable las cuales se encargan de suministrar información sobre el estado del proceso de transferencia de datos, la señal de entrada d in es de 8 bits al igual que la de salida d out, estas señales corresponden a la información de entrada y salida del dispositivo, la salida TXD se refiere a los datos trasmitidos y la señal RXD a los datos recibidos.
 
-![inOut](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/caja%20negra.png?raw=true)
+![inOut](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/CN.png)
 
 
 ## Descripción funcional:
 
-![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/Rx.png)
-![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/Tx.png)
+![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/FRX.png)
+![fun](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/FTX.png)
 
 ## Descripción Estructural:
 
-![estrutural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/DE.png)
+![estructural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/ERX.png)
+![estructural](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/ETX.png)
 
 ## Diagrama de Estados:
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+![Estados](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/EstadosRx.png)
+![Estados](https://github.com/Fabeltranm/FPGA-Game-D1/blob/master/HW/RTL/01BLUETOOTH/Version_02/03%20document/img/EstadosTx.png)
 
 ## Arquitectura del periférico:
 
